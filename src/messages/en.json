@@ -168,6 +168,54 @@
       "company": "Company"
     }
   },
+  "consultoriaPage": {
+    "eyebrow": "AI consulting",
+    "title": "Let's talk about your business. No jargon, no commitment.",
+    "subtitle": "A conversation with the person who will design your solution. We analyze your operation, find where technology saves you time and money, and hand you a clear plan of where to start.",
+    "ctaPrimary": "Request a consultation",
+    "ctaSecondary": "See how it works",
+    "forWho": {
+      "eyebrow": "Sound familiar?",
+      "title": "You know you're losing time on work that could run itself. But you don't know where to start.",
+      "items": [
+        "Your team repeats the same manual work every week.",
+        "You've heard about AI, but you don't know what fits your business.",
+        "You don't want a huge project: you want to know what moves the needle first."
+      ]
+    },
+    "deliverables": {
+      "eyebrow": "What you take away",
+      "title": "You leave with clarity, not an invoice.",
+      "items": [
+        { "name": "Analysis of your operation", "desc": "We map your processes and find the bottlenecks costing you the most." },
+        { "name": "Prioritized opportunities", "desc": "What to automate first, ordered by real impact on your business." },
+        { "name": "Plan with estimated impact", "desc": "A concrete plan: what we'd do, how, and what to expect. You decide if we continue." }
+      ]
+    },
+    "how": {
+      "eyebrow": "How it works",
+      "title": "Three steps. Zero friction.",
+      "items": [
+        { "step": "01", "name": "We talk", "desc": "A conversation about your business and your day-to-day. No jargon." },
+        { "step": "02", "name": "We analyze", "desc": "We study your operation and where technology really helps." },
+        { "step": "03", "name": "We hand you the plan", "desc": "A clear, prioritized plan. With us or without us, it's yours." }
+      ]
+    },
+    "expert": {
+      "eyebrow": "Who you talk to",
+      "title": "You're served by the person who will build your solution.",
+      "body": "No salespeople, no middlemen. The person who analyzes your operation is the same one who designs and builds what comes next. We know your sector's context —legal and real estate— and we speak your language, not a technical manual's."
+    },
+    "guarantee": {
+      "title": "No commitment, for real.",
+      "body": "If after the consultation we don't see a clear fit, we'll tell you. We'd rather give an honest \"no\" than a project that doesn't serve you."
+    },
+    "finalCta": {
+      "title": "Shall we start with a conversation?",
+      "subtitle": "Tell us your case. The consultation is the first step, no commitment.",
+      "cta": "Request a consultation"
+    }
+  },
   "servicesHub": {
     "title": "Services",
     "subtitle": "First we understand your business. Then we build and deploy the solution that makes it grow."
