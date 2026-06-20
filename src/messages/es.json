@@ -170,8 +170,8 @@
   },
   "consultoriaPage": {
     "eyebrow": "Consultoría de IA",
-    "title": "Hablemos de tu negocio. Sin tecnicismos, sin compromiso.",
-    "subtitle": "Una conversación con quien va a diseñar tu solución. Analizamos tu operación, detectamos dónde la tecnología te hace ganar tiempo y dinero, y te entregamos un plan claro de por dónde empezar.",
+    "title": "Hablemos de tu negocio. Sin tecnicismos, directo a lo que importa.",
+    "subtitle": "Una sesión de trabajo con quien va a diseñar tu solución. Analizamos tu operación a fondo, detectamos dónde la tecnología te hace ganar tiempo y dinero, y sales con un plan claro de por dónde empezar.",
     "ctaPrimary": "Solicitar consultoría",
     "ctaSecondary": "Ver cómo funciona",
     "forWho": {
@@ -183,22 +183,30 @@
         "No quieres un proyecto enorme: quieres saber qué mueve la aguja primero."
       ]
     },
-    "deliverables": {
-      "eyebrow": "Qué te llevas",
-      "title": "Sales con claridad, no con una factura.",
-      "items": [
-        { "name": "Análisis de tu operación", "desc": "Mapeamos tus procesos y detectamos los cuellos de botella que más te cuestan." },
-        { "name": "Oportunidades priorizadas", "desc": "Qué automatizar primero, ordenado por impacto real en tu negocio." },
-        { "name": "Plan con impacto estimado", "desc": "Un plan concreto: qué haríamos, cómo y qué esperar. Tú decides si seguimos." }
-      ]
-    },
-    "how": {
-      "eyebrow": "Cómo funciona",
-      "title": "Tres pasos. Cero fricción.",
-      "items": [
-        { "step": "01", "name": "Hablamos", "desc": "Una conversación sobre tu negocio y tu día a día. Sin jerga." },
-        { "step": "02", "name": "Analizamos", "desc": "Estudiamos tu operación y dónde la tecnología aporta de verdad." },
-        { "step": "03", "name": "Te entregamos el plan", "desc": "Un plan claro y priorizado. Con o sin nosotros, te lo llevas." }
+    "process": {
+      "eyebrow": "La consultoría, paso a paso",
+      "title": "Una sesión de trabajo, no una reunión comercial.",
+      "intro": "Dedicamos tiempo real a entender tu negocio y a ponerle números a la oportunidad. No es una llamada de ventas: es análisis. Y sales con algo concreto en la mano.",
+      "takeawayLabel": "Te llevas",
+      "steps": [
+        {
+          "step": "01",
+          "name": "Escuchamos tu operación a fondo",
+          "desc": "Nos sentamos contigo a entender cómo trabaja tu negocio de verdad: qué hace tu equipo cada día, dónde se atasca y qué te roba horas. Metido en el día a día, hay patrones que dejas de ver; nuestro trabajo es verlos.",
+          "takeaway": "Una radiografía clara de dónde se te escapan el tiempo y el dinero."
+        },
+        {
+          "step": "02",
+          "name": "Detectamos las oportunidades reales",
+          "desc": "Cruzamos lo que hemos visto con lo que la automatización y la IA pueden hacer hoy —en tu caso, no en teoría—. Te decimos qué tiene sentido automatizar y qué no. Casi siempre aparecen dos o tres oportunidades que no esperabas.",
+          "takeaway": "Oportunidades concretas, priorizadas por impacto y esfuerzo."
+        },
+        {
+          "step": "03",
+          "name": "Te entregamos un plan accionable",
+          "desc": "Nada de un PDF genérico: un plan con qué automatizar, en qué orden, cómo lo haríamos y qué impacto esperar. Es tuyo. Lo ejecutas con nosotros, con tu equipo o con quien quieras.",
+          "takeaway": "Un plan claro y priorizado, listo para ejecutar."
+        }
       ]
     },
     "expert": {
@@ -206,13 +214,9 @@
       "title": "Te atiende quien va a construir tu solución.",
       "body": "Nada de comerciales ni intermediarios. La persona que analiza tu operación es la misma que diseña y construye lo que viene después. Conocemos el contexto de tu sector —legal e inmobiliario— y hablamos tu idioma, no el de un manual técnico."
     },
-    "guarantee": {
-      "title": "Sin compromiso, de verdad.",
-      "body": "Si tras la consultoría no vemos un encaje claro, te lo decimos. Preferimos un \"no\" honesto a un proyecto que no te sirva."
-    },
     "finalCta": {
-      "title": "¿Empezamos por una conversación?",
-      "subtitle": "Cuéntanos tu caso. La consultoría es el primer paso, sin compromiso.",
+      "title": "Pongamos el foco en lo que te hace crecer.",
+      "subtitle": "Cuéntanos tu caso y reservamos tu consultoría. El plan que sale es tuyo, lo ejecutes con nosotros o no.",
       "cta": "Solicitar consultoría"
     }
   },

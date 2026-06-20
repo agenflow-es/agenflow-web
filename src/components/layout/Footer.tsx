@@ -46,7 +46,7 @@ export function Footer() {
           <div className="min-w-[220px]">
             <div className="mb-4 flex items-center gap-2.5">
               <Logo />
-              <span className="font-display text-[20px] font-semibold tracking-[-0.02em]">
+              <span className="font-wordmark text-[21px] font-semibold tracking-[-0.03em]">
                 agenflow
               </span>
             </div>

@@ -1,0 +1,73 @@
+AGENFLOW · GUÍA RÁPIDA DE MARCA
+Logotipo "Flow" — v1 · junio 2026
+================================================================
+
+1. LOGOTIPO
+----------------------------------------------------------------
+El logo combina un SÍMBOLO (tres láminas que ascienden = flujo /
+automatización / capas) y un WORDMARK ("agenflow"). El asta de la
+"f" lleva un corte diagonal: es un detalle deliberado de la marca,
+no lo elimines ni lo corrijas.
+
+Versiones incluidas:
+  · Lockup horizontal   — uso principal
+  · Lockup vertical     — espacios cuadrados / centrados
+  · Wordmark solo       — cuando el símbolo ya aparece cerca
+  · Isotipo solo        — favicon, app, avatar, sellos
+
+2. COLOR
+----------------------------------------------------------------
+Azul Agenflow (primario) ....... #5B82FF
+Tinta texto / negro ............ #14161D
+Neutro claro (fondos) .......... #EDEAE3
+Fondo oscuro / tile ............ #0B0E1A  (degradado #141A30 → #0A0E1D)
+
+Sombras del símbolo (NO usar sueltas, solo dentro del símbolo):
+  sobre claro ... #5B82FF · #4B6CD7 · #344F9F
+  sobre oscuro .. #5B82FF · #7898FF · #A0B6FF
+
+3. TIPOGRAFÍA
+----------------------------------------------------------------
+Space Grotesk — SemiBold (600), tracking -0.035em.
+El wordmark va siempre en minúsculas.
+Los SVG llevan la fuente incrustada (se ven bien sin conexión).
+
+4. ESPACIO DE SEGURIDAD Y TAMAÑO MÍNIMO
+----------------------------------------------------------------
+Deja un margen libre alrededor igual a la ALTURA DEL SÍMBOLO.
+Tamaño mínimo:
+  · Lockup horizontal .. 24 px de alto (impreso: 8 mm)
+  · Isotipo ............ 16 px
+
+5. USOS CORRECTOS / INCORRECTOS
+----------------------------------------------------------------
+SÍ  · usar la versión blanca sobre fondos oscuros o fotos
+SÍ  · mantener proporciones originales
+NO  · rotar, inclinar o deformar
+NO  · recolorear o aplicar degradados ajenos
+NO  · reordenar o separar las láminas del símbolo
+NO  · poner el símbolo a color sobre fondos oscuros (usa el blanco)
+
+6. ÍNDICE DE ARCHIVOS
+----------------------------------------------------------------
+vector/   SVG escalables (web, impresión, edición) — fuente incrustada
+  agenflow-lockup-horizontal.svg
+  agenflow-lockup-horizontal-blanco.svg   (para fondo oscuro)
+  agenflow-lockup-vertical.svg
+  agenflow-wordmark.svg
+  agenflow-isotipo.svg / -blanco.svg / -mono.svg
+
+png/      Mapas de bits, fondo transparente
+  lockup/        lockups y wordmark en alta resolución
+  isotipo/       1024 · 512 · 256 · 128 · 64
+  isotipo-blanco/  512 · 256 · 128
+
+favicon/  Web y app
+  favicon.svg · favicon-16/32/48.png
+  apple-touch-icon-180.png · icon-192.png · icon-512.png
+  icon-maskable-512.png · site.webmanifest · snippet-html.txt
+
+social/   agenflow-og-1200x630.png (Open Graph / redes)
+
+----------------------------------------------------------------
+hola@agenflow.es

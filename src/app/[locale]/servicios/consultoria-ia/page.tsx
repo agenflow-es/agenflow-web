@@ -3,8 +3,7 @@ import { Link } from "@/i18n/navigation";
 import { Container, Eyebrow } from "@/components/ui/primitives";
 import { Reveal } from "@/components/motion/Reveal";
 
-type Deliverable = { name: string; desc: string };
-type Step = { step: string; name: string; desc: string };
+type Step = { step: string; name: string; desc: string; takeaway: string };
 
 export default async function ConsultoriaPage({
   params,
@@ -15,8 +14,7 @@ export default async function ConsultoriaPage({
   setRequestLocale(locale);
   const t = await getTranslations("consultoriaPage");
   const forWho = t.raw("forWho.items") as string[];
-  const deliverables = t.raw("deliverables.items") as Deliverable[];
-  const steps = t.raw("how.items") as Step[];
+  const steps = t.raw("process.steps") as Step[];
 
   return (
     <>
@@ -56,7 +54,7 @@ export default async function ConsultoriaPage({
 
       {/* For who / problem */}
       <section className="border-b border-border">
-        <Container className="max-w-[900px] py-[clamp(72px,10vw,140px)]">
+        <Container className="max-w-[860px] py-[clamp(72px,10vw,140px)]">
           <Reveal>
             <Eyebrow>{t("forWho.eyebrow")}</Eyebrow>
             <h2 className="mt-4 max-w-[22ch] font-display text-[clamp(26px,3.4vw,40px)] font-bold leading-[1.12] tracking-[-0.022em] text-balance">
@@ -64,10 +62,14 @@ export default async function ConsultoriaPage({
             </h2>
             <ul className="mt-8 space-y-4">
               {forWho.map((it, i) => (
-                <li key={i} className="flex gap-3.5 text-[17px] text-fg-muted">
-                  <span aria-hidden className="mt-2 text-accent">
-                    ●
-                  </span>
+                <li
+                  key={i}
+                  className="flex items-start gap-3.5 text-[17px] leading-[1.5] text-fg-muted"
+                >
+                  <span
+                    aria-hidden
+                    className="mt-[0.55em] h-1.5 w-1.5 shrink-0 rounded-full bg-accent"
+                  />
                   <span>{it}</span>
                 </li>
               ))}
@@ -76,58 +78,48 @@ export default async function ConsultoriaPage({
         </Container>
       </section>
 
-      {/* Deliverables */}
-      <section className="border-b border-border bg-surface">
+      {/* The consultation, step by step (merged) */}
+      <section id="como" className="scroll-mt-20 border-b border-border bg-surface">
         <Container className="py-[clamp(72px,10vw,140px)]">
           <Reveal>
-            <div className="mb-12 max-w-[680px]">
-              <Eyebrow>{t("deliverables.eyebrow")}</Eyebrow>
+            <div className="mx-auto mb-12 max-w-[720px] text-center">
+              <Eyebrow>{t("process.eyebrow")}</Eyebrow>
               <h2 className="mt-4 font-display text-[clamp(26px,3.4vw,42px)] font-bold leading-[1.1] tracking-[-0.022em] text-balance">
-                {t("deliverables.title")}
+                {t("process.title")}
               </h2>
+              <p className="mt-4 leading-[1.6] text-fg-muted text-pretty">
+                {t("process.intro")}
+              </p>
             </div>
-            <div className="grid gap-5 sm:grid-cols-3">
-              {deliverables.map((d, i) => (
+
+            <div className="mx-auto max-w-[860px] space-y-4">
+              {steps.map((s, i) => (
                 <div
                   key={i}
-                  className="rounded-[var(--radius-lg)] border border-border bg-bg p-6 shadow-[var(--shadow)]"
+                  className="group rounded-[var(--radius-lg)] border border-border bg-bg p-7 shadow-[var(--shadow)] transition duration-200 hover:-translate-y-1 hover:border-accent sm:flex sm:gap-7 sm:p-8"
                 >
-                  <span className="inline-flex h-[34px] w-[34px] items-center justify-center rounded-[9px] bg-[var(--accent-soft)] font-label text-[13px] font-semibold text-accent">
-                    {String(i + 1).padStart(2, "0")}
-                  </span>
-                  <h3 className="mt-4 font-display text-[19px] font-semibold">
-                    {d.name}
-                  </h3>
-                  <p className="mt-2 text-sm leading-[1.55] text-fg-muted">
-                    {d.desc}
-                  </p>
-                </div>
-              ))}
-            </div>
-          </Reveal>
-        </Container>
-      </section>
-
-      {/* How it works */}
-      <section id="como" className="scroll-mt-20 border-b border-border">
-        <Container className="py-[clamp(72px,10vw,140px)]">
-          <Reveal>
-            <div className="mx-auto mb-12 max-w-[680px] text-center">
-              <Eyebrow>{t("how.eyebrow")}</Eyebrow>
-              <h2 className="mt-4 font-display text-[clamp(26px,3.4vw,42px)] font-bold leading-[1.1] tracking-[-0.022em] text-balance">
-                {t("how.title")}
-              </h2>
-            </div>
-            <div className="grid gap-6 sm:grid-cols-3">
-              {steps.map((s, i) => (
-                <div key={i}>
-                  <span className="flex h-9 w-9 items-center justify-center rounded-full bg-accent font-label text-[13px] font-semibold text-accent-fg">
+                  <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-accent font-label text-[15px] font-semibold text-accent-fg">
                     {s.step}
                   </span>
-                  <h3 className="mt-5 font-display text-[20px] font-semibold">
-                    {s.name}
-                  </h3>
-                  <p className="mt-2 leading-[1.55] text-fg-muted">{s.desc}</p>
+                  <div className="mt-5 sm:mt-0">
+                    <h3 className="font-display text-[21px] font-semibold">
+                      {s.name}
+                    </h3>
+                    <p className="mt-2.5 leading-[1.6] text-fg-muted">
+                      {s.desc}
+                    </p>
+                    <div className="mt-4 flex items-start gap-2 text-[14px]">
+                      <span aria-hidden className="text-accent">
+                        →
+                      </span>
+                      <span>
+                        <span className="font-semibold text-accent">
+                          {t("process.takeawayLabel")}:
+                        </span>{" "}
+                        <span className="text-fg">{s.takeaway}</span>
+                      </span>
+                    </div>
+                  </div>
                 </div>
               ))}
             </div>
@@ -136,10 +128,10 @@ export default async function ConsultoriaPage({
       </section>
 
       {/* The expert */}
-      <section className="border-b border-border bg-surface">
+      <section className="border-b border-border">
         <Container className="max-w-[860px] py-[clamp(72px,10vw,140px)]">
           <Reveal>
-            <div className="rounded-[var(--radius-lg)] border border-border border-l-2 border-l-accent bg-bg p-8 shadow-[var(--shadow)] sm:p-10">
+            <div className="rounded-[var(--radius-lg)] border border-border border-l-2 border-l-accent bg-surface p-8 shadow-[var(--shadow)] sm:p-10">
               <Eyebrow>{t("expert.eyebrow")}</Eyebrow>
               <h2 className="mt-4 font-display text-[clamp(24px,3vw,36px)] font-bold leading-[1.12] tracking-[-0.022em] text-balance">
                 {t("expert.title")}
@@ -152,7 +144,7 @@ export default async function ConsultoriaPage({
         </Container>
       </section>
 
-      {/* Final CTA + guarantee */}
+      {/* Final CTA */}
       <section className="relative overflow-hidden">
         <div
           className="pointer-events-none absolute inset-0"
@@ -175,10 +167,6 @@ export default async function ConsultoriaPage({
             >
               {t("finalCta.cta")} <span className="text-lg">→</span>
             </Link>
-            <p className="mx-auto mt-8 max-w-[520px] text-sm text-fg-faint">
-              <strong className="text-fg">{t("guarantee.title")}</strong>{" "}
-              {t("guarantee.body")}
-            </p>
           </Reveal>
         </Container>
       </section>

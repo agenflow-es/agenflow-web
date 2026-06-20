@@ -170,8 +170,8 @@
   },
   "consultoriaPage": {
     "eyebrow": "AI consulting",
-    "title": "Let's talk about your business. No jargon, no commitment.",
-    "subtitle": "A conversation with the person who will design your solution. We analyze your operation, find where technology saves you time and money, and hand you a clear plan of where to start.",
+    "title": "Let's talk about your business. No jargon, straight to what matters.",
+    "subtitle": "A working session with the person who will design your solution. We analyze your operation in depth, find where technology saves you time and money, and you leave with a clear plan of where to start.",
     "ctaPrimary": "Request a consultation",
     "ctaSecondary": "See how it works",
     "forWho": {
@@ -183,22 +183,30 @@
         "You don't want a huge project: you want to know what moves the needle first."
       ]
     },
-    "deliverables": {
-      "eyebrow": "What you take away",
-      "title": "You leave with clarity, not an invoice.",
-      "items": [
-        { "name": "Analysis of your operation", "desc": "We map your processes and find the bottlenecks costing you the most." },
-        { "name": "Prioritized opportunities", "desc": "What to automate first, ordered by real impact on your business." },
-        { "name": "Plan with estimated impact", "desc": "A concrete plan: what we'd do, how, and what to expect. You decide if we continue." }
-      ]
-    },
-    "how": {
-      "eyebrow": "How it works",
-      "title": "Three steps. Zero friction.",
-      "items": [
-        { "step": "01", "name": "We talk", "desc": "A conversation about your business and your day-to-day. No jargon." },
-        { "step": "02", "name": "We analyze", "desc": "We study your operation and where technology really helps." },
-        { "step": "03", "name": "We hand you the plan", "desc": "A clear, prioritized plan. With us or without us, it's yours." }
+    "process": {
+      "eyebrow": "The consultation, step by step",
+      "title": "A working session, not a sales call.",
+      "intro": "We spend real time understanding your business and putting numbers to the opportunity. It's not a sales call: it's analysis. And you leave with something concrete in hand.",
+      "takeawayLabel": "You leave with",
+      "steps": [
+        {
+          "step": "01",
+          "name": "We study your operation in depth",
+          "desc": "We sit down with you to understand how your business actually works: what your team does each day, where it gets stuck, and what steals your hours. Deep in the day-to-day, you stop seeing patterns; our job is to see them.",
+          "takeaway": "A clear picture of where your time and money slip away."
+        },
+        {
+          "step": "02",
+          "name": "We find the real opportunities",
+          "desc": "We cross what we've seen with what automation and AI can do today —in your case, not in theory. We tell you what's worth automating and what isn't. There are almost always two or three opportunities you didn't expect.",
+          "takeaway": "Concrete opportunities, prioritized by impact and effort."
+        },
+        {
+          "step": "03",
+          "name": "We hand you an actionable plan",
+          "desc": "No generic PDF: a plan with what to automate, in what order, how we'd do it and what impact to expect. It's yours. Run it with us, with your team, or with whoever you want.",
+          "takeaway": "A clear, prioritized plan, ready to execute."
+        }
       ]
     },
     "expert": {
@@ -206,13 +214,9 @@
       "title": "You're served by the person who will build your solution.",
       "body": "No salespeople, no middlemen. The person who analyzes your operation is the same one who designs and builds what comes next. We know your sector's context —legal and real estate— and we speak your language, not a technical manual's."
     },
-    "guarantee": {
-      "title": "No commitment, for real.",
-      "body": "If after the consultation we don't see a clear fit, we'll tell you. We'd rather give an honest \"no\" than a project that doesn't serve you."
-    },
     "finalCta": {
-      "title": "Shall we start with a conversation?",
-      "subtitle": "Tell us your case. The consultation is the first step, no commitment.",
+      "title": "Let's focus on what makes you grow.",
+      "subtitle": "Tell us your case and we'll book your consultation. The plan it produces is yours —whether you run it with us or not.",
       "cta": "Request a consultation"
     }
   },

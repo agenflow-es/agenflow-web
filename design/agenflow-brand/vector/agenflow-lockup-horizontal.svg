@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-10 90 585 150" width="1170" height="300" role="img" aria-label="agenflow">
+  <defs>
+    
+    <mask id="fcutH">
+      <rect x="-10" y="90" width="585" height="150" fill="#fff"></rect>
+      <polygon points="362.71,101.6 372.81,101.6 362.71,125.6" fill="#000"></polygon>
+    </mask>
+  </defs>
+  <g transform="translate(0,102.9) scale(1.9)">
+    <polygon points="8,50 32,50 44,40 20,40" fill="#344f9f"></polygon>
+    <polygon points="15,38 39,38 51,28 27,28" fill="#4b6cd7"></polygon>
+    <polygon points="22,26 46,26 58,16 34,16" fill="#5b82ff"></polygon>
+  </g>
+  <text x="138" y="200" font-family="&#39;Space Grotesk&#39;,&#39;Helvetica Neue&#39;,Arial,sans-serif" font-weight="600" font-size="100" letter-spacing="-3.5" fill="#14161d" mask="url(#fcutH)">agenflow</text>
+</svg>

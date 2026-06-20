@@ -80,7 +80,7 @@ export function Header() {
           className="flex items-center gap-2.5 text-fg"
         >
           <Logo />
-          <span className="font-display text-[20px] font-semibold tracking-[-0.02em]">
+          <span className="font-wordmark text-[21px] font-semibold tracking-[-0.03em]">
             agenflow
           </span>
         </Link>

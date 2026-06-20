@@ -38,12 +38,27 @@ export function Eyebrow({
   );
 }
 
-export function Logo() {
+// Agenflow isotipo — three stacked parallelograms. Fills follow the theme
+// via the --iso-* tokens (light-on-dark in dark mode, color on light).
+export function Logo({ className }: { className?: string }) {
   return (
-    <span className="relative inline-block h-[22px] w-[22px]">
-      <span className="absolute inset-0 rounded-[6px] bg-accent opacity-90" />
-      <span className="absolute left-[5px] top-[5px] h-3 w-3 rounded-[3px] bg-bg" />
-      <span className="absolute left-2 top-2 h-1.5 w-1.5 rounded-[2px] bg-accent" />
-    </span>
+    <svg
+      viewBox="0 0 64 64"
+      width="26"
+      height="26"
+      role="img"
+      aria-label="Agenflow"
+      className={cn("shrink-0", className)}
+    >
+      <polygon points="8,50 32,50 44,40 20,40" style={{ fill: "var(--iso-1)" }} />
+      <polygon
+        points="15,38 39,38 51,28 27,28"
+        style={{ fill: "var(--iso-2)" }}
+      />
+      <polygon
+        points="22,26 46,26 58,16 34,16"
+        style={{ fill: "var(--iso-3)" }}
+      />
+    </svg>
   );
 }

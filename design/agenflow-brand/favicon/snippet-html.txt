@@ -1,0 +1,11 @@
+Pega esto en el <head> de tu web (ajusta las rutas a donde subas los archivos):
+
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="icon" href="/favicon-16.png" sizes="16x16" type="image/png">
+<link rel="apple-touch-icon" href="/apple-touch-icon-180.png">
+<link rel="manifest" href="/site.webmanifest">
+<meta name="theme-color" content="#5B82FF">
+
+Open Graph (redes / previsualización al compartir):
+<meta property="og:image" content="/agenflow-og-1200x630.png">
