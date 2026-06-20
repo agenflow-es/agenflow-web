@@ -71,6 +71,17 @@ body {
   color: #fff;
 }
 
+/* Theme toggle icon: show sun in dark, moon in light (no JS state needed) */
+.theme-icon-moon {
+  display: none;
+}
+[data-theme="light"] .theme-icon-sun {
+  display: none;
+}
+[data-theme="light"] .theme-icon-moon {
+  display: inline;
+}
+
 /* ---- Animations (ported from the design) ---- */
 @keyframes af-drift {
   0% { transform: translate(0, 0); }
