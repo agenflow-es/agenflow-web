@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "title": "Agenflow — AI software, specialized by vertical",
-    "description": "We audit your operations, automate the repetitive, and build the software your sector needs."
+    "title": "Agenflow — Custom software that grows your business",
+    "description": "We turn slow processes into growth: we integrate custom automation and AI so you produce more with the same team."
   },
   "nav": {
     "services": "Services",
@@ -9,204 +9,257 @@
     "pricing": "Pricing",
     "about": "About",
     "contact": "Contact",
-    "cta": "Request a diagnosis"
+    "cta": "Request a consultation"
   },
   "hero": {
-    "title": "AI software for sectors that still run by hand.",
-    "subtitle": "We audit your operations, automate the repetitive, and build the software your sector needs. We start in weeks, not months.",
-    "ctaPrimary": "Request a diagnosis",
-    "ctaSecondary": "See services"
+    "eyebrow": "AI software, specialized by sector",
+    "title": "We turn slow processes into growth.",
+    "subtitle": "We integrate custom automation and AI into your operation: the same team, far more business. We start with a consultation and stay on as your technology partner.",
+    "ctaPrimary": "Request a consultation",
+    "ctaSecondary": "See services",
+    "proof": [
+      "Specialized in Legal & Real Estate",
+      "Own product in development",
+      "GDPR & EU-hosted data"
+    ],
+    "mockupLabel": "fincai · in development"
   },
   "about": {
-    "title": "We build AI software, specialized by vertical.",
-    "body": "Agenflow enters every client through consulting and automation, and builds the product their sector needs. Growing without systems isn't scaling — it's just a scheduled collapse."
+    "eyebrow": "What Agenflow is",
+    "body": "We understand how your business works and where it loses time and margin. Then we integrate the custom automation and technology that make it more productive, more profitable and bigger —and we run it with you."
   },
   "services": {
-    "title": "What we do",
+    "eyebrow": "Services",
+    "title": "First we understand. Then we build what makes you grow.",
     "cta": "See all services",
     "items": [
       {
-        "name": "AI consulting & automation",
-        "desc": "We audit your operations and propose a concrete solution. The way in.",
+        "name": "AI consulting",
+        "desc": "We analyze your operation and find where to gain time, margin and capacity. You leave with a clear plan of what to automate and where to start.",
         "href": "/servicios/consultoria-ia"
       },
       {
-        "name": "Automation + AI for SMEs",
-        "desc": "We remove repetitive manual work with automation and AI.",
+        "name": "Process automation",
+        "desc": "We build and deploy the solution: we connect your tools and automate the work that slows the team down. Results in weeks.",
         "href": "/servicios/automatizacion-ia"
       },
       {
-        "name": "Custom software development",
-        "desc": "We build SaaS and custom software tailored to your sector.",
-        "href": "/servicios/desarrollo-software"
+        "name": "Custom software by sector",
+        "desc": "When your sector needs a tool the market doesn't offer, we build it. Specialized products, ready to grow with you.",
+        "href": "/sectores"
       }
     ],
-    "complementary": "Complementary service: modernizing your online presence.",
+    "complementary": "Online presence — we modernize it so it captures and sells too.",
     "complementaryCta": "Learn more"
   },
   "sectors": {
-    "title": "Sectors",
-    "cta": "See all sectors",
+    "eyebrow": "Sectors",
+    "title": "Specialized where it matters most.",
     "items": [
       {
+        "label": "Sector 01",
         "name": "Legal",
-        "desc": "Software and automation for law firms, alongside a partner firm.",
+        "desc": "Law firms: we automate accounting-audit processes to remove manual work and cut errors. Fewer hours on repetitive tasks, more time for clients.",
+        "cta": "Explore legal",
         "href": "/sectores/legal"
       },
       {
+        "label": "Sector 02",
         "name": "Real estate & construction",
-        "desc": "fincai for property managers and replo for real estate agencies. Next: renovations, installers and construction.",
+        "desc": "Real estate agencies and property managers: lead capture, community management and document workflows without friction. Here we're building fincai, our software for property management. Construction and renovations, coming soon.",
+        "cta": "Explore sector",
         "href": "/sectores/inmobiliario-construccion"
       }
     ]
   },
-  "process": {
-    "title": "The Agenflow Protocol",
+  "security": {
+    "eyebrow": "Security & compliance",
+    "title": "Your data, protected and under control.",
+    "subtitle": "You work with sensitive information. Protecting it and staying compliant isn't an extra —it's the foundation of how we work.",
     "items": [
-      { "name": "Diagnosis & audit", "desc": "We find where you lose time and money." },
-      { "name": "Solution architecture", "desc": "We show you the blueprint before building." },
-      { "name": "Development & deployment", "desc": "We build, test and integrate." },
-      { "name": "Support & optimization", "desc": "We monitor and improve continuously." }
+      {
+        "name": "GDPR by design",
+        "desc": "We comply with EU regulation from day one, not as an add-on."
+      },
+      {
+        "name": "EU-hosted data",
+        "desc": "Your information is processed and stored on servers within the European Union."
+      },
+      {
+        "name": "Contract & confidentiality",
+        "desc": "Data processing agreement (DPA) and confidentiality signed with every client."
+      },
+      {
+        "name": "Encryption & access control",
+        "desc": "Encrypted data and least-privilege access: only those who should, access what they should."
+      }
+    ]
+  },
+  "whyUs": {
+    "eyebrow": "Why us",
+    "title": "We know how. And we build it ourselves.",
+    "items": [
+      {
+        "name": "You talk to who builds it",
+        "desc": "You won't get a salesperson: you'll get the person who will analyze your operation and design the solution."
+      },
+      {
+        "name": "We build product, not just slides",
+        "desc": "We develop our own software by sector. What we propose, we know how to build."
+      },
+      {
+        "name": "Sector focus",
+        "desc": "Specialized in legal and real estate. We know the context; we don't improvise."
+      }
     ]
   },
   "pricing": {
-    "title": "How we work",
-    "subtitle": "By packages, based on your starting point. A tailored quote after the diagnosis.",
-    "cta": "See pricing"
-  },
-  "trust": {
-    "title": "Why teams trust us",
-    "body": "We work with a partner law firm and build real products like fincai and replo. Clear method, test environments and data security. Results in weeks, not months."
+    "eyebrow": "Pricing",
+    "title": "Tailored quotes. No shelf prices.",
+    "subtitle": "Every project is quoted on its real scope. Tell us your case and we'll give it to you straight.",
+    "items": [
+      { "name": "AI consulting", "desc": "We understand your operation and propose where to start." },
+      { "name": "Process automation", "desc": "We build and deploy the custom solution." },
+      { "name": "Online presence", "desc": "We modernize your website and digital presence." }
+    ],
+    "cta": "Request a quote",
+    "viewAll": "See pricing",
+    "note": "Looking for our sector software? Each product has its own plan on its page."
   },
   "finalCta": {
-    "title": "Request a diagnosis of your operations",
-    "subtitle": "We tell you what to automate and how — no strings attached.",
-    "cta": "Request a diagnosis"
+    "title": "Ready to do more with the same team?",
+    "subtitle": "A no-commitment consultation. We'll tell you what to automate first —even if you don't work with us.",
+    "cta": "Request a consultation"
   },
   "faq": {
-    "title": "FAQ",
+    "title": "What people usually ask us.",
     "items": [
-      { "q": "What exactly does Agenflow do?", "a": "We build AI software specialized by vertical and automate processes in SMEs, starting with a consultation." },
-      { "q": "How soon will I see results?", "a": "We work in weeks, not months. The initial diagnosis is fast." },
-      { "q": "Which sectors do you work with?", "a": "Legal and real estate/construction are our sectors, plus automation for SMEs in general." }
+      {
+        "q": "Do you work with companies without a technical team?",
+        "a": "Yes. We bring all the technical side and integrate with your team. You bring the business knowledge; we bring the solution."
+      },
+      {
+        "q": "How soon will I see results?",
+        "a": "The consultation, in days. The first automations in production are measured in weeks, not months."
+      },
+      {
+        "q": "How do you protect our data?",
+        "a": "GDPR compliance, EU-hosted data, a confidentiality agreement, and encryption with access control. It's detailed in the security section."
+      },
+      {
+        "q": "I'm not sure what to automate. Where do I start?",
+        "a": "With the consultation: we analyze your operation and tell you exactly what to automate first and what impact to expect."
+      },
+      {
+        "q": "Why specialized by sector?",
+        "a": "Because knowing the legal or real estate context is the difference between a solution used every day and one that gathers dust."
+      }
     ]
   },
   "footer": {
-    "tagline": "AI software, specialized by vertical.",
+    "tagline": "Custom software, specialized by sector.",
     "rights": "All rights reserved.",
     "contact": "Contact",
     "legalNotice": "Legal notice",
-    "privacy": "Privacy"
+    "privacy": "Privacy",
+    "groups": {
+      "services": "Services",
+      "sectors": "Sectors",
+      "company": "Company"
+    }
   },
   "servicesHub": {
     "title": "Services",
-    "subtitle": "From audit to software. Three ways to work with you, one logic: remove manual work and build what your business needs."
+    "subtitle": "First we understand your business. Then we build and deploy the solution that makes it grow."
   },
   "servicePages": {
     "consultoria": {
-      "title": "AI consulting & automation",
-      "intro": "We audit your operations, find where you lose time and money, and hand you a clear plan of what to automate and how. The way into everything else.",
+      "title": "AI consulting",
+      "intro": "We analyze your operation and find where you can gain time, margin and capacity. You leave with a clear plan of what to automate and where to start.",
       "points": [
-        "Process audit and bottleneck analysis",
-        "Prioritized AI and automation opportunities",
-        "Implementation plan with estimated impact"
+        "Process and bottleneck analysis",
+        "Automation opportunities prioritized by impact",
+        "Implementation plan with expected results"
       ],
-      "cta": "Request a diagnosis"
+      "cta": "Request a consultation"
     },
     "automatizacion": {
-      "title": "Automation + AI for SMEs",
-      "intro": "We remove repetitive manual work by connecting your tools and applying AI where it helps. Results in weeks, not months.",
+      "title": "Process automation",
+      "intro": "We build and deploy the solution: we connect your tools and automate the work that slows the team down. Results in weeks, not months.",
       "points": [
         "Integration of your tools and data",
-        "AI agents over documents and unstructured data",
-        "Processes that run on their own, with oversight"
+        "Automation of repetitive manual work",
+        "Go-live with follow-up"
       ],
-      "cta": "Automate my operations"
+      "cta": "Request a quote"
     },
     "desarrollo": {
-      "title": "Custom software development",
-      "intro": "When automation isn't enough, we build the software. SaaS and tools tailored to your sector, with AI at the core.",
+      "title": "Custom software by sector",
+      "intro": "When your sector needs a tool the market doesn't offer, we build it. A specialized product, ready to grow with you.",
       "points": [
-        "Custom product, from architecture to deployment",
-        "Integrated AI (Claude/GPT) where it adds value",
-        "Test environments and data security"
+        "Custom product, from design to deployment",
+        "Specialized in your sector's context",
+        "Built to scale"
       ],
       "cta": "Talk about my project"
     },
     "presenciaOnline": {
-      "title": "Online presence modernization",
-      "intro": "Has your website or digital presence fallen behind? We update and modernize it. A simple first step before automating.",
+      "title": "Online presence",
+      "intro": "We modernize your website and digital presence so it captures and sells too. A simple first step to start working together.",
       "points": [
         "Revamp of outdated websites",
         "Better speed, SEO and conversion",
         "A base ready to grow"
       ],
-      "cta": "Improve my presence"
+      "cta": "Request a quote"
     }
   },
   "sectorsHub": {
     "title": "Sectors",
-    "subtitle": "We build software specialized by vertical. These are the sectors we already work in."
+    "subtitle": "We build software specialized by sector. These are the sectors we work in."
   },
   "sectorPages": {
     "legal": {
       "title": "Legal",
-      "intro": "Software and automation for law firms, alongside a partner law firm that co-defines the solutions with us.",
+      "intro": "For law firms. We automate accounting-audit processes to remove manual work and cut errors: fewer hours on repetitive tasks, more time for clients.",
       "points": [
-        "Document management automation",
-        "AI agents over case files and data",
-        "Solutions validated with a partner firm"
+        "Accounting-audit process automation",
+        "Less manual work and fewer errors",
+        "More capacity for the team"
       ],
-      "cta": "Request a diagnosis"
+      "cta": "Request a consultation"
     },
     "realEstate": {
       "title": "Real estate & construction",
-      "intro": "We develop software for property managers and real estate agencies, with an eye on renovations, installers and construction.",
-      "cta": "Request a diagnosis",
+      "intro": "For real estate agencies and property managers: lead capture, community management and document workflows without friction. Construction and renovations, coming soon.",
+      "cta": "Request a consultation",
       "comingSoon": "coming soon",
       "products": {
-        "fincai": "AI software so property managers can run their communities far better. Finc, its AI agent, orchestrates everything.",
+        "fincai": "We're building fincai: AI software so property managers can run their communities far better.",
         "replo": "Lead management for real estate agencies: omnichannel inbox, WhatsApp agent, voice and visit scheduling."
       }
     }
   },
   "pricingPage": {
     "title": "Pricing",
-    "subtitle": "We work in packages based on your starting point. Tell us your case and we'll send you a tailored quote.",
-    "note": "No fixed prices: every project is different. We give you a clear quote after the diagnosis.",
-    "packages": [
-      {
-        "name": "Operations diagnosis",
-        "desc": "We audit your operations and hand you a plan of what to automate and how. The entry point.",
-        "cta": "Request a quote"
-      },
-      {
-        "name": "Automation + AI sprint",
-        "desc": "Scoped implementation: we connect tools and apply AI to remove manual work.",
-        "cta": "Request a quote"
-      },
-      {
-        "name": "Software / product development",
-        "desc": "We build software tailored to your sector, with AI at the core.",
-        "cta": "Request a quote"
-      },
-      {
-        "name": "Support & optimization",
-        "desc": "Ongoing support: monitoring, improvements and new automations.",
-        "cta": "Request a quote"
-      }
+    "subtitle": "We work with tailored quotes: every project is quoted on its real scope. Tell us your case and we'll give it to you straight.",
+    "note": "Custom software by sector has its own model and pricing on each product's page.",
+    "items": [
+      { "name": "AI consulting", "desc": "We understand your operation and propose where to start.", "cta": "Request a quote" },
+      { "name": "Process automation", "desc": "We build and deploy the custom solution.", "cta": "Request a quote" },
+      { "name": "Online presence", "desc": "We modernize your website and digital presence.", "cta": "Request a quote" }
     ]
   },
   "aboutPage": {
     "title": "About",
-    "intro": "Agenflow exists to bring AI and automation to sectors that still run by hand, and to build the software they need.",
-    "body": "We work with sector partners — like a law firm in legal — to build products that truly fit, and we develop our own vertical SaaS like fincai and replo.",
-    "expertTitle": "Talk to an expert",
-    "expertBody": "You won't get a salesperson: you'll get the person who will design your solution.",
-    "cta": "Request a diagnosis"
+    "intro": "We help businesses produce more without growing costs: we understand their operation and integrate the automation and technology that make it faster, more profitable and scalable.",
+    "body": "We focus on legal and real estate and develop our own software by sector. You won't get a salesperson: you'll get the person who will analyze your operation and build the solution.",
+    "expertTitle": "You talk to who builds it",
+    "expertBody": "No middlemen: the person who designs your solution is the one who sits with you from day one.",
+    "cta": "Request a consultation"
   },
   "contactPage": {
-    "title": "Let's talk about your operations",
+    "title": "Let's talk about your operation",
     "body": "Tell us what you want to improve and we'll suggest where to start.",
     "emailLabel": "Or email us at",
     "form": {

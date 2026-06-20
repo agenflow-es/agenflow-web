@@ -17,18 +17,18 @@ export default async function Page({
           href="https://fincai.es"
           target="_blank"
           rel="noopener noreferrer"
-          className="group rounded-2xl border border-black/10 p-6 transition hover:border-foreground dark:border-white/15"
+          className="group rounded-[var(--radius-lg)] border border-border bg-surface p-6 transition hover:border-accent"
         >
-          <h2 className="font-medium">fincai →</h2>
-          <p className="mt-2 text-sm text-zinc-600 dark:text-zinc-400">
+          <h2 className="font-display font-semibold">fincai →</h2>
+          <p className="mt-2 text-sm leading-[1.55] text-fg-muted">
             {t("products.fincai")}
           </p>
         </a>
-        <div className="rounded-2xl border border-black/10 p-6 dark:border-white/15">
-          <h2 className="font-medium text-zinc-400">
+        <div className="rounded-[var(--radius-lg)] border border-border bg-surface p-6">
+          <h2 className="font-display font-semibold text-fg-faint">
             replo ({t("comingSoon")})
           </h2>
-          <p className="mt-2 text-sm text-zinc-600 dark:text-zinc-400">
+          <p className="mt-2 text-sm leading-[1.55] text-fg-muted">
             {t("products.replo")}
           </p>
         </div>

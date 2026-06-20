@@ -1,30 +1,113 @@
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
+import { Container, Logo } from "@/components/ui/primitives";
+import { LocaleSwitcher } from "./LocaleSwitcher";
+import { siteConfig } from "@/lib/site";
+
+type NavItem = { name: string; href: string };
+
+function FooterLink({
+  href,
+  children,
+}: {
+  href: string;
+  children: React.ReactNode;
+}) {
+  return (
+    <Link
+      href={href}
+      className="mb-2.5 block text-[14.5px] text-fg-muted transition hover:text-fg-hover"
+    >
+      {children}
+    </Link>
+  );
+}
+
+function ColTitle({ children }: { children: React.ReactNode }) {
+  return (
+    <div className="mb-4 font-label text-[12px] font-medium uppercase tracking-[0.13em] text-accent">
+      {children}
+    </div>
+  );
+}
 
 export function Footer() {
   const t = useTranslations("footer");
   const nav = useTranslations("nav");
+  const tServices = useTranslations("services");
+  const tSectors = useTranslations("sectors");
+  const serviceItems = tServices.raw("items") as NavItem[];
+  const sectorItems = tSectors.raw("items") as NavItem[];
 
   return (
-    <footer className="mt-20 border-t border-black/5 dark:border-white/10">
-      <div className="mx-auto grid max-w-5xl gap-8 px-6 py-12 sm:grid-cols-2">
-        <div>
-          <div className="font-semibold">Agenflow</div>
-          <p className="mt-2 max-w-xs text-sm text-zinc-500">{t("tagline")}</p>
+    <footer className="border-t border-border bg-surface">
+      <Container className="pb-8 pt-[clamp(48px,7vw,80px)]">
+        <div className="grid gap-10 md:grid-cols-[1.4fr_repeat(3,1fr)]">
+          <div className="min-w-[220px]">
+            <div className="mb-4 flex items-center gap-2.5">
+              <Logo />
+              <span className="font-display text-[20px] font-semibold tracking-[-0.02em]">
+                agenflow
+              </span>
+            </div>
+            <p className="max-w-[30ch] text-sm leading-[1.55] text-fg-muted">
+              {t("tagline")}
+            </p>
+          </div>
+
+          <div>
+            <ColTitle>{t("groups.services")}</ColTitle>
+            {serviceItems.map((l, i) => (
+              <FooterLink key={i} href={l.href}>
+                {l.name}
+              </FooterLink>
+            ))}
+          </div>
+
+          <div>
+            <ColTitle>{t("groups.sectors")}</ColTitle>
+            {sectorItems.map((l, i) => (
+              <FooterLink key={i} href={l.href}>
+                {l.name}
+              </FooterLink>
+            ))}
+          </div>
+
+          <div>
+            <ColTitle>{t("groups.company")}</ColTitle>
+            <FooterLink href="/nosotros">{nav("about")}</FooterLink>
+            <FooterLink href="/precios">{nav("pricing")}</FooterLink>
+            <a
+              href={`mailto:${siteConfig.contactEmail}`}
+              className="mb-2.5 block text-[14.5px] text-fg-muted transition hover:text-fg-hover"
+            >
+              {siteConfig.contactEmail}
+            </a>
+            <a
+              href={siteConfig.linkedin}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="block text-[14.5px] text-fg-muted transition hover:text-fg-hover"
+            >
+              LinkedIn
+            </a>
+          </div>
         </div>
-        <nav className="grid grid-cols-2 gap-2 text-sm text-zinc-500">
-          <Link href="/servicios">{nav("services")}</Link>
-          <Link href="/sectores">{nav("sectors")}</Link>
-          <Link href="/precios">{nav("pricing")}</Link>
-          <Link href="/nosotros">{nav("about")}</Link>
-          <Link href="/contacto">{nav("contact")}</Link>
-          <Link href="/aviso-legal">{t("legalNotice")}</Link>
-          <Link href="/privacidad">{t("privacy")}</Link>
-        </nav>
-      </div>
-      <div className="mx-auto max-w-5xl px-6 pb-8 text-xs text-zinc-400">
-        © 2026 Agenflow. {t("rights")}
-      </div>
+
+        <div className="mt-12 flex flex-wrap items-center justify-between gap-4 border-t border-border pt-6">
+          <span className="text-[13px] text-fg-faint">
+            © 2026 Agenflow ·{" "}
+            <Link href="/aviso-legal" className="transition hover:text-fg-hover">
+              {t("legalNotice")}
+            </Link>{" "}
+            ·{" "}
+            <Link href="/privacidad" className="transition hover:text-fg-hover">
+              {t("privacy")}
+            </Link>
+          </span>
+          <LocaleSwitcher />
+        </div>
+      </Container>
     </footer>
   );
 }

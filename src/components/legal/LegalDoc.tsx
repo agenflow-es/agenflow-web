@@ -7,27 +7,27 @@ export function LegalDoc({ namespace }: { namespace: LegalNamespace }) {
   const sections = t.raw(`${namespace}.sections`) as string[];
 
   return (
-    <section className="mx-auto max-w-3xl px-6 py-24">
-      <h1 className="text-4xl font-semibold tracking-tight">
+    <section className="mx-auto max-w-3xl px-[clamp(20px,5vw,48px)] py-24">
+      <h1 className="font-display text-4xl font-bold tracking-[-0.022em]">
         {t(`${namespace}.title`)}
       </h1>
-      <p className="mt-4 rounded-lg border border-amber-500/30 bg-amber-500/10 px-4 py-3 text-sm text-amber-700 dark:text-amber-400">
+      <p className="mt-4 rounded-[var(--radius)] border border-border bg-[var(--accent-soft)] px-4 py-3 text-sm text-accent">
         {t("draftNotice")}
       </p>
-      <p className="mt-6 text-zinc-600 dark:text-zinc-400">
+      <p className="mt-6 leading-[1.6] text-fg-muted">
         {t(`${namespace}.intro`)}
       </p>
       <div className="mt-8 space-y-8">
         {sections.map((s, i) => (
           <div key={i}>
-            <h2 className="text-xl font-medium">{s}</h2>
-            <p className="mt-2 text-sm text-zinc-500">{t("pendingContent")}</p>
+            <h2 className="font-display text-xl font-semibold">{s}</h2>
+            <p className="mt-2 text-sm text-fg-faint">{t("pendingContent")}</p>
           </div>
         ))}
       </div>
-      <div className="mt-12 rounded-2xl border border-black/10 p-6 text-sm dark:border-white/15">
-        <div className="font-medium">{t("company.label")}</div>
-        <ul className="mt-2 space-y-1 text-zinc-600 dark:text-zinc-400">
+      <div className="mt-12 rounded-[var(--radius-lg)] border border-border bg-surface p-6 text-sm">
+        <div className="font-semibold">{t("company.label")}</div>
+        <ul className="mt-2 space-y-1 text-fg-muted">
           <li>{t("company.name")}</li>
           <li>{t("company.taxId")}</li>
           <li>{t("company.address")}</li>

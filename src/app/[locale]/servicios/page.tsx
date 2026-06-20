@@ -1,7 +1,8 @@
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
+import { Container } from "@/components/ui/primitives";
 
-type ServiceItem = { name: string; desc: string; href: string };
+type Item = { name: string; desc: string; href: string };
 
 export default async function ServiciosPage({
   params,
@@ -12,37 +13,39 @@ export default async function ServiciosPage({
   setRequestLocale(locale);
   const t = await getTranslations("servicesHub");
   const ts = await getTranslations("services");
-  const items = ts.raw("items") as ServiceItem[];
+  const items = ts.raw("items") as Item[];
 
   return (
-    <section className="mx-auto max-w-5xl px-6 py-24">
-      <h1 className="text-4xl font-semibold tracking-tight">{t("title")}</h1>
-      <p className="mt-6 max-w-2xl text-lg text-zinc-600 dark:text-zinc-400">
+    <Container className="py-24">
+      <h1 className="font-display text-4xl font-bold tracking-[-0.022em]">
+        {t("title")}
+      </h1>
+      <p className="mt-5 max-w-[60ch] text-lg leading-[1.6] text-fg-muted">
         {t("subtitle")}
       </p>
-      <div className="mt-12 grid gap-6 sm:grid-cols-3">
+      <div className="mt-12 grid gap-5 sm:grid-cols-3">
         {items.map((item, i) => (
           <Link
             key={i}
             href={item.href}
-            className="group rounded-2xl border border-black/10 p-6 transition hover:border-foreground dark:border-white/15"
+            className="group rounded-[var(--radius-lg)] border border-border bg-surface p-6 shadow-[var(--shadow)] transition hover:-translate-y-1 hover:border-accent"
           >
-            <h2 className="text-lg font-medium">{item.name}</h2>
-            <p className="mt-2 text-sm text-zinc-600 dark:text-zinc-400">
+            <h2 className="font-display text-lg font-semibold">{item.name}</h2>
+            <p className="mt-2 text-sm leading-[1.55] text-fg-muted">
               {item.desc}
             </p>
           </Link>
         ))}
       </div>
-      <p className="mt-6 text-sm text-zinc-500">
+      <p className="mt-6 text-sm text-fg-faint">
         {ts("complementary")}{" "}
         <Link
           href="/servicios/presencia-online"
-          className="underline underline-offset-4"
+          className="text-accent underline underline-offset-4"
         >
           {ts("complementaryCta")}
         </Link>
       </p>
-    </section>
+    </Container>
   );
 }

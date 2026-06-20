@@ -38,55 +38,55 @@ export function ContactForm() {
   }
 
   const fieldClass =
-    "mt-1 w-full rounded-lg border border-black/10 bg-transparent px-4 py-2.5 text-sm outline-none focus:border-foreground dark:border-white/15";
+    "mt-1 w-full rounded-[var(--radius)] border border-border bg-transparent px-4 py-2.5 text-sm text-fg outline-none transition focus:border-accent";
 
   return (
     <form onSubmit={handleSubmit(onSubmit)} className="mt-8 space-y-4" noValidate>
       <div>
-        <label className="text-sm font-medium" htmlFor="name">
+        <label className="text-sm font-medium text-fg" htmlFor="name">
           {t("name")}
         </label>
         <input id="name" className={fieldClass} {...register("name")} />
         {errors.name && (
-          <p className="mt-1 text-xs text-red-600">{errors.name.message}</p>
+          <p className="mt-1 text-xs text-red-500">{errors.name.message}</p>
         )}
       </div>
       <div>
-        <label className="text-sm font-medium" htmlFor="email">
+        <label className="text-sm font-medium text-fg" htmlFor="email">
           {t("email")}
         </label>
         <input id="email" type="email" className={fieldClass} {...register("email")} />
         {errors.email && (
-          <p className="mt-1 text-xs text-red-600">{errors.email.message}</p>
+          <p className="mt-1 text-xs text-red-500">{errors.email.message}</p>
         )}
       </div>
       <div>
-        <label className="text-sm font-medium" htmlFor="company">
+        <label className="text-sm font-medium text-fg" htmlFor="company">
           {t("company")}
         </label>
         <input id="company" className={fieldClass} {...register("company")} />
       </div>
       <div>
-        <label className="text-sm font-medium" htmlFor="message">
+        <label className="text-sm font-medium text-fg" htmlFor="message">
           {t("message")}
         </label>
         <textarea id="message" rows={5} className={fieldClass} {...register("message")} />
         {errors.message && (
-          <p className="mt-1 text-xs text-red-600">{errors.message.message}</p>
+          <p className="mt-1 text-xs text-red-500">{errors.message.message}</p>
         )}
       </div>
       <button
         type="submit"
         disabled={isSubmitting}
-        className="rounded-full bg-foreground px-6 py-3 text-sm font-medium text-background disabled:opacity-60"
+        className="rounded-[var(--radius)] bg-accent px-6 py-3 text-sm font-semibold text-accent-fg transition hover:-translate-y-0.5 disabled:opacity-60"
       >
         {isSubmitting ? t("sending") : t("submit")}
       </button>
       {status === "ok" && (
-        <p className="text-sm text-green-600">{t("success")}</p>
+        <p className="text-sm text-green-500">{t("success")}</p>
       )}
       {status === "error" && (
-        <p className="text-sm text-red-600">{t("error")}</p>
+        <p className="text-sm text-red-500">{t("error")}</p>
       )}
     </form>
   );

@@ -1,26 +1,112 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+/* ---- Design tokens (from Agenflow Home.dc.html · direction A · Signal) ---- */
+:root,
+[data-theme="dark"] {
+  --bg: #0a0a0b;
+  --bg-elev: #141417;
+  --bg-elev2: #1d1d22;
+  --text: #f2f2f4;
+  --text-hover: #ffffff;
+  --text-muted: #9a9aa4;
+  --text-faint: #67676f;
+  --border: rgba(255, 255, 255, 0.09);
+  --border-strong: rgba(255, 255, 255, 0.17);
+  --accent: #5b82ff;
+  --accent-fg: #ffffff;
+  --accent-soft: rgba(91, 130, 255, 0.14);
+  --shadow: 0 1px 0 rgba(255, 255, 255, 0.04) inset, 0 14px 40px rgba(0, 0, 0, 0.45);
+  --grid: rgba(255, 255, 255, 0.04);
+  --radius: 6px;
+  --radius-lg: 10px;
 }
 
+[data-theme="light"] {
+  --bg: #ffffff;
+  --bg-elev: #f7f7f9;
+  --bg-elev2: #eeeef1;
+  --text: #0c0c0f;
+  --text-hover: #0a0a0b;
+  --text-muted: #5b5b65;
+  --text-faint: #9a9aa2;
+  --border: rgba(0, 0, 0, 0.10);
+  --border-strong: rgba(0, 0, 0, 0.18);
+  --accent: #2f54eb;
+  --accent-fg: #ffffff;
+  --accent-soft: rgba(47, 84, 235, 0.08);
+  --shadow: 0 1px 2px rgba(0, 0, 0, 0.04), 0 16px 40px rgba(0, 0, 0, 0.07);
+  --grid: rgba(0, 0, 0, 0.035);
+}
+
+/* ---- Tailwind theme mapping (inline = follows data-theme at runtime) ---- */
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --color-bg: var(--bg);
+  --color-surface: var(--bg-elev);
+  --color-surface-2: var(--bg-elev2);
+  --color-fg: var(--text);
+  --color-fg-hover: var(--text-hover);
+  --color-fg-muted: var(--text-muted);
+  --color-fg-faint: var(--text-faint);
+  --color-border: var(--border);
+  --color-border-strong: var(--border-strong);
+  --color-accent: var(--accent);
+  --color-accent-fg: var(--accent-fg);
+  --font-display: var(--font-inter);
+  --font-body: var(--font-inter);
+  --font-label: var(--font-jetbrains-mono);
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-inter), system-ui, sans-serif;
+  font-size: 17px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+::selection {
+  background: var(--accent);
+  color: #fff;
+}
+
+/* ---- Animations (ported from the design) ---- */
+@keyframes af-drift {
+  0% { transform: translate(0, 0); }
+  50% { transform: translate(-5%, 4%); }
+  100% { transform: translate(0, 0); }
+}
+@keyframes af-drift2 {
+  0% { transform: translate(0, 0); }
+  50% { transform: translate(6%, -5%); }
+  100% { transform: translate(0, 0); }
+}
+@keyframes af-float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-9px); }
+}
+@keyframes af-pulse {
+  0%, 100% { opacity: 0.35; transform: scale(1); }
+  50% { opacity: 1; transform: scale(1.15); }
+}
+@keyframes af-dash {
+  to { stroke-dashoffset: -32; }
+}
+@keyframes af-scan {
+  0% { transform: translateX(-120%); }
+  100% { transform: translateX(220%); }
+}
+@keyframes af-blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.25; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+  }
 }

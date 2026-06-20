@@ -1,5 +1,6 @@
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { ContactForm } from "@/components/contact/ContactForm";
+import { Container } from "@/components/ui/primitives";
 import { siteConfig } from "@/lib/site";
 
 export default async function ContactPage({
@@ -12,16 +13,21 @@ export default async function ContactPage({
   const t = await getTranslations("contactPage");
 
   return (
-    <section className="mx-auto max-w-2xl px-6 py-24">
-      <h1 className="text-4xl font-semibold tracking-tight">{t("title")}</h1>
-      <p className="mt-6 text-lg text-zinc-600 dark:text-zinc-400">{t("body")}</p>
+    <Container className="max-w-2xl py-24">
+      <h1 className="font-display text-4xl font-bold tracking-[-0.022em]">
+        {t("title")}
+      </h1>
+      <p className="mt-6 text-lg leading-[1.6] text-fg-muted">{t("body")}</p>
       <ContactForm />
-      <p className="mt-10 text-sm text-zinc-500">
+      <p className="mt-10 text-sm text-fg-faint">
         {t("emailLabel")}{" "}
-        <a href={`mailto:${siteConfig.contactEmail}`} className="underline">
+        <a
+          href={`mailto:${siteConfig.contactEmail}`}
+          className="text-accent underline underline-offset-4"
+        >
           {siteConfig.contactEmail}
         </a>
       </p>
-    </section>
+    </Container>
   );
 }

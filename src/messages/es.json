@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "title": "Agenflow — Software con IA por vertical",
-    "description": "Auditamos tu operativa, automatizamos lo repetitivo y construimos el software que tu sector necesita."
+    "title": "Agenflow — Software a medida que hace crecer tu negocio",
+    "description": "Convertimos procesos lentos en crecimiento: integramos automatización e IA a medida para que produzcas más con el mismo equipo."
   },
   "nav": {
     "services": "Servicios",
@@ -9,204 +9,257 @@
     "pricing": "Precios",
     "about": "Nosotros",
     "contact": "Contacto",
-    "cta": "Solicitar diagnóstico"
+    "cta": "Solicitar consultoría"
   },
   "hero": {
-    "title": "Software con IA para sectores que aún funcionan a mano.",
-    "subtitle": "Auditamos tu operativa, automatizamos lo repetitivo y construimos el software que tu sector necesita. Empezamos en semanas, no en meses.",
-    "ctaPrimary": "Solicitar diagnóstico",
-    "ctaSecondary": "Ver servicios"
+    "eyebrow": "Software con IA, especializado por sector",
+    "title": "Convertimos procesos lentos en crecimiento.",
+    "subtitle": "Integramos automatización e IA a medida en tu operación: el mismo equipo, mucho más volumen de negocio. Empezamos con una consultoría y nos quedamos como tu socio de tecnología.",
+    "ctaPrimary": "Solicitar consultoría",
+    "ctaSecondary": "Ver servicios",
+    "proof": [
+      "Especializados en Legal e Inmobiliario",
+      "Producto propio en desarrollo",
+      "RGPD y datos en la UE"
+    ],
+    "mockupLabel": "fincai · en desarrollo"
   },
   "about": {
-    "title": "Construimos software con IA, especializado por vertical.",
-    "body": "Agenflow entra en cada cliente por la puerta de la consultoría y la automatización, y construye el producto que su sector necesita. Crecer sin sistemas no es escalar: es solo un colapso programado."
+    "eyebrow": "Qué es Agenflow",
+    "body": "Entendemos cómo funciona tu negocio y dónde pierde tiempo y margen. Después integramos la automatización y la tecnología a medida que lo hacen más productivo, más rentable y más grande —y lo operamos contigo."
   },
   "services": {
-    "title": "Qué hacemos",
+    "eyebrow": "Servicios",
+    "title": "Primero entendemos. Después construimos lo que te hace crecer.",
     "cta": "Ver todos los servicios",
     "items": [
       {
-        "name": "Consultoría de IA y automatización",
-        "desc": "Auditamos tu operativa y te proponemos una solución concreta. La puerta de entrada.",
+        "name": "Consultoría de IA",
+        "desc": "Analizamos tu operación y encontramos dónde ganar tiempo, margen y capacidad. Sales con un plan claro de qué automatizar y por dónde empezar.",
         "href": "/servicios/consultoria-ia"
       },
       {
-        "name": "Automatización + IA para pymes",
-        "desc": "Eliminamos el trabajo manual repetitivo con automatizaciones e IA.",
+        "name": "Automatización de procesos",
+        "desc": "Construimos e implantamos la solución: conectamos tus herramientas y automatizamos el trabajo que frena al equipo. Resultados en semanas.",
         "href": "/servicios/automatizacion-ia"
       },
       {
-        "name": "Desarrollo de software a medida",
-        "desc": "Construimos SaaS y software a medida de tu sector.",
-        "href": "/servicios/desarrollo-software"
+        "name": "Software a medida por sector",
+        "desc": "Cuando tu sector necesita una herramienta que el mercado no ofrece, la construimos. Productos especializados, listos para crecer contigo.",
+        "href": "/sectores"
       }
     ],
-    "complementary": "Servicio complementario: modernización de tu presencia online.",
+    "complementary": "Mejora de presencia online — la modernizamos para que también capte y venda.",
     "complementaryCta": "Saber más"
   },
   "sectors": {
-    "title": "Sectores",
-    "cta": "Ver todos los sectores",
+    "eyebrow": "Sectores",
+    "title": "Especializados donde más importa.",
     "items": [
       {
+        "label": "Sector 01",
         "name": "Legal",
-        "desc": "Software y automatización para despachos, junto a un despacho partner.",
+        "desc": "Despachos de abogados: automatizamos procesos de auditoría contable para eliminar trabajo manual y reducir errores. Menos horas en tareas repetitivas, más tiempo para el cliente.",
+        "cta": "Explorar sector legal",
         "href": "/sectores/legal"
       },
       {
+        "label": "Sector 02",
         "name": "Inmobiliario y construcción",
-        "desc": "fincai para administradores de fincas y replo para inmobiliarias. Próximo: reformas, instaladores y construcción.",
+        "desc": "Inmobiliarias y administradores de fincas: captación, gestión de comunidades y procesos documentales sin fricción. Aquí construimos fincai, nuestro software para administración de fincas. Obra y reformas, próximamente.",
+        "cta": "Explorar sector",
         "href": "/sectores/inmobiliario-construccion"
       }
     ]
   },
-  "process": {
-    "title": "El Protocolo Agenflow",
+  "security": {
+    "eyebrow": "Seguridad y cumplimiento",
+    "title": "Tus datos, protegidos y bajo control.",
+    "subtitle": "Trabajas con información sensible. Cumplir y protegerla no es un extra: es la base de cómo trabajamos.",
     "items": [
-      { "name": "Diagnóstico y auditoría", "desc": "Identificamos dónde pierdes tiempo y dinero." },
-      { "name": "Arquitectura de la solución", "desc": "Te presentamos el plano antes de implementar." },
-      { "name": "Desarrollo y despliegue", "desc": "Construimos, probamos e integramos." },
-      { "name": "Soporte y optimización", "desc": "Monitorizamos y mejoramos de forma continua." }
+      {
+        "name": "RGPD por diseño",
+        "desc": "Cumplimos el Reglamento europeo desde el primer día, no como un añadido."
+      },
+      {
+        "name": "Datos en la UE",
+        "desc": "Tu información se procesa y almacena en servidores dentro de la Unión Europea."
+      },
+      {
+        "name": "Contrato y confidencialidad",
+        "desc": "Acuerdo de encargado del tratamiento (DPA) y confidencialidad firmados con cada cliente."
+      },
+      {
+        "name": "Cifrado y control de accesos",
+        "desc": "Información cifrada y acceso por mínimo privilegio: solo quien debe accede a lo que debe."
+      }
+    ]
+  },
+  "whyUs": {
+    "eyebrow": "Por qué nosotros",
+    "title": "Sabemos hacerlo. Y lo construimos nosotros.",
+    "items": [
+      {
+        "name": "Hablas con quien lo construye",
+        "desc": "No te atiende un comercial: te atiende quien va a analizar tu operación y diseñar la solución."
+      },
+      {
+        "name": "Construimos producto, no solo presentaciones",
+        "desc": "Desarrollamos nuestro propio software por sector. Lo que proponemos, sabemos construirlo."
+      },
+      {
+        "name": "Foco por sector",
+        "desc": "Especializados en legal e inmobiliario. Conocemos el contexto; no improvisamos."
+      }
     ]
   },
   "pricing": {
-    "title": "Cómo trabajamos",
-    "subtitle": "Por paquetes, según tu punto de partida. Presupuesto a medida tras el diagnóstico.",
-    "cta": "Ver precios"
-  },
-  "trust": {
-    "title": "Por qué confían en nosotros",
-    "body": "Trabajamos con un despacho de abogados partner y construimos productos reales como fincai y replo. Método claro, entornos de prueba y seguridad de datos. Resultados en semanas, no en meses."
+    "eyebrow": "Precios",
+    "title": "Presupuesto a medida. Sin precio de escaparate.",
+    "subtitle": "Cada proyecto se presupuesta sobre su alcance real. Cuéntanos tu caso y te lo damos claro.",
+    "items": [
+      { "name": "Consultoría de IA", "desc": "Entendemos tu operación y te proponemos por dónde empezar." },
+      { "name": "Automatización de procesos", "desc": "Construimos e implantamos la solución a medida." },
+      { "name": "Mejora de presencia online", "desc": "Modernizamos tu web y tu presencia digital." }
+    ],
+    "cta": "Solicitar presupuesto",
+    "viewAll": "Ver precios",
+    "note": "¿Buscas nuestro software por sector? Cada producto tiene su propio plan en su página."
   },
   "finalCta": {
-    "title": "Solicita un diagnóstico de tu operativa",
-    "subtitle": "Te decimos qué automatizar y cómo, sin compromiso.",
-    "cta": "Solicitar diagnóstico"
+    "title": "¿Listo para hacer más con el mismo equipo?",
+    "subtitle": "Una consultoría sin compromiso. Te decimos qué automatizar primero —aunque no trabajes con nosotros.",
+    "cta": "Solicitar consultoría"
   },
   "faq": {
-    "title": "Preguntas frecuentes",
+    "title": "Lo que suelen preguntarnos.",
     "items": [
-      { "q": "¿Qué hace exactamente Agenflow?", "a": "Construimos software con IA especializado por vertical y automatizamos procesos en pymes, empezando por una consultoría." },
-      { "q": "¿En cuánto tiempo veo resultados?", "a": "Trabajamos en semanas, no en meses. El diagnóstico inicial es rápido." },
-      { "q": "¿Con qué sectores trabajáis?", "a": "Legal e inmobiliario/construcción son nuestros sectores, además de automatización para pymes en general." }
+      {
+        "q": "¿Trabajáis con empresas sin equipo técnico?",
+        "a": "Sí. Aportamos toda la parte técnica y nos integramos con tu equipo. Tú pones el conocimiento del negocio; nosotros, la solución."
+      },
+      {
+        "q": "¿Cuánto tarda en verse resultados?",
+        "a": "La consultoría, en días. Las primeras automatizaciones en producción se miden en semanas, no en meses."
+      },
+      {
+        "q": "¿Cómo protegéis nuestros datos?",
+        "a": "Cumplimiento RGPD, datos alojados en la UE, acuerdo de confidencialidad y cifrado con control de accesos. Lo tienes detallado en la sección de seguridad."
+      },
+      {
+        "q": "No tengo claro qué automatizar. ¿Por dónde empiezo?",
+        "a": "Por la consultoría: analizamos tu operación y te decimos exactamente qué automatizar primero y qué impacto esperar."
+      },
+      {
+        "q": "¿Por qué especializados por sector?",
+        "a": "Porque conocer el contexto legal o inmobiliario es la diferencia entre una solución que se usa cada día y una que se queda en el cajón."
+      }
     ]
   },
   "footer": {
-    "tagline": "Software con IA, especializado por vertical.",
+    "tagline": "Software a medida, especializado por sector.",
     "rights": "Todos los derechos reservados.",
     "contact": "Contacto",
     "legalNotice": "Aviso legal",
-    "privacy": "Privacidad"
+    "privacy": "Privacidad",
+    "groups": {
+      "services": "Servicios",
+      "sectors": "Sectores",
+      "company": "Empresa"
+    }
   },
   "servicesHub": {
     "title": "Servicios",
-    "subtitle": "De la auditoría al software. Tres formas de trabajar contigo, una misma lógica: quitar trabajo manual y construir lo que tu negocio necesita."
+    "subtitle": "Primero entendemos tu negocio. Después construimos e implantamos la solución que lo hace crecer."
   },
   "servicePages": {
     "consultoria": {
-      "title": "Consultoría de IA y automatización",
-      "intro": "Auditamos tu operativa, detectamos dónde pierdes tiempo y dinero, y te entregamos un plan claro de qué automatizar y cómo. La puerta de entrada a todo lo demás.",
+      "title": "Consultoría de IA",
+      "intro": "Analizamos tu operación y encontramos dónde puedes ganar tiempo, margen y capacidad. Sales con un plan claro de qué automatizar y por dónde empezar.",
       "points": [
-        "Auditoría de procesos y cuellos de botella",
-        "Oportunidades de IA y automatización priorizadas",
-        "Plan de implementación con impacto estimado"
+        "Análisis de procesos y cuellos de botella",
+        "Oportunidades de automatización priorizadas por impacto",
+        "Plan de implementación con resultados esperados"
       ],
-      "cta": "Solicitar diagnóstico"
+      "cta": "Solicitar consultoría"
     },
     "automatizacion": {
-      "title": "Automatización + IA para pymes",
-      "intro": "Eliminamos el trabajo manual repetitivo conectando tus herramientas y aplicando IA donde aporta. Resultados en semanas, no en meses.",
+      "title": "Automatización de procesos",
+      "intro": "Construimos e implantamos la solución: conectamos tus herramientas y automatizamos el trabajo que frena al equipo. Resultados en semanas, no en meses.",
       "points": [
         "Integración de tus herramientas y datos",
-        "Agentes de IA sobre documentos y datos no estructurados",
-        "Procesos que funcionan solos, con supervisión"
+        "Automatización del trabajo manual repetitivo",
+        "Puesta en producción con seguimiento"
       ],
-      "cta": "Automatizar mi operativa"
+      "cta": "Solicitar presupuesto"
     },
     "desarrollo": {
-      "title": "Desarrollo de software a medida",
-      "intro": "Cuando una automatización no basta, construimos el software. SaaS y herramientas a medida de tu sector, con IA en el núcleo.",
+      "title": "Software a medida por sector",
+      "intro": "Cuando tu sector necesita una herramienta que el mercado no ofrece, la construimos. Producto especializado, listo para crecer contigo.",
       "points": [
-        "Producto a medida, de la arquitectura al despliegue",
-        "IA integrada (Claude/GPT) donde aporta valor",
-        "Entornos de prueba y seguridad de datos"
+        "Producto a medida, del diseño al despliegue",
+        "Especializado en el contexto de tu sector",
+        "Pensado para escalar"
       ],
       "cta": "Hablar de mi proyecto"
     },
     "presenciaOnline": {
-      "title": "Modernización de presencia online",
-      "intro": "¿Tu web o presencia digital se quedó atrás? La actualizamos y modernizamos. Un primer paso sencillo antes de automatizar.",
+      "title": "Mejora de presencia online",
+      "intro": "Modernizamos tu web y tu presencia digital para que también capte y venda. Un primer paso sencillo para empezar a trabajar juntos.",
       "points": [
         "Renovación de webs anticuadas",
         "Mejora de velocidad, SEO y conversión",
         "Una base lista para crecer"
       ],
-      "cta": "Mejorar mi presencia"
+      "cta": "Solicitar presupuesto"
     }
   },
   "sectorsHub": {
     "title": "Sectores",
-    "subtitle": "Construimos software especializado por vertical. Estos son los sectores en los que ya trabajamos."
+    "subtitle": "Construimos software especializado por sector. Estos son los sectores en los que trabajamos."
   },
   "sectorPages": {
     "legal": {
       "title": "Legal",
-      "intro": "Software y automatización para despachos, junto a un despacho de abogados partner que co-define las soluciones con nosotros.",
+      "intro": "Para despachos de abogados. Automatizamos procesos de auditoría contable para eliminar trabajo manual y reducir errores: menos horas en tareas repetitivas, más tiempo para el cliente.",
       "points": [
-        "Automatización de gestión documental",
-        "Agentes de IA sobre expedientes y datos",
-        "Soluciones validadas con un despacho partner"
+        "Automatización de procesos de auditoría contable",
+        "Menos trabajo manual y menos errores",
+        "Más capacidad para el equipo"
       ],
-      "cta": "Solicitar diagnóstico"
+      "cta": "Solicitar consultoría"
     },
     "realEstate": {
       "title": "Inmobiliario y construcción",
-      "intro": "Desarrollamos software para administradores de fincas e inmobiliarias, con la mirada puesta en reformas, instaladores y construcción.",
-      "cta": "Solicitar diagnóstico",
+      "intro": "Para inmobiliarias y administradores de fincas: captación, gestión de comunidades y procesos documentales sin fricción. Obra y reformas, próximamente.",
+      "cta": "Solicitar consultoría",
       "comingSoon": "próximamente",
       "products": {
-        "fincai": "Software con IA para que los administradores de fincas gestionen sus comunidades mucho mejor. Finc, su agente de IA, lo orquesta todo.",
+        "fincai": "Estamos construyendo fincai: software con IA para que los administradores de fincas gestionen sus comunidades mucho mejor.",
         "replo": "Gestión de leads para inmobiliarias: bandeja omnicanal, agente de WhatsApp, voz y gestión de visitas."
       }
     }
   },
   "pricingPage": {
     "title": "Precios",
-    "subtitle": "Trabajamos por paquetes según tu punto de partida. Cuéntanos tu caso y te pasamos un presupuesto a medida.",
-    "note": "Sin precios cerrados: cada proyecto es distinto. Te damos un presupuesto claro tras el diagnóstico.",
-    "packages": [
-      {
-        "name": "Diagnóstico de operativa",
-        "desc": "Auditamos tu operativa y te entregamos un plan de qué automatizar y cómo. El punto de entrada.",
-        "cta": "Solicitar presupuesto"
-      },
-      {
-        "name": "Sprint de automatización + IA",
-        "desc": "Implementación acotada: conectamos herramientas y aplicamos IA para quitar trabajo manual.",
-        "cta": "Solicitar presupuesto"
-      },
-      {
-        "name": "Desarrollo de software / producto",
-        "desc": "Construimos el software a medida de tu sector, con IA en el núcleo.",
-        "cta": "Solicitar presupuesto"
-      },
-      {
-        "name": "Soporte y optimización",
-        "desc": "Acompañamiento continuo: monitorización, mejoras y nuevas automatizaciones.",
-        "cta": "Solicitar presupuesto"
-      }
+    "subtitle": "Trabajamos con presupuesto a medida: cada proyecto se presupuesta sobre su alcance real. Cuéntanos tu caso y te lo damos claro.",
+    "note": "El software a medida por sector tiene su propio modelo y precios en la página de cada producto.",
+    "items": [
+      { "name": "Consultoría de IA", "desc": "Entendemos tu operación y te proponemos por dónde empezar.", "cta": "Solicitar presupuesto" },
+      { "name": "Automatización de procesos", "desc": "Construimos e implantamos la solución a medida.", "cta": "Solicitar presupuesto" },
+      { "name": "Mejora de presencia online", "desc": "Modernizamos tu web y tu presencia digital.", "cta": "Solicitar presupuesto" }
     ]
   },
   "aboutPage": {
     "title": "Nosotros",
-    "intro": "Agenflow nace para llevar la IA y la automatización a sectores que aún funcionan a mano, y para construir el software que necesitan.",
-    "body": "Trabajamos con partners de sector —como un despacho de abogados en legal— para construir productos que de verdad encajan, y desarrollamos nuestros propios SaaS verticales como fincai y replo.",
-    "expertTitle": "Habla con un experto",
-    "expertBody": "No te atiende un comercial: te atiende quien va a diseñar tu solución.",
-    "cta": "Solicitar diagnóstico"
+    "intro": "Ayudamos a los negocios a producir más sin crecer en costes: entendemos su operación e integramos la automatización y la tecnología que la hacen más rápida, rentable y escalable.",
+    "body": "Trabajamos con foco en legal e inmobiliario y desarrollamos nuestro propio software por sector. No te atiende un comercial: te atiende quien va a analizar tu operación y construir la solución.",
+    "expertTitle": "Hablas con quien lo construye",
+    "expertBody": "Sin intermediarios: la persona que diseña tu solución es la que se sienta contigo desde el primer día.",
+    "cta": "Solicitar consultoría"
   },
   "contactPage": {
-    "title": "Hablemos de tu operativa",
+    "title": "Hablemos de tu operación",
     "body": "Cuéntanos qué quieres mejorar y te proponemos por dónde empezar.",
     "emailLabel": "O escríbenos a",
     "form": {

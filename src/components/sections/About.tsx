@@ -1,14 +1,20 @@
 import { useTranslations } from "next-intl";
+import { Container, Eyebrow } from "@/components/ui/primitives";
+import { Reveal } from "@/components/motion/Reveal";
 
 export function About() {
   const t = useTranslations("about");
 
   return (
-    <section className="mx-auto max-w-3xl px-6 py-20 text-center">
-      <h2 className="text-3xl font-semibold tracking-tight sm:text-4xl">
-        {t("title")}
-      </h2>
-      <p className="mt-6 text-lg text-zinc-600 dark:text-zinc-400">{t("body")}</p>
+    <section>
+      <Container className="max-w-[1100px] py-[clamp(88px,12vw,168px)]">
+        <Reveal>
+          <Eyebrow>{t("eyebrow")}</Eyebrow>
+          <p className="mt-5 font-display text-[clamp(28px,3.8vw,46px)] font-bold leading-[1.18] tracking-[-0.022em] text-balance">
+            {t("body")}
+          </p>
+        </Reveal>
+      </Container>
     </section>
   );
 }

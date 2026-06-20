@@ -14,14 +14,16 @@ export function DetailPage({
   children?: React.ReactNode;
 }) {
   return (
-    <section className="mx-auto max-w-3xl px-6 py-24">
-      <h1 className="text-4xl font-semibold tracking-tight">{title}</h1>
-      <p className="mt-6 text-lg text-zinc-600 dark:text-zinc-400">{intro}</p>
+    <section className="mx-auto max-w-3xl px-[clamp(20px,5vw,48px)] py-24">
+      <h1 className="font-display text-4xl font-bold tracking-[-0.022em]">
+        {title}
+      </h1>
+      <p className="mt-6 text-lg leading-[1.6] text-fg-muted">{intro}</p>
       {points && points.length > 0 && (
         <ul className="mt-8 space-y-3">
           {points.map((p, i) => (
-            <li key={i} className="flex gap-3 text-zinc-700 dark:text-zinc-300">
-              <span aria-hidden className="text-zinc-400">
+            <li key={i} className="flex gap-3 text-fg">
+              <span aria-hidden className="text-accent">
                 —
               </span>
               <span>{p}</span>
@@ -33,7 +35,7 @@ export function DetailPage({
       {cta && (
         <Link
           href="/contacto"
-          className="mt-10 inline-block rounded-full bg-foreground px-6 py-3 font-medium text-background"
+          className="mt-10 inline-block rounded-[var(--radius)] bg-accent px-6 py-3 font-medium text-accent-fg transition hover:-translate-y-0.5"
         >
           {cta}
         </Link>

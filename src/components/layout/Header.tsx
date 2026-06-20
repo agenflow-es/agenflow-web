@@ -1,32 +1,128 @@
+"use client";
+
+import { useState } from "react";
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
+import { Container, Logo } from "@/components/ui/primitives";
 import { LocaleSwitcher } from "./LocaleSwitcher";
+import { ThemeToggle } from "@/components/theme/ThemeToggle";
+
+type NavItem = { name: string; href: string };
+
+function Dropdown({
+  label,
+  items,
+  footerHref,
+  footerLabel,
+}: {
+  label: string;
+  items: NavItem[];
+  footerHref: string;
+  footerLabel: string;
+}) {
+  const [open, setOpen] = useState(false);
+  return (
+    <span
+      className="relative"
+      onMouseEnter={() => setOpen(true)}
+      onMouseLeave={() => setOpen(false)}
+    >
+      <button
+        type="button"
+        className="inline-flex items-center gap-1.5 px-3 py-2.5 text-[15px] font-medium text-fg-muted transition hover:text-fg-hover"
+      >
+        {label}
+        <span className="text-[10px] opacity-70">▾</span>
+      </button>
+      {open && (
+        <div className="absolute left-0 top-[calc(100%-4px)] min-w-[260px] rounded-[var(--radius-lg)] border border-border bg-surface p-2 shadow-[var(--shadow)]">
+          {items.map((it, i) => (
+            <Link
+              key={i}
+              href={it.href}
+              className="block rounded-[var(--radius)] px-3 py-2.5 text-[14.5px] font-semibold text-fg transition hover:bg-surface-2"
+            >
+              {it.name}
+            </Link>
+          ))}
+          <Link
+            href={footerHref}
+            className="mt-1 block rounded-[var(--radius)] px-3 py-2.5 text-[13px] font-semibold text-accent transition hover:bg-surface-2"
+          >
+            {footerLabel} →
+          </Link>
+        </div>
+      )}
+    </span>
+  );
+}
 
 export function Header() {
-  const t = useTranslations("nav");
+  const nav = useTranslations("nav");
+  const tServices = useTranslations("services");
+  const tSectors = useTranslations("sectors");
+  const serviceItems = tServices.raw("items") as NavItem[];
+  const sectorItems = tSectors.raw("items") as NavItem[];
 
   return (
-    <header className="sticky top-0 z-50 border-b border-black/5 bg-background/80 backdrop-blur dark:border-white/10">
-      <div className="mx-auto flex max-w-5xl items-center justify-between px-6 py-4">
-        <Link href="/" className="font-semibold tracking-tight">
-          Agenflow
+    <header
+      className="sticky top-0 z-50 border-b border-border"
+      style={{
+        background: "color-mix(in srgb, var(--bg) 78%, transparent)",
+        backdropFilter: "blur(14px)",
+        WebkitBackdropFilter: "blur(14px)",
+      }}
+    >
+      <Container className="flex h-[68px] items-center justify-between">
+        <Link
+          href="/"
+          aria-label="Agenflow"
+          className="flex items-center gap-2.5 text-fg"
+        >
+          <Logo />
+          <span className="font-display text-[20px] font-semibold tracking-[-0.02em]">
+            agenflow
+          </span>
         </Link>
-        <nav className="hidden items-center gap-6 text-sm md:flex">
-          <Link href="/servicios">{t("services")}</Link>
-          <Link href="/sectores">{t("sectors")}</Link>
-          <Link href="/precios">{t("pricing")}</Link>
-          <Link href="/nosotros">{t("about")}</Link>
+
+        <nav className="hidden items-center gap-1 lg:flex">
+          <Dropdown
+            label={nav("services")}
+            items={serviceItems}
+            footerHref="/servicios"
+            footerLabel={tServices("cta")}
+          />
+          <Dropdown
+            label={nav("sectors")}
+            items={sectorItems}
+            footerHref="/sectores"
+            footerLabel={nav("sectors")}
+          />
+          <Link
+            href="/precios"
+            className="px-3 py-2.5 text-[15px] font-medium text-fg-muted transition hover:text-fg-hover"
+          >
+            {nav("pricing")}
+          </Link>
+          <Link
+            href="/nosotros"
+            className="px-3 py-2.5 text-[15px] font-medium text-fg-muted transition hover:text-fg-hover"
+          >
+            {nav("about")}
+          </Link>
         </nav>
-        <div className="flex items-center gap-3">
+
+        <div className="flex items-center gap-2.5">
+          <ThemeToggle />
           <LocaleSwitcher />
           <Link
             href="/contacto"
-            className="rounded-full bg-foreground px-4 py-2 text-sm font-medium text-background"
+            className="inline-flex rounded-[var(--radius)] bg-accent px-[18px] py-2.5 text-[14px] font-semibold text-accent-fg transition hover:-translate-y-0.5"
           >
-            {t("cta")}
+            {nav("cta")}
           </Link>
         </div>
-      </div>
+      </Container>
     </header>
   );
 }

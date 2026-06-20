@@ -1,7 +1,8 @@
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
+import { Container } from "@/components/ui/primitives";
 
-type SectorItem = { name: string; desc: string; href: string };
+type Item = { name: string; desc: string; href: string };
 
 export default async function SectoresPage({
   params,
@@ -12,12 +13,14 @@ export default async function SectoresPage({
   setRequestLocale(locale);
   const t = await getTranslations("sectorsHub");
   const tsec = await getTranslations("sectors");
-  const items = tsec.raw("items") as SectorItem[];
+  const items = tsec.raw("items") as Item[];
 
   return (
-    <section className="mx-auto max-w-5xl px-6 py-24">
-      <h1 className="text-4xl font-semibold tracking-tight">{t("title")}</h1>
-      <p className="mt-6 max-w-2xl text-lg text-zinc-600 dark:text-zinc-400">
+    <Container className="py-24">
+      <h1 className="font-display text-4xl font-bold tracking-[-0.022em]">
+        {t("title")}
+      </h1>
+      <p className="mt-5 max-w-[60ch] text-lg leading-[1.6] text-fg-muted">
         {t("subtitle")}
       </p>
       <div className="mt-12 grid gap-6 sm:grid-cols-2">
@@ -25,15 +28,13 @@ export default async function SectoresPage({
           <Link
             key={i}
             href={item.href}
-            className="group rounded-2xl border border-black/10 p-8 transition hover:border-foreground dark:border-white/15"
+            className="group rounded-[var(--radius-lg)] border border-border bg-surface p-8 shadow-[var(--shadow)] transition hover:-translate-y-1 hover:border-accent"
           >
-            <h2 className="text-xl font-medium">{item.name}</h2>
-            <p className="mt-2 text-sm text-zinc-600 dark:text-zinc-400">
-              {item.desc}
-            </p>
+            <h2 className="font-display text-xl font-semibold">{item.name}</h2>
+            <p className="mt-2 leading-[1.55] text-fg-muted">{item.desc}</p>
           </Link>
         ))}
       </div>
-    </section>
+    </Container>
   );
 }
