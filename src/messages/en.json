@@ -208,6 +208,65 @@
   "contactPage": {
     "title": "Let's talk about your operations",
     "body": "Tell us what you want to improve and we'll suggest where to start.",
-    "emailLabel": "Or email us at"
+    "emailLabel": "Or email us at",
+    "form": {
+      "name": "Name",
+      "email": "Email",
+      "company": "Company (optional)",
+      "message": "What do you want to improve?",
+      "submit": "Send message",
+      "sending": "Sending…",
+      "success": "Thanks! We'll get back to you shortly.",
+      "error": "Couldn't send. Try again or email us.",
+      "errors": {
+        "name": "Enter your name.",
+        "email": "Enter a valid email.",
+        "message": "Tell us a bit more (min. 10 characters)."
+      }
+    }
+  },
+  "legal": {
+    "draftNotice": "Draft — text pending legal review and final company details.",
+    "pendingContent": "Content pending.",
+    "company": {
+      "label": "Data controller",
+      "name": "[Legal name / sole trader]",
+      "taxId": "[Tax ID]",
+      "address": "[Address]",
+      "email": "hola@agenflow.es"
+    },
+    "privacy": {
+      "title": "Privacy policy",
+      "intro": "How we handle your personal data when you contact Agenflow or use this site.",
+      "sections": [
+        "Data controller",
+        "Data we collect",
+        "Purpose",
+        "Legal basis",
+        "Retention",
+        "Your rights",
+        "Contact"
+      ]
+    },
+    "legalNotice": {
+      "title": "Legal notice",
+      "intro": "Legal information about the owner of this website and the terms of use.",
+      "sections": [
+        "Site owner",
+        "Purpose",
+        "Intellectual property",
+        "Liability",
+        "Applicable law"
+      ]
+    },
+    "cookies": {
+      "title": "Cookie policy",
+      "intro": "Which cookies this site uses and how you can manage them.",
+      "sections": [
+        "What cookies are",
+        "Cookies we use",
+        "How to manage cookies"
+      ]
+    }
   }
 }

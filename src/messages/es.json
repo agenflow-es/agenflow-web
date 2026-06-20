@@ -208,6 +208,65 @@
   "contactPage": {
     "title": "Hablemos de tu operativa",
     "body": "Cuéntanos qué quieres mejorar y te proponemos por dónde empezar.",
-    "emailLabel": "O escríbenos a"
+    "emailLabel": "O escríbenos a",
+    "form": {
+      "name": "Nombre",
+      "email": "Email",
+      "company": "Empresa (opcional)",
+      "message": "¿Qué quieres mejorar?",
+      "submit": "Enviar mensaje",
+      "sending": "Enviando…",
+      "success": "¡Gracias! Te respondemos en breve.",
+      "error": "No se pudo enviar. Inténtalo de nuevo o escríbenos por email.",
+      "errors": {
+        "name": "Escribe tu nombre.",
+        "email": "Introduce un email válido.",
+        "message": "Cuéntanos un poco más (mín. 10 caracteres)."
+      }
+    }
+  },
+  "legal": {
+    "draftNotice": "Borrador — texto pendiente de revisión legal y de los datos definitivos de la empresa.",
+    "pendingContent": "Contenido pendiente de redacción.",
+    "company": {
+      "label": "Responsable",
+      "name": "[Razón social / autónomo]",
+      "taxId": "[NIF]",
+      "address": "[Dirección]",
+      "email": "hola@agenflow.es"
+    },
+    "privacy": {
+      "title": "Política de privacidad",
+      "intro": "Cómo tratamos tus datos personales cuando contactas con Agenflow o usas esta web.",
+      "sections": [
+        "Responsable del tratamiento",
+        "Datos que recopilamos",
+        "Finalidad",
+        "Base legal",
+        "Conservación",
+        "Tus derechos",
+        "Contacto"
+      ]
+    },
+    "legalNotice": {
+      "title": "Aviso legal",
+      "intro": "Información legal sobre el titular de este sitio web y las condiciones de uso.",
+      "sections": [
+        "Titular del sitio",
+        "Objeto",
+        "Propiedad intelectual",
+        "Responsabilidad",
+        "Legislación aplicable"
+      ]
+    },
+    "cookies": {
+      "title": "Política de cookies",
+      "intro": "Qué cookies utiliza esta web y cómo puedes gestionarlas.",
+      "sections": [
+        "Qué son las cookies",
+        "Cookies que utilizamos",
+        "Cómo gestionar las cookies"
+      ]
+    }
   }
 }
