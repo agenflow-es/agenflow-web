@@ -82,11 +82,11 @@ export function Header() {
         WebkitBackdropFilter: "blur(14px)",
       }}
     >
-      <Container className="flex h-[68px] items-center justify-between">
+      <Container className="grid h-[68px] grid-cols-[1fr_auto_1fr] items-center gap-4">
         <Link
           href="/"
           aria-label="Agenflow"
-          className="flex items-center gap-2.5 text-fg"
+          className="flex items-center gap-2.5 justify-self-start text-fg"
         >
           <Logo />
           <span className="font-wordmark text-[21px] font-semibold tracking-[-0.03em]">
@@ -94,7 +94,7 @@ export function Header() {
           </span>
         </Link>
 
-        <nav className="hidden items-center gap-1 lg:flex">
+        <nav className="hidden items-center justify-center gap-1 lg:flex">
           <Dropdown label={nav("services")} items={serviceItems} />
           <Dropdown
             label={nav("sectors")}
@@ -116,7 +116,7 @@ export function Header() {
           </Link>
         </nav>
 
-        <div className="flex items-center gap-2.5">
+        <div className="flex items-center justify-self-end gap-2.5">
           <ThemeToggle />
           <LocaleSwitcher />
           <Link

@@ -19,10 +19,10 @@
     "ctaSecondary": "See services",
     "proof": [
       "Specialized in Legal & Real Estate",
-      "Own product in development",
+      "Own software by sector",
       "GDPR & EU-hosted data"
     ],
-    "mockupLabel": "fincai · in development"
+    "mockupLabel": "fincai · property management"
   },
   "about": {
     "eyebrow": "What Agenflow is",
@@ -66,7 +66,7 @@
       {
         "label": "Sector 02",
         "name": "Real estate & construction",
-        "desc": "Real estate agencies and property managers: lead capture, community management and document workflows without friction. Here we're building fincai, our software for property management. Construction and renovations, coming soon.",
+        "desc": "Real estate agencies and property managers: lead capture, community management and document workflows without friction. We build fincai, our AI software for property management.",
         "cta": "Explore sector",
         "href": "/sectores/inmobiliario-construccion"
       }
@@ -355,30 +355,27 @@
       ]
     },
     "showcase": {
-      "eyebrow": "What we're building",
-      "title": "Products by sector, in motion.",
-      "intro": "This is what we have in hand today. We present them as they take shape —no smoke.",
+      "eyebrow": "Our products by sector",
+      "title": "Our own software, specialized by sector.",
+      "intro": "Each product solves the real work of one type of business, with AI inside.",
       "cta": "See sector",
       "items": [
         {
           "name": "fincai",
           "sector": "Property management",
           "desc": "AI software so property managers can run their communities far better.",
-          "status": "In development",
           "href": "/sectores/inmobiliario-construccion"
         },
         {
           "name": "replo",
           "sector": "Real estate agencies",
           "desc": "End-to-end lead management: omnichannel inbox, WhatsApp agent, voice and visit scheduling.",
-          "status": "In development",
           "href": "/sectores/inmobiliario-construccion"
         },
         {
           "name": "Legal sector",
           "sector": "Law firms",
           "desc": "A product for firms, built together with a partner firm. We'll tell the story once it's ready.",
-          "status": "In the works",
           "href": "/sectores/legal"
         }
       ]
@@ -409,7 +406,7 @@
       "eyebrow": "Two ways to start",
       "user": {
         "title": "Are you in one of these sectors?",
-        "body": "Discover the product we're building for your business and join the list of the first to use it.",
+        "body": "Discover the product for your business and join the list of the first to use it.",
         "cta": "See sectors"
       },
       "partner": {
@@ -607,16 +604,137 @@
         "More capacity for the team"
       ],
       "cta": "Request a consultation"
+    }
+  },
+  "inmobiliarioPage": {
+    "eyebrow": "Sector · Real estate & construction",
+    "title": "Our own technology for real estate agencies and property managers.",
+    "subtitle": "We know how the sector works and we build the AI software it's missing: to capture and sell more, and to manage communities without friction.",
+    "cta": "Talk about your case",
+    "problem": {
+      "eyebrow": "The sector's day-to-day",
+      "title": "Too much time on tasks that could run themselves.",
+      "items": [
+        "Leads coming in through a dozen channels and going cold before anyone replies.",
+        "Visits, calls and WhatsApps impossible to track by hand.",
+        "Communities with documents, incidents and meetings that eat up hours."
+      ]
     },
-    "realEstate": {
-      "title": "Real estate & construction",
-      "intro": "For real estate agencies and property managers: lead capture, community management and document workflows without friction. Construction and renovations, coming soon.",
-      "cta": "Request a consultation",
-      "comingSoon": "coming soon",
-      "products": {
-        "fincai": "We're building fincai: AI software so property managers can run their communities far better.",
-        "replo": "Lead management for real estate agencies: omnichannel inbox, WhatsApp agent, voice and visit scheduling."
-      }
+    "pains": {
+      "eyebrow": "Sector pains, solved",
+      "title": "What eats your day, done on its own.",
+      "intro": "We know the real bottlenecks of each business in the sector —and we build to clear them out of the way.",
+      "groups": [
+        {
+          "name": "Real estate agencies",
+          "items": [
+            {
+              "pain": "A lead waits hours and goes to whichever agency replies first.",
+              "fix": "A WhatsApp and voice agent that answers instantly, any time, and books the visit."
+            },
+            {
+              "pain": "Contacts from Idealista, Fotocasa, web and calls that slip through the cracks.",
+              "fix": "Omnichannel inbox: every opportunity in one place, with follow-up, none lost."
+            },
+            {
+              "pain": "Visits, calls and reminders impossible to juggle by hand.",
+              "fix": "Automatic scheduling and follow-up: the system remembers, confirms and nudges for you."
+            }
+          ]
+        },
+        {
+          "name": "Property management",
+          "items": [
+            {
+              "pain": "Every community incident is an email, a call and a loose sheet of paper.",
+              "fix": "AI logs, classifies and follows every incident until it's closed."
+            },
+            {
+              "pain": "Finding a document or prepping a meeting eats the whole morning.",
+              "fix": "Each community's documents, organized and queryable in plain language."
+            },
+            {
+              "pain": "Answering residents the same thing a hundred times.",
+              "fix": "Automatic answers to frequent questions, with the right info for their community."
+            }
+          ]
+        }
+      ]
+    },
+    "products": {
+      "eyebrow": "What we're building",
+      "title": "Our software for the sector.",
+      "intro": "Our own software for the sector: specialized, with AI inside.",
+      "items": [
+        {
+          "name": "fincai",
+          "for": "Property management",
+          "desc": "AI software so property managers can run their communities far better: an agent that orchestrates documents, incidents and communication.",
+          "cta": "Discover fincai",
+          "href": "https://fincai.es",
+          "external": true
+        },
+        {
+          "name": "replo",
+          "for": "Real estate agencies",
+          "desc": "End-to-end lead management: omnichannel inbox, WhatsApp agent, voice and visit scheduling. So you reply first and sell more.",
+          "status": "Coming soon",
+          "cta": "Notify me at launch",
+          "href": "/contacto",
+          "external": false
+        }
+      ]
+    },
+    "construction": {
+      "eyebrow": "Construction & renovation",
+      "title": "The hard part isn't the build: it's everything around it.",
+      "intro": "Coordinating, documenting and following up eat the hours that should go into building. We automate that with tailored consulting and automation.",
+      "items": [
+        {
+          "pain": "Site reports and progress in WhatsApp and on paper.",
+          "fix": "Capture and centralize the daily report: from the site to the dashboard, no manual collecting."
+        },
+        {
+          "pain": "Coordinating trades and subcontractors over endless calls.",
+          "fix": "Automatic alerts, confirmations and follow-up so each trade shows up when it should."
+        },
+        {
+          "pain": "Measurements, certifications and cost overruns spotted too late.",
+          "fix": "Cost and progress up to date: you see the deviation before it hurts."
+        },
+        {
+          "pain": "Quality and safety documentation scattered everywhere.",
+          "fix": "All site documentation organized and one click away, ready for any audit."
+        }
+      ],
+      "note": "We start with what weighs on you most and leave it working."
+    },
+    "segments": {
+      "eyebrow": "Who it's for",
+      "title": "If you see yourself here, we speak your language.",
+      "items": [
+        {
+          "name": "Neighborhood agency",
+          "desc": "Few hands, a thousand tasks. Automate capture and follow-up without hiring."
+        },
+        {
+          "name": "Agency with several agents",
+          "desc": "So no lead gets lost across the team and every agent performs better."
+        },
+        {
+          "name": "Property manager",
+          "desc": "Manage more communities with the same structure, without drowning in paperwork."
+        },
+        {
+          "name": "Builder or renovator",
+          "desc": "Fewer hours on coordination and site reports; more on building."
+        }
+      ]
+    },
+    "finalCta": {
+      "title": "Work in the sector? Let's talk.",
+      "subtitle": "Tell us how you work today and we'll tell you what can be improved —and whether one of our products fits.",
+      "cta": "Talk about your case"
     }
   },
   "pricingPage": {

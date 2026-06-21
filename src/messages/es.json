@@ -19,10 +19,10 @@
     "ctaSecondary": "Ver servicios",
     "proof": [
       "Especializados en Legal e Inmobiliario",
-      "Producto propio en desarrollo",
+      "Software propio por sector",
       "RGPD y datos en la UE"
     ],
-    "mockupLabel": "fincai · en desarrollo"
+    "mockupLabel": "fincai · administración de fincas"
   },
   "about": {
     "eyebrow": "Qué es Agenflow",
@@ -66,7 +66,7 @@
       {
         "label": "Sector 02",
         "name": "Inmobiliario y construcción",
-        "desc": "Inmobiliarias y administradores de fincas: captación, gestión de comunidades y procesos documentales sin fricción. Aquí construimos fincai, nuestro software para administración de fincas. Obra y reformas, próximamente.",
+        "desc": "Inmobiliarias y administradores de fincas: captación, gestión de comunidades y procesos documentales sin fricción. Construimos fincai, nuestro software con IA para administración de fincas.",
         "cta": "Explorar sector",
         "href": "/sectores/inmobiliario-construccion"
       }
@@ -355,30 +355,27 @@
       ]
     },
     "showcase": {
-      "eyebrow": "Lo que estamos construyendo",
-      "title": "Productos por sector, en marcha.",
-      "intro": "Esto es lo que tenemos hoy entre manos. Los presentamos según van tomando forma —sin humo.",
+      "eyebrow": "Nuestros productos por sector",
+      "title": "Software propio, especializado por sector.",
+      "intro": "Cada producto resuelve el trabajo real de un tipo de negocio, con la IA dentro.",
       "cta": "Ver sector",
       "items": [
         {
           "name": "fincai",
           "sector": "Administración de fincas",
           "desc": "Software con IA para que los administradores gestionen sus comunidades mucho mejor.",
-          "status": "En desarrollo",
           "href": "/sectores/inmobiliario-construccion"
         },
         {
           "name": "replo",
           "sector": "Inmobiliarias",
           "desc": "Gestión de leads de punta a punta: bandeja omnicanal, agente de WhatsApp, voz y gestión de visitas.",
-          "status": "En desarrollo",
           "href": "/sectores/inmobiliario-construccion"
         },
         {
           "name": "Sector legal",
           "sector": "Despachos",
           "desc": "Producto para despacho desarrollado junto a un despacho partner. Lo contaremos en cuanto esté.",
-          "status": "En preparación",
           "href": "/sectores/legal"
         }
       ]
@@ -409,7 +406,7 @@
       "eyebrow": "Dos formas de empezar",
       "user": {
         "title": "¿Eres de uno de estos sectores?",
-        "body": "Conoce el producto que estamos construyendo para tu negocio y entra en la lista de los primeros en usarlo.",
+        "body": "Conoce el producto para tu negocio y entra en la lista de los primeros en usarlo.",
         "cta": "Ver sectores"
       },
       "partner": {
@@ -607,16 +604,137 @@
         "Más capacidad para el equipo"
       ],
       "cta": "Solicitar consultoría"
+    }
+  },
+  "inmobiliarioPage": {
+    "eyebrow": "Sector · Inmobiliario y construcción",
+    "title": "Tecnología propia para inmobiliarias y administradores de fincas.",
+    "subtitle": "Conocemos cómo trabaja el sector y construimos el software con IA que le falta: para captar y vender más, y para gestionar comunidades sin fricción.",
+    "cta": "Hablar de tu caso",
+    "problem": {
+      "eyebrow": "El día a día del sector",
+      "title": "Demasiado tiempo en tareas que podrían ir solas.",
+      "items": [
+        "Leads que entran por mil canales y se enfrían antes de que alguien responda.",
+        "Visitas, llamadas y WhatsApps imposibles de seguir a mano.",
+        "Comunidades con documentación, incidencias y juntas que devoran horas."
+      ]
     },
-    "realEstate": {
-      "title": "Inmobiliario y construcción",
-      "intro": "Para inmobiliarias y administradores de fincas: captación, gestión de comunidades y procesos documentales sin fricción. Obra y reformas, próximamente.",
-      "cta": "Solicitar consultoría",
-      "comingSoon": "próximamente",
-      "products": {
-        "fincai": "Estamos construyendo fincai: software con IA para que los administradores de fincas gestionen sus comunidades mucho mejor.",
-        "replo": "Gestión de leads para inmobiliarias: bandeja omnicanal, agente de WhatsApp, voz y gestión de visitas."
-      }
+    "pains": {
+      "eyebrow": "Dolores del sector, resueltos",
+      "title": "Lo que te roba el día, hecho solo.",
+      "intro": "Conocemos los atascos reales de cada negocio del sector —y construimos para quitarlos de en medio.",
+      "groups": [
+        {
+          "name": "Inmobiliarias",
+          "items": [
+            {
+              "pain": "Un lead espera horas y se va a la agencia que responde antes.",
+              "fix": "Agente de WhatsApp y voz que contesta al instante, a cualquier hora, y agenda la visita."
+            },
+            {
+              "pain": "Contactos por Idealista, Fotocasa, web y llamadas que se pierden entre todos.",
+              "fix": "Bandeja omnicanal: cada oportunidad en un sitio y con seguimiento, sin que se cuele ninguna."
+            },
+            {
+              "pain": "Visitas, llamadas y recordatorios imposibles de cuadrar a mano.",
+              "fix": "Agenda y seguimiento automáticos: el sistema recuerda, confirma y avisa por ti."
+            }
+          ]
+        },
+        {
+          "name": "Administración de fincas",
+          "items": [
+            {
+              "pain": "Cada incidencia de una comunidad es un email, una llamada y un papel suelto.",
+              "fix": "La IA registra, clasifica y sigue cada incidencia hasta cerrarla."
+            },
+            {
+              "pain": "Encontrar un documento o preparar una junta se lleva la mañana.",
+              "fix": "Documentación de cada comunidad ordenada y consultable preguntando en lenguaje natural."
+            },
+            {
+              "pain": "Responder a los vecinos lo mismo cien veces.",
+              "fix": "Respuestas automáticas a las dudas frecuentes, con la info correcta de su comunidad."
+            }
+          ]
+        }
+      ]
+    },
+    "products": {
+      "eyebrow": "Lo que construimos",
+      "title": "Nuestro software para el sector.",
+      "intro": "Software propio para el sector: especializado y con la IA dentro.",
+      "items": [
+        {
+          "name": "fincai",
+          "for": "Administración de fincas",
+          "desc": "Software con IA para que los administradores gestionen sus comunidades mucho mejor: un agente que orquesta documentación, incidencias y comunicación.",
+          "cta": "Conoce fincai",
+          "href": "https://fincai.es",
+          "external": true
+        },
+        {
+          "name": "replo",
+          "for": "Inmobiliarias",
+          "desc": "Gestión de leads de punta a punta: bandeja omnicanal, agente de WhatsApp, voz y gestión de visitas. Para responder el primero y vender más.",
+          "status": "Muy pronto",
+          "cta": "Avísame del lanzamiento",
+          "href": "/contacto",
+          "external": false
+        }
+      ]
+    },
+    "construction": {
+      "eyebrow": "Construcción y reformas",
+      "title": "Lo que más cuesta no es la obra: es todo lo que la rodea.",
+      "intro": "Coordinar, documentar y hacer seguimiento se llevan las horas que deberían ir a construir. Eso lo automatizamos con consultoría y automatización a medida.",
+      "items": [
+        {
+          "pain": "Partes de obra y avances en WhatsApp y papel.",
+          "fix": "Captura y centraliza el parte diario: del tajo al panel, sin recopilar a mano."
+        },
+        {
+          "pain": "Coordinar gremios y subcontratas a base de llamadas.",
+          "fix": "Avisos, confirmaciones y seguimiento automáticos para que cada oficio llegue cuando toca."
+        },
+        {
+          "pain": "Mediciones, certificaciones y desviaciones que se ven tarde.",
+          "fix": "Coste y avance al día: ves la desviación antes de que duela."
+        },
+        {
+          "pain": "Documentación de calidad y PRL dispersa.",
+          "fix": "Toda la documentación de obra ordenada y a un clic, lista para cualquier auditoría."
+        }
+      ],
+      "note": "Empezamos por lo que más te pesa y lo dejamos funcionando."
+    },
+    "segments": {
+      "eyebrow": "Para quién es",
+      "title": "Si te reconoces aquí, hablamos tu idioma.",
+      "items": [
+        {
+          "name": "Inmobiliaria de barrio",
+          "desc": "Pocas manos, mil tareas. Automatizas captación y seguimiento sin tener que contratar."
+        },
+        {
+          "name": "Agencia con varios agentes",
+          "desc": "Que ningún lead se pierda entre el equipo y que cada agente rinda más."
+        },
+        {
+          "name": "Administrador de fincas",
+          "desc": "Gestiona más comunidades con la misma estructura, sin ahogarte en papeleo."
+        },
+        {
+          "name": "Constructora o reformista",
+          "desc": "Menos horas en coordinación y parte de obra; más en construir."
+        }
+      ]
+    },
+    "finalCta": {
+      "title": "¿Trabajas en el sector? Hablemos.",
+      "subtitle": "Cuéntanos cómo trabajas hoy y te decimos qué se puede mejorar —y si encaja alguno de nuestros productos.",
+      "cta": "Hablar de tu caso"
     }
   },
   "pricingPage": {

@@ -10,7 +10,7 @@ type Product = {
   name: string;
   sector: string;
   desc: string;
-  status: string;
+  status?: string;
   href: string;
 };
 type Reason = { name: string; desc: string };
@@ -148,10 +148,12 @@ export default async function DesarrolloPage({
                     <span className="font-display text-[22px] font-semibold lowercase">
                       {p.name}
                     </span>
-                    <span className="inline-flex shrink-0 items-center gap-1.5 rounded-full border border-border px-2.5 py-1 font-label text-[10.5px] uppercase tracking-[0.08em] text-fg-muted">
-                      <span aria-hidden className="h-1.5 w-1.5 rounded-full bg-accent" />
-                      {p.status}
-                    </span>
+                    {p.status && (
+                      <span className="inline-flex shrink-0 items-center gap-1.5 rounded-full border border-border px-2.5 py-1 font-label text-[10.5px] uppercase tracking-[0.08em] text-fg-muted">
+                        <span aria-hidden className="h-1.5 w-1.5 rounded-full bg-accent" />
+                        {p.status}
+                      </span>
+                    )}
                   </div>
                   <span className="mt-1 font-label text-[12px] uppercase tracking-[0.1em] text-accent">
                     {p.sector}
