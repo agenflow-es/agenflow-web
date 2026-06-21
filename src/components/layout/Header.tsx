@@ -6,6 +6,7 @@ import { Link } from "@/i18n/navigation";
 import { Container, Logo } from "@/components/ui/primitives";
 import { LocaleSwitcher } from "./LocaleSwitcher";
 import { ThemeToggle } from "@/components/theme/ThemeToggle";
+import { MobileMenu } from "./MobileMenu";
 
 type NavItem = { name: string; href: string };
 
@@ -116,10 +117,23 @@ export function Header() {
           <LocaleSwitcher />
           <Link
             href="/contacto?reason=consultoria"
-            className="inline-flex rounded-[var(--radius)] bg-accent px-[18px] py-2.5 text-[14px] font-semibold text-accent-fg transition hover:-translate-y-0.5"
+            className="hidden rounded-[var(--radius)] bg-accent px-[18px] py-2.5 text-[14px] font-semibold text-accent-fg transition hover:-translate-y-0.5 lg:inline-flex"
           >
             {nav("cta")}
           </Link>
+          <MobileMenu
+            serviceItems={serviceItems}
+            sectorItems={sectorItems}
+            labels={{
+              services: nav("services"),
+              sectors: nav("sectors"),
+              pricing: nav("pricing"),
+              about: nav("about"),
+              cta: nav("cta"),
+              open: nav("menuOpen"),
+              close: nav("menuClose"),
+            }}
+          />
         </div>
       </Container>
     </header>

@@ -9,7 +9,9 @@
     "pricing": "Pricing",
     "about": "About",
     "contact": "Contact",
-    "cta": "Request a consultation"
+    "cta": "Request a consultation",
+    "menuOpen": "Open menu",
+    "menuClose": "Close menu"
   },
   "hero": {
     "eyebrow": "AI software, specialized by sector",

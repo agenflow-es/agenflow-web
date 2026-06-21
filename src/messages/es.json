@@ -9,7 +9,9 @@
     "pricing": "Precios",
     "about": "Nosotros",
     "contact": "Contacto",
-    "cta": "Solicitar consultoría"
+    "cta": "Solicitar consultoría",
+    "menuOpen": "Abrir menú",
+    "menuClose": "Cerrar menú"
   },
   "hero": {
     "eyebrow": "Software con IA, especializado por sector",
