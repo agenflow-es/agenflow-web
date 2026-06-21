@@ -2,6 +2,7 @@ import { getTranslations, setRequestLocale } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
 import { Container, Eyebrow } from "@/components/ui/primitives";
 import { Reveal } from "@/components/motion/Reveal";
+import { AccentCard } from "@/components/ui/AccentCard";
 import { SpotlightCard } from "@/components/visuals/SpotlightCard";
 
 type PainItem = { pain: string; fix: string };
@@ -125,21 +126,7 @@ export default async function LegalPage({
             </div>
             <div className="mt-12 grid gap-5 sm:grid-cols-2">
               {automate.map((c, i) => (
-                <div
-                  key={i}
-                  className="group rounded-[var(--radius-lg)] border border-border bg-bg p-6 shadow-[var(--shadow)] transition duration-200 hover:-translate-y-1 hover:border-accent"
-                >
-                  <span
-                    aria-hidden
-                    className="block h-1.5 w-7 rounded-full bg-accent opacity-80 transition group-hover:w-10"
-                  />
-                  <h3 className="mt-5 font-display text-[18px] font-semibold">
-                    {c.name}
-                  </h3>
-                  <p className="mt-2.5 text-[15px] leading-[1.6] text-fg-muted">
-                    {c.desc}
-                  </p>
-                </div>
+                <AccentCard key={i} title={c.name} desc={c.desc} background="bg" />
               ))}
             </div>
           </Reveal>
@@ -191,21 +178,7 @@ export default async function LegalPage({
             </div>
             <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
               {trust.map((c, i) => (
-                <div
-                  key={i}
-                  className="group rounded-[var(--radius-lg)] border border-border bg-bg p-6 shadow-[var(--shadow)] transition duration-200 hover:-translate-y-1 hover:border-accent"
-                >
-                  <span
-                    aria-hidden
-                    className="block h-1.5 w-7 rounded-full bg-accent opacity-80 transition group-hover:w-10"
-                  />
-                  <h3 className="mt-5 font-display text-[17px] font-semibold">
-                    {c.name}
-                  </h3>
-                  <p className="mt-2.5 text-[14.5px] leading-[1.6] text-fg-muted">
-                    {c.desc}
-                  </p>
-                </div>
+                <AccentCard key={i} title={c.name} desc={c.desc} background="bg" compact />
               ))}
             </div>
           </Reveal>

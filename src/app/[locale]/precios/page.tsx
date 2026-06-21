@@ -3,6 +3,7 @@ import { Check } from "lucide-react";
 import { Link } from "@/i18n/navigation";
 import { Container, Eyebrow } from "@/components/ui/primitives";
 import { Reveal } from "@/components/motion/Reveal";
+import { AccentCard } from "@/components/ui/AccentCard";
 import { PricingSection } from "@/components/pricing";
 
 type CustomItem = {
@@ -89,20 +90,7 @@ export default async function PreciosPage({
             </div>
             <div className="mt-12 grid gap-5 sm:grid-cols-3">
               {custom.map((c, i) => (
-                <div
-                  key={i}
-                  className="group flex flex-col rounded-[var(--radius-lg)] border border-border bg-surface p-7 shadow-[var(--shadow)] transition duration-200 hover:-translate-y-1 hover:border-accent"
-                >
-                  <span
-                    aria-hidden
-                    className="block h-1.5 w-7 rounded-full bg-accent opacity-80 transition group-hover:w-10"
-                  />
-                  <h3 className="mt-5 font-display text-[19px] font-semibold">
-                    {c.name}
-                  </h3>
-                  <p className="mt-2.5 flex-1 text-[14.5px] leading-[1.6] text-fg-muted">
-                    {c.desc}
-                  </p>
+                <AccentCard key={i} title={c.name} desc={c.desc}>
                   {c.note && (
                     <p className="mt-3 text-[12.5px] leading-[1.45] text-accent">
                       {c.note}
@@ -125,7 +113,7 @@ export default async function PreciosPage({
                       </span>
                     </Link>
                   )}
-                </div>
+                </AccentCard>
               ))}
             </div>
           </Reveal>

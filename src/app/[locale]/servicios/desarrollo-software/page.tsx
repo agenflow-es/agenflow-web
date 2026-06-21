@@ -2,6 +2,7 @@ import { getTranslations, setRequestLocale } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
 import { Container, Eyebrow } from "@/components/ui/primitives";
 import { Reveal } from "@/components/motion/Reveal";
+import { AccentCard } from "@/components/ui/AccentCard";
 import { SpotlightCard } from "@/components/visuals/SpotlightCard";
 
 type Pillar = { name: string; desc: string };
@@ -75,21 +76,7 @@ export default async function DesarrolloPage({
             </div>
             <div className="mt-12 grid gap-5 sm:grid-cols-3">
               {pillars.map((p, i) => (
-                <div
-                  key={i}
-                  className="rounded-[var(--radius-lg)] border border-border bg-surface p-6 shadow-[var(--shadow)]"
-                >
-                  <span
-                    aria-hidden
-                    className="block h-1.5 w-7 rounded-full bg-accent opacity-80"
-                  />
-                  <h3 className="mt-5 font-display text-[18px] font-semibold">
-                    {p.name}
-                  </h3>
-                  <p className="mt-2.5 text-[15px] leading-[1.6] text-fg-muted">
-                    {p.desc}
-                  </p>
-                </div>
+                <AccentCard key={i} title={p.name} desc={p.desc} />
               ))}
             </div>
           </Reveal>
@@ -188,17 +175,7 @@ export default async function DesarrolloPage({
             </div>
             <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
               {reasons.map((r, i) => (
-                <div
-                  key={i}
-                  className="rounded-[var(--radius-lg)] border border-border bg-bg p-6 shadow-[var(--shadow)]"
-                >
-                  <h3 className="font-display text-[17px] font-semibold">
-                    {r.name}
-                  </h3>
-                  <p className="mt-2.5 text-[14.5px] leading-[1.6] text-fg-muted">
-                    {r.desc}
-                  </p>
-                </div>
+                <AccentCard key={i} title={r.name} desc={r.desc} background="bg" bar={false} compact />
               ))}
             </div>
           </Reveal>

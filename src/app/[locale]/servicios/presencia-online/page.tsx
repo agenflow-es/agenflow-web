@@ -2,6 +2,7 @@ import { getTranslations, setRequestLocale } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
 import { Container, Eyebrow } from "@/components/ui/primitives";
 import { Reveal } from "@/components/motion/Reveal";
+import { AccentCard } from "@/components/ui/AccentCard";
 import { AiVisibilityCheck } from "@/components/ai/AiVisibilityCheck";
 
 type Card = { name: string; desc: string };
@@ -88,21 +89,7 @@ export default async function PresenciaPage({
             </div>
             <div className="grid gap-5 md:grid-cols-3">
               {shiftCards.map((c, i) => (
-                <div
-                  key={i}
-                  className="rounded-[var(--radius-lg)] border border-border bg-bg p-6 shadow-[var(--shadow)]"
-                >
-                  <span
-                    aria-hidden
-                    className="block h-1.5 w-7 rounded-full bg-accent opacity-80"
-                  />
-                  <h3 className="mt-5 font-display text-[18px] font-semibold">
-                    {c.name}
-                  </h3>
-                  <p className="mt-2.5 text-[15px] leading-[1.6] text-fg-muted">
-                    {c.desc}
-                  </p>
-                </div>
+                <AccentCard key={i} title={c.name} desc={c.desc} background="bg" />
               ))}
             </div>
           </Reveal>
