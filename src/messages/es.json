@@ -120,11 +120,11 @@
     "items": [
       { "name": "Consultoría de IA", "desc": "Entendemos tu operación y te proponemos por dónde empezar." },
       { "name": "Automatización de procesos", "desc": "Construimos e implantamos la solución a medida." },
-      { "name": "Mejora de presencia online", "desc": "Modernizamos tu web y tu presencia digital." }
+      { "name": "Software por sector", "desc": "Producto especializado por vertical, con la IA dentro." }
     ],
     "cta": "Solicitar presupuesto",
     "viewAll": "Ver precios",
-    "note": "¿Buscas nuestro software por sector? Cada producto tiene su propio plan en su página."
+    "note": "La presencia online va por paquetes; el resto, a medida. Lo desglosamos en Precios."
   },
   "finalCta": {
     "title": "¿Listo para hacer más con el mismo equipo?",
@@ -406,8 +406,7 @@
       "eyebrow": "Dos formas de empezar",
       "user": {
         "title": "¿Eres de uno de estos sectores?",
-        "body": "Conoce el producto para tu negocio y entra en la lista de los primeros en usarlo.",
-        "cta": "Ver sectores"
+        "body": "Conoce el producto para tu negocio y entra en la lista de los primeros en usarlo."
       },
       "partner": {
         "title": "¿Conoces un sector a fondo?",
@@ -538,6 +537,12 @@
       ],
       "note": "Servicio recurrente opcional. Lo ajustamos a tu plan."
     },
+    "plansLink": {
+      "eyebrow": "Planes y precios",
+      "title": "Tres planes para ponerte al día.",
+      "body": "Tres niveles —del esencial al de máxima visibilidad— más un mantenimiento mensual opcional para tenerlo todo al día y funcionando. Mira qué incluye cada plan en la página de precios.",
+      "cta": "Ver planes y precios"
+    },
     "finalCta": {
       "title": "Pongamos tu negocio donde la gente —y la IA— lo encuentre.",
       "subtitle": "Cuéntanos cómo estás hoy y te decimos por dónde empezar. Sin compromiso.",
@@ -590,19 +595,114 @@
       "cta": "Solicitar presupuesto"
     }
   },
-  "sectorsHub": {
-    "title": "Sectores",
-    "subtitle": "Construimos software especializado por sector. Estos son los sectores en los que trabajamos."
-  },
-  "sectorPages": {
-    "legal": {
-      "title": "Legal",
-      "intro": "Para despachos de abogados. Automatizamos procesos de auditoría contable para eliminar trabajo manual y reducir errores: menos horas en tareas repetitivas, más tiempo para el cliente.",
-      "points": [
-        "Automatización de procesos de auditoría contable",
-        "Menos trabajo manual y menos errores",
-        "Más capacidad para el equipo"
-      ],
+  "legalPage": {
+    "eyebrow": "Sector · Despachos de abogados",
+    "title": "Menos trabajo manual en el despacho. Más horas para tus clientes.",
+    "subtitle": "Conocemos cómo trabaja un despacho y automatizamos los procesos que más tiempo consumen —empezando por la auditoría contable— para reducir el trabajo a mano, recortar errores y devolverle horas a tu equipo.",
+    "cta": "Solicitar consultoría",
+    "problem": {
+      "eyebrow": "El día a día del despacho",
+      "title": "Las horas del despacho se van en tareas que podrían ir solas.",
+      "items": [
+        "Revisión de cuentas y documentos que se repite a mano, expediente tras expediente.",
+        "Descuadres y erratas que aparecen tarde y obligan a rehacer el trabajo.",
+        "Plazos y entregas que se controlan de memoria, con el riesgo de que alguno se escape."
+      ]
+    },
+    "pains": {
+      "eyebrow": "Dolores del despacho, resueltos",
+      "title": "Lo que te quita horas, hecho solo.",
+      "intro": "Conocemos los atascos reales de un despacho y automatizamos cada uno para que tu equipo deje de pelearse con ellos.",
+      "items": [
+        {
+          "pain": "Cuadrar cuentas y revisar documentación se hace a mano, expediente tras expediente.",
+          "fix": "Automatizamos la revisión: el sistema cuadra, contrasta y deja señalado lo que necesita tu criterio."
+        },
+        {
+          "pain": "Un descuadre o una errata se cuela y aparece tarde, cuando ya toca rehacer.",
+          "fix": "La automatización contrasta los datos y avisa del descuadre en el momento, no al final."
+        },
+        {
+          "pain": "Vencimientos y entregas que se controlan de memoria y alguno acaba apurado.",
+          "fix": "Seguimiento automático de cada plazo, con avisos antes de que se convierta en urgencia."
+        },
+        {
+          "pain": "La información de cada expediente está repartida y encontrarla se lleva la mañana.",
+          "fix": "Documentación ordenada y consultable: encuentras el dato preguntando en lenguaje natural."
+        }
+      ]
+    },
+    "automate": {
+      "eyebrow": "Lo que automatizamos",
+      "title": "Procesos del despacho, funcionando solos.",
+      "intro": "Empezamos por lo que más te pesa hoy y lo dejamos funcionando; desde ahí seguimos con el resto.",
+      "items": [
+        {
+          "name": "Auditoría contable",
+          "desc": "Cuadre, conciliación y revisión de cuentas, con la detección de descuadres y errores hecha por el sistema. Es donde más experiencia tenemos."
+        },
+        {
+          "name": "Revisión de documentación",
+          "desc": "Lectura, clasificación y extracción de datos de documentos y expedientes, sin teclear ni copiar a mano."
+        },
+        {
+          "name": "Plazos y vencimientos",
+          "desc": "Control automático de fechas clave, con avisos y recordatorios para que ningún plazo dependa de la memoria."
+        },
+        {
+          "name": "Informes al cliente",
+          "desc": "Generación de informes y entregables a partir del trabajo ya hecho, listos para revisar y enviar."
+        }
+      ]
+    },
+    "delivery": {
+      "eyebrow": "Cómo trabajamos",
+      "title": "Del proceso manual a funcionando, en tres pasos.",
+      "intro": "Sin proyectos eternos: entendemos cómo trabajas, lo automatizamos y lo dejamos en marcha con tu equipo.",
+      "steps": [
+        {
+          "step": "01",
+          "name": "Analizamos tu operativa",
+          "desc": "Nos sentamos con tu equipo y mapeamos los procesos que más tiempo y errores generan."
+        },
+        {
+          "step": "02",
+          "name": "Automatizamos el proceso",
+          "desc": "Construimos la automatización a medida sobre tus herramientas y la afinamos con casos reales."
+        },
+        {
+          "step": "03",
+          "name": "Lo dejamos en marcha",
+          "desc": "Lo ponemos a funcionar con tu equipo y nos quedamos para ajustarlo según lo usáis."
+        }
+      ]
+    },
+    "trust": {
+      "eyebrow": "Confianza y confidencialidad",
+      "title": "Tus datos y los de tus clientes, protegidos.",
+      "intro": "Un despacho maneja información sensible. Trabajamos con la confidencialidad y la seguridad como base, no como añadido.",
+      "items": [
+        {
+          "name": "RGPD por diseño",
+          "desc": "Cumplimiento de protección de datos integrado en cada automatización desde el primer día."
+        },
+        {
+          "name": "Datos en la UE",
+          "desc": "Tus datos y los servidores que los procesan permanecen dentro de la Unión Europea."
+        },
+        {
+          "name": "Acuerdo y confidencialidad",
+          "desc": "Contrato de encargado del tratamiento (DPA) y acuerdo de confidencialidad sobre todo lo que tocamos."
+        },
+        {
+          "name": "Cifrado y control de accesos",
+          "desc": "Información cifrada y accesos controlados: solo entra a cada dato quien debe."
+        }
+      ]
+    },
+    "finalCta": {
+      "title": "¿Llevas un despacho? Hablemos.",
+      "subtitle": "Cuéntanos cómo trabajáis hoy y te decimos qué procesos puedes quitar de en medio —empezando por el que más te pesa.",
       "cta": "Solicitar consultoría"
     }
   },
@@ -738,14 +838,25 @@
     }
   },
   "pricingPage": {
-    "title": "Precios",
-    "subtitle": "Trabajamos con presupuesto a medida: cada proyecto se presupuesta sobre su alcance real. Cuéntanos tu caso y te lo damos claro.",
-    "note": "El software a medida por sector tiene su propio modelo y precios en la página de cada producto.",
-    "items": [
-      { "name": "Consultoría de IA", "desc": "Entendemos tu operación y te proponemos por dónde empezar.", "cta": "Solicitar presupuesto" },
-      { "name": "Automatización de procesos", "desc": "Construimos e implantamos la solución a medida.", "cta": "Solicitar presupuesto" },
-      { "name": "Mejora de presencia online", "desc": "Modernizamos tu web y tu presencia digital.", "cta": "Solicitar presupuesto" }
-    ]
+    "eyebrow": "Precios",
+    "title": "Presupuesto a medida. Sin precio de escaparate.",
+    "subtitle": "Cada proyecto se presupuesta sobre su alcance real. Solo la presencia online va por paquetes cerrados; el resto lo cerramos cuando entendemos tu caso.",
+    "custom": {
+      "eyebrow": "A medida",
+      "title": "Lo que presupuestamos por tu caso.",
+      "intro": "Consultoría, automatización y software por sector: el alcance lo marca tu operación, así que el precio también. Te pasamos un presupuesto cerrado en cuanto la entendemos.",
+      "items": [
+        { "name": "Consultoría de IA", "desc": "Entendemos tu operación y te proponemos por dónde empezar.", "cta": "Solicitar presupuesto", "ctaHref": "/contacto", "link": "Ver servicio", "linkHref": "/servicios/consultoria-ia" },
+        { "name": "Automatización de procesos", "desc": "Construimos e implantamos la solución a medida sobre tus herramientas.", "cta": "Solicitar presupuesto", "ctaHref": "/contacto", "link": "Ver servicio", "linkHref": "/servicios/automatizacion-ia" },
+        { "name": "Software por sector", "desc": "Producto especializado por vertical, con la IA dentro.", "note": "El precio de cada producto está en su propia página.", "cta": "Ver productos por sector", "ctaHref": "/servicios/desarrollo-software" }
+      ]
+    },
+    "packages": {
+      "eyebrow": "Por paquetes",
+      "title": "Mejora de presencia online",
+      "intro": "Nuestro único servicio con planes cerrados: tres niveles para poner tu negocio al día y que te encuentren en Google y en la IA. Sin precio de escaparate; el presupuesto se cierra según tu caso.",
+      "serviceLink": "Ver el servicio de presencia online"
+    }
   },
   "aboutPage": {
     "title": "Nosotros",
@@ -776,47 +887,167 @@
     }
   },
   "legal": {
-    "draftNotice": "Borrador — texto pendiente de revisión legal y de los datos definitivos de la empresa.",
-    "pendingContent": "Contenido pendiente de redacción.",
+    "lastUpdated": "Última actualización: junio de 2026",
     "company": {
-      "label": "Responsable",
-      "name": "[Razón social / autónomo]",
-      "taxId": "[NIF]",
-      "address": "[Dirección]",
-      "email": "hola@agenflow.es"
+      "label": "Titular y responsable",
+      "brandNote": "Agenflow es la marca comercial bajo la que opera Francisco Javier Arias Carrillo (autónomo).",
+      "name": "Francisco Javier Arias Carrillo",
+      "taxIdLabel": "NIF",
+      "taxId": "45886331C",
+      "addressLabel": "Domicilio",
+      "address": "c/ Huelva, 38 — 14400 Pozoblanco (Córdoba)",
+      "emailLabel": "Email",
+      "email": "info@agenflow.es"
     },
     "privacy": {
       "title": "Política de privacidad",
-      "intro": "Cómo tratamos tus datos personales cuando contactas con Agenflow o usas esta web.",
+      "intro": "Cómo tratamos tus datos personales cuando contactas con Agenflow o navegas por este sitio, conforme al Reglamento (UE) 2016/679 (RGPD) y a la Ley Orgánica 3/2018 (LOPDGDD).",
       "sections": [
-        "Responsable del tratamiento",
-        "Datos que recopilamos",
-        "Finalidad",
-        "Base legal",
-        "Conservación",
-        "Tus derechos",
-        "Contacto"
+        {
+          "heading": "Responsable del tratamiento",
+          "body": [
+            "El responsable del tratamiento de tus datos es Francisco Javier Arias Carrillo (NIF 45886331C), con domicilio en c/ Huelva, 38, 14400 Pozoblanco (Córdoba), que opera bajo la marca Agenflow.",
+            "Puedes contactar con nosotros en cualquier momento en info@agenflow.es."
+          ]
+        },
+        {
+          "heading": "Qué datos tratamos",
+          "body": [
+            "Tratamos los datos que nos facilitas al rellenar el formulario de contacto: tu nombre, tu email y, de forma opcional, el nombre de tu empresa y el contenido de tu mensaje.",
+            "No recogemos categorías especiales de datos, no elaboramos perfiles y no tomamos decisiones automatizadas sobre ti."
+          ]
+        },
+        {
+          "heading": "Con qué finalidad",
+          "body": [
+            "Utilizamos tus datos únicamente para atender tu consulta y ponernos en contacto contigo en relación con los servicios de Agenflow.",
+            "No te enviamos comunicaciones comerciales no solicitadas."
+          ]
+        },
+        {
+          "heading": "Base jurídica",
+          "body": [
+            "La base jurídica del tratamiento es tu consentimiento, que prestas al enviar el formulario, y el interés legítimo en responder a las solicitudes que nos diriges (artículo 6.1.a y 6.1.f del RGPD)."
+          ]
+        },
+        {
+          "heading": "Conservación",
+          "body": [
+            "Conservamos tus datos durante el tiempo necesario para atender tu solicitud y, después, durante los plazos legalmente exigibles. Cuando dejan de ser necesarios, los suprimimos."
+          ]
+        },
+        {
+          "heading": "Destinatarios y encargados",
+          "body": [
+            "No cedemos tus datos a terceros, salvo obligación legal. Para el funcionamiento del sitio y el envío del formulario nos apoyamos en proveedores que actúan como encargados del tratamiento: Vercel (alojamiento del sitio) y Resend (envío del email de contacto), con los que mantenemos los acuerdos exigidos por el RGPD.",
+            "Si alguno de estos proveedores trata datos fuera del Espacio Económico Europeo, lo hace con las garantías adecuadas previstas en el RGPD."
+          ]
+        },
+        {
+          "heading": "Tus derechos",
+          "body": [
+            "Puedes ejercer tus derechos de acceso, rectificación, supresión, oposición, limitación y portabilidad escribiendo a info@agenflow.es e indicando el derecho que deseas ejercer.",
+            "Si consideras que no hemos atendido correctamente tu solicitud, puedes presentar una reclamación ante la Agencia Española de Protección de Datos (www.aepd.es)."
+          ]
+        },
+        {
+          "heading": "Cookies",
+          "body": [
+            "Este sitio utiliza únicamente cookies y almacenamiento técnicos necesarios para funcionar. Tienes el detalle en nuestra Política de cookies."
+          ]
+        }
       ]
     },
     "legalNotice": {
       "title": "Aviso legal",
-      "intro": "Información legal sobre el titular de este sitio web y las condiciones de uso.",
+      "intro": "Información legal sobre el titular de este sitio web y las condiciones de uso, conforme a la Ley 34/2002 de Servicios de la Sociedad de la Información y de Comercio Electrónico (LSSI-CE).",
       "sections": [
-        "Titular del sitio",
-        "Objeto",
-        "Propiedad intelectual",
-        "Responsabilidad",
-        "Legislación aplicable"
+        {
+          "heading": "Titular del sitio",
+          "body": [
+            "En cumplimiento del deber de información del artículo 10 de la LSSI-CE, se hacen constar los siguientes datos: el titular de este sitio web es Francisco Javier Arias Carrillo (NIF 45886331C), con domicilio en c/ Huelva, 38, 14400 Pozoblanco (Córdoba). «Agenflow» es la marca comercial bajo la que opera. Email de contacto: info@agenflow.es."
+          ]
+        },
+        {
+          "heading": "Objeto",
+          "body": [
+            "Este aviso legal regula el uso del sitio web agenflow.es, que ofrece información sobre los servicios de consultoría, automatización y desarrollo de software de Agenflow.",
+            "La navegación por el sitio atribuye la condición de usuario e implica la aceptación de las condiciones recogidas en este aviso legal."
+          ]
+        },
+        {
+          "heading": "Condiciones de uso",
+          "body": [
+            "El usuario se compromete a hacer un uso adecuado de los contenidos del sitio y a no emplearlos para actividades ilícitas o contrarias a la buena fe.",
+            "El titular puede modificar en cualquier momento, y sin previo aviso, la información contenida en el sitio, así como su configuración y presentación."
+          ]
+        },
+        {
+          "heading": "Propiedad intelectual e industrial",
+          "body": [
+            "Los contenidos del sitio (textos, marcas, logotipos, diseño y código) son titularidad de Francisco Javier Arias Carrillo o de terceros que han autorizado su uso, y están protegidos por la normativa de propiedad intelectual e industrial.",
+            "Queda prohibida su reproducción, distribución o comunicación pública sin autorización expresa del titular."
+          ]
+        },
+        {
+          "heading": "Responsabilidad",
+          "body": [
+            "El titular no se responsabiliza de los daños derivados del uso del sitio ni de la presencia de virus u otros elementos que puedan alterar los sistemas del usuario.",
+            "El sitio puede contener enlaces a páginas de terceros; el titular no asume responsabilidad sobre sus contenidos."
+          ]
+        },
+        {
+          "heading": "Legislación aplicable",
+          "body": [
+            "Este aviso legal se rige por la legislación española. Para la resolución de cualquier controversia, las partes se someten a los juzgados y tribunales que correspondan conforme a derecho."
+          ]
+        }
       ]
     },
     "cookies": {
       "title": "Política de cookies",
-      "intro": "Qué cookies utiliza esta web y cómo puedes gestionarlas.",
+      "intro": "Qué cookies y almacenamiento local utiliza agenflow.es y cómo puedes gestionarlos.",
       "sections": [
-        "Qué son las cookies",
-        "Cookies que utilizamos",
-        "Cómo gestionar las cookies"
+        {
+          "heading": "Qué son las cookies",
+          "body": [
+            "Una cookie es un pequeño archivo que un sitio web guarda en tu navegador para recordar información sobre tu visita. Tecnologías similares, como el almacenamiento local (localStorage), cumplen funciones parecidas."
+          ]
+        },
+        {
+          "heading": "Cookies que utilizamos",
+          "body": [
+            "agenflow.es utiliza exclusivamente cookies y almacenamiento técnicos, necesarios para que el sitio funcione y recuerde tus preferencias. No usamos cookies de analítica, de publicidad ni de seguimiento, por lo que no necesitamos tu consentimiento previo para instalarlas.",
+            "El detalle es el siguiente:"
+          ],
+          "table": {
+            "headers": ["Nombre", "Tipo", "Finalidad", "Duración"],
+            "rows": [
+              ["NEXT_LOCALE", "Técnica (cookie)", "Recordar el idioma que eliges (español o inglés).", "1 año"],
+              ["theme", "Técnica (almacenamiento local)", "Recordar el tema claro u oscuro que seleccionas.", "Hasta que la borres"]
+            ]
+          }
+        },
+        {
+          "heading": "Cómo gestionarlas",
+          "body": [
+            "Puedes eliminar o bloquear estas cookies desde la configuración de tu navegador. Al tratarse de cookies técnicas necesarias, su bloqueo puede impedir que el sitio recuerde tu idioma o tu preferencia de tema.",
+            "Cada navegador ofrece instrucciones para gestionar las cookies en su sección de ayuda (Chrome, Firefox, Safari, Edge)."
+          ]
+        },
+        {
+          "heading": "Cambios en esta política",
+          "body": [
+            "Si en el futuro incorporamos cookies adicionales (por ejemplo, de analítica), actualizaremos esta política y, cuando sea necesario, te pediremos tu consentimiento antes de instalarlas."
+          ]
+        }
       ]
     }
+  },
+  "cookieBanner": {
+    "aria": "Aviso de cookies",
+    "text": "Usamos solo cookies técnicas necesarias para que la web funcione y recuerde tu idioma y tu tema. No usamos analítica ni seguimiento.",
+    "more": "Más información",
+    "accept": "Entendido"
   }
 }

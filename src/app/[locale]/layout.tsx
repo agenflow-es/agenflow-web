@@ -12,6 +12,7 @@ import { siteConfig } from "@/lib/site";
 import { ThemeProvider } from "@/components/theme/ThemeProvider";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
+import { CookieBanner } from "@/components/layout/CookieBanner";
 import { OrganizationJsonLd } from "@/components/seo/JsonLd";
 import "../globals.css";
 
@@ -81,6 +82,7 @@ export default async function LocaleLayout({
             <Header />
             <main className="flex-1">{children}</main>
             <Footer />
+            <CookieBanner />
           </NextIntlClientProvider>
         </ThemeProvider>
       </body>

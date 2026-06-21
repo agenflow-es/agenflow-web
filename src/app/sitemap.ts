@@ -9,7 +9,6 @@ const paths = [
   "/servicios/automatizacion-ia",
   "/servicios/desarrollo-software",
   "/servicios/presencia-online",
-  "/sectores",
   "/sectores/legal",
   "/sectores/inmobiliario-construccion",
   "/precios",

@@ -27,6 +27,8 @@ export default async function DesarrolloPage({
   const steps = t.raw("model.steps") as Step[];
   const products = t.raw("showcase.items") as Product[];
   const reasons = t.raw("why.items") as Reason[];
+  const tSectors = await getTranslations("sectors");
+  const sectorLinks = tSectors.raw("items") as { name: string; href: string }[];
 
   return (
     <>
@@ -218,23 +220,28 @@ export default async function DesarrolloPage({
               <Eyebrow>{t("split.eyebrow")}</Eyebrow>
             </div>
             <div className="mx-auto grid max-w-[920px] gap-5 md:grid-cols-2">
-              <Link
-                href="/sectores"
-                className="group rounded-[var(--radius-lg)] border border-border bg-surface p-8 shadow-[var(--shadow)] transition duration-200 hover:-translate-y-1 hover:border-accent"
-              >
+              <div className="rounded-[var(--radius-lg)] border border-border bg-surface p-8 shadow-[var(--shadow)]">
                 <h3 className="font-display text-[clamp(20px,2.4vw,26px)] font-bold tracking-[-0.018em]">
                   {t("split.user.title")}
                 </h3>
                 <p className="mt-3 leading-[1.6] text-fg-muted">
                   {t("split.user.body")}
                 </p>
-                <span className="mt-5 inline-flex items-center gap-1.5 font-semibold text-accent">
-                  {t("split.user.cta")}
-                  <span aria-hidden className="transition group-hover:translate-x-0.5">
-                    →
-                  </span>
-                </span>
-              </Link>
+                <div className="mt-6 flex flex-wrap gap-2.5">
+                  {sectorLinks.map((s, i) => (
+                    <Link
+                      key={i}
+                      href={s.href}
+                      className="group inline-flex items-center gap-1.5 rounded-[var(--radius)] border border-border px-3.5 py-2 text-[14px] font-semibold text-fg transition hover:-translate-y-0.5 hover:border-accent hover:text-accent"
+                    >
+                      {s.name}
+                      <span aria-hidden className="transition group-hover:translate-x-0.5">
+                        →
+                      </span>
+                    </Link>
+                  ))}
+                </div>
+              </div>
               <Link
                 href="/contacto"
                 className="group rounded-[var(--radius-lg)] border border-l-2 border-border border-l-accent bg-surface p-8 shadow-[var(--shadow)] transition duration-200 hover:-translate-y-1 hover:border-accent"

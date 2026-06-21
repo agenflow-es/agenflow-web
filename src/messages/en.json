@@ -120,11 +120,11 @@
     "items": [
       { "name": "AI consulting", "desc": "We understand your operation and propose where to start." },
       { "name": "Process automation", "desc": "We build and deploy the custom solution." },
-      { "name": "Online presence", "desc": "We modernize your website and digital presence." }
+      { "name": "Software by sector", "desc": "Product specialized by vertical, with AI inside." }
     ],
     "cta": "Request a quote",
     "viewAll": "See pricing",
-    "note": "Looking for our sector software? Each product has its own plan on its page."
+    "note": "Online presence comes as packages; everything else is tailored. See the breakdown on Pricing."
   },
   "finalCta": {
     "title": "Ready to do more with the same team?",
@@ -406,8 +406,7 @@
       "eyebrow": "Two ways to start",
       "user": {
         "title": "Are you in one of these sectors?",
-        "body": "Discover the product for your business and join the list of the first to use it.",
-        "cta": "See sectors"
+        "body": "Discover the product for your business and join the list of the first to use it."
       },
       "partner": {
         "title": "Do you know a sector inside out?",
@@ -538,6 +537,12 @@
       ],
       "note": "Optional recurring service. We tailor it to your plan."
     },
+    "plansLink": {
+      "eyebrow": "Plans and pricing",
+      "title": "Three plans to bring you up to date.",
+      "body": "Three levels —from essential to maximum visibility— plus an optional monthly maintenance to keep everything up to date and running. See what each plan includes on the pricing page.",
+      "cta": "See plans and pricing"
+    },
     "finalCta": {
       "title": "Let's put your business where people —and AI— can find it.",
       "subtitle": "Tell us where you stand today and we'll tell you where to start. No commitment.",
@@ -590,19 +595,114 @@
       "cta": "Request a quote"
     }
   },
-  "sectorsHub": {
-    "title": "Sectors",
-    "subtitle": "We build software specialized by sector. These are the sectors we work in."
-  },
-  "sectorPages": {
-    "legal": {
-      "title": "Legal",
-      "intro": "For law firms. We automate accounting-audit processes to remove manual work and cut errors: fewer hours on repetitive tasks, more time for clients.",
-      "points": [
-        "Accounting-audit process automation",
-        "Less manual work and fewer errors",
-        "More capacity for the team"
-      ],
+  "legalPage": {
+    "eyebrow": "Sector · Law firms",
+    "title": "Less manual work in the firm. More hours for your clients.",
+    "subtitle": "We know how a law firm works and we automate the processes that eat the most time —starting with accounting audit— to cut manual work, reduce errors and give your team back its hours.",
+    "cta": "Request a consultation",
+    "problem": {
+      "eyebrow": "The firm's day-to-day",
+      "title": "The firm's hours go into tasks that could run themselves.",
+      "items": [
+        "Reviewing accounts and documents by hand, case after case.",
+        "Discrepancies and typos that surface late and force you to redo the work.",
+        "Deadlines and deliverables tracked from memory, with the risk one slips through."
+      ]
+    },
+    "pains": {
+      "eyebrow": "The firm's pains, solved",
+      "title": "What eats your hours, done on its own.",
+      "intro": "We know a firm's real bottlenecks and we automate each one so your team stops fighting them.",
+      "items": [
+        {
+          "pain": "Reconciling accounts and reviewing documentation by hand, case after case.",
+          "fix": "We automate the review: the system reconciles, cross-checks and flags whatever needs your judgment."
+        },
+        {
+          "pain": "A discrepancy or a typo slips in and surfaces late, when it's already time to redo it.",
+          "fix": "The automation cross-checks the data and flags the discrepancy on the spot, not at the end."
+        },
+        {
+          "pain": "Deadlines and deliverables tracked from memory, and one ends up cutting it close.",
+          "fix": "Automatic tracking of every deadline, with alerts before it turns into an emergency."
+        },
+        {
+          "pain": "Each case's information is scattered and finding it eats the whole morning.",
+          "fix": "Documentation organized and queryable: you find the detail by asking in plain language."
+        }
+      ]
+    },
+    "automate": {
+      "eyebrow": "What we automate",
+      "title": "The firm's processes, running on their own.",
+      "intro": "We start with what weighs on you most today and leave it working; from there we move on to the rest.",
+      "items": [
+        {
+          "name": "Accounting audit",
+          "desc": "Reconciliation, cross-checking and review of accounts, with discrepancy and error detection done by the system. It's where we have the most experience."
+        },
+        {
+          "name": "Document review",
+          "desc": "Reading, classifying and extracting data from documents and case files, with no typing or copying by hand."
+        },
+        {
+          "name": "Deadlines & due dates",
+          "desc": "Automatic control of key dates, with alerts and reminders so no deadline depends on memory."
+        },
+        {
+          "name": "Client reports",
+          "desc": "Reports and deliverables generated from the work already done, ready to review and send."
+        }
+      ]
+    },
+    "delivery": {
+      "eyebrow": "How we work",
+      "title": "From manual process to running, in three steps.",
+      "intro": "No endless projects: we understand how you work, automate it and leave it running with your team.",
+      "steps": [
+        {
+          "step": "01",
+          "name": "We map your operation",
+          "desc": "We sit down with your team and map the processes that generate the most time and errors."
+        },
+        {
+          "step": "02",
+          "name": "We automate the process",
+          "desc": "We build the automation tailored to your tools and refine it with real cases."
+        },
+        {
+          "step": "03",
+          "name": "We leave it running",
+          "desc": "We put it to work with your team and stay to fine-tune it as you use it."
+        }
+      ]
+    },
+    "trust": {
+      "eyebrow": "Trust & confidentiality",
+      "title": "Your data and your clients' data, protected.",
+      "intro": "A firm handles sensitive information. We work with confidentiality and security as the baseline, not an add-on.",
+      "items": [
+        {
+          "name": "GDPR by design",
+          "desc": "Data-protection compliance built into every automation from day one."
+        },
+        {
+          "name": "Data in the EU",
+          "desc": "Your data and the servers that process it stay within the European Union."
+        },
+        {
+          "name": "Agreement & confidentiality",
+          "desc": "Data-processing agreement (DPA) and confidentiality agreement over everything we touch."
+        },
+        {
+          "name": "Encryption & access control",
+          "desc": "Encrypted information and controlled access: only those who should reach each piece of data."
+        }
+      ]
+    },
+    "finalCta": {
+      "title": "Run a law firm? Let's talk.",
+      "subtitle": "Tell us how you work today and we'll tell you which processes you can take off your plate —starting with the one that weighs on you most.",
       "cta": "Request a consultation"
     }
   },
@@ -738,14 +838,25 @@
     }
   },
   "pricingPage": {
-    "title": "Pricing",
-    "subtitle": "We work with tailored quotes: every project is quoted on its real scope. Tell us your case and we'll give it to you straight.",
-    "note": "Custom software by sector has its own model and pricing on each product's page.",
-    "items": [
-      { "name": "AI consulting", "desc": "We understand your operation and propose where to start.", "cta": "Request a quote" },
-      { "name": "Process automation", "desc": "We build and deploy the custom solution.", "cta": "Request a quote" },
-      { "name": "Online presence", "desc": "We modernize your website and digital presence.", "cta": "Request a quote" }
-    ]
+    "eyebrow": "Pricing",
+    "title": "Tailored quotes. No shelf prices.",
+    "subtitle": "Every project is priced on its real scope. Only online presence comes as fixed packages; everything else we close once we understand your case.",
+    "custom": {
+      "eyebrow": "Tailored",
+      "title": "What we price around your case.",
+      "intro": "Consulting, automation and software by sector: the scope is set by your operation, so the price is too. We send a fixed quote as soon as we understand it.",
+      "items": [
+        { "name": "AI consulting", "desc": "We understand your operation and propose where to start.", "cta": "Request a quote", "ctaHref": "/contacto", "link": "View service", "linkHref": "/servicios/consultoria-ia" },
+        { "name": "Process automation", "desc": "We build and roll out the tailored solution on your tools.", "cta": "Request a quote", "ctaHref": "/contacto", "link": "View service", "linkHref": "/servicios/automatizacion-ia" },
+        { "name": "Software by sector", "desc": "Product specialized by vertical, with AI inside.", "note": "Each product's price is on its own page.", "cta": "See products by sector", "ctaHref": "/servicios/desarrollo-software" }
+      ]
+    },
+    "packages": {
+      "eyebrow": "Packages",
+      "title": "Online presence",
+      "intro": "Our only service with fixed plans: three levels to bring your business up to date and get you found on Google and AI. No shelf price; the quote is set to your case.",
+      "serviceLink": "See the online presence service"
+    }
   },
   "aboutPage": {
     "title": "About",
@@ -776,47 +887,167 @@
     }
   },
   "legal": {
-    "draftNotice": "Draft — text pending legal review and final company details.",
-    "pendingContent": "Content pending.",
+    "lastUpdated": "Last updated: June 2026",
     "company": {
-      "label": "Data controller",
-      "name": "[Legal name / sole trader]",
-      "taxId": "[Tax ID]",
-      "address": "[Address]",
-      "email": "hola@agenflow.es"
+      "label": "Owner and controller",
+      "brandNote": "Agenflow is the trading name under which Francisco Javier Arias Carrillo (sole trader) operates.",
+      "name": "Francisco Javier Arias Carrillo",
+      "taxIdLabel": "Tax ID (NIF)",
+      "taxId": "45886331C",
+      "addressLabel": "Address",
+      "address": "c/ Huelva, 38 — 14400 Pozoblanco (Córdoba), Spain",
+      "emailLabel": "Email",
+      "email": "info@agenflow.es"
     },
     "privacy": {
       "title": "Privacy policy",
-      "intro": "How we handle your personal data when you contact Agenflow or use this site.",
+      "intro": "How we handle your personal data when you contact Agenflow or browse this site, under Regulation (EU) 2016/679 (GDPR) and Spanish Organic Law 3/2018 (LOPDGDD).",
       "sections": [
-        "Data controller",
-        "Data we collect",
-        "Purpose",
-        "Legal basis",
-        "Retention",
-        "Your rights",
-        "Contact"
+        {
+          "heading": "Data controller",
+          "body": [
+            "The controller of your data is Francisco Javier Arias Carrillo (Tax ID 45886331C), with address at c/ Huelva, 38, 14400 Pozoblanco (Córdoba), Spain, operating under the Agenflow brand.",
+            "You can contact us at any time at info@agenflow.es."
+          ]
+        },
+        {
+          "heading": "What data we process",
+          "body": [
+            "We process the data you provide when you fill in the contact form: your name, your email and, optionally, your company name and the content of your message.",
+            "We do not collect special categories of data, we do not build profiles and we do not make automated decisions about you."
+          ]
+        },
+        {
+          "heading": "Purpose",
+          "body": [
+            "We use your data solely to respond to your enquiry and to get in touch with you regarding Agenflow's services.",
+            "We do not send unsolicited marketing communications."
+          ]
+        },
+        {
+          "heading": "Legal basis",
+          "body": [
+            "The legal basis for processing is your consent, given when you submit the form, and our legitimate interest in responding to the requests you send us (Article 6.1.a and 6.1.f GDPR)."
+          ]
+        },
+        {
+          "heading": "Retention",
+          "body": [
+            "We keep your data for as long as needed to handle your request and, afterwards, for the periods required by law. Once it is no longer necessary, we delete it."
+          ]
+        },
+        {
+          "heading": "Recipients and processors",
+          "body": [
+            "We do not share your data with third parties except where legally required. To run the site and send the contact form we rely on providers acting as data processors: Vercel (site hosting) and Resend (delivery of the contact email), with whom we maintain the agreements required by the GDPR.",
+            "Where any of these providers processes data outside the European Economic Area, it does so under the appropriate safeguards set out in the GDPR."
+          ]
+        },
+        {
+          "heading": "Your rights",
+          "body": [
+            "You can exercise your rights of access, rectification, erasure, objection, restriction and portability by writing to info@agenflow.es, stating the right you wish to exercise.",
+            "If you believe we have not handled your request properly, you can lodge a complaint with the Spanish Data Protection Agency (www.aepd.es)."
+          ]
+        },
+        {
+          "heading": "Cookies",
+          "body": [
+            "This site uses only the technical cookies and storage needed to work. You'll find the detail in our Cookie policy."
+          ]
+        }
       ]
     },
     "legalNotice": {
       "title": "Legal notice",
-      "intro": "Legal information about the owner of this website and the terms of use.",
+      "intro": "Legal information about the owner of this website and the terms of use, under Spanish Law 34/2002 on Information Society Services and Electronic Commerce (LSSI-CE).",
       "sections": [
-        "Site owner",
-        "Purpose",
-        "Intellectual property",
-        "Liability",
-        "Applicable law"
+        {
+          "heading": "Site owner",
+          "body": [
+            "In compliance with the information duty under Article 10 of the LSSI-CE, the following details are stated: the owner of this website is Francisco Javier Arias Carrillo (Tax ID 45886331C), with address at c/ Huelva, 38, 14400 Pozoblanco (Córdoba), Spain. \"Agenflow\" is the trading name under which he operates. Contact email: info@agenflow.es."
+          ]
+        },
+        {
+          "heading": "Purpose",
+          "body": [
+            "This legal notice governs the use of the agenflow.es website, which provides information about Agenflow's consulting, automation and software development services.",
+            "Browsing the site grants the condition of user and implies acceptance of the terms set out in this legal notice."
+          ]
+        },
+        {
+          "heading": "Terms of use",
+          "body": [
+            "The user agrees to make appropriate use of the site's content and not to use it for unlawful activities or activities contrary to good faith.",
+            "The owner may modify the information on the site, as well as its configuration and presentation, at any time and without prior notice."
+          ]
+        },
+        {
+          "heading": "Intellectual and industrial property",
+          "body": [
+            "The site's content (texts, trademarks, logos, design and code) belongs to Francisco Javier Arias Carrillo or to third parties who have authorised its use, and is protected by intellectual and industrial property law.",
+            "Its reproduction, distribution or public communication without the owner's express authorisation is prohibited."
+          ]
+        },
+        {
+          "heading": "Liability",
+          "body": [
+            "The owner is not liable for damages arising from the use of the site or from the presence of viruses or other elements that may alter the user's systems.",
+            "The site may contain links to third-party pages; the owner assumes no responsibility for their content."
+          ]
+        },
+        {
+          "heading": "Applicable law",
+          "body": [
+            "This legal notice is governed by Spanish law. Any dispute will be submitted to the courts and tribunals that apply under the law."
+          ]
+        }
       ]
     },
     "cookies": {
       "title": "Cookie policy",
-      "intro": "Which cookies this site uses and how you can manage them.",
+      "intro": "Which cookies and local storage agenflow.es uses and how you can manage them.",
       "sections": [
-        "What cookies are",
-        "Cookies we use",
-        "How to manage cookies"
+        {
+          "heading": "What cookies are",
+          "body": [
+            "A cookie is a small file that a website stores in your browser to remember information about your visit. Similar technologies, such as local storage (localStorage), serve comparable purposes."
+          ]
+        },
+        {
+          "heading": "Cookies we use",
+          "body": [
+            "agenflow.es uses only technical cookies and storage, needed for the site to work and to remember your preferences. We do not use analytics, advertising or tracking cookies, so we do not need your prior consent to set them.",
+            "The detail is as follows:"
+          ],
+          "table": {
+            "headers": ["Name", "Type", "Purpose", "Duration"],
+            "rows": [
+              ["NEXT_LOCALE", "Technical (cookie)", "Remember the language you choose (Spanish or English).", "1 year"],
+              ["theme", "Technical (local storage)", "Remember the light or dark theme you select.", "Until you clear it"]
+            ]
+          }
+        },
+        {
+          "heading": "How to manage them",
+          "body": [
+            "You can delete or block these cookies from your browser settings. As they are necessary technical cookies, blocking them may prevent the site from remembering your language or theme preference.",
+            "Every browser provides instructions to manage cookies in its help section (Chrome, Firefox, Safari, Edge)."
+          ]
+        },
+        {
+          "heading": "Changes to this policy",
+          "body": [
+            "If we add further cookies in the future (for example, analytics), we will update this policy and, where necessary, ask for your consent before setting them."
+          ]
+        }
       ]
     }
+  },
+  "cookieBanner": {
+    "aria": "Cookie notice",
+    "text": "We only use the technical cookies needed for the site to work and to remember your language and theme. No analytics, no tracking.",
+    "more": "Learn more",
+    "accept": "Got it"
   }
 }

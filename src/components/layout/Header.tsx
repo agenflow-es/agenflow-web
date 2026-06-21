@@ -96,12 +96,7 @@ export function Header() {
 
         <nav className="hidden items-center justify-center gap-1 lg:flex">
           <Dropdown label={nav("services")} items={serviceItems} />
-          <Dropdown
-            label={nav("sectors")}
-            items={sectorItems}
-            footerHref="/sectores"
-            footerLabel={nav("sectors")}
-          />
+          <Dropdown label={nav("sectors")} items={sectorItems} />
           <Link
             href="/precios"
             className="px-3 py-2.5 text-[15px] font-medium text-fg-muted transition hover:text-fg-hover"
