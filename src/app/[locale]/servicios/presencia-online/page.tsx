@@ -4,6 +4,7 @@ import { Container, Eyebrow } from "@/components/ui/primitives";
 import { Reveal } from "@/components/motion/Reveal";
 import { SectionHeader } from "@/components/layout/SectionHeader";
 import { PageHero } from "@/components/layout/PageHero";
+import { CtaSection } from "@/components/layout/CtaSection";
 import { AccentCard } from "@/components/ui/AccentCard";
 import { AiVisibilityCheck } from "@/components/ai/AiVisibilityCheck";
 
@@ -119,31 +120,12 @@ export default async function PresenciaPage({
       </section>
 
       {/* Final CTA */}
-      <section className="relative overflow-hidden">
-        <div
-          className="pointer-events-none absolute inset-0"
-          style={{
-            background:
-              "radial-gradient(ellipse 70% 120% at 50% 120%, var(--accent-soft), transparent 70%)",
-          }}
-        />
-        <Container className="relative max-w-[760px] py-[clamp(64px,9vw,120px)] text-center">
-          <Reveal>
-            <h2 className="font-display text-[clamp(28px,4vw,46px)] font-bold leading-[1.08] tracking-[-0.022em] text-balance">
-              {t("finalCta.title")}
-            </h2>
-            <p className="mx-auto mt-5 max-w-[560px] text-[clamp(16px,1.5vw,19px)] text-fg-muted">
-              {t("finalCta.subtitle")}
-            </p>
-            <Link
-              href="/contacto?reason=presupuesto"
-              className="mt-8 inline-flex items-center gap-2.5 rounded-[var(--radius)] bg-accent px-[30px] py-4 text-[17px] font-semibold text-accent-fg transition hover:-translate-y-0.5"
-            >
-              {t("finalCta.cta")} <span className="text-lg">→</span>
-            </Link>
-          </Reveal>
-        </Container>
-      </section>
+      <CtaSection
+        title={t("finalCta.title")}
+        subtitle={t("finalCta.subtitle")}
+        cta={t("finalCta.cta")}
+        href="/contacto?reason=presupuesto"
+      />
     </>
   );
 }
