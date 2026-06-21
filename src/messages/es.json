@@ -3,6 +3,40 @@
     "title": "Agenflow — Software a medida que hace crecer tu negocio",
     "description": "Convertimos procesos lentos en crecimiento: integramos automatización e IA a medida para que produzcas más con el mismo equipo."
   },
+  "pageMeta": {
+    "services": {
+      "title": "Servicios",
+      "description": "Consultoría de IA, automatización de procesos, software por sector y mejora de presencia online. Entendemos tu operación y construimos la solución."
+    },
+    "consultoria": {
+      "title": "Consultoría de IA",
+      "description": "Analizamos tu operación y te proponemos qué automatizar primero, con un plan claro de implementación. Una sesión de trabajo, sin compromiso."
+    },
+    "automatizacion": {
+      "title": "Automatización de procesos",
+      "description": "Conectamos tus herramientas y automatizamos el trabajo manual que frena al equipo. Resultados en semanas, no en meses."
+    },
+    "desarrollo": {
+      "title": "Software por sector",
+      "description": "Diseñamos productos SaaS especializados por vertical, con la IA dentro. Software que ya conoce tu sector el día que lo abres."
+    },
+    "presencia": {
+      "title": "Mejora de presencia online",
+      "description": "Web, SEO y visibilidad en IA (GEO) para que te encuentren en Google y en ChatGPT. Tres planes para poner tu negocio al día."
+    },
+    "legal": {
+      "title": "Sector legal",
+      "description": "Automatizamos los procesos del despacho —auditoría contable, documentación y plazos— para reducir el trabajo manual y los errores."
+    },
+    "inmobiliario": {
+      "title": "Sector inmobiliario y construcción",
+      "description": "Software con IA para inmobiliarias y administradores de fincas: captación, gestión de comunidades y procesos documentales sin fricción."
+    },
+    "pricing": {
+      "title": "Precios",
+      "description": "Presupuesto a medida según el alcance real de tu proyecto. Solo la presencia online va por paquetes cerrados."
+    }
+  },
   "nav": {
     "services": "Servicios",
     "sectors": "Sectores",

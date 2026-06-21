@@ -3,6 +3,40 @@
     "title": "Agenflow — Custom software that grows your business",
     "description": "We turn slow processes into growth: we integrate custom automation and AI so you produce more with the same team."
   },
+  "pageMeta": {
+    "services": {
+      "title": "Services",
+      "description": "AI consulting, process automation, software by sector and online presence. We understand your operation and build the solution."
+    },
+    "consultoria": {
+      "title": "AI consulting",
+      "description": "We analyze your operation and propose what to automate first, with a clear implementation plan. A working session, no commitment."
+    },
+    "automatizacion": {
+      "title": "Process automation",
+      "description": "We connect your tools and automate the manual work that slows the team down. Results in weeks, not months."
+    },
+    "desarrollo": {
+      "title": "Software by sector",
+      "description": "We design SaaS products specialized by vertical, with AI inside. Software that already knows your sector the day you open it."
+    },
+    "presencia": {
+      "title": "Online presence",
+      "description": "Web, SEO and AI visibility (GEO) so you get found on Google and ChatGPT. Three plans to bring your business up to date."
+    },
+    "legal": {
+      "title": "Legal sector",
+      "description": "We automate the firm's processes —accounting audit, documentation and deadlines— to cut manual work and errors."
+    },
+    "inmobiliario": {
+      "title": "Real estate & construction",
+      "description": "AI software for real estate agencies and property managers: lead capture, community management and document workflows without friction."
+    },
+    "pricing": {
+      "title": "Pricing",
+      "description": "Tailored quotes based on the real scope of your project. Only online presence comes as fixed packages."
+    }
+  },
   "nav": {
     "services": "Services",
     "sectors": "Sectors",

@@ -46,7 +46,7 @@ export async function generateMetadata({
   const t = await getTranslations({ locale, namespace: "metadata" });
   return {
     metadataBase: new URL(siteConfig.url),
-    title: t("title"),
+    title: { default: t("title"), template: "%s — Agenflow" },
     description: t("description"),
     alternates: {
       canonical: `/${locale}`,

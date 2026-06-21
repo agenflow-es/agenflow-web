@@ -1,4 +1,6 @@
+import type { Metadata } from "next";
 import { getTranslations, setRequestLocale } from "next-intl/server";
+import { buildMetadata } from "@/lib/metadata";
 import { Container, Eyebrow } from "@/components/ui/primitives";
 import { Reveal } from "@/components/motion/Reveal";
 import { SectionHeader } from "@/components/layout/SectionHeader";
@@ -6,6 +8,15 @@ import { PageHero } from "@/components/layout/PageHero";
 import { CtaSection } from "@/components/layout/CtaSection";
 
 type Step = { step: string; name: string; desc: string; takeaway: string };
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  return buildMetadata({ locale, key: "consultoria", path: "/servicios/consultoria-ia" });
+}
 
 export default async function ConsultoriaPage({
   params,

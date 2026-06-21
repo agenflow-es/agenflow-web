@@ -1,4 +1,6 @@
+import type { Metadata } from "next";
 import { getTranslations, setRequestLocale } from "next-intl/server";
+import { buildMetadata } from "@/lib/metadata";
 import { Check } from "lucide-react";
 import { Link } from "@/i18n/navigation";
 import { Container, Eyebrow } from "@/components/ui/primitives";
@@ -25,6 +27,15 @@ type PlanItem = {
   features: Feature[];
 };
 type Row = { feat: string; vals: string[]; star?: boolean };
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  return buildMetadata({ locale, key: "pricing", path: "/precios" });
+}
 
 export default async function PreciosPage({
   params,

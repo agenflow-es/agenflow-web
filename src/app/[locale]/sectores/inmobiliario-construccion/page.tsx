@@ -1,4 +1,6 @@
+import type { Metadata } from "next";
 import { getTranslations, setRequestLocale } from "next-intl/server";
+import { buildMetadata } from "@/lib/metadata";
 import { Link } from "@/i18n/navigation";
 import { Container, Eyebrow } from "@/components/ui/primitives";
 import { Reveal } from "@/components/motion/Reveal";
@@ -62,6 +64,15 @@ function ProductCard({ p }: { p: Product }) {
       {inner}
     </Link>
   );
+}
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  return buildMetadata({ locale, key: "inmobiliario", path: "/sectores/inmobiliario-construccion" });
 }
 
 export default async function InmobiliarioPage({

@@ -1,4 +1,6 @@
+import type { Metadata } from "next";
 import { getTranslations, setRequestLocale } from "next-intl/server";
+import { buildMetadata } from "@/lib/metadata";
 import { Link } from "@/i18n/navigation";
 import { Container, Eyebrow } from "@/components/ui/primitives";
 import { Reveal } from "@/components/motion/Reveal";
@@ -9,6 +11,15 @@ import { AccentCard } from "@/components/ui/AccentCard";
 import { AiVisibilityCheck } from "@/components/ai/AiVisibilityCheck";
 
 type Card = { name: string; desc: string };
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  return buildMetadata({ locale, key: "presencia", path: "/servicios/presencia-online" });
+}
 
 export default async function PresenciaPage({
   params,
