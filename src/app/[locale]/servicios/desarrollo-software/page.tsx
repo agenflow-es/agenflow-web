@@ -6,6 +6,7 @@ import { Container, Eyebrow } from "@/components/ui/primitives";
 import { Reveal } from "@/components/motion/Reveal";
 import { SectionHeader } from "@/components/layout/SectionHeader";
 import { PageHero } from "@/components/layout/PageHero";
+import { FaqList } from "@/components/layout/FaqList";
 import { AccentCard } from "@/components/ui/AccentCard";
 import { SpotlightCard } from "@/components/visuals/SpotlightCard";
 
@@ -164,6 +165,12 @@ export default async function DesarrolloPage({
           </Reveal>
         </Container>
       </section>
+
+      {/* FAQ */}
+      <FaqList
+        title={t("faq.title")}
+        items={t.raw("faq.items") as { q: string; a: string }[]}
+      />
 
       {/* Split CTA */}
       <section className="relative overflow-hidden">

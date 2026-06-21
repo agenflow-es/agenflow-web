@@ -206,6 +206,14 @@
     }
   },
   "consultoriaPage": {
+    "faq": {
+      "title": "Preguntas frecuentes",
+      "items": [
+        { "q": "¿La consultoría es gratis?", "a": "No. Es una sesión de trabajo de pago en la que analizamos tu operación y sales con un plan claro de qué automatizar y por dónde empezar. El plan es tuyo, lo ejecutes con nosotros o no." },
+        { "q": "¿Cuánto dura y qué me llevo?", "a": "En pocos días tienes un diagnóstico con las oportunidades de automatización priorizadas por impacto y un plan de implementación con los resultados esperados." },
+        { "q": "¿Necesito equipo técnico?", "a": "No. Aportamos toda la parte técnica; tú pones el conocimiento de tu negocio. Nos integramos con tu equipo y tus herramientas actuales." }
+      ]
+    },
     "eyebrow": "Consultoría de IA",
     "title": "Hablemos de tu negocio. Sin tecnicismos, directo a lo que importa.",
     "subtitle": "Una sesión de trabajo con quien va a diseñar tu solución. Analizamos tu operación a fondo, detectamos dónde la tecnología te hace ganar tiempo y dinero, y sales con un plan claro de por dónde empezar.",
@@ -258,6 +266,14 @@
     }
   },
   "automatizacionPage": {
+    "faq": {
+      "title": "Preguntas frecuentes",
+      "items": [
+        { "q": "¿Cuánto tardáis en poner algo en marcha?", "a": "Las primeras automatizaciones en producción se miden en semanas, no en meses. Empezamos por lo que más tiempo te quita y lo dejamos funcionando." },
+        { "q": "¿Tengo que cambiar mis herramientas?", "a": "No. Nos integramos con las que ya usas y automatizamos el trabajo manual que las rodea, sin romper lo que funciona." },
+        { "q": "¿Cómo se presupuesta?", "a": "A medida, según el alcance real. Cuando entendemos el proceso te pasamos un presupuesto cerrado, sin compromiso." }
+      ]
+    },
     "eyebrow": "Automatización de procesos",
     "title": "El trabajo manual que repites cada semana, hecho solo.",
     "subtitle": "Conectamos tus herramientas y automatizamos las tareas que consumen las horas de tu equipo. Tú te quedas con el criterio; la máquina, con lo repetitivo. Y se nota en semanas.",
@@ -346,6 +362,14 @@
     }
   },
   "desarrolloPage": {
+    "faq": {
+      "title": "Preguntas frecuentes",
+      "items": [
+        { "q": "¿Desarrolláis software para cualquier empresa?", "a": "Diseñamos productos especializados por sector, con la IA dentro. Si conoces un sector a fondo y ves el software que le falta, ponemos la tecnología." },
+        { "q": "¿En qué se diferencia de una herramienta genérica?", "a": "El producto se diseña para un tipo de negocio concreto, así que habla su idioma desde el primer día en lugar de obligarte a adaptarte tú." },
+        { "q": "¿Cuál es el modelo y el precio?", "a": "Cada producto por sector tiene su propio modelo y precio en su página. Para construir algo nuevo juntos, hablamos de tu caso." }
+      ]
+    },
     "eyebrow": "Software por sector",
     "title": "Construimos el software que tu sector no encuentra en el mercado.",
     "subtitle": "No adaptamos herramientas genéricas: diseñamos productos para un tipo de negocio concreto, con la IA dentro. Software que ya conoce tu sector el día que lo abres.",
@@ -453,6 +477,14 @@
     }
   },
   "presenciaPage": {
+    "faq": {
+      "title": "Preguntas frecuentes",
+      "items": [
+        { "q": "¿Qué es la visibilidad en IA (GEO)?", "a": "Trabajamos para que ChatGPT, Perplexity, Google AI y Gemini conozcan y recomienden tu negocio, igual que el SEO trabaja tu posición en Google." },
+        { "q": "¿Garantizáis que la IA me recomiende?", "a": "No prometemos posiciones ni recomendaciones garantizadas. Trabajamos tu visibilidad con método; los resultados dependen de muchos factores." },
+        { "q": "¿Solo hacéis webs nuevas?", "a": "Ponemos al día tu web y tu presencia digital. Tres planes, del esencial al de máxima visibilidad, más un mantenimiento mensual opcional." }
+      ]
+    },
     "eyebrow": "Presencia online",
     "title": "Tu negocio de siempre, visible en el internet de 2026.",
     "subtitle": "En dos años la IA lo ha cambiado todo, y la mayoría de webs se han quedado atrás. Renovamos tu presencia para que cargue rápido, convierta, y te encuentren tanto en Google como en ChatGPT.",
@@ -634,6 +666,14 @@
     }
   },
   "legalPage": {
+    "faq": {
+      "title": "Preguntas frecuentes",
+      "items": [
+        { "q": "¿Qué procesos del despacho automatizáis?", "a": "Empezamos por la auditoría contable —donde más experiencia tenemos— y seguimos con la revisión de documentación, los plazos y los informes al cliente." },
+        { "q": "¿Es seguro con datos sensibles?", "a": "Sí. Trabajamos con RGPD por diseño, datos en la UE, acuerdo de confidencialidad y cifrado con control de accesos. La confidencialidad es la base." },
+        { "q": "¿Tengo que cambiar mis herramientas?", "a": "No. Automatizamos sobre tu forma de trabajar actual y nos integramos con tu equipo." }
+      ]
+    },
     "eyebrow": "Sector · Despachos de abogados",
     "title": "Menos trabajo manual en el despacho. Más horas para tus clientes.",
     "subtitle": "Conocemos cómo trabaja un despacho y automatizamos los procesos que más tiempo consumen —empezando por la auditoría contable— para reducir el trabajo a mano, recortar errores y devolverle horas a tu equipo.",
@@ -745,6 +785,14 @@
     }
   },
   "inmobiliarioPage": {
+    "faq": {
+      "title": "Preguntas frecuentes",
+      "items": [
+        { "q": "¿Trabajáis con inmobiliarias y administradores de fincas?", "a": "Sí. Para administración de fincas construimos fincai; para inmobiliarias automatizamos la captación y la gestión de leads de punta a punta." },
+        { "q": "¿Y si soy constructora o reformista?", "a": "Automatizamos la coordinación, la documentación y el seguimiento de obra con consultoría y automatización a medida." },
+        { "q": "¿Se integra con los canales que uso?", "a": "Centralizamos los contactos que entran por distintos canales para que no se pierda ninguna oportunidad y el seguimiento sea automático." }
+      ]
+    },
     "eyebrow": "Sector · Inmobiliario y construcción",
     "title": "Tecnología propia para inmobiliarias y administradores de fincas.",
     "subtitle": "Conocemos cómo trabaja el sector y construimos el software con IA que le falta: para captar y vender más, y para gestionar comunidades sin fricción.",

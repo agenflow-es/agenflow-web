@@ -206,6 +206,14 @@
     }
   },
   "consultoriaPage": {
+    "faq": {
+      "title": "Frequently asked questions",
+      "items": [
+        { "q": "Is the consultation free?", "a": "No. It's a paid working session where we analyze your operation and you leave with a clear plan of what to automate and where to start. The plan is yours, whether you execute it with us or not." },
+        { "q": "How long is it and what do I get?", "a": "Within a few days you have a diagnosis with automation opportunities prioritized by impact and an implementation plan with the expected results." },
+        { "q": "Do I need a technical team?", "a": "No. We bring the whole technical side; you bring the knowledge of your business. We integrate with your team and your current tools." }
+      ]
+    },
     "eyebrow": "AI consulting",
     "title": "Let's talk about your business. No jargon, straight to what matters.",
     "subtitle": "A working session with the person who will design your solution. We analyze your operation in depth, find where technology saves you time and money, and you leave with a clear plan of where to start.",
@@ -258,6 +266,14 @@
     }
   },
   "automatizacionPage": {
+    "faq": {
+      "title": "Frequently asked questions",
+      "items": [
+        { "q": "How long until something is up and running?", "a": "The first automations in production are measured in weeks, not months. We start with what takes the most time and leave it working." },
+        { "q": "Do I have to change my tools?", "a": "No. We integrate with the ones you already use and automate the manual work around them, without breaking what works." },
+        { "q": "How is it quoted?", "a": "Tailored, based on the real scope. Once we understand the process we send a fixed quote, no commitment." }
+      ]
+    },
     "eyebrow": "Process automation",
     "title": "The manual work you repeat every week, done on its own.",
     "subtitle": "We connect your tools and automate the tasks that eat your team's hours. You keep the judgment; the machine takes the repetitive part. And it shows in weeks.",
@@ -346,6 +362,14 @@
     }
   },
   "desarrolloPage": {
+    "faq": {
+      "title": "Frequently asked questions",
+      "items": [
+        { "q": "Do you build software for any company?", "a": "We design products specialized by sector, with AI inside. If you know a sector inside out and see the software it's missing, we bring the technology." },
+        { "q": "How is it different from a generic tool?", "a": "The product is designed for one specific type of business, so it speaks its language from day one instead of forcing you to adapt." },
+        { "q": "What's the model and pricing?", "a": "Each product by sector has its own model and pricing on its page. To build something new together, let's talk about your case." }
+      ]
+    },
     "eyebrow": "Software by sector",
     "title": "We build the software your sector can't find on the market.",
     "subtitle": "We don't adapt generic tools: we design products for one specific type of business, with AI inside. Software that already knows your sector the day you open it.",
@@ -453,6 +477,14 @@
     }
   },
   "presenciaPage": {
+    "faq": {
+      "title": "Frequently asked questions",
+      "items": [
+        { "q": "What is AI visibility (GEO)?", "a": "We work so ChatGPT, Perplexity, Google AI and Gemini know and recommend your business, just as SEO works your position on Google." },
+        { "q": "Do you guarantee AI will recommend me?", "a": "We don't promise guaranteed rankings or recommendations. We work your visibility with method; results depend on many factors." },
+        { "q": "Do you only build new websites?", "a": "We bring your website and digital presence up to date. Three plans, from essential to maximum visibility, plus an optional monthly maintenance." }
+      ]
+    },
     "eyebrow": "Online presence",
     "title": "Your lifelong business, visible on the internet of 2026.",
     "subtitle": "In two years AI has changed everything, and most websites have fallen behind. We rebuild your presence so it loads fast, converts, and gets you found —on Google and in ChatGPT.",
@@ -634,6 +666,14 @@
     }
   },
   "legalPage": {
+    "faq": {
+      "title": "Frequently asked questions",
+      "items": [
+        { "q": "Which firm processes do you automate?", "a": "We start with accounting audit —where we have the most experience— and move on to document review, deadlines and client reports." },
+        { "q": "Is it safe with sensitive data?", "a": "Yes. We work with GDPR by design, data in the EU, a confidentiality agreement and encryption with access control. Confidentiality is the baseline." },
+        { "q": "Do I have to change my tools?", "a": "No. We automate on top of how you work today and integrate with your team." }
+      ]
+    },
     "eyebrow": "Sector · Law firms",
     "title": "Less manual work in the firm. More hours for your clients.",
     "subtitle": "We know how a law firm works and we automate the processes that eat the most time —starting with accounting audit— to cut manual work, reduce errors and give your team back its hours.",
@@ -745,6 +785,14 @@
     }
   },
   "inmobiliarioPage": {
+    "faq": {
+      "title": "Frequently asked questions",
+      "items": [
+        { "q": "Do you work with agencies and property managers?", "a": "Yes. For property management we build fincai; for real estate agencies we automate lead capture and management end to end." },
+        { "q": "What if I'm a builder or renovator?", "a": "We automate coordination, documentation and site follow-up with tailored consulting and automation." },
+        { "q": "Does it integrate with the channels I use?", "a": "We centralize the contacts coming in through different channels so no opportunity is lost and follow-up is automatic." }
+      ]
+    },
     "eyebrow": "Sector · Real estate & construction",
     "title": "Our own technology for real estate agencies and property managers.",
     "subtitle": "We know how the sector works and we build the AI software it's missing: to capture and sell more, and to manage communities without friction.",
