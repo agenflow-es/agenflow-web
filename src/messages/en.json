@@ -587,7 +587,8 @@
     }
   },
   "servicesHub": {
-    "title": "Services",
+    "eyebrow": "Services",
+    "title": "We understand your operation and build the solution.",
     "subtitle": "First we understand your business. Then we build and deploy the solution that makes it grow."
   },
   "servicePages": {

@@ -587,7 +587,8 @@
     }
   },
   "servicesHub": {
-    "title": "Servicios",
+    "eyebrow": "Servicios",
+    "title": "Entendemos tu operación y construimos la solución.",
     "subtitle": "Primero entendemos tu negocio. Después construimos e implantamos la solución que lo hace crecer."
   },
   "servicePages": {
