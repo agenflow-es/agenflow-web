@@ -2,6 +2,7 @@ import { getTranslations, setRequestLocale } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
 import { Container, Eyebrow } from "@/components/ui/primitives";
 import { Reveal } from "@/components/motion/Reveal";
+import { SectionHeader } from "@/components/layout/SectionHeader";
 import { AccentCard } from "@/components/ui/AccentCard";
 import { SpotlightCard } from "@/components/visuals/SpotlightCard";
 
@@ -135,15 +136,11 @@ export default async function InmobiliarioPage({
       <section className="border-b border-border">
         <Container className="py-[clamp(72px,10vw,140px)]">
           <Reveal>
-            <div className="mx-auto mb-12 max-w-[720px] text-center">
-              <Eyebrow>{t("pains.eyebrow")}</Eyebrow>
-              <h2 className="mt-4 font-display text-[clamp(26px,3.4vw,42px)] font-bold leading-[1.1] tracking-[-0.022em] text-balance">
-                {t("pains.title")}
-              </h2>
-              <p className="mt-4 leading-[1.6] text-fg-muted text-pretty">
-                {t("pains.intro")}
-              </p>
-            </div>
+            <SectionHeader
+              eyebrow={t("pains.eyebrow")}
+              title={t("pains.title")}
+              intro={t("pains.intro")}
+            />
             <div className="grid gap-x-5 gap-y-10 md:grid-cols-2">
               {painGroups.map((g, i) => (
                 <div key={i}>
@@ -176,15 +173,12 @@ export default async function InmobiliarioPage({
       <section className="border-b border-border bg-surface">
         <Container className="py-[clamp(72px,10vw,140px)]">
           <Reveal>
-            <div className="max-w-[720px]">
-              <Eyebrow>{t("products.eyebrow")}</Eyebrow>
-              <h2 className="mt-4 font-display text-[clamp(26px,3.4vw,40px)] font-bold leading-[1.12] tracking-[-0.022em] text-balance">
-                {t("products.title")}
-              </h2>
-              <p className="mt-4 leading-[1.6] text-fg-muted text-pretty">
-                {t("products.intro")}
-              </p>
-            </div>
+            <SectionHeader
+              eyebrow={t("products.eyebrow")}
+              title={t("products.title")}
+              intro={t("products.intro")}
+              align="left"
+            />
             <div className="mt-12 grid gap-5 sm:grid-cols-2">
               {products.map((p, i) => (
                 <ProductCard key={i} p={p} />
@@ -198,15 +192,13 @@ export default async function InmobiliarioPage({
       <section className="border-b border-border">
         <Container className="py-[clamp(72px,10vw,140px)]">
           <Reveal>
-            <div className="max-w-[760px]">
-              <Eyebrow>{t("construction.eyebrow")}</Eyebrow>
-              <h2 className="mt-4 font-display text-[clamp(26px,3.4vw,40px)] font-bold leading-[1.12] tracking-[-0.022em] text-balance">
-                {t("construction.title")}
-              </h2>
-              <p className="mt-5 text-[17px] leading-[1.6] text-fg-muted text-pretty">
-                {t("construction.intro")}
-              </p>
-            </div>
+            <SectionHeader
+              eyebrow={t("construction.eyebrow")}
+              title={t("construction.title")}
+              intro={t("construction.intro")}
+              align="left"
+              maxWidth={760}
+            />
             <div className="mt-12 grid gap-5 sm:grid-cols-2">
               {construction.map((it, i) => (
                 <div
@@ -236,12 +228,11 @@ export default async function InmobiliarioPage({
       <section className="border-b border-border bg-surface">
         <Container className="py-[clamp(72px,10vw,140px)]">
           <Reveal>
-            <div className="max-w-[720px]">
-              <Eyebrow>{t("segments.eyebrow")}</Eyebrow>
-              <h2 className="mt-4 font-display text-[clamp(26px,3.4vw,40px)] font-bold leading-[1.12] tracking-[-0.022em] text-balance">
-                {t("segments.title")}
-              </h2>
-            </div>
+            <SectionHeader
+              eyebrow={t("segments.eyebrow")}
+              title={t("segments.title")}
+              align="left"
+            />
             <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
               {segments.map((s, i) => (
                 <AccentCard key={i} title={s.name} desc={s.desc} background="bg" compact />

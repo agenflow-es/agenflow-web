@@ -2,6 +2,7 @@ import { getTranslations, setRequestLocale } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
 import { Container, Eyebrow } from "@/components/ui/primitives";
 import { Reveal } from "@/components/motion/Reveal";
+import { SectionHeader } from "@/components/layout/SectionHeader";
 import { AccentCard } from "@/components/ui/AccentCard";
 import { AiVisibilityCheck } from "@/components/ai/AiVisibilityCheck";
 
@@ -78,15 +79,12 @@ export default async function PresenciaPage({
       <section className="border-b border-border bg-surface">
         <Container className="py-[clamp(72px,10vw,140px)]">
           <Reveal>
-            <div className="mx-auto mb-12 max-w-[760px] text-center">
-              <Eyebrow>{t("shift.eyebrow")}</Eyebrow>
-              <h2 className="mt-4 font-display text-[clamp(26px,3.4vw,42px)] font-bold leading-[1.1] tracking-[-0.022em] text-balance">
-                {t("shift.title")}
-              </h2>
-              <p className="mt-4 leading-[1.6] text-fg-muted text-pretty">
-                {t("shift.intro")}
-              </p>
-            </div>
+            <SectionHeader
+              eyebrow={t("shift.eyebrow")}
+              title={t("shift.title")}
+              intro={t("shift.intro")}
+              maxWidth={760}
+            />
             <div className="grid gap-5 md:grid-cols-3">
               {shiftCards.map((c, i) => (
                 <AccentCard key={i} title={c.name} desc={c.desc} background="bg" />

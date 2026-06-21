@@ -3,6 +3,7 @@ import { Check } from "lucide-react";
 import { Link } from "@/i18n/navigation";
 import { Container, Eyebrow } from "@/components/ui/primitives";
 import { Reveal } from "@/components/motion/Reveal";
+import { SectionHeader } from "@/components/layout/SectionHeader";
 import { AccentCard } from "@/components/ui/AccentCard";
 import { PricingSection } from "@/components/pricing";
 
@@ -79,15 +80,12 @@ export default async function PreciosPage({
       <section className="border-b border-border">
         <Container className="py-[clamp(72px,10vw,140px)]">
           <Reveal>
-            <div className="max-w-[720px]">
-              <Eyebrow>{t("custom.eyebrow")}</Eyebrow>
-              <h2 className="mt-4 font-display text-[clamp(26px,3.4vw,40px)] font-bold leading-[1.12] tracking-[-0.022em] text-balance">
-                {t("custom.title")}
-              </h2>
-              <p className="mt-4 leading-[1.6] text-fg-muted text-pretty">
-                {t("custom.intro")}
-              </p>
-            </div>
+            <SectionHeader
+              eyebrow={t("custom.eyebrow")}
+              title={t("custom.title")}
+              intro={t("custom.intro")}
+              align="left"
+            />
             <div className="mt-12 grid gap-5 sm:grid-cols-3">
               {custom.map((c, i) => (
                 <AccentCard key={i} title={c.name} desc={c.desc}>
@@ -124,15 +122,11 @@ export default async function PreciosPage({
       <section className="border-b border-border bg-surface">
         <Container className="py-[clamp(72px,10vw,140px)]">
           <Reveal>
-            <div className="mx-auto mb-12 max-w-[720px] text-center">
-              <Eyebrow>{t("packages.eyebrow")}</Eyebrow>
-              <h2 className="mt-4 font-display text-[clamp(26px,3.4vw,42px)] font-bold leading-[1.1] tracking-[-0.022em] text-balance">
-                {t("packages.title")}
-              </h2>
-              <p className="mt-4 leading-[1.6] text-fg-muted text-pretty">
-                {t("packages.intro")}
-              </p>
-            </div>
+            <SectionHeader
+              eyebrow={t("packages.eyebrow")}
+              title={t("packages.title")}
+              intro={t("packages.intro")}
+            />
 
             <PricingSection plans={plans} />
 

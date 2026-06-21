@@ -2,6 +2,7 @@ import { getTranslations, setRequestLocale } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
 import { Container, Eyebrow } from "@/components/ui/primitives";
 import { Reveal } from "@/components/motion/Reveal";
+import { SectionHeader } from "@/components/layout/SectionHeader";
 
 type Step = { step: string; name: string; desc: string; takeaway: string };
 
@@ -82,15 +83,11 @@ export default async function ConsultoriaPage({
       <section id="como" className="scroll-mt-20 border-b border-border bg-surface">
         <Container className="py-[clamp(72px,10vw,140px)]">
           <Reveal>
-            <div className="mx-auto mb-12 max-w-[720px] text-center">
-              <Eyebrow>{t("process.eyebrow")}</Eyebrow>
-              <h2 className="mt-4 font-display text-[clamp(26px,3.4vw,42px)] font-bold leading-[1.1] tracking-[-0.022em] text-balance">
-                {t("process.title")}
-              </h2>
-              <p className="mt-4 leading-[1.6] text-fg-muted text-pretty">
-                {t("process.intro")}
-              </p>
-            </div>
+            <SectionHeader
+              eyebrow={t("process.eyebrow")}
+              title={t("process.title")}
+              intro={t("process.intro")}
+            />
 
             <div className="mx-auto max-w-[860px] space-y-4">
               {steps.map((s, i) => (

@@ -2,6 +2,7 @@ import { getTranslations, setRequestLocale } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
 import { Container, Eyebrow } from "@/components/ui/primitives";
 import { Reveal } from "@/components/motion/Reveal";
+import { SectionHeader } from "@/components/layout/SectionHeader";
 import { AccentCard } from "@/components/ui/AccentCard";
 import { ProcessFlow } from "@/components/visuals/ProcessFlow";
 import { SpotlightCard } from "@/components/visuals/SpotlightCard";
@@ -83,15 +84,11 @@ export default async function AutomatizacionPage({
       <section id="como" className="scroll-mt-20 border-b border-border bg-surface">
         <Container className="py-[clamp(72px,10vw,140px)]">
           <Reveal>
-            <div className="mx-auto mb-12 max-w-[720px] text-center">
-              <Eyebrow>{t("flow.eyebrow")}</Eyebrow>
-              <h2 className="mt-4 font-display text-[clamp(26px,3.4vw,42px)] font-bold leading-[1.1] tracking-[-0.022em] text-balance">
-                {t("flow.title")}
-              </h2>
-              <p className="mt-4 leading-[1.6] text-fg-muted text-pretty">
-                {t("flow.intro")}
-              </p>
-            </div>
+            <SectionHeader
+              eyebrow={t("flow.eyebrow")}
+              title={t("flow.title")}
+              intro={t("flow.intro")}
+            />
 
             <div className="mx-auto max-w-[920px] rounded-[var(--radius-lg)] border border-border bg-bg p-[clamp(20px,4vw,40px)] shadow-[var(--shadow)]">
               <div className="mb-5 flex items-center justify-between font-label text-[12px] uppercase tracking-[0.13em] text-accent">
@@ -108,12 +105,11 @@ export default async function AutomatizacionPage({
       <section className="border-b border-border">
         <Container className="py-[clamp(72px,10vw,140px)]">
           <Reveal>
-            <div className="max-w-[720px]">
-              <Eyebrow>{t("capabilities.eyebrow")}</Eyebrow>
-              <h2 className="mt-4 font-display text-[clamp(26px,3.4vw,40px)] font-bold leading-[1.12] tracking-[-0.022em] text-balance">
-                {t("capabilities.title")}
-              </h2>
-            </div>
+            <SectionHeader
+              eyebrow={t("capabilities.eyebrow")}
+              title={t("capabilities.title")}
+              align="left"
+            />
             <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
               {capabilities.map((c, i) => (
                 <AccentCard key={i} title={c.name} desc={c.desc} />
@@ -127,15 +123,11 @@ export default async function AutomatizacionPage({
       <section className="border-b border-border bg-surface">
         <Container className="py-[clamp(72px,10vw,140px)]">
           <Reveal>
-            <div className="mx-auto mb-12 max-w-[720px] text-center">
-              <Eyebrow>{t("delivery.eyebrow")}</Eyebrow>
-              <h2 className="mt-4 font-display text-[clamp(26px,3.4vw,42px)] font-bold leading-[1.1] tracking-[-0.022em] text-balance">
-                {t("delivery.title")}
-              </h2>
-              <p className="mt-4 leading-[1.6] text-fg-muted text-pretty">
-                {t("delivery.intro")}
-              </p>
-            </div>
+            <SectionHeader
+              eyebrow={t("delivery.eyebrow")}
+              title={t("delivery.title")}
+              intro={t("delivery.intro")}
+            />
             <div className="grid gap-5 md:grid-cols-3">
               {steps.map((s, i) => (
                 <SpotlightCard key={i}>

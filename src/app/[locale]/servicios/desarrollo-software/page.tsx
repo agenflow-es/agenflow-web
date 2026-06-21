@@ -2,6 +2,7 @@ import { getTranslations, setRequestLocale } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
 import { Container, Eyebrow } from "@/components/ui/primitives";
 import { Reveal } from "@/components/motion/Reveal";
+import { SectionHeader } from "@/components/layout/SectionHeader";
 import { AccentCard } from "@/components/ui/AccentCard";
 import { SpotlightCard } from "@/components/visuals/SpotlightCard";
 
@@ -65,15 +66,13 @@ export default async function DesarrolloPage({
       <section className="border-b border-border">
         <Container className="py-[clamp(72px,10vw,140px)]">
           <Reveal>
-            <div className="max-w-[760px]">
-              <Eyebrow>{t("thesis.eyebrow")}</Eyebrow>
-              <h2 className="mt-4 font-display text-[clamp(26px,3.4vw,40px)] font-bold leading-[1.12] tracking-[-0.022em] text-balance">
-                {t("thesis.title")}
-              </h2>
-              <p className="mt-5 text-[17px] leading-[1.6] text-fg-muted text-pretty">
-                {t("thesis.body")}
-              </p>
-            </div>
+            <SectionHeader
+              eyebrow={t("thesis.eyebrow")}
+              title={t("thesis.title")}
+              intro={t("thesis.body")}
+              align="left"
+              maxWidth={760}
+            />
             <div className="mt-12 grid gap-5 sm:grid-cols-3">
               {pillars.map((p, i) => (
                 <AccentCard key={i} title={p.name} desc={p.desc} />
@@ -87,15 +86,11 @@ export default async function DesarrolloPage({
       <section className="border-b border-border bg-surface">
         <Container className="py-[clamp(72px,10vw,140px)]">
           <Reveal>
-            <div className="mx-auto mb-12 max-w-[720px] text-center">
-              <Eyebrow>{t("model.eyebrow")}</Eyebrow>
-              <h2 className="mt-4 font-display text-[clamp(26px,3.4vw,42px)] font-bold leading-[1.1] tracking-[-0.022em] text-balance">
-                {t("model.title")}
-              </h2>
-              <p className="mt-4 leading-[1.6] text-fg-muted text-pretty">
-                {t("model.intro")}
-              </p>
-            </div>
+            <SectionHeader
+              eyebrow={t("model.eyebrow")}
+              title={t("model.title")}
+              intro={t("model.intro")}
+            />
             <div className="grid gap-5 md:grid-cols-3">
               {steps.map((s, i) => (
                 <SpotlightCard key={i}>
@@ -117,15 +112,12 @@ export default async function DesarrolloPage({
       <section className="border-b border-border">
         <Container className="py-[clamp(72px,10vw,140px)]">
           <Reveal>
-            <div className="max-w-[720px]">
-              <Eyebrow>{t("showcase.eyebrow")}</Eyebrow>
-              <h2 className="mt-4 font-display text-[clamp(26px,3.4vw,40px)] font-bold leading-[1.12] tracking-[-0.022em] text-balance">
-                {t("showcase.title")}
-              </h2>
-              <p className="mt-4 leading-[1.6] text-fg-muted text-pretty">
-                {t("showcase.intro")}
-              </p>
-            </div>
+            <SectionHeader
+              eyebrow={t("showcase.eyebrow")}
+              title={t("showcase.title")}
+              intro={t("showcase.intro")}
+              align="left"
+            />
             <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
               {products.map((p, i) => (
                 <Link
@@ -167,12 +159,11 @@ export default async function DesarrolloPage({
       <section className="border-b border-border bg-surface">
         <Container className="py-[clamp(72px,10vw,140px)]">
           <Reveal>
-            <div className="max-w-[720px]">
-              <Eyebrow>{t("why.eyebrow")}</Eyebrow>
-              <h2 className="mt-4 font-display text-[clamp(26px,3.4vw,40px)] font-bold leading-[1.12] tracking-[-0.022em] text-balance">
-                {t("why.title")}
-              </h2>
-            </div>
+            <SectionHeader
+              eyebrow={t("why.eyebrow")}
+              title={t("why.title")}
+              align="left"
+            />
             <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
               {reasons.map((r, i) => (
                 <AccentCard key={i} title={r.name} desc={r.desc} background="bg" bar={false} compact />
