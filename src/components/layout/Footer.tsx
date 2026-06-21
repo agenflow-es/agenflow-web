@@ -103,6 +103,10 @@ export function Footer() {
             ·{" "}
             <Link href="/privacidad" className="transition hover:text-fg-hover">
               {t("privacy")}
+            </Link>{" "}
+            ·{" "}
+            <Link href="/cookies" className="transition hover:text-fg-hover">
+              {t("cookies")}
             </Link>
           </span>
           <LocaleSwitcher />

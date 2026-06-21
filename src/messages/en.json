@@ -162,6 +162,7 @@
     "contact": "Contact",
     "legalNotice": "Legal notice",
     "privacy": "Privacy",
+    "cookies": "Cookies",
     "groups": {
       "services": "Services",
       "sectors": "Sectors",
@@ -375,7 +376,7 @@
         {
           "name": "Legal sector",
           "sector": "Law firms",
-          "desc": "A product for firms, built together with a partner firm. We'll tell the story once it's ready.",
+          "desc": "AI software for law firms: automates accounting-audit work, documentation and deadlines.",
           "href": "/sectores/legal"
         }
       ]

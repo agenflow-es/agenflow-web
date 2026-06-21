@@ -162,6 +162,7 @@
     "contact": "Contacto",
     "legalNotice": "Aviso legal",
     "privacy": "Privacidad",
+    "cookies": "Cookies",
     "groups": {
       "services": "Servicios",
       "sectors": "Sectores",
@@ -375,7 +376,7 @@
         {
           "name": "Sector legal",
           "sector": "Despachos",
-          "desc": "Producto para despacho desarrollado junto a un despacho partner. Lo contaremos en cuanto esté.",
+          "desc": "Producto con IA para despachos: automatiza el trabajo de auditoría contable, documentación y plazos.",
           "href": "/sectores/legal"
         }
       ]
