@@ -38,7 +38,7 @@ export default async function PresenciaPage({
           </p>
           <div className="mt-9 flex justify-center">
             <Link
-              href="/contacto"
+              href="/contacto?reason=presupuesto"
               className="inline-flex items-center gap-2.5 rounded-[var(--radius)] bg-accent px-[26px] py-[15px] font-medium text-accent-fg transition hover:-translate-y-0.5"
             >
               {t("cta")} <span className="text-lg">→</span>
@@ -170,7 +170,7 @@ export default async function PresenciaPage({
               {t("finalCta.subtitle")}
             </p>
             <Link
-              href="/contacto"
+              href="/contacto?reason=presupuesto"
               className="mt-8 inline-flex items-center gap-2.5 rounded-[var(--radius)] bg-accent px-[30px] py-4 text-[17px] font-semibold text-accent-fg transition hover:-translate-y-0.5"
             >
               {t("finalCta.cta")} <span className="text-lg">→</span>

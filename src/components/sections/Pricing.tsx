@@ -45,7 +45,7 @@ export function Pricing() {
                     </div>
                   </div>
                   <Link
-                    href="/contacto"
+                    href="/contacto?reason=presupuesto"
                     className="whitespace-nowrap text-sm font-semibold text-accent underline-offset-4 hover:underline"
                   >
                     {t("cta")} →

@@ -55,7 +55,7 @@ export function Hero() {
 
         <div className="mt-9 flex flex-wrap justify-center gap-3.5">
           <Link
-            href="/contacto"
+            href="/contacto?reason=consultoria"
             className="inline-flex items-center gap-2.5 rounded-[var(--radius)] bg-accent px-[26px] py-[15px] font-medium text-accent-fg transition hover:-translate-y-0.5"
           >
             {t("ctaPrimary")} <span className="text-lg">→</span>

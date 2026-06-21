@@ -24,7 +24,7 @@ export function FinalCta() {
             {t("subtitle")}
           </p>
           <Link
-            href="/contacto"
+            href="/contacto?reason=consultoria"
             className="mt-8 inline-flex items-center gap-2.5 rounded-[var(--radius)] bg-accent px-[30px] py-4 text-[17px] font-semibold text-accent-fg transition hover:-translate-y-0.5"
           >
             {t("cta")} <span className="text-lg">→</span>

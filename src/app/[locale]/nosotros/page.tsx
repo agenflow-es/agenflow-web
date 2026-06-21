@@ -25,7 +25,7 @@ export default async function NosotrosPage({
         </p>
       </div>
       <Link
-        href="/contacto"
+        href="/contacto?reason=consultoria"
         className="mt-8 inline-block rounded-[var(--radius)] bg-accent px-6 py-3 font-medium text-accent-fg transition hover:-translate-y-0.5"
       >
         {t("cta")}

@@ -16,6 +16,8 @@ export function ContactForm() {
     email: z.string().email(t("errors.email")),
     company: z.string().optional(),
     message: z.string().min(10, t("errors.message")),
+    // Honeypot: stays empty for real users; bots that fill it are dropped server-side.
+    website: z.string().optional(),
   });
   type Values = z.infer<typeof schema>;
 
@@ -70,10 +72,21 @@ export function ContactForm() {
         <label className="text-sm font-medium text-fg" htmlFor="message">
           {t("message")}
         </label>
-        <textarea id="message" rows={5} className={fieldClass} {...register("message")} />
+        <textarea id="message" rows={5} maxLength={5000} className={fieldClass} {...register("message")} />
         {errors.message && (
           <p className="mt-1 text-xs text-red-500">{errors.message.message}</p>
         )}
+      </div>
+      {/* Honeypot: off-screen + aria-hidden so humans never see or tab to it. */}
+      <div aria-hidden="true" className="absolute left-[-9999px] top-[-9999px] h-0 w-0 overflow-hidden">
+        <label htmlFor="website">No rellenar</label>
+        <input
+          id="website"
+          type="text"
+          tabIndex={-1}
+          autoComplete="off"
+          {...register("website")}
+        />
       </div>
       <button
         type="submit"

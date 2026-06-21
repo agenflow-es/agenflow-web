@@ -115,7 +115,7 @@ export function Header() {
           <ThemeToggle />
           <LocaleSwitcher />
           <Link
-            href="/contacto"
+            href="/contacto?reason=consultoria"
             className="inline-flex rounded-[var(--radius)] bg-accent px-[18px] py-2.5 text-[14px] font-semibold text-accent-fg transition hover:-translate-y-0.5"
           >
             {nav("cta")}

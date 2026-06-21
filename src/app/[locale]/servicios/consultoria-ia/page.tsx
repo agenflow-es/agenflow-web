@@ -37,7 +37,7 @@ export default async function ConsultoriaPage({
           </p>
           <div className="mt-9 flex flex-wrap justify-center gap-3.5">
             <Link
-              href="/contacto"
+              href="/contacto?reason=consultoria"
               className="inline-flex items-center gap-2.5 rounded-[var(--radius)] bg-accent px-[26px] py-[15px] font-medium text-accent-fg transition hover:-translate-y-0.5"
             >
               {t("ctaPrimary")} <span className="text-lg">→</span>
@@ -162,7 +162,7 @@ export default async function ConsultoriaPage({
               {t("finalCta.subtitle")}
             </p>
             <Link
-              href="/contacto"
+              href="/contacto?reason=consultoria"
               className="mt-8 inline-flex items-center gap-2.5 rounded-[var(--radius)] bg-accent px-[30px] py-4 text-[17px] font-semibold text-accent-fg transition hover:-translate-y-0.5"
             >
               {t("finalCta.cta")} <span className="text-lg">→</span>

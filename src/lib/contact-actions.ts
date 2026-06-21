@@ -1,5 +1,6 @@
 "use server";
 
+import { headers } from "next/headers";
 import { z } from "zod";
 import { Resend } from "resend";
 import { siteConfig } from "@/lib/site";
@@ -8,13 +9,44 @@ const schema = z.object({
   name: z.string().min(2),
   email: z.string().email(),
   company: z.string().optional(),
-  message: z.string().min(10),
+  // Cap length as a basic anti-flood guard.
+  message: z.string().min(10).max(5000),
+  // Honeypot: hidden field that humans never see. Optional + must stay empty.
+  website: z.string().optional(),
 });
+
+// Basic in-memory rate limit. NOTE: per server instance only — on serverless
+// (Vercel) instances don't share memory, so for production this should move to
+// a durable store (Vercel KV / Upstash Redis). Good enough as a first guard.
+// TODO(prod): replace with Vercel KV / Upstash Redis once deployed.
+const WINDOW_MS = 10 * 60 * 1000;
+const MAX_PER_WINDOW = 5;
+const hits = new Map<string, number[]>();
+
+function rateLimited(ip: string): boolean {
+  const now = Date.now();
+  const recent = (hits.get(ip) ?? []).filter((t) => now - t < WINDOW_MS);
+  if (recent.length >= MAX_PER_WINDOW) {
+    hits.set(ip, recent);
+    return true;
+  }
+  recent.push(now);
+  hits.set(ip, recent);
+  return false;
+}
 
 export async function sendContact(input: unknown): Promise<{ ok: boolean }> {
   const parsed = schema.safeParse(input);
   if (!parsed.success) return { ok: false };
-  const { name, email, company, message } = parsed.data;
+  const { name, email, company, message, website } = parsed.data;
+
+  // Honeypot: if the hidden field came back filled, it's a bot. Silently drop
+  // and report success so the bot gets no signal that it was caught.
+  if (website && website.trim() !== "") return { ok: true };
+
+  const h = await headers();
+  const ip = (h.get("x-forwarded-for")?.split(",")[0] ?? "unknown").trim();
+  if (rateLimited(ip)) return { ok: false };
 
   const apiKey = process.env.RESEND_API_KEY;
   if (!apiKey) {

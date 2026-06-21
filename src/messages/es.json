@@ -780,7 +780,7 @@
           "desc": "Gestión de leads de punta a punta: bandeja omnicanal, agente de WhatsApp, voz y gestión de visitas. Para responder el primero y vender más.",
           "status": "Muy pronto",
           "cta": "Avísame del lanzamiento",
-          "href": "/contacto",
+          "href": "/contacto?reason=lanzamiento",
           "external": false
         }
       ]
@@ -846,8 +846,8 @@
       "title": "Lo que presupuestamos por tu caso.",
       "intro": "Consultoría, automatización y software por sector: el alcance lo marca tu operación, así que el precio también. Te pasamos un presupuesto cerrado en cuanto la entendemos.",
       "items": [
-        { "name": "Consultoría de IA", "desc": "Entendemos tu operación y te proponemos por dónde empezar.", "cta": "Solicitar presupuesto", "ctaHref": "/contacto", "link": "Ver servicio", "linkHref": "/servicios/consultoria-ia" },
-        { "name": "Automatización de procesos", "desc": "Construimos e implantamos la solución a medida sobre tus herramientas.", "cta": "Solicitar presupuesto", "ctaHref": "/contacto", "link": "Ver servicio", "linkHref": "/servicios/automatizacion-ia" },
+        { "name": "Consultoría de IA", "desc": "Entendemos tu operación y te proponemos por dónde empezar.", "cta": "Solicitar presupuesto", "ctaHref": "/contacto?reason=presupuesto", "link": "Ver servicio", "linkHref": "/servicios/consultoria-ia" },
+        { "name": "Automatización de procesos", "desc": "Construimos e implantamos la solución a medida sobre tus herramientas.", "cta": "Solicitar presupuesto", "ctaHref": "/contacto?reason=presupuesto", "link": "Ver servicio", "linkHref": "/servicios/automatizacion-ia" },
         { "name": "Software por sector", "desc": "Producto especializado por vertical, con la IA dentro.", "note": "El precio de cada producto está en su propia página.", "cta": "Ver productos por sector", "ctaHref": "/servicios/desarrollo-software" }
       ]
     },
@@ -869,6 +869,24 @@
   "contactPage": {
     "title": "Hablemos de tu operación",
     "body": "Cuéntanos qué quieres mejorar y te proponemos por dónde empezar.",
+    "variants": {
+      "consultoria": {
+        "title": "Solicita tu consultoría",
+        "body": "Cuéntanos cómo trabajáis hoy y te proponemos qué automatizar primero. Es una sesión de trabajo, sin compromiso."
+      },
+      "presupuesto": {
+        "title": "Pide tu presupuesto",
+        "body": "Cuéntanos qué necesitas y te pasamos un presupuesto cerrado sobre tu caso, sin compromiso."
+      },
+      "lanzamiento": {
+        "title": "Entra en la lista de espera",
+        "body": "Déjanos tus datos y te avisamos en cuanto esté disponible. Si quieres, cuéntanos cómo trabajas hoy."
+      },
+      "caso": {
+        "title": "Cuéntanos tu caso",
+        "body": "Dinos cómo trabajáis hoy y te decimos qué se puede mejorar —y si encaja alguno de nuestros productos."
+      }
+    },
     "emailLabel": "O escríbenos a",
     "form": {
       "name": "Nombre",

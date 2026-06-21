@@ -780,7 +780,7 @@
           "desc": "End-to-end lead management: omnichannel inbox, WhatsApp agent, voice and visit scheduling. So you reply first and sell more.",
           "status": "Coming soon",
           "cta": "Notify me at launch",
-          "href": "/contacto",
+          "href": "/contacto?reason=lanzamiento",
           "external": false
         }
       ]
@@ -846,8 +846,8 @@
       "title": "What we price around your case.",
       "intro": "Consulting, automation and software by sector: the scope is set by your operation, so the price is too. We send a fixed quote as soon as we understand it.",
       "items": [
-        { "name": "AI consulting", "desc": "We understand your operation and propose where to start.", "cta": "Request a quote", "ctaHref": "/contacto", "link": "View service", "linkHref": "/servicios/consultoria-ia" },
-        { "name": "Process automation", "desc": "We build and roll out the tailored solution on your tools.", "cta": "Request a quote", "ctaHref": "/contacto", "link": "View service", "linkHref": "/servicios/automatizacion-ia" },
+        { "name": "AI consulting", "desc": "We understand your operation and propose where to start.", "cta": "Request a quote", "ctaHref": "/contacto?reason=presupuesto", "link": "View service", "linkHref": "/servicios/consultoria-ia" },
+        { "name": "Process automation", "desc": "We build and roll out the tailored solution on your tools.", "cta": "Request a quote", "ctaHref": "/contacto?reason=presupuesto", "link": "View service", "linkHref": "/servicios/automatizacion-ia" },
         { "name": "Software by sector", "desc": "Product specialized by vertical, with AI inside.", "note": "Each product's price is on its own page.", "cta": "See products by sector", "ctaHref": "/servicios/desarrollo-software" }
       ]
     },
@@ -869,6 +869,24 @@
   "contactPage": {
     "title": "Let's talk about your operation",
     "body": "Tell us what you want to improve and we'll suggest where to start.",
+    "variants": {
+      "consultoria": {
+        "title": "Request your consultation",
+        "body": "Tell us how you work today and we'll propose what to automate first. A working session, no commitment."
+      },
+      "presupuesto": {
+        "title": "Request your quote",
+        "body": "Tell us what you need and we'll send a fixed quote for your case, no commitment."
+      },
+      "lanzamiento": {
+        "title": "Join the waitlist",
+        "body": "Leave us your details and we'll let you know as soon as it's available. If you like, tell us how you work today."
+      },
+      "caso": {
+        "title": "Tell us about your case",
+        "body": "Tell us how you work today and we'll tell you what can be improved —and whether one of our products fits."
+      }
+    },
     "emailLabel": "Or email us at",
     "form": {
       "name": "Name",
