@@ -1,5 +1,7 @@
 @import "tailwindcss";
 
+@custom-variant dark (&:is(.dark *));
+
 /* ---- Design tokens (from Agenflow Home.dc.html · direction A · Signal) ---- */
 :root,
 [data-theme="dark"] {
@@ -23,6 +25,27 @@
   --iso-1: #a0b6ff;
   --iso-2: #7898ff;
   --iso-3: #5b82ff;
+
+  /* shadcn / 21st.dev semantic tokens → mapped onto the brand system.
+     These let registry components (npx shadcn add) inherit our theme.
+     Note: shadcn's hover-`accent` is intentionally NOT remapped — our
+     `--accent` is the brand blue. Adapt `bg-accent` per component. */
+  --background: var(--bg);
+  --foreground: var(--text);
+  --card: var(--bg-elev);
+  --card-foreground: var(--text);
+  --popover: var(--bg-elev);
+  --popover-foreground: var(--text);
+  --primary: var(--accent);
+  --primary-foreground: var(--accent-fg);
+  --secondary: var(--bg-elev2);
+  --secondary-foreground: var(--text);
+  --muted: var(--bg-elev2);
+  --muted-foreground: var(--text-muted);
+  --destructive: #ef4444;
+  --destructive-foreground: #ffffff;
+  --input: var(--border);
+  --ring: var(--accent);
 }
 
 [data-theme="light"] {
@@ -44,6 +67,24 @@
   --iso-1: #344f9f;
   --iso-2: #4b6cd7;
   --iso-3: #5b82ff;
+
+  /* shadcn / 21st.dev semantic tokens (light) */
+  --background: var(--bg);
+  --foreground: var(--text);
+  --card: var(--bg-elev);
+  --card-foreground: var(--text);
+  --popover: var(--bg-elev);
+  --popover-foreground: var(--text);
+  --primary: var(--accent);
+  --primary-foreground: var(--accent-fg);
+  --secondary: var(--bg-elev2);
+  --secondary-foreground: var(--text);
+  --muted: var(--bg-elev2);
+  --muted-foreground: var(--text-muted);
+  --destructive: #dc2626;
+  --destructive-foreground: #ffffff;
+  --input: var(--border);
+  --ring: var(--accent);
 }
 
 /* ---- Tailwind theme mapping (inline = follows data-theme at runtime) ---- */
@@ -59,10 +100,49 @@
   --color-border-strong: var(--border-strong);
   --color-accent: var(--accent);
   --color-accent-fg: var(--accent-fg);
+  /* shadcn / 21st.dev color utilities (bg-primary, text-muted-foreground, …) */
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
   --font-display: var(--font-inter);
   --font-body: var(--font-inter);
   --font-label: var(--font-jetbrains-mono);
   --font-wordmark: var(--font-space-grotesk);
+  --animate-fade-scale: fade-scale 0.2s ease-out;
+  @keyframes fade-scale {
+  0% {
+    opacity: 0;
+    transform: translateY(-50%) scale(0.95);
+    }
+  100% {
+    opacity: 1;
+    transform: translateY(-50%) scale(1);
+    }
+  }
+}
+
+/* Default border color = brand token (shadcn/21st.dev registry components use
+   a bare `border` utility and expect this base rule; ours pair `border` with
+   `border-border`, so this is additive and changes nothing existing). */
+@layer base {
+  *,
+  ::after,
+  ::before {
+    border-color: var(--color-border);
+  }
 }
 
 body {

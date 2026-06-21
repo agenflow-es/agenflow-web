@@ -44,9 +44,9 @@
         "href": "/servicios/automatizacion-ia"
       },
       {
-        "name": "Custom software by sector",
-        "desc": "When your sector needs a tool the market doesn't offer, we build it. Specialized products, ready to grow with you.",
-        "href": "/sectores"
+        "name": "Software by sector",
+        "desc": "We design and build SaaS by sector: AI products made for one specific type of business.",
+        "href": "/servicios/desarrollo-software"
       }
     ],
     "complementary": "Online presence — we modernize it so it captures and sells too.",
@@ -218,6 +218,333 @@
       "title": "Let's focus on what makes you grow.",
       "subtitle": "Tell us your case and we'll book your consultation. The plan it produces is yours —whether you run it with us or not.",
       "cta": "Request a consultation"
+    }
+  },
+  "automatizacionPage": {
+    "eyebrow": "Process automation",
+    "title": "The manual work you repeat every week, done on its own.",
+    "subtitle": "We connect your tools and automate the tasks that eat your team's hours. You keep the judgment; the machine takes the repetitive part. And it shows in weeks.",
+    "ctaPrimary": "Request a quote",
+    "ctaSecondary": "See how it works",
+    "problem": {
+      "eyebrow": "The cost of doing it by hand",
+      "title": "Each manual task looks small. Added up, they cost you a full-time person.",
+      "items": [
+        "Copying data from one place to another, filling the same fields, moving files.",
+        "Reports someone assembles by hand every week —and that arrive late.",
+        "Follow-ups that get forgotten and errors that slip in when things are rushed."
+      ]
+    },
+    "flow": {
+      "eyebrow": "How it works",
+      "title": "We connect your tools and the work starts to flow on its own.",
+      "intro": "We don't change how you work: we connect what you already use. Information comes in, gets processed with automation and AI, and comes out ready where you need it —without anyone touching it along the way.",
+      "sourcesLabel": "What you already use",
+      "outcomesLabel": "What you get",
+      "hub": "Agenflow",
+      "hubDesc": "Automation + AI",
+      "sources": ["Email", "Sheets", "CRM / ERP", "Documents"],
+      "outcomes": ["Live data", "Reports ready", "Timely alerts"]
+    },
+    "capabilities": {
+      "eyebrow": "What we automate",
+      "title": "If it's repetitive and follows rules, it can probably be automated.",
+      "items": [
+        {
+          "name": "Data across tools",
+          "desc": "We sync information across your CRM, ERP, sheets and email. A single source of truth, always up to date."
+        },
+        {
+          "name": "Documents & forms",
+          "desc": "We extract, classify and fill documents automatically. Invoices, contracts, files —read and processed with AI."
+        },
+        {
+          "name": "Reports & dashboards",
+          "desc": "The numbers you assemble by hand every week, generated on their own and ready the moment you open them."
+        },
+        {
+          "name": "Alerts & follow-up",
+          "desc": "Reminders, alerts and follow-ups that fire at the right moment. Nothing falls through the cracks."
+        },
+        {
+          "name": "Replies & support",
+          "desc": "Automatic answers to frequent questions over email or chat, with the right tone and the right information."
+        },
+        {
+          "name": "Custom processes",
+          "desc": "Is your workflow one of a kind? We map it and automate it end to end, integrating whatever it takes."
+        }
+      ]
+    },
+    "delivery": {
+      "eyebrow": "From idea to production",
+      "title": "Results in weeks, not months.",
+      "intro": "We start with what weighs the most and get it running fast. You see the impact before we keep expanding.",
+      "steps": [
+        {
+          "step": "01",
+          "name": "We connect",
+          "desc": "We hook up your tools and data without touching how your team works. What you already use, integrated."
+        },
+        {
+          "step": "02",
+          "name": "We automate",
+          "desc": "We build the flow, test it with your real cases and refine it until it runs on its own, error-free."
+        },
+        {
+          "step": "03",
+          "name": "We ship to production",
+          "desc": "We leave it running in your day-to-day and look after it: we monitor, adjust and expand it with you."
+        }
+      ]
+    },
+    "reassurance": {
+      "title": "Without breaking what already works.",
+      "body": "We integrate with your current tools, we don't force them out. Your team keeps working the same way —just without the tedious part. And all with your data in the EU and under control."
+    },
+    "finalCta": {
+      "title": "What task would you take off your plate tomorrow?",
+      "subtitle": "Tell us your process and we'll tell you what can be automated and what impact to expect. Tailored quote, no commitment.",
+      "cta": "Request a quote"
+    }
+  },
+  "desarrolloPage": {
+    "eyebrow": "Software by sector",
+    "title": "We build the software your sector can't find on the market.",
+    "subtitle": "We don't adapt generic tools: we design products for one specific type of business, with AI inside. Software that already knows your sector the day you open it.",
+    "cta": "Let's talk about your sector",
+    "thesis": {
+      "eyebrow": "The thesis",
+      "title": "The best software for your sector isn't adapted: it's designed for it.",
+      "body": "Generic tools force your business to fit into them. We do the opposite: we study how a sector works and build the product it needs —with automation and AI integrated from day one.",
+      "pillars": [
+        {
+          "name": "Knows your business",
+          "desc": "Designed around how your sector works, not a generic use case."
+        },
+        {
+          "name": "AI inside",
+          "desc": "Artificial intelligence isn't an add-on: it's part of the product from the core."
+        },
+        {
+          "name": "Grows with you",
+          "desc": "Built to scale to more cases, more volume and a bigger team without rebuilding it."
+        }
+      ]
+    },
+    "model": {
+      "eyebrow": "How a product is born",
+      "title": "From sector knowledge to a product used every day.",
+      "intro": "We don't start from an abstract idea. We start from a sector and from those who live it up close.",
+      "steps": [
+        {
+          "step": "01",
+          "name": "We start from the sector",
+          "desc": "We get into how the business works —sometimes alongside a partner who lives it every day— until we understand what it's really missing."
+        },
+        {
+          "step": "02",
+          "name": "We design and build",
+          "desc": "We turn that knowledge into product: we design it, build it with AI inside and test it with real cases."
+        },
+        {
+          "step": "03",
+          "name": "We run it, and it grows",
+          "desc": "We put it live, maintain it and expand it. The product improves with every business that uses it."
+        }
+      ]
+    },
+    "showcase": {
+      "eyebrow": "What we're building",
+      "title": "Products by sector, in motion.",
+      "intro": "This is what we have in hand today. We present them as they take shape —no smoke.",
+      "cta": "See sector",
+      "items": [
+        {
+          "name": "fincai",
+          "sector": "Property management",
+          "desc": "AI software so property managers can run their communities far better.",
+          "status": "In development",
+          "href": "/sectores/inmobiliario-construccion"
+        },
+        {
+          "name": "replo",
+          "sector": "Real estate agencies",
+          "desc": "End-to-end lead management: omnichannel inbox, WhatsApp agent, voice and visit scheduling.",
+          "status": "In development",
+          "href": "/sectores/inmobiliario-construccion"
+        },
+        {
+          "name": "Legal sector",
+          "sector": "Law firms",
+          "desc": "A product for firms, built together with a partner firm. We'll tell the story once it's ready.",
+          "status": "In the works",
+          "href": "/sectores/legal"
+        }
+      ]
+    },
+    "why": {
+      "eyebrow": "Why us",
+      "title": "We build product, not presentations.",
+      "items": [
+        {
+          "name": "Real product",
+          "desc": "We develop and run our own software. What we propose, we know how to build."
+        },
+        {
+          "name": "Native AI",
+          "desc": "AI is integrated into the product, solving real work —not as a demo."
+        },
+        {
+          "name": "Sector focus",
+          "desc": "We know the sector's context. The product speaks its language."
+        },
+        {
+          "name": "Protected data",
+          "desc": "GDPR by design and EU-hosted data. The foundation of how we build."
+        }
+      ]
+    },
+    "split": {
+      "eyebrow": "Two ways to start",
+      "user": {
+        "title": "Are you in one of these sectors?",
+        "body": "Discover the product we're building for your business and join the list of the first to use it.",
+        "cta": "See sectors"
+      },
+      "partner": {
+        "title": "Do you know a sector inside out?",
+        "body": "If you see the software your sector is missing and want to build it, we bring the technology. You the knowledge, us the product.",
+        "cta": "Let's build it together"
+      }
+    }
+  },
+  "presenciaPage": {
+    "eyebrow": "Online presence",
+    "title": "Your lifelong business, visible on the internet of 2026.",
+    "subtitle": "In two years AI has changed everything, and most websites have fallen behind. We rebuild your presence so it loads fast, converts, and gets you found —on Google and in ChatGPT.",
+    "cta": "Request a quote",
+    "problem": {
+      "eyebrow": "The world changed",
+      "title": "Your website is stuck in the past, and it's costing you clients.",
+      "items": [
+        "An old, slow website that doesn't build trust or invite contact.",
+        "SEO that's missing or outdated: you don't show up when people search.",
+        "And now people ask ChatGPT… and AI doesn't even know you exist."
+      ]
+    },
+    "shift": {
+      "eyebrow": "What changed",
+      "title": "Having a website is no longer enough. You have to be visible —on Google and in AI.",
+      "intro": "We explain it clearly, no jargon, because it's exactly what almost no one is telling you.",
+      "cards": [
+        {
+          "name": "A website that converts",
+          "desc": "Fast, clear and built so visitors do what you want: book, call or message you."
+        },
+        {
+          "name": "Up-to-date SEO",
+          "desc": "The work to get Google to show you when someone searches for what you offer. If you're not at the top, you don't exist."
+        },
+        {
+          "name": "GEO: visibility in AI",
+          "desc": "More and more people ask ChatGPT, Perplexity or Google AI instead of searching. GEO makes AI know your business and recommend it."
+        }
+      ]
+    },
+    "audit": {
+      "eyebrow": "A quick test",
+      "title": "Do you know what AI says about your business right now?",
+      "body": "Type your business name and city. We ask an AI with internet access and show you, right here, what it knows about you. The answer is almost always surprising —and that's where you see the work to be done.",
+      "placeholder": "E.g.: The Corner Café, Valencia",
+      "loading": "Asking AI about your business…",
+      "answerLabel": "Here's what AI says",
+      "resultCta": "I want AI to know me",
+      "disclaimer": "Answer generated by an AI with web search. It's indicative: it reflects what AI finds about your business today.",
+      "errors": {
+        "notConfigured": "The live check will be available very soon. In the meantime, write to us and we'll run it for you.",
+        "rateLimited": "You've run several checks in a row. Wait a moment and try again.",
+        "failed": "We couldn't complete the check. Please try again in a moment."
+      }
+    },
+    "plans": {
+      "eyebrow": "Plans",
+      "title": "Choose how you want to be found.",
+      "subtitle": "Three levels to bring your business up to date. No shelf prices: we send a closed quote based on your case.",
+      "popularLabel": "Recommended",
+      "ctaText": "Request a quote",
+      "items": [
+        {
+          "name": "Essential",
+          "info": "Your website, up to date and ready to convert.",
+          "features": [
+            { "text": "Desktop + mobile website, responsive and HTTPS" },
+            { "text": "Copy & messaging + booking CTA + WhatsApp" },
+            { "text": "Optimized speed (Core Web Vitals)" },
+            { "text": "Basic Google Business profile" },
+            { "text": "2 weeks post-launch support" }
+          ]
+        },
+        {
+          "name": "Professional",
+          "info": "Visible in your area and capturing bookings.",
+          "highlighted": true,
+          "features": [
+            { "text": "Everything in Essential" },
+            { "text": "On-page SEO", "tooltip": "Schema, metadata, Google Analytics 4 and Search Console set up." },
+            { "text": "Advanced Google Business profile" },
+            { "text": "Local SEO", "tooltip": "Citations/NAP, local keywords and review management to rank in your area." },
+            { "text": "Website in 2 languages" },
+            { "text": "Booking/calendar integration + conversion analytics" },
+            { "text": "1 month post-launch support" }
+          ]
+        },
+        {
+          "name": "Visibility 360",
+          "info": "Get found on Google and in AI.",
+          "features": [
+            { "text": "Everything in Professional" },
+            { "text": "GEO: visibility in AI", "tooltip": "Optimization so ChatGPT, Perplexity, Google AI and Gemini know and recommend your business." },
+            { "text": "CRO + initial SEO content + automations" },
+            { "text": "Website in up to 4 languages" },
+            { "text": "1 month post-launch support" }
+          ]
+        }
+      ]
+    },
+    "compare": {
+      "eyebrow": "Compare everything",
+      "title": "What each plan includes.",
+      "cols": ["Essential", "Professional", "Visibility 360"],
+      "rows": [
+        { "feat": "Desktop + mobile website, responsive, HTTPS", "vals": ["true", "true", "true"] },
+        { "feat": "Copy/messaging + booking CTA + WhatsApp", "vals": ["true", "true", "true"] },
+        { "feat": "Speed (Core Web Vitals)", "vals": ["true", "true", "true"] },
+        { "feat": "On-page SEO (schema, metas, GA4, Search Console)", "vals": ["false", "true", "true"] },
+        { "feat": "Google Business profile optimized", "vals": ["Basic", "Advanced", "Advanced"] },
+        { "feat": "Local SEO (citations/NAP, keywords, reviews)", "vals": ["false", "true", "true"] },
+        { "feat": "Multilingual", "vals": ["false", "2 languages", "Up to 4"] },
+        { "feat": "Booking/calendar integration + analytics", "vals": ["false", "true", "true"] },
+        { "feat": "GEO — visibility in AI (ChatGPT, Perplexity, Google AI, Gemini)", "vals": ["false", "false", "true"], "star": true },
+        { "feat": "CRO + initial SEO content + automations", "vals": ["false", "false", "true"] },
+        { "feat": "Post-launch support", "vals": ["2 weeks", "1 month", "1 month"] }
+      ]
+    },
+    "addon": {
+      "eyebrow": "To scale",
+      "title": "Maintenance & Visibility",
+      "body": "What matters isn't launching: it's staying at the top. SEO and GEO are ongoing work —search engines and AIs change every month.",
+      "points": [
+        "Hosting, updates and security",
+        "Ongoing SEO and GEO",
+        "Improvements and support every month"
+      ],
+      "note": "Optional recurring service. We tailor it to your plan."
+    },
+    "finalCta": {
+      "title": "Let's put your business where people —and AI— can find it.",
+      "subtitle": "Tell us where you stand today and we'll tell you where to start. No commitment.",
+      "cta": "Request a quote"
     }
   },
   "servicesHub": {

@@ -17,8 +17,8 @@ function Dropdown({
 }: {
   label: string;
   items: NavItem[];
-  footerHref: string;
-  footerLabel: string;
+  footerHref?: string;
+  footerLabel?: string;
 }) {
   const [open, setOpen] = useState(false);
   return (
@@ -45,12 +45,14 @@ function Dropdown({
               {it.name}
             </Link>
           ))}
-          <Link
-            href={footerHref}
-            className="mt-1 block rounded-[var(--radius)] px-3 py-2.5 text-[13px] font-semibold text-accent transition hover:bg-surface-2"
-          >
-            {footerLabel} →
-          </Link>
+          {footerHref && footerLabel && (
+            <Link
+              href={footerHref}
+              className="mt-1 block rounded-[var(--radius)] px-3 py-2.5 text-[13px] font-semibold text-accent transition hover:bg-surface-2"
+            >
+              {footerLabel} →
+            </Link>
+          )}
         </div>
       )}
     </span>
@@ -61,7 +63,14 @@ export function Header() {
   const nav = useTranslations("nav");
   const tServices = useTranslations("services");
   const tSectors = useTranslations("sectors");
-  const serviceItems = tServices.raw("items") as NavItem[];
+  const tServicePages = useTranslations("servicePages");
+  const serviceItems: NavItem[] = [
+    ...(tServices.raw("items") as NavItem[]),
+    {
+      name: tServicePages("presenciaOnline.title"),
+      href: "/servicios/presencia-online",
+    },
+  ];
   const sectorItems = tSectors.raw("items") as NavItem[];
 
   return (
@@ -86,12 +95,7 @@ export function Header() {
         </Link>
 
         <nav className="hidden items-center gap-1 lg:flex">
-          <Dropdown
-            label={nav("services")}
-            items={serviceItems}
-            footerHref="/servicios"
-            footerLabel={tServices("cta")}
-          />
+          <Dropdown label={nav("services")} items={serviceItems} />
           <Dropdown
             label={nav("sectors")}
             items={sectorItems}

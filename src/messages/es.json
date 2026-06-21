@@ -44,9 +44,9 @@
         "href": "/servicios/automatizacion-ia"
       },
       {
-        "name": "Software a medida por sector",
-        "desc": "Cuando tu sector necesita una herramienta que el mercado no ofrece, la construimos. Productos especializados, listos para crecer contigo.",
-        "href": "/sectores"
+        "name": "Software por sector",
+        "desc": "Diseñamos y construimos SaaS por sector: productos con IA pensados para un tipo de negocio concreto.",
+        "href": "/servicios/desarrollo-software"
       }
     ],
     "complementary": "Mejora de presencia online — la modernizamos para que también capte y venda.",
@@ -218,6 +218,333 @@
       "title": "Pongamos el foco en lo que te hace crecer.",
       "subtitle": "Cuéntanos tu caso y reservamos tu consultoría. El plan que sale es tuyo, lo ejecutes con nosotros o no.",
       "cta": "Solicitar consultoría"
+    }
+  },
+  "automatizacionPage": {
+    "eyebrow": "Automatización de procesos",
+    "title": "El trabajo manual que repites cada semana, hecho solo.",
+    "subtitle": "Conectamos tus herramientas y automatizamos las tareas que consumen las horas de tu equipo. Tú te quedas con el criterio; la máquina, con lo repetitivo. Y se nota en semanas.",
+    "ctaPrimary": "Solicitar presupuesto",
+    "ctaSecondary": "Ver cómo funciona",
+    "problem": {
+      "eyebrow": "El coste de hacerlo a mano",
+      "title": "Cada tarea manual parece pequeña. Sumadas, te cuestan una persona a jornada completa.",
+      "items": [
+        "Copiar datos de un sitio a otro, rellenar los mismos campos, mover archivos.",
+        "Informes que alguien arma a mano cada semana —y que llegan tarde.",
+        "Seguimientos que se olvidan y errores que se cuelan cuando hay prisa."
+      ]
+    },
+    "flow": {
+      "eyebrow": "Cómo funciona",
+      "title": "Conectamos tus herramientas y el trabajo empieza a fluir solo.",
+      "intro": "No cambiamos cómo trabajas: conectamos lo que ya usas. La información entra, se procesa con automatización e IA, y sale lista donde la necesitas —sin que nadie la toque por el camino.",
+      "sourcesLabel": "Lo que ya usas",
+      "outcomesLabel": "Lo que recibes",
+      "hub": "Agenflow",
+      "hubDesc": "Automatización + IA",
+      "sources": ["Email", "Hojas", "CRM / ERP", "Documentos"],
+      "outcomes": ["Datos al día", "Informes listos", "Avisos a tiempo"]
+    },
+    "capabilities": {
+      "eyebrow": "Qué automatizamos",
+      "title": "Si es repetitivo y sigue reglas, probablemente se puede automatizar.",
+      "items": [
+        {
+          "name": "Datos entre herramientas",
+          "desc": "Sincronizamos la información entre tu CRM, tu ERP, tus hojas y tu email. Una sola fuente de verdad, siempre al día."
+        },
+        {
+          "name": "Documentos y formularios",
+          "desc": "Extraemos, clasificamos y rellenamos documentos automáticamente. Facturas, contratos, expedientes —leídos y procesados con IA."
+        },
+        {
+          "name": "Informes y paneles",
+          "desc": "Los números que armas a mano cada semana, generados solos y listos en el momento en que los abres."
+        },
+        {
+          "name": "Avisos y seguimiento",
+          "desc": "Recordatorios, alertas y seguimientos que se disparan en el momento justo. Nada se queda en el tintero."
+        },
+        {
+          "name": "Atención y respuestas",
+          "desc": "Respuestas automáticas a las consultas frecuentes por email o chat, con el tono y la información correctos."
+        },
+        {
+          "name": "Procesos a medida",
+          "desc": "¿Tu flujo es único? Lo mapeamos y lo automatizamos de punta a punta, integrando lo que haga falta."
+        }
+      ]
+    },
+    "delivery": {
+      "eyebrow": "De la idea a producción",
+      "title": "Resultados en semanas, no en meses.",
+      "intro": "Empezamos por lo que más pesa y lo ponemos a funcionar rápido. Ves el impacto antes de seguir ampliando.",
+      "steps": [
+        {
+          "step": "01",
+          "name": "Conectamos",
+          "desc": "Enganchamos tus herramientas y tus datos sin tocar cómo trabaja tu equipo. Lo que ya usas, integrado."
+        },
+        {
+          "step": "02",
+          "name": "Automatizamos",
+          "desc": "Construimos el flujo, lo probamos con tus casos reales y lo afinamos hasta que va solo y sin errores."
+        },
+        {
+          "step": "03",
+          "name": "Ponemos en producción",
+          "desc": "Lo dejamos funcionando en tu día a día y lo cuidamos: monitorizamos, ajustamos y ampliamos contigo."
+        }
+      ]
+    },
+    "reassurance": {
+      "title": "Sin romper lo que ya funciona.",
+      "body": "Nos integramos con tus herramientas actuales, no las sustituimos a la fuerza. Tu equipo sigue trabajando igual —solo que sin la parte tediosa. Y todo con tus datos en la UE y bajo control."
+    },
+    "finalCta": {
+      "title": "¿Qué tarea te quitarías de encima mañana?",
+      "subtitle": "Cuéntanos tu proceso y te decimos qué se puede automatizar y qué impacto esperar. Presupuesto a medida, sin compromiso.",
+      "cta": "Solicitar presupuesto"
+    }
+  },
+  "desarrolloPage": {
+    "eyebrow": "Software por sector",
+    "title": "Construimos el software que tu sector no encuentra en el mercado.",
+    "subtitle": "No adaptamos herramientas genéricas: diseñamos productos para un tipo de negocio concreto, con la IA dentro. Software que ya conoce tu sector el día que lo abres.",
+    "cta": "Hablemos de tu sector",
+    "thesis": {
+      "eyebrow": "La tesis",
+      "title": "El mejor software para tu sector no se adapta: se diseña para él.",
+      "body": "Las herramientas genéricas obligan a tu negocio a encajar en ellas. Nosotros hacemos lo contrario: estudiamos cómo funciona un sector y construimos el producto que necesita —con la automatización y la IA integradas desde el primer día.",
+      "pillars": [
+        {
+          "name": "Conoce tu negocio",
+          "desc": "Diseñado alrededor de cómo trabaja tu sector, no de un caso de uso genérico."
+        },
+        {
+          "name": "Con IA dentro",
+          "desc": "La inteligencia artificial no es un añadido: es parte del producto desde el núcleo."
+        },
+        {
+          "name": "Crece contigo",
+          "desc": "Pensado para escalar a más casos, más volumen y más equipo sin rehacerlo."
+        }
+      ]
+    },
+    "model": {
+      "eyebrow": "Cómo nace un producto",
+      "title": "Del conocimiento del sector a un producto que se usa cada día.",
+      "intro": "No partimos de una idea en abstracto. Partimos de un sector y de quien lo vive de cerca.",
+      "steps": [
+        {
+          "step": "01",
+          "name": "Partimos del sector",
+          "desc": "Nos metemos en cómo trabaja el negocio —a veces junto a un partner que lo vive cada día— hasta entender qué le falta de verdad."
+        },
+        {
+          "step": "02",
+          "name": "Diseñamos y construimos",
+          "desc": "Convertimos ese conocimiento en producto: lo diseñamos, lo construimos con IA dentro y lo probamos con casos reales."
+        },
+        {
+          "step": "03",
+          "name": "Lo operamos y crece",
+          "desc": "Lo ponemos en marcha, lo mantenemos y lo ampliamos. El producto mejora con cada negocio que lo usa."
+        }
+      ]
+    },
+    "showcase": {
+      "eyebrow": "Lo que estamos construyendo",
+      "title": "Productos por sector, en marcha.",
+      "intro": "Esto es lo que tenemos hoy entre manos. Los presentamos según van tomando forma —sin humo.",
+      "cta": "Ver sector",
+      "items": [
+        {
+          "name": "fincai",
+          "sector": "Administración de fincas",
+          "desc": "Software con IA para que los administradores gestionen sus comunidades mucho mejor.",
+          "status": "En desarrollo",
+          "href": "/sectores/inmobiliario-construccion"
+        },
+        {
+          "name": "replo",
+          "sector": "Inmobiliarias",
+          "desc": "Gestión de leads de punta a punta: bandeja omnicanal, agente de WhatsApp, voz y gestión de visitas.",
+          "status": "En desarrollo",
+          "href": "/sectores/inmobiliario-construccion"
+        },
+        {
+          "name": "Sector legal",
+          "sector": "Despachos",
+          "desc": "Producto para despacho desarrollado junto a un despacho partner. Lo contaremos en cuanto esté.",
+          "status": "En preparación",
+          "href": "/sectores/legal"
+        }
+      ]
+    },
+    "why": {
+      "eyebrow": "Por qué con nosotros",
+      "title": "Construimos producto, no presentaciones.",
+      "items": [
+        {
+          "name": "Producto real",
+          "desc": "Desarrollamos y operamos nuestro propio software. Lo que proponemos, sabemos construirlo."
+        },
+        {
+          "name": "IA nativa",
+          "desc": "La IA va integrada en el producto, resolviendo trabajo real —no como demo."
+        },
+        {
+          "name": "Foco por sector",
+          "desc": "Conocemos el contexto del sector. El producto habla su idioma."
+        },
+        {
+          "name": "Datos protegidos",
+          "desc": "RGPD por diseño y datos en la UE. La base de cómo construimos."
+        }
+      ]
+    },
+    "split": {
+      "eyebrow": "Dos formas de empezar",
+      "user": {
+        "title": "¿Eres de uno de estos sectores?",
+        "body": "Conoce el producto que estamos construyendo para tu negocio y entra en la lista de los primeros en usarlo.",
+        "cta": "Ver sectores"
+      },
+      "partner": {
+        "title": "¿Conoces un sector a fondo?",
+        "body": "Si ves el software que le falta a tu sector y quieres construirlo, ponemos la tecnología. Tú el conocimiento, nosotros el producto.",
+        "cta": "Construyámoslo juntos"
+      }
+    }
+  },
+  "presenciaPage": {
+    "eyebrow": "Presencia online",
+    "title": "Tu negocio de siempre, visible en el internet de 2026.",
+    "subtitle": "En dos años la IA lo ha cambiado todo, y la mayoría de webs se han quedado atrás. Renovamos tu presencia para que cargue rápido, convierta, y te encuentren tanto en Google como en ChatGPT.",
+    "cta": "Solicitar presupuesto",
+    "problem": {
+      "eyebrow": "El mundo cambió",
+      "title": "Tu web sigue en el pasado y te está costando clientes.",
+      "items": [
+        "Una web antigua y lenta, que no transmite confianza ni invita a contactar.",
+        "SEO inexistente o desactualizado: no apareces cuando te buscan.",
+        "Y ahora la gente le pregunta a ChatGPT… y la IA ni sabe que existes."
+      ]
+    },
+    "shift": {
+      "eyebrow": "Lo que cambió",
+      "title": "Hoy no basta con tener web. Hay que ser visible —en Google y en la IA.",
+      "intro": "Te lo explicamos claro y sin tecnicismos, porque es justo lo que casi nadie te está contando.",
+      "cards": [
+        {
+          "name": "Una web que convierte",
+          "desc": "Rápida, clara y pensada para que el visitante haga lo que quieres: reservar, llamar o escribirte."
+        },
+        {
+          "name": "SEO actualizado",
+          "desc": "El trabajo para que Google te muestre cuando alguien busca lo que ofreces. Si no estás arriba, no existes."
+        },
+        {
+          "name": "GEO: visibilidad en IA",
+          "desc": "Cada vez más gente pregunta a ChatGPT, Perplexity o Google AI en vez de buscar. El GEO hace que la IA conozca tu negocio y lo recomiende."
+        }
+      ]
+    },
+    "audit": {
+      "eyebrow": "Una prueba rápida",
+      "title": "¿Sabes qué dice la IA de tu negocio ahora mismo?",
+      "body": "Escribe el nombre de tu negocio y tu ciudad. Le preguntamos a una IA con acceso a internet y te enseñamos aquí mismo qué sabe de ti. Casi siempre la respuesta sorprende —y ahí se ve el trabajo que hay por hacer.",
+      "placeholder": "Ej.: Cafetería La Esquina, Valencia",
+      "loading": "Preguntando a la IA por tu negocio…",
+      "answerLabel": "Esto dice la IA",
+      "resultCta": "Quiero que la IA me conozca",
+      "disclaimer": "Respuesta generada por una IA con búsqueda web. Es orientativa: refleja lo que la IA encuentra hoy sobre tu negocio.",
+      "errors": {
+        "notConfigured": "La comprobación en vivo estará disponible muy pronto. Mientras, escríbenos y te la hacemos nosotros.",
+        "rateLimited": "Has hecho varias pruebas seguidas. Espera un momento e inténtalo de nuevo.",
+        "failed": "No hemos podido completar la comprobación. Inténtalo de nuevo en un momento."
+      }
+    },
+    "plans": {
+      "eyebrow": "Planes",
+      "title": "Elige cómo quieres que te encuentren.",
+      "subtitle": "Tres niveles para poner tu negocio al día. Sin precio de escaparate: te pasamos presupuesto cerrado según tu caso.",
+      "popularLabel": "Recomendado",
+      "ctaText": "Solicitar presupuesto",
+      "items": [
+        {
+          "name": "Esencial",
+          "info": "Tu web, al día y lista para convertir.",
+          "features": [
+            { "text": "Web desktop + móvil, responsive y con HTTPS" },
+            { "text": "Copy y mensaje + CTA de reserva + WhatsApp" },
+            { "text": "Velocidad optimizada (Core Web Vitals)" },
+            { "text": "Ficha de Google básica" },
+            { "text": "Soporte 2 semanas post-lanzamiento" }
+          ]
+        },
+        {
+          "name": "Profesional",
+          "info": "Visible en tu zona y captando reservas.",
+          "highlighted": true,
+          "features": [
+            { "text": "Todo lo de Esencial" },
+            { "text": "SEO on-page", "tooltip": "Schema, metadatos, Google Analytics 4 y Search Console configurados." },
+            { "text": "Ficha de Google avanzada" },
+            { "text": "SEO local", "tooltip": "Citas/NAP, keywords locales y gestión de reseñas para posicionar en tu zona." },
+            { "text": "Web en 2 idiomas" },
+            { "text": "Integración de reservas/agenda + analítica de conversión" },
+            { "text": "Soporte 1 mes post-lanzamiento" }
+          ]
+        },
+        {
+          "name": "Visibilidad 360",
+          "info": "Que te encuentren en Google y en la IA.",
+          "features": [
+            { "text": "Todo lo de Profesional" },
+            { "text": "GEO: visibilidad en IA", "tooltip": "Optimización para que ChatGPT, Perplexity, Google AI y Gemini conozcan y recomienden tu negocio." },
+            { "text": "CRO + contenido SEO inicial + automatizaciones" },
+            { "text": "Web hasta 4 idiomas" },
+            { "text": "Soporte 1 mes post-lanzamiento" }
+          ]
+        }
+      ]
+    },
+    "compare": {
+      "eyebrow": "Comparar todo",
+      "title": "Qué incluye cada plan.",
+      "cols": ["Esencial", "Profesional", "Visibilidad 360"],
+      "rows": [
+        { "feat": "Web desktop + móvil, responsive, HTTPS", "vals": ["true", "true", "true"] },
+        { "feat": "Copy/mensaje + CTA de reserva + WhatsApp", "vals": ["true", "true", "true"] },
+        { "feat": "Velocidad (Core Web Vitals)", "vals": ["true", "true", "true"] },
+        { "feat": "SEO on-page (schema, metas, GA4, Search Console)", "vals": ["false", "true", "true"] },
+        { "feat": "Ficha de Google (GBP) optimizada", "vals": ["Básico", "Avanzado", "Avanzado"] },
+        { "feat": "SEO local (citas/NAP, keywords, reseñas)", "vals": ["false", "true", "true"] },
+        { "feat": "Multilingüe", "vals": ["false", "2 idiomas", "Hasta 4"] },
+        { "feat": "Integración reservas/agenda + analítica", "vals": ["false", "true", "true"] },
+        { "feat": "GEO — visibilidad en IA (ChatGPT, Perplexity, Google AI, Gemini)", "vals": ["false", "false", "true"], "star": true },
+        { "feat": "CRO + contenido SEO inicial + automatizaciones", "vals": ["false", "false", "true"] },
+        { "feat": "Soporte post-lanzamiento", "vals": ["2 semanas", "1 mes", "1 mes"] }
+      ]
+    },
+    "addon": {
+      "eyebrow": "Para escalar",
+      "title": "Mantenimiento & Visibilidad",
+      "body": "Lo importante no es lanzar: es mantenerse arriba. El SEO y el GEO son trabajo continuo —los buscadores y las IAs cambian cada mes.",
+      "points": [
+        "Hosting, actualizaciones y seguridad",
+        "SEO y GEO continuos",
+        "Mejoras y soporte cada mes"
+      ],
+      "note": "Servicio recurrente opcional. Lo ajustamos a tu plan."
+    },
+    "finalCta": {
+      "title": "Pongamos tu negocio donde la gente —y la IA— lo encuentre.",
+      "subtitle": "Cuéntanos cómo estás hoy y te decimos por dónde empezar. Sin compromiso.",
+      "cta": "Solicitar presupuesto"
     }
   },
   "servicesHub": {
