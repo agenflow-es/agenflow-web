@@ -4,6 +4,7 @@ import { Link } from "@/i18n/navigation";
 import { Container, Eyebrow } from "@/components/ui/primitives";
 import { Reveal } from "@/components/motion/Reveal";
 import { SectionHeader } from "@/components/layout/SectionHeader";
+import { PageHero } from "@/components/layout/PageHero";
 import { AccentCard } from "@/components/ui/AccentCard";
 import { PricingSection } from "@/components/pricing";
 
@@ -57,24 +58,11 @@ export default async function PreciosPage({
   return (
     <>
       {/* Hero */}
-      <section className="relative overflow-hidden border-b border-border">
-        <div
-          className="pointer-events-none absolute inset-0"
-          style={{
-            background:
-              "radial-gradient(ellipse 80% 60% at 50% 0%, var(--accent-soft), transparent 70%)",
-          }}
-        />
-        <Container className="relative max-w-[820px] py-[clamp(64px,10vw,120px)] text-center">
-          <Eyebrow>{t("eyebrow")}</Eyebrow>
-          <h1 className="mt-5 font-display text-[clamp(30px,4.4vw,50px)] font-bold leading-[1.07] tracking-[-0.022em] text-balance">
-            {t("title")}
-          </h1>
-          <p className="mx-auto mt-6 max-w-[640px] text-[clamp(16px,1.5vw,19px)] leading-[1.6] text-fg-muted text-pretty">
-            {t("subtitle")}
-          </p>
-        </Container>
-      </section>
+      <PageHero
+        eyebrow={t("eyebrow")}
+        title={t("title")}
+        subtitle={t("subtitle")}
+      />
 
       {/* Block 1 — Tailored */}
       <section className="border-b border-border">

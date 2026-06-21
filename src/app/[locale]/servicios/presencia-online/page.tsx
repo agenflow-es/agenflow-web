@@ -3,6 +3,7 @@ import { Link } from "@/i18n/navigation";
 import { Container, Eyebrow } from "@/components/ui/primitives";
 import { Reveal } from "@/components/motion/Reveal";
 import { SectionHeader } from "@/components/layout/SectionHeader";
+import { PageHero } from "@/components/layout/PageHero";
 import { AccentCard } from "@/components/ui/AccentCard";
 import { AiVisibilityCheck } from "@/components/ai/AiVisibilityCheck";
 
@@ -22,32 +23,12 @@ export default async function PresenciaPage({
   return (
     <>
       {/* Hero */}
-      <section className="relative overflow-hidden border-b border-border">
-        <div
-          className="pointer-events-none absolute inset-0"
-          style={{
-            background:
-              "radial-gradient(ellipse 80% 60% at 50% 0%, var(--accent-soft), transparent 70%)",
-          }}
-        />
-        <Container className="relative max-w-[840px] py-[clamp(64px,10vw,120px)] text-center">
-          <Eyebrow>{t("eyebrow")}</Eyebrow>
-          <h1 className="mt-5 font-display text-[clamp(32px,4.6vw,52px)] font-bold leading-[1.06] tracking-[-0.022em] text-balance">
-            {t("title")}
-          </h1>
-          <p className="mx-auto mt-6 max-w-[660px] text-[clamp(16px,1.5vw,19px)] leading-[1.6] text-fg-muted text-pretty">
-            {t("subtitle")}
-          </p>
-          <div className="mt-9 flex justify-center">
-            <Link
-              href="/contacto?reason=presupuesto"
-              className="inline-flex items-center gap-2.5 rounded-[var(--radius)] bg-accent px-[26px] py-[15px] font-medium text-accent-fg transition hover:-translate-y-0.5"
-            >
-              {t("cta")} <span className="text-lg">→</span>
-            </Link>
-          </div>
-        </Container>
-      </section>
+      <PageHero
+        eyebrow={t("eyebrow")}
+        title={t("title")}
+        subtitle={t("subtitle")}
+        cta={{ label: t("cta"), href: "/contacto?reason=presupuesto" }}
+      />
 
       {/* Problem */}
       <section className="border-b border-border">
