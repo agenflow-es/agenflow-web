@@ -7,8 +7,10 @@ import { SectionHeader } from "@/components/layout/SectionHeader";
 import { PageHero } from "@/components/layout/PageHero";
 import { FaqList } from "@/components/layout/FaqList";
 import { CtaSection } from "@/components/layout/CtaSection";
+import { StepTimeline } from "@/components/visuals/StepTimeline";
 
 type Step = { step: string; name: string; desc: string; takeaway: string };
+type TimelineStep = { title: string; sub?: string };
 
 export async function generateMetadata({
   params,
@@ -76,6 +78,13 @@ export default async function ConsultoriaPage({
               title={t("process.title")}
               intro={t("process.intro")}
             />
+
+            <div className="mx-auto mb-14 max-w-[760px]">
+              <StepTimeline
+                items={t.raw("process.timeline") as TimelineStep[]}
+                highlightLast
+              />
+            </div>
 
             <div className="mx-auto max-w-[860px] space-y-4">
               {steps.map((s, i) => (

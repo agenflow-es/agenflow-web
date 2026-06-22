@@ -180,7 +180,7 @@
     "title": "Tailored quotes. No shelf prices.",
     "subtitle": "Every project is quoted on its real scope. Tell us your case and we'll give it to you straight.",
     "items": [
-      { "name": "AI consulting", "desc": "We understand your operation and propose where to start." },
+      { "name": "AI consulting", "desc": "We understand your operation and you leave with a clear plan of where to start." },
       { "name": "Process automation", "desc": "We build and deploy the custom solution." },
       { "name": "Software by sector", "desc": "Product specialized by vertical, with AI inside." }
     ],
@@ -261,6 +261,11 @@
       "title": "A working session, not a sales call.",
       "intro": "We spend real time understanding your business and putting numbers to the opportunity. It's not a sales call: it's analysis. And you leave with something concrete in hand.",
       "takeawayLabel": "You leave with",
+      "timeline": [
+        { "title": "We listen", "sub": "A read of your operation" },
+        { "title": "We prioritize", "sub": "Opportunities by impact" },
+        { "title": "Plan in your hands", "sub": "Clear and ready to run" }
+      ],
       "steps": [
         {
           "step": "01",
@@ -960,7 +965,7 @@
       "title": "What we price around your case.",
       "intro": "Consulting, automation and software by sector: the scope is set by your operation, so the price is too. We send a fixed quote as soon as we understand it.",
       "items": [
-        { "name": "AI consulting", "desc": "We understand your operation and propose where to start.", "cta": "Request a quote", "ctaHref": "/contacto?reason=presupuesto", "link": "View service", "linkHref": "/servicios/consultoria-ia" },
+        { "name": "AI consulting", "desc": "We understand your operation and you leave with a clear plan of where to start.", "cta": "Request a quote", "ctaHref": "/contacto?reason=presupuesto", "link": "View service", "linkHref": "/servicios/consultoria-ia" },
         { "name": "Process automation", "desc": "We build and roll out the tailored solution on your tools.", "cta": "Request a quote", "ctaHref": "/contacto?reason=presupuesto", "link": "View service", "linkHref": "/servicios/automatizacion-ia" },
         { "name": "Software by sector", "desc": "Product specialized by vertical, with AI inside.", "note": "Each product's price is on its own page.", "cta": "See products by sector", "ctaHref": "/servicios/desarrollo-software" }
       ]
@@ -985,6 +990,11 @@
         "Agenflow was founded by an industrial engineer with over 6 years in construction and international hospital projects: huge builds, with hundreds of people and thousands of details that all have to fit together. There you learn fast that a project succeeds —and turns a profit— when the systems inside are well defined and orchestrated.",
         "You also live the other side. Like all of his colleagues, he suffered the same problem: endless hours, no time for anything, and processes with enormous room for improvement. A lot of effort spent on tasks a good system could handle.",
         "The idea of building something of his own was always there. When he saw what automation and artificial intelligence could do with those processes, he didn't think twice: he spent more than a year learning and applying it for real, until he founded Agenflow."
+      ],
+      "milestones": [
+        { "title": "Building hospitals", "sub": "Engineering on national and international projects" },
+        { "title": "The jump to AI", "sub": "Over a year learning and applying it for real" },
+        { "title": "Agenflow is born", "sub": "Custom systems and AI for SMBs" }
       ]
     },
     "mission": {

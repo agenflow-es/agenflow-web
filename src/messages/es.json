@@ -180,7 +180,7 @@
     "title": "Presupuesto a medida. Sin precio de escaparate.",
     "subtitle": "Cada proyecto se presupuesta sobre su alcance real. Cuéntanos tu caso y te lo damos claro.",
     "items": [
-      { "name": "Consultoría de IA", "desc": "Entendemos tu operación y te proponemos por dónde empezar." },
+      { "name": "Consultoría de IA", "desc": "Entendemos tu operación y te vas con un plan claro de por dónde empezar." },
       { "name": "Automatización de procesos", "desc": "Construimos e implantamos la solución a medida." },
       { "name": "Software por sector", "desc": "Producto especializado por vertical, con la IA dentro." }
     ],
@@ -261,6 +261,11 @@
       "title": "Una sesión de trabajo, no una reunión comercial.",
       "intro": "Dedicamos tiempo real a entender tu negocio y a ponerle números a la oportunidad. No es una llamada de ventas: es análisis. Y sales con algo concreto en la mano.",
       "takeawayLabel": "Te llevas",
+      "timeline": [
+        { "title": "Escuchamos", "sub": "Radiografía de tu operación" },
+        { "title": "Priorizamos", "sub": "Oportunidades por impacto" },
+        { "title": "Plan en tu mano", "sub": "Claro y listo para ejecutar" }
+      ],
       "steps": [
         {
           "step": "01",
@@ -960,7 +965,7 @@
       "title": "Lo que presupuestamos por tu caso.",
       "intro": "Consultoría, automatización y software por sector: el alcance lo marca tu operación, así que el precio también. Te pasamos un presupuesto cerrado en cuanto la entendemos.",
       "items": [
-        { "name": "Consultoría de IA", "desc": "Entendemos tu operación y te proponemos por dónde empezar.", "cta": "Solicitar presupuesto", "ctaHref": "/contacto?reason=presupuesto", "link": "Ver servicio", "linkHref": "/servicios/consultoria-ia" },
+        { "name": "Consultoría de IA", "desc": "Entendemos tu operación y te vas con un plan claro de por dónde empezar.", "cta": "Solicitar presupuesto", "ctaHref": "/contacto?reason=presupuesto", "link": "Ver servicio", "linkHref": "/servicios/consultoria-ia" },
         { "name": "Automatización de procesos", "desc": "Construimos e implantamos la solución a medida sobre tus herramientas.", "cta": "Solicitar presupuesto", "ctaHref": "/contacto?reason=presupuesto", "link": "Ver servicio", "linkHref": "/servicios/automatizacion-ia" },
         { "name": "Software por sector", "desc": "Producto especializado por vertical, con la IA dentro.", "note": "El precio de cada producto está en su propia página.", "cta": "Ver productos por sector", "ctaHref": "/servicios/desarrollo-software" }
       ]
@@ -985,6 +990,11 @@
         "Agenflow lo funda un ingeniero industrial con más de 6 años de experiencia en construcción y proyectos internacionales de hospitales: obras enormes, con cientos de personas y miles de detalles que tienen que encajar. Ahí se aprende rápido que un proyecto sale adelante —y es rentable— cuando por dentro hay sistemas bien definidos y orquestados.",
         "También se vive el otro lado. Como todos sus compañeros, sufría el mismo problema: jornadas larguísimas, sin tiempo para nada y procesos con un margen de mejora enorme. Mucho esfuerzo invertido en tareas que un buen sistema podía resolver.",
         "La idea de montar algo propio siempre estuvo ahí. Cuando vio lo que la automatización y la inteligencia artificial podían hacer con esos procesos, no se lo pensó: dedicó más de un año a formarse y a aplicarlo en real, hasta fundar Agenflow."
+      ],
+      "milestones": [
+        { "title": "Construcción de hospitales", "sub": "Ingeniería en proyectos nacionales e internacionales" },
+        { "title": "El salto a la IA", "sub": "Más de un año formándose y aplicándolo en real" },
+        { "title": "Nace Agenflow", "sub": "Sistemas e IA a medida para pymes" }
       ]
     },
     "mission": {

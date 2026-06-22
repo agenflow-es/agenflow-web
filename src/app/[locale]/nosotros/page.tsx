@@ -8,6 +8,7 @@ import { PageHero } from "@/components/layout/PageHero";
 import { AccentCard } from "@/components/ui/AccentCard";
 import { FaqList } from "@/components/layout/FaqList";
 import { CtaSection } from "@/components/layout/CtaSection";
+import { StepTimeline } from "@/components/visuals/StepTimeline";
 
 type FocusItem = {
   title: string;
@@ -35,6 +36,7 @@ export default async function NosotrosPage({
   setRequestLocale(locale);
   const t = await getTranslations("aboutPage");
   const paragraphs = t.raw("origin.paragraphs") as string[];
+  const milestones = t.raw("origin.milestones") as { title: string; sub?: string }[];
   const focus = t.raw("focus.items") as FocusItem[];
   const values = t.raw("values.items") as Value[];
 
@@ -61,6 +63,9 @@ export default async function NosotrosPage({
               {paragraphs.map((p, i) => (
                 <p key={i}>{p}</p>
               ))}
+            </div>
+            <div className="mt-14">
+              <StepTimeline items={milestones} highlightLast />
             </div>
           </Reveal>
         </Container>
