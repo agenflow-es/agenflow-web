@@ -55,6 +55,10 @@
     "calculadoraRoi": {
       "title": "Automation ROI calculator",
       "description": "Estimate in a minute the time and money you recover by automating repetitive tasks in your business."
+    },
+    "trabajaConNosotros": {
+      "title": "Work with us",
+      "description": "Join Agenflow. There are no open positions right now, but you can send us an open application."
     }
   },
   "nav": {
@@ -217,6 +221,8 @@
     "tagline": "Custom software, specialized by sector.",
     "rights": "All rights reserved.",
     "contact": "Contact",
+    "about": "About us",
+    "careers": "Work with us",
     "legalNotice": "Legal notice",
     "privacy": "Privacy",
     "cookies": "Cookies",
@@ -1127,6 +1133,22 @@
     "ctaTitle": "I want those savings in my business",
     "ctaSubtitle": "We'll tell you what to automate first to get there, with a clear plan.",
     "cta": "Request a consultation"
+  },
+  "careersPage": {
+    "eyebrow": "Work with us",
+    "title": "Let's build Agenflow together",
+    "subtitle": "We're a small team automating real operations with AI. We grow slowly and deliberately: when we open a position, it shows up here.",
+    "openings": {
+      "title": "No open positions right now",
+      "body": "We're heads-down building and don't have any roles posted yet. When we open one, you'll see it on this page with all the details."
+    },
+    "spontaneous": {
+      "title": "Think you're a fit anyway?",
+      "body": "If you're passionate about automation and AI applied to real businesses and believe you can contribute, write to us. Tell us who you are, what you do, and attach your CV.",
+      "cta": "Send your application",
+      "subject": "Open application — Agenflow",
+      "note": "We read everything that comes in. If it's a fit, we'll get back to you."
+    }
   },
   "contactPage": {
     "title": "Let's talk about your operation",

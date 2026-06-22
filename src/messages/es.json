@@ -55,6 +55,10 @@
     "calculadoraRoi": {
       "title": "Calculadora de ROI de automatización",
       "description": "Estima en un minuto el tiempo y el dinero que recuperas al automatizar tareas repetitivas en tu negocio."
+    },
+    "trabajaConNosotros": {
+      "title": "Trabaja con nosotros",
+      "description": "Únete a Agenflow. Ahora mismo no hay vacantes abiertas, pero puedes enviarnos una candidatura espontánea."
     }
   },
   "nav": {
@@ -217,6 +221,8 @@
     "tagline": "Software a medida, especializado por sector.",
     "rights": "Todos los derechos reservados.",
     "contact": "Contacto",
+    "about": "Sobre nosotros",
+    "careers": "Trabaja con nosotros",
     "legalNotice": "Aviso legal",
     "privacy": "Privacidad",
     "cookies": "Cookies",
@@ -1127,6 +1133,22 @@
     "ctaTitle": "Quiero ese ahorro en mi negocio",
     "ctaSubtitle": "Te decimos qué automatizar primero para conseguirlo, con un plan claro.",
     "cta": "Solicitar consultoría"
+  },
+  "careersPage": {
+    "eyebrow": "Trabaja con nosotros",
+    "title": "Construyamos Agenflow juntos",
+    "subtitle": "Somos un equipo pequeño que automatiza operaciones reales con IA. Crecemos despacio y con criterio: cuando abrimos una posición, aparece aquí.",
+    "openings": {
+      "title": "No hay vacantes abiertas ahora mismo",
+      "body": "Estamos en plena construcción y todavía no tenemos posiciones publicadas. Cuando abramos una, la verás en esta página con todos los detalles."
+    },
+    "spontaneous": {
+      "title": "¿Crees que encajas igualmente?",
+      "body": "Si te apasiona la automatización y la IA aplicada a negocios reales y crees que puedes aportar, escríbenos. Cuéntanos quién eres, qué sabes hacer y adjunta tu CV.",
+      "cta": "Enviar candidatura",
+      "subject": "Candidatura espontánea — Agenflow",
+      "note": "Leemos todo lo que llega. Si encaja, te contestamos."
+    }
   },
   "contactPage": {
     "title": "Hablemos de tu operación",

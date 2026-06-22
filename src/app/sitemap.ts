@@ -14,6 +14,7 @@ const paths = [
   "/sectores/inmobiliario-construccion",
   "/precios",
   "/nosotros",
+  "/trabaja-con-nosotros",
   "/recursos",
   "/recursos/blog",
   "/recursos/newsletter",

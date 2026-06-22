@@ -51,7 +51,6 @@ export function MobileMenu({
     sectors: string;
     resources: string;
     pricing: string;
-    about: string;
     cta: string;
     open: string;
     close: string;
@@ -115,13 +114,6 @@ export function MobileMenu({
                 className="block rounded-[var(--radius)] px-3 py-3 text-[15px] font-semibold text-fg transition hover:bg-surface-2"
               >
                 {labels.pricing}
-              </Link>
-              <Link
-                href="/nosotros"
-                onClick={close}
-                className="block rounded-[var(--radius)] px-3 py-3 text-[15px] font-semibold text-fg transition hover:bg-surface-2"
-              >
-                {labels.about}
               </Link>
             </div>
             <Link

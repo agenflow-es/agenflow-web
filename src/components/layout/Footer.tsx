@@ -75,7 +75,8 @@ export function Footer() {
 
           <div>
             <ColTitle>{t("groups.company")}</ColTitle>
-            <FooterLink href="/nosotros">{nav("about")}</FooterLink>
+            <FooterLink href="/nosotros">{t("about")}</FooterLink>
+            <FooterLink href="/trabaja-con-nosotros">{t("careers")}</FooterLink>
             <FooterLink href="/precios">{nav("pricing")}</FooterLink>
             <a
               href={`mailto:${siteConfig.contactEmail}`}

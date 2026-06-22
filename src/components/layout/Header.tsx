@@ -109,12 +109,6 @@ export function Header() {
           >
             {nav("pricing")}
           </Link>
-          <Link
-            href="/nosotros"
-            className="px-3 py-2.5 text-[15px] font-medium text-fg-muted transition hover:text-fg-hover"
-          >
-            {nav("about")}
-          </Link>
         </nav>
 
         <div className="flex items-center justify-self-end gap-2.5">
@@ -135,7 +129,6 @@ export function Header() {
               sectors: nav("sectors"),
               resources: nav("resources"),
               pricing: nav("pricing"),
-              about: nav("about"),
               cta: nav("cta"),
               open: nav("menuOpen"),
               close: nav("menuClose"),
