@@ -39,6 +39,26 @@ function rateLimited(ip: string): boolean {
   return false;
 }
 
+// Belt-and-suspenders: the answer is rendered in a plain <p>, so strip any
+// markdown / emojis the model might slip in and collapse it to one clean
+// paragraph, regardless of how well it followed the system prompt.
+function toPlainText(s: string): string {
+  return s
+    .replace(
+      /[\u{1F300}-\u{1FAFF}\u{2600}-\u{27BF}\u{2B00}-\u{2BFF}\u{FE0F}\u{20E3}]/gu,
+      "",
+    ) // emojis & pictographs
+    .replace(/^#{1,6}\s+/gm, "") // headings
+    .replace(/^\s*>\s?/gm, "") // blockquotes
+    .replace(/^\s*[-•*]\s+/gm, "") // bullet markers
+    .replace(/\*\*?([^*]+)\*\*?/g, "$1") // **bold** / *italic*
+    .replace(/__?([^_]+)__?/g, "$1") // __bold__ / _italic_
+    .replace(/`([^`]+)`/g, "$1") // `code`
+    .replace(/\s*\n\s*/g, " ") // newlines → spaces
+    .replace(/\s{2,}/g, " ") // collapse runs of spaces
+    .trim();
+}
+
 export async function checkAiVisibility(input: unknown): Promise<AiCheckResult> {
   const parsed = schema.safeParse(input);
   if (!parsed.success) return { ok: false, error: "invalid" };
@@ -56,24 +76,24 @@ export async function checkAiVisibility(input: unknown): Promise<AiCheckResult> 
 
   const system =
     locale === "en"
-      ? "You check how visible a business is online and to AI assistants. The user gives a business name (and usually a city). Use web search to find what relevant public information exists about it (website, reviews, listings, presence) and summarize it in 2–4 short sentences. If you find little or nothing, say so plainly and honestly: that there's barely any information and that to AI assistants the business is nearly invisible. Be concrete, never invent data, and don't cite source URLs. Answer in English."
-      : "Compruebas la visibilidad de un negocio en internet y ante asistentes de IA. El usuario te da el nombre (y normalmente la ciudad) de un negocio. Usa la búsqueda web para encontrar qué información pública relevante existe sobre él (web, reseñas, fichas, presencia) y resúmelo en 2–4 frases breves. Si encuentras poco o nada, dilo claro y con honestidad: que apenas hay información y que para los asistentes de IA es casi invisible. Sé concreto, nunca inventes datos y no cites URLs de fuentes. Responde en español.";
+      ? "You check whether a business shows up online and to AI assistants. The user gives the business name and, usually, the city. Use web search and answer in 2–3 very short sentences (about 50 words max), in plain running text: no headings, no lists, no bullets, no emojis, no bold and no markdown of any kind. Get to the point: say whether the business appears and what is known about it; if there's barely any information, say so honestly —that to AI it's nearly invisible— and mention in a few words what shows up in its place (competitors or directories). Don't add a preamble or comment on the query, and don't end with questions or offers. Never invent data or cite URLs. Answer in English."
+      : "Compruebas si un negocio aparece en internet y ante los asistentes de IA. El usuario te da el nombre del negocio y, normalmente, la ciudad. Usa la búsqueda web y responde en 2 o 3 frases muy breves (máximo unas 50 palabras), en texto plano y corrido: sin títulos, sin listas, sin viñetas, sin emojis, sin negritas y sin ningún formato markdown. Ve al grano: di si el negocio aparece y qué se sabe de él; si apenas hay información, dilo con honestidad —que para la IA es casi invisible— y menciona en pocas palabras qué aparece en su lugar (competencia o directorios). No añadas introducción ni comentes la consulta, y no termines con preguntas ni ofrecimientos. Nunca inventes datos ni cites URLs. Responde en español.";
 
   try {
     const client = new Anthropic({ apiKey });
     const response = await client.messages.create({
       model: MODEL,
-      max_tokens: 1024,
+      max_tokens: 500,
       system,
       tools: [{ type: "web_search_20260209", name: "web_search", max_uses: 3 }],
       messages: [{ role: "user", content: business }],
     });
 
-    const answer = response.content
+    const raw = response.content
       .filter((b): b is Anthropic.TextBlock => b.type === "text")
       .map((b) => b.text)
-      .join("\n")
-      .trim();
+      .join("\n");
+    const answer = toPlainText(raw);
 
     if (!answer) return { ok: false, error: "failed" };
     return { ok: true, answer };
