@@ -87,7 +87,8 @@
   },
   "about": {
     "eyebrow": "What Agenflow is",
-    "body": "We understand how your business works and where it loses time and margin. Then we integrate the custom automation and technology that make it more productive, more profitable and bigger —and we run it with you."
+    "body": "We understand how your business works and where it loses time and margin. Then we integrate the custom automation and technology that make it more productive, more profitable and bigger —and we run it with you.",
+    "capabilities": ["AI consulting", "Automation", "Software by sector"]
   },
   "services": {
     "eyebrow": "Services",

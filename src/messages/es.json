@@ -87,7 +87,8 @@
   },
   "about": {
     "eyebrow": "Qué es Agenflow",
-    "body": "Entendemos cómo funciona tu negocio y dónde pierde tiempo y margen. Después integramos la automatización y la tecnología a medida que lo hacen más productivo, más rentable y más grande —y lo operamos contigo."
+    "body": "Entendemos cómo funciona tu negocio y dónde pierde tiempo y margen. Después integramos la automatización y la tecnología a medida que lo hacen más productivo, más rentable y más grande —y lo operamos contigo.",
+    "capabilities": ["Consultoría de IA", "Automatización", "Software por sector"]
   },
   "services": {
     "eyebrow": "Servicios",
