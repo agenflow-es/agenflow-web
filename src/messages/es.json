@@ -59,17 +59,33 @@
     "trabajaConNosotros": {
       "title": "Trabaja con nosotros",
       "description": "Únete a Agenflow. Ahora mismo no hay vacantes abiertas, pero puedes enviarnos una candidatura espontánea."
+    },
+    "contacto": {
+      "title": "Contacto",
+      "description": "Cuéntanos qué quieres mejorar en tu operación y te proponemos por dónde empezar. Te respondemos en breve."
+    },
+    "privacidad": {
+      "title": "Política de privacidad",
+      "description": "Cómo trata Agenflow tus datos personales conforme al RGPD y la LOPDGDD: finalidad, base jurídica, encargados y tus derechos."
+    },
+    "avisoLegal": {
+      "title": "Aviso legal",
+      "description": "Información legal del titular de agenflow.es y condiciones de uso, conforme a la LSSI-CE."
+    },
+    "cookies": {
+      "title": "Política de cookies",
+      "description": "Qué cookies y almacenamiento técnico utiliza agenflow.es. No usamos analítica, publicidad ni seguimiento."
     }
   },
   "nav": {
     "services": "Servicios",
     "sectors": "Sectores",
     "pricing": "Precios",
-    "about": "Nosotros",
     "resources": "Recursos",
     "contact": "Contacto",
     "menuOpen": "Abrir menú",
-    "menuClose": "Cerrar menú"
+    "menuClose": "Cerrar menú",
+    "skipToContent": "Saltar al contenido"
   },
   "hero": {
     "title": "Convertimos procesos lentos en capacidad para crecer.",
@@ -141,8 +157,8 @@
         "desc": "Cumplimos el Reglamento europeo desde el primer día, no como un añadido."
       },
       {
-        "name": "Datos en la UE",
-        "desc": "Tu información se procesa y almacena en servidores dentro de la Unión Europea."
+        "name": "Tratamiento con garantías",
+        "desc": "Trabajamos con proveedores que cumplen el RGPD; cualquier transferencia internacional se ampara en las garantías que exige el reglamento."
       },
       {
         "name": "Contrato y confidencialidad",
@@ -637,48 +653,6 @@
     "title": "Entendemos tu operación y construimos la solución.",
     "subtitle": "Primero entendemos tu negocio. Después construimos e implantamos la solución que lo hace crecer."
   },
-  "servicePages": {
-    "consultoria": {
-      "title": "Consultoría de IA",
-      "intro": "Analizamos tu operación y encontramos dónde puedes ganar tiempo, margen y capacidad. Sales con un plan claro de qué automatizar y por dónde empezar.",
-      "points": [
-        "Análisis de procesos y cuellos de botella",
-        "Oportunidades de automatización priorizadas por impacto",
-        "Plan de implementación con resultados esperados"
-      ],
-      "cta": "Solicitar consultoría"
-    },
-    "automatizacion": {
-      "title": "Automatización de procesos",
-      "intro": "Construimos e implantamos la solución: conectamos tus herramientas y automatizamos el trabajo que frena al equipo. Resultados en semanas, no en meses.",
-      "points": [
-        "Integración de tus herramientas y datos",
-        "Automatización del trabajo manual repetitivo",
-        "Puesta en producción con seguimiento"
-      ],
-      "cta": "Solicitar presupuesto"
-    },
-    "desarrollo": {
-      "title": "Software por sector",
-      "intro": "Cuando tu sector necesita una herramienta que el mercado no ofrece, la construimos. Producto especializado, listo para crecer contigo.",
-      "points": [
-        "Producto por sector, del diseño al despliegue",
-        "Especializado en el contexto de tu sector",
-        "Pensado para escalar"
-      ],
-      "cta": "Hablar de mi proyecto"
-    },
-    "presenciaOnline": {
-      "title": "Mejora de presencia online",
-      "intro": "Modernizamos tu web y tu presencia digital para que también capte y venda. Un primer paso sencillo para empezar a trabajar juntos.",
-      "points": [
-        "Renovación de webs anticuadas",
-        "Mejora de velocidad, SEO y conversión",
-        "Una base lista para crecer"
-      ],
-      "cta": "Solicitar presupuesto"
-    }
-  },
   "legalPage": {
     "faq": {
       "title": "Preguntas frecuentes",
@@ -772,8 +746,8 @@
           "desc": "Cumplimiento de protección de datos integrado en cada automatización desde el primer día."
         },
         {
-          "name": "Datos en la UE",
-          "desc": "Tus datos y los servidores que los procesan permanecen dentro de la Unión Europea."
+          "name": "Tratamiento con garantías",
+          "desc": "Trabajamos con proveedores que cumplen el RGPD; si algún dato se trata fuera de la UE, es con las garantías que exige el reglamento."
         },
         {
           "name": "Acuerdo y confidencialidad",
@@ -1175,11 +1149,13 @@
       "sending": "Enviando…",
       "success": "¡Gracias! Te respondemos en breve.",
       "error": "No se pudo enviar. Inténtalo de nuevo o escríbenos por email.",
+      "errorRate": "Has enviado varios mensajes seguidos. Espera unos minutos e inténtalo de nuevo.",
       "errors": {
         "name": "Escribe tu nombre.",
         "email": "Introduce un email válido.",
         "message": "Cuéntanos un poco más (mín. 10 caracteres)."
-      }
+      },
+      "privacy": "Al enviar este formulario aceptas nuestra <privacy>política de privacidad</privacy>."
     }
   },
   "legal": {
@@ -1211,6 +1187,7 @@
           "body": [
             "Tratamos los datos que nos facilitas al rellenar el formulario de contacto: tu nombre, tu email y, de forma opcional, el nombre de tu empresa y el contenido de tu mensaje.",
             "Si te suscribes a nuestra newsletter, tratamos tu dirección de email y el registro de tu consentimiento para enviártela.",
+            "Si utilizas la comprobación de visibilidad en IA, tratamos el nombre del negocio (y, si la incluyes, la ciudad) que escribes para realizar la consulta.",
             "No recogemos categorías especiales de datos, no elaboramos perfiles y no tomamos decisiones automatizadas sobre ti."
           ]
         },
@@ -1238,7 +1215,7 @@
         {
           "heading": "Destinatarios y encargados",
           "body": [
-            "No cedemos tus datos a terceros, salvo obligación legal. Para el funcionamiento del sitio y el envío del formulario nos apoyamos en proveedores que actúan como encargados del tratamiento: Vercel (alojamiento del sitio) y Resend (envío del email de contacto y gestión de la lista de suscriptores de la newsletter), con los que mantenemos los acuerdos exigidos por el RGPD.",
+            "No cedemos tus datos a terceros, salvo obligación legal. Para el funcionamiento del sitio y algunas de sus funciones nos apoyamos en proveedores que actúan como encargados del tratamiento: Vercel (alojamiento del sitio), Resend (envío del email de contacto y gestión de la lista de suscriptores de la newsletter) y Anthropic (que procesa el nombre del negocio que introduces en la comprobación de visibilidad en IA), con los que mantenemos los acuerdos exigidos por el RGPD.",
             "Si alguno de estos proveedores trata datos fuera del Espacio Económico Europeo, lo hace con las garantías adecuadas previstas en el RGPD."
           ]
         },
@@ -1323,7 +1300,8 @@
             "headers": ["Nombre", "Tipo", "Finalidad", "Duración"],
             "rows": [
               ["NEXT_LOCALE", "Técnica (cookie)", "Recordar el idioma que eliges (español o inglés).", "1 año"],
-              ["theme", "Técnica (almacenamiento local)", "Recordar el tema claro u oscuro que seleccionas.", "Hasta que la borres"]
+              ["theme", "Técnica (almacenamiento local)", "Recordar el tema claro u oscuro que seleccionas.", "Hasta que la borres"],
+              ["af-cookie-notice", "Técnica (almacenamiento local)", "Recordar que ya has visto este aviso de cookies.", "Hasta que la borres"]
             ]
           }
         },

@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useRef, useState } from "react";
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
 import { Container, Logo } from "@/components/ui/primitives";
@@ -10,50 +10,57 @@ import { MobileMenu } from "./MobileMenu";
 
 type NavItem = { name: string; href: string };
 
-function Dropdown({
-  label,
-  items,
-  footerHref,
-  footerLabel,
-}: {
-  label: string;
-  items: NavItem[];
-  footerHref?: string;
-  footerLabel?: string;
-}) {
+function Dropdown({ label, items }: { label: string; items: NavItem[] }) {
   const [open, setOpen] = useState(false);
+  const wrapRef = useRef<HTMLSpanElement>(null);
+
+  // Close when keyboard focus leaves the whole group (tab-out) so the menu is
+  // reachable and dismissible without a mouse.
+  function handleBlur(e: React.FocusEvent<HTMLSpanElement>) {
+    if (!wrapRef.current?.contains(e.relatedTarget as Node | null)) {
+      setOpen(false);
+    }
+  }
+
   return (
     <span
+      ref={wrapRef}
       className="relative"
       onMouseEnter={() => setOpen(true)}
       onMouseLeave={() => setOpen(false)}
+      onBlur={handleBlur}
+      onKeyDown={(e) => {
+        if (e.key === "Escape") setOpen(false);
+      }}
     >
       <button
         type="button"
+        aria-haspopup="menu"
+        aria-expanded={open}
+        onClick={() => setOpen((v) => !v)}
         className="inline-flex items-center gap-1.5 px-3 py-2.5 text-[15px] font-medium text-fg-muted transition hover:text-fg-hover"
       >
         {label}
-        <span className="text-[10px] opacity-70">▾</span>
+        <span aria-hidden="true" className="text-[10px] opacity-70">
+          ▾
+        </span>
       </button>
       {open && (
-        <div className="absolute left-0 top-[calc(100%-4px)] min-w-[260px] rounded-[var(--radius-lg)] border border-border bg-surface p-2 shadow-[var(--shadow)]">
-          {items.map((it, i) => (
+        <div
+          role="menu"
+          className="absolute left-0 top-[calc(100%-4px)] min-w-[260px] rounded-[var(--radius-lg)] border border-border bg-surface p-2 shadow-[var(--shadow)]"
+        >
+          {items.map((it) => (
             <Link
-              key={i}
+              key={it.href}
+              role="menuitem"
               href={it.href}
+              onClick={() => setOpen(false)}
               className="block rounded-[var(--radius)] px-3 py-2.5 text-[14.5px] font-semibold text-fg transition hover:bg-surface-2 hover:text-accent"
             >
               {it.name}
             </Link>
           ))}
-          {footerHref && footerLabel && (
-            <Link
-              href={footerHref}
-              className="mt-1 block rounded-[var(--radius)] px-3 py-2.5 text-[13px] font-semibold text-accent transition hover:bg-surface-2"
-            >
-              {footerLabel} →
-            </Link>
-          )}
         </div>
       )}
     </span>

@@ -35,9 +35,17 @@ function rateLimited(ip: string): boolean {
   return false;
 }
 
-export async function sendContact(input: unknown): Promise<{ ok: boolean }> {
+type ContactError = "validation" | "rate_limited" | "not_configured" | "failed";
+
+// Strip CR/LF from single-line fields before composing the email (defense in
+// depth against header/line injection, even though they go in the body).
+const oneLine = (s: string) => s.replace(/[\r\n]+/g, " ").trim();
+
+export async function sendContact(
+  input: unknown,
+): Promise<{ ok: boolean; error?: ContactError }> {
   const parsed = schema.safeParse(input);
-  if (!parsed.success) return { ok: false };
+  if (!parsed.success) return { ok: false, error: "validation" };
   const { name, email, company, message, website } = parsed.data;
 
   // Honeypot: if the hidden field came back filled, it's a bot. Silently drop
@@ -46,23 +54,24 @@ export async function sendContact(input: unknown): Promise<{ ok: boolean }> {
 
   const h = await headers();
   const ip = (h.get("x-forwarded-for")?.split(",")[0] ?? "unknown").trim();
-  if (rateLimited(ip)) return { ok: false };
+  if (rateLimited(ip)) return { ok: false, error: "rate_limited" };
 
   const apiKey = process.env.RESEND_API_KEY;
   if (!apiKey) {
     // No key configured yet (e.g. local/dev) — don't crash, just log.
     console.warn("[contact] RESEND_API_KEY no configurada; mensaje no enviado.");
-    return { ok: false };
+    return { ok: false, error: "not_configured" };
   }
 
+  const safeName = oneLine(name);
   const resend = new Resend(apiKey);
   const { error } = await resend.emails.send({
-    from: `Agenflow Web <${process.env.CONTACT_FROM ?? "web@agenflow.es"}>`,
+    from: `Agenflow Web <${process.env.CONTACT_FROM ?? "web@notifications.agenflow.es"}>`,
     to: process.env.CONTACT_EMAIL ?? siteConfig.contactEmail,
     replyTo: email,
-    subject: `Nuevo contacto web — ${name}`,
-    text: `Nombre: ${name}\nEmail: ${email}\nEmpresa: ${company ?? "-"}\n\n${message}`,
+    subject: `Nuevo contacto web — ${safeName}`,
+    text: `Nombre: ${safeName}\nEmail: ${email}\nEmpresa: ${company ? oneLine(company) : "-"}\n\n${message}`,
   });
 
-  return { ok: !error };
+  return { ok: !error, error: error ? "failed" : undefined };
 }

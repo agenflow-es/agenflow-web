@@ -20,9 +20,9 @@ function Group({
       <div className="px-3 pb-1 pt-2 font-label text-[11px] uppercase tracking-[0.13em] text-fg-faint">
         {title}
       </div>
-      {items.map((it, i) => (
+      {items.map((it) => (
         <Link
-          key={i}
+          key={it.href}
           href={it.href}
           onClick={onNavigate}
           className="block rounded-[var(--radius)] px-3 py-2.5 text-[15px] font-semibold text-fg transition hover:bg-surface-2"

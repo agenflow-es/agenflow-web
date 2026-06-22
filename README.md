@@ -1,36 +1,61 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Agenflow Web
 
-## Getting Started
+Sitio corporativo bilingüe (ES/EN) de **Agenflow** — software con IA, automatización y consultoría para pymes.
 
-First, run the development server:
+## Stack
+
+- **Next.js 16** (App Router) + **React 19** + **TypeScript** (estricto)
+- **Tailwind CSS v4** con sistema de tokens claro/oscuro (`src/app/globals.css`) y puente a primitivas shadcn/21st.dev
+- **next-intl** para i18n (`/es` por defecto, `/en`); enrutado de locale en `src/proxy.ts`
+- **MDX** (`@next/mdx`) para los posts del blog (`src/content/blog/`)
+- **Motion** (`motion/react`) para animaciones; **React Hook Form + Zod** para formularios
+- **Resend** para email (contacto + newsletter) y **Anthropic** para la comprobación de visibilidad en IA
+- **next-themes** (tema oscuro por defecto), fuentes Inter · JetBrains Mono · Space Grotesk vía `next/font`
+- Hosting: **Vercel**
+
+## Puesta en marcha
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm install
+cp .env.example .env.local   # y rellena las variables (ver abajo)
+npm run dev                  # http://localhost:3000  → redirige a /es
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Variables de entorno (`.env.local`)
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+| Variable | Para qué | Gated |
+| --- | --- | --- |
+| `NEXT_PUBLIC_SITE_URL` | URL pública (SEO: sitemap, canonical, hreflang) | — |
+| `NEXT_PUBLIC_CONTACT_EMAIL` | Email de contacto mostrado en footer/contacto | — |
+| `RESEND_API_KEY` | Envío de email (contacto + newsletter) vía Resend | sin ella, el form devuelve error controlado |
+| `CONTACT_FROM` | Remitente verificado en Resend (p. ej. `web@notifications.agenflow.es`) | — |
+| `CONTACT_EMAIL` | Buzón que recibe los mensajes de contacto | — |
+| `RESEND_AUDIENCE_ID` | Audiencia de Resend donde se guardan las altas de newsletter | sin ella, la suscripción devuelve error |
+| `ANTHROPIC_API_KEY` | Comprobación «¿qué dice la IA de tu negocio?» (Claude + búsqueda web) | sin ella, el widget muestra estado "muy pronto" |
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Todas las funciones están *gated*: si falta su clave, degradan con elegancia en vez de romper.
 
-## Learn More
+## Scripts
 
-To learn more about Next.js, take a look at the following resources:
+- `npm run dev` — servidor de desarrollo
+- `npm run build` — build de producción (usa un `.next` limpio; no mezcles `dev` y `build` sobre el mismo `.next`)
+- `npm run start` — sirve el build
+- `npm run lint` — ESLint
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Estructura
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- `src/app/[locale]/` — rutas (App Router), una carpeta por sección
+- `src/components/` — `layout/`, `sections/` (home), `ui/`, `visuals/`, `legal/`, formularios
+- `src/messages/{es,en}.json` — **toda** la copy traducible (mantener ambos en paridad de claves)
+- `src/lib/` — server actions (Resend/Anthropic), `metadata.ts` (`buildMetadata`), `site.ts`
+- `src/content/blog/` — registro tipado `posts.ts` + cuerpos MDX por locale
+- `design/` — material de referencia de diseño (no es código de producción)
 
-## Deploy on Vercel
+## i18n
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+La copy vive en `src/messages/{es,en}.json` y se consume con `useTranslations()` / `getTranslations()`. Ambos ficheros deben tener **exactamente las mismas claves**; el build no lo valida, así que al añadir/quitar una clave hazlo en los dos idiomas.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Notas
+
+- Los rate-limits de los server actions son **en memoria** (suficiente como primera barrera; en serverless conviene moverlos a Vercel KV / Upstash antes de producción).
+- Los textos legales (`/privacidad`, `/aviso-legal`, `/cookies`) son un borrador sólido pendiente de **revisión por un abogado**.

@@ -59,17 +59,33 @@
     "trabajaConNosotros": {
       "title": "Work with us",
       "description": "Join Agenflow. There are no open positions right now, but you can send us an open application."
+    },
+    "contacto": {
+      "title": "Contact",
+      "description": "Tell us what you want to improve in your operation and we'll suggest where to start. We'll get back to you shortly."
+    },
+    "privacidad": {
+      "title": "Privacy policy",
+      "description": "How Agenflow handles your personal data under the GDPR and Spanish LOPDGDD: purpose, legal basis, processors and your rights."
+    },
+    "avisoLegal": {
+      "title": "Legal notice",
+      "description": "Legal information about the owner of agenflow.es and the terms of use, under the Spanish LSSI-CE."
+    },
+    "cookies": {
+      "title": "Cookie policy",
+      "description": "Which cookies and technical storage agenflow.es uses. No analytics, advertising or tracking."
     }
   },
   "nav": {
     "services": "Services",
     "sectors": "Sectors",
     "pricing": "Pricing",
-    "about": "About",
     "resources": "Resources",
     "contact": "Contact",
     "menuOpen": "Open menu",
-    "menuClose": "Close menu"
+    "menuClose": "Close menu",
+    "skipToContent": "Skip to content"
   },
   "hero": {
     "title": "We turn slow processes into capacity to grow.",
@@ -141,8 +157,8 @@
         "desc": "We comply with EU regulation from day one, not as an add-on."
       },
       {
-        "name": "EU-hosted data",
-        "desc": "Your information is processed and stored on servers within the European Union."
+        "name": "Safeguarded processing",
+        "desc": "We work with GDPR-compliant providers; any international transfer is covered by the safeguards the regulation requires."
       },
       {
         "name": "Contract & confidentiality",
@@ -637,48 +653,6 @@
     "title": "We understand your operation and build the solution.",
     "subtitle": "First we understand your business. Then we build and deploy the solution that makes it grow."
   },
-  "servicePages": {
-    "consultoria": {
-      "title": "AI consulting",
-      "intro": "We analyze your operation and find where you can gain time, margin and capacity. You leave with a clear plan of what to automate and where to start.",
-      "points": [
-        "Process and bottleneck analysis",
-        "Automation opportunities prioritized by impact",
-        "Implementation plan with expected results"
-      ],
-      "cta": "Request a consultation"
-    },
-    "automatizacion": {
-      "title": "Process automation",
-      "intro": "We build and deploy the solution: we connect your tools and automate the work that slows the team down. Results in weeks, not months.",
-      "points": [
-        "Integration of your tools and data",
-        "Automation of repetitive manual work",
-        "Go-live with follow-up"
-      ],
-      "cta": "Request a quote"
-    },
-    "desarrollo": {
-      "title": "Software by sector",
-      "intro": "When your sector needs a tool the market doesn't offer, we build it. A specialized product, ready to grow with you.",
-      "points": [
-        "Product by sector, from design to deployment",
-        "Specialized in your sector's context",
-        "Built to scale"
-      ],
-      "cta": "Talk about my project"
-    },
-    "presenciaOnline": {
-      "title": "Online presence",
-      "intro": "We modernize your website and digital presence so it captures and sells too. A simple first step to start working together.",
-      "points": [
-        "Revamp of outdated websites",
-        "Better speed, SEO and conversion",
-        "A base ready to grow"
-      ],
-      "cta": "Request a quote"
-    }
-  },
   "legalPage": {
     "faq": {
       "title": "Frequently asked questions",
@@ -772,8 +746,8 @@
           "desc": "Data-protection compliance built into every automation from day one."
         },
         {
-          "name": "Data in the EU",
-          "desc": "Your data and the servers that process it stay within the European Union."
+          "name": "Safeguarded processing",
+          "desc": "We work with GDPR-compliant providers; where any data is processed outside the EU, it's under the safeguards the regulation requires."
         },
         {
           "name": "Agreement & confidentiality",
@@ -1175,11 +1149,13 @@
       "sending": "Sending…",
       "success": "Thanks! We'll get back to you shortly.",
       "error": "Couldn't send. Try again or email us.",
+      "errorRate": "You've sent several messages in a row. Please wait a few minutes and try again.",
       "errors": {
         "name": "Enter your name.",
         "email": "Enter a valid email.",
         "message": "Tell us a bit more (min. 10 characters)."
-      }
+      },
+      "privacy": "By submitting this form you accept our <privacy>privacy policy</privacy>."
     }
   },
   "legal": {
@@ -1211,6 +1187,7 @@
           "body": [
             "We process the data you provide when you fill in the contact form: your name, your email and, optionally, your company name and the content of your message.",
             "If you subscribe to our newsletter, we process your email address and the record of your consent to send it to you.",
+            "If you use the AI visibility check, we process the business name (and the city, if you include it) you type to run the query.",
             "We do not collect special categories of data, we do not build profiles and we do not make automated decisions about you."
           ]
         },
@@ -1238,7 +1215,7 @@
         {
           "heading": "Recipients and processors",
           "body": [
-            "We do not share your data with third parties except where legally required. To run the site and send the contact form we rely on providers acting as data processors: Vercel (site hosting) and Resend (delivery of the contact email and management of the newsletter subscriber list), with whom we maintain the agreements required by the GDPR.",
+            "We do not share your data with third parties except where legally required. To run the site and some of its features we rely on providers acting as data processors: Vercel (site hosting), Resend (delivery of the contact email and management of the newsletter subscriber list) and Anthropic (which processes the business name you enter in the AI visibility check), with whom we maintain the agreements required by the GDPR.",
             "Where any of these providers processes data outside the European Economic Area, it does so under the appropriate safeguards set out in the GDPR."
           ]
         },
@@ -1323,7 +1300,8 @@
             "headers": ["Name", "Type", "Purpose", "Duration"],
             "rows": [
               ["NEXT_LOCALE", "Technical (cookie)", "Remember the language you choose (Spanish or English).", "1 year"],
-              ["theme", "Technical (local storage)", "Remember the light or dark theme you select.", "Until you clear it"]
+              ["theme", "Technical (local storage)", "Remember the light or dark theme you select.", "Until you clear it"],
+              ["af-cookie-notice", "Technical (local storage)", "Remember that you have already seen this cookie notice.", "Until you clear it"]
             ]
           }
         },

@@ -16,7 +16,7 @@ function CtaButton({ cta, primary }: { cta: Cta; primary?: boolean }) {
     : "inline-flex items-center gap-2.5 rounded-[var(--radius)] border border-border-strong px-[26px] py-[15px] font-medium text-fg transition hover:bg-surface";
   const content = primary ? (
     <>
-      {cta.label} <span className="text-lg">→</span>
+      {cta.label} <span aria-hidden="true" className="text-lg">→</span>
     </>
   ) : (
     cta.label

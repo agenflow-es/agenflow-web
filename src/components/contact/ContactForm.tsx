@@ -5,11 +5,13 @@ import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
 import { useTranslations } from "next-intl";
+import { Link } from "@/i18n/navigation";
 import { sendContact } from "@/lib/contact-actions";
 
 export function ContactForm() {
   const t = useTranslations("contactPage.form");
   const [status, setStatus] = useState<"idle" | "ok" | "error">("idle");
+  const [errorKind, setErrorKind] = useState<string>("failed");
 
   const schema = z.object({
     name: z.string().min(2, t("errors.name")),
@@ -35,6 +37,7 @@ export function ContactForm() {
       setStatus("ok");
       reset();
     } else {
+      setErrorKind(res.error ?? "failed");
       setStatus("error");
     }
   }
@@ -48,18 +51,35 @@ export function ContactForm() {
         <label className="text-sm font-medium text-fg" htmlFor="name">
           {t("name")}
         </label>
-        <input id="name" className={fieldClass} {...register("name")} />
+        <input
+          id="name"
+          aria-invalid={!!errors.name}
+          aria-describedby={errors.name ? "name-error" : undefined}
+          className={fieldClass}
+          {...register("name")}
+        />
         {errors.name && (
-          <p className="mt-1 text-xs text-red-500">{errors.name.message}</p>
+          <p id="name-error" role="alert" className="mt-1 text-xs text-red-500">
+            {errors.name.message}
+          </p>
         )}
       </div>
       <div>
         <label className="text-sm font-medium text-fg" htmlFor="email">
           {t("email")}
         </label>
-        <input id="email" type="email" className={fieldClass} {...register("email")} />
+        <input
+          id="email"
+          type="email"
+          aria-invalid={!!errors.email}
+          aria-describedby={errors.email ? "email-error" : undefined}
+          className={fieldClass}
+          {...register("email")}
+        />
         {errors.email && (
-          <p className="mt-1 text-xs text-red-500">{errors.email.message}</p>
+          <p id="email-error" role="alert" className="mt-1 text-xs text-red-500">
+            {errors.email.message}
+          </p>
         )}
       </div>
       <div>
@@ -72,14 +92,23 @@ export function ContactForm() {
         <label className="text-sm font-medium text-fg" htmlFor="message">
           {t("message")}
         </label>
-        <textarea id="message" rows={5} maxLength={5000} className={fieldClass} {...register("message")} />
+        <textarea
+          id="message"
+          rows={5}
+          maxLength={5000}
+          aria-invalid={!!errors.message}
+          aria-describedby={errors.message ? "message-error" : undefined}
+          className={fieldClass}
+          {...register("message")}
+        />
         {errors.message && (
-          <p className="mt-1 text-xs text-red-500">{errors.message.message}</p>
+          <p id="message-error" role="alert" className="mt-1 text-xs text-red-500">
+            {errors.message.message}
+          </p>
         )}
       </div>
       {/* Honeypot: off-screen + aria-hidden so humans never see or tab to it. */}
       <div aria-hidden="true" className="absolute left-[-9999px] top-[-9999px] h-0 w-0 overflow-hidden">
-        <label htmlFor="website">No rellenar</label>
         <input
           id="website"
           type="text"
@@ -95,11 +124,27 @@ export function ContactForm() {
       >
         {isSubmitting ? t("sending") : t("submit")}
       </button>
+      <p className="text-xs leading-[1.5] text-fg-faint">
+        {t.rich("privacy", {
+          privacy: (chunks) => (
+            <Link
+              href="/privacidad"
+              className="font-medium text-accent underline decoration-accent/40 underline-offset-2 transition hover:decoration-accent"
+            >
+              {chunks}
+            </Link>
+          ),
+        })}
+      </p>
       {status === "ok" && (
-        <p className="text-sm text-green-500">{t("success")}</p>
+        <p role="status" className="text-sm text-green-500">
+          {t("success")}
+        </p>
       )}
       {status === "error" && (
-        <p className="text-sm text-red-500">{t("error")}</p>
+        <p role="alert" className="text-sm text-red-500">
+          {errorKind === "rate_limited" ? t("errorRate") : t("error")}
+        </p>
       )}
     </form>
   );

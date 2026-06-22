@@ -57,8 +57,8 @@ export function Footer() {
 
           <div>
             <ColTitle>{t("groups.services")}</ColTitle>
-            {serviceItems.map((l, i) => (
-              <FooterLink key={i} href={l.href}>
+            {serviceItems.map((l) => (
+              <FooterLink key={l.href} href={l.href}>
                 {l.name}
               </FooterLink>
             ))}
@@ -66,8 +66,8 @@ export function Footer() {
 
           <div>
             <ColTitle>{t("groups.sectors")}</ColTitle>
-            {sectorItems.map((l, i) => (
-              <FooterLink key={i} href={l.href}>
+            {sectorItems.map((l) => (
+              <FooterLink key={l.href} href={l.href}>
                 {l.name}
               </FooterLink>
             ))}

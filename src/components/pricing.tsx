@@ -13,7 +13,7 @@ import {
 import { cn } from '@/lib/utils';
 import { CheckCircleIcon, StarIcon } from 'lucide-react';
 import { Link } from '@/i18n/navigation';
-import { motion, Transition } from 'framer-motion';
+import { motion, type Transition } from 'motion/react';
 
 interface Plan {
 	name: string;

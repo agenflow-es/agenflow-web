@@ -31,11 +31,13 @@ function rateLimited(ip: string): boolean {
   return false;
 }
 
+type NewsletterError = "validation" | "rate_limited" | "not_configured" | "failed";
+
 export async function subscribeNewsletter(
   input: unknown,
-): Promise<{ ok: boolean }> {
+): Promise<{ ok: boolean; error?: NewsletterError }> {
   const parsed = schema.safeParse(input);
-  if (!parsed.success) return { ok: false };
+  if (!parsed.success) return { ok: false, error: "validation" };
   const { email, website } = parsed.data;
 
   // Honeypot: filled means a bot. Silently report success so it gets no signal.
@@ -43,7 +45,7 @@ export async function subscribeNewsletter(
 
   const h = await headers();
   const ip = (h.get("x-forwarded-for")?.split(",")[0] ?? "unknown").trim();
-  if (rateLimited(ip)) return { ok: false };
+  if (rateLimited(ip)) return { ok: false, error: "rate_limited" };
 
   const apiKey = process.env.RESEND_API_KEY;
   const audienceId = process.env.RESEND_AUDIENCE_ID;
@@ -52,7 +54,7 @@ export async function subscribeNewsletter(
     console.warn(
       "[newsletter] RESEND_API_KEY / RESEND_AUDIENCE_ID no configuradas; suscripción no registrada.",
     );
-    return { ok: false };
+    return { ok: false, error: "not_configured" };
   }
 
   const resend = new Resend(apiKey);
@@ -62,5 +64,5 @@ export async function subscribeNewsletter(
     audienceId,
   });
 
-  return { ok: !error };
+  return { ok: !error, error: error ? "failed" : undefined };
 }

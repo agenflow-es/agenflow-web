@@ -37,7 +37,10 @@ export function AiVisibilityCheck() {
       />
 
       {state.status === "loading" && (
-        <div className="mt-4 flex items-center gap-2.5 text-[14.5px] text-fg-muted">
+        <div
+          role="status"
+          className="mt-4 flex items-center gap-2.5 text-[14.5px] text-fg-muted"
+        >
           <Loader2 className="h-4 w-4 animate-spin text-accent" />
           {t("loading")}
         </div>
@@ -64,7 +67,7 @@ export function AiVisibilityCheck() {
       )}
 
       {state.status === "error" && (
-        <p className="mt-4 text-[14px] text-fg-faint">
+        <p role="alert" className="mt-4 text-[14px] text-fg-faint">
           {state.kind === "not_configured"
             ? t("errors.notConfigured")
             : state.kind === "rate_limited"

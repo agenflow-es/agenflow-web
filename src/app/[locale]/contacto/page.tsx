@@ -1,8 +1,19 @@
+import type { Metadata } from "next";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { ContactForm } from "@/components/contact/ContactForm";
 import { Container } from "@/components/ui/primitives";
+import { buildMetadata } from "@/lib/metadata";
 
 const REASONS = ["consultoria", "presupuesto", "lanzamiento", "caso"] as const;
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  return buildMetadata({ locale, key: "contacto", path: "/contacto" });
+}
 
 export default async function ContactPage({
   params,

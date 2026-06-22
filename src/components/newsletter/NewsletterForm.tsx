@@ -49,7 +49,7 @@ export function NewsletterForm() {
   // Subscribed — replace the form with the success message.
   if (status === "ok") {
     return (
-      <p className="text-[15px] font-medium leading-[1.5] text-fg">
+      <p role="status" className="text-[15px] font-medium leading-[1.5] text-fg">
         {t("success")}
       </p>
     );
@@ -66,6 +66,8 @@ export function NewsletterForm() {
             id="newsletter-email"
             type="email"
             placeholder={t("emailPlaceholder")}
+            aria-invalid={!!errors.email}
+            aria-describedby={errors.email ? "newsletter-email-error" : undefined}
             className={fieldClass}
             {...register("email")}
           />
@@ -79,12 +81,16 @@ export function NewsletterForm() {
         </button>
       </div>
       {errors.email && (
-        <p className="mt-2 text-xs text-red-500">{errors.email.message}</p>
+        <p id="newsletter-email-error" role="alert" className="mt-2 text-xs text-red-500">
+          {errors.email.message}
+        </p>
       )}
 
       <label className="mt-4 flex items-start gap-2.5 text-[13px] leading-[1.5] text-fg-muted">
         <input
           type="checkbox"
+          aria-invalid={!!errors.consent}
+          aria-describedby={errors.consent ? "newsletter-consent-error" : undefined}
           className="mt-0.5 h-4 w-4 shrink-0 accent-[var(--accent)]"
           {...register("consent")}
         />
@@ -102,7 +108,9 @@ export function NewsletterForm() {
         </span>
       </label>
       {errors.consent && (
-        <p className="mt-2 text-xs text-red-500">{errors.consent.message}</p>
+        <p id="newsletter-consent-error" role="alert" className="mt-2 text-xs text-red-500">
+          {errors.consent.message}
+        </p>
       )}
 
       {/* Honeypot: off-screen + aria-hidden so humans never see or tab to it. */}
@@ -110,7 +118,6 @@ export function NewsletterForm() {
         aria-hidden="true"
         className="absolute left-[-9999px] top-[-9999px] h-0 w-0 overflow-hidden"
       >
-        <label htmlFor="newsletter-website">No rellenar</label>
         <input
           id="newsletter-website"
           type="text"
@@ -121,7 +128,9 @@ export function NewsletterForm() {
       </div>
 
       {status === "error" && (
-        <p className="mt-3 text-sm text-red-500">{t("error")}</p>
+        <p role="alert" className="mt-3 text-sm text-red-500">
+          {t("error")}
+        </p>
       )}
     </form>
   );
