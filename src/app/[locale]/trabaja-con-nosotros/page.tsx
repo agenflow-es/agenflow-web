@@ -65,17 +65,11 @@ export default async function CareersPage({
               <p className="mx-auto mt-3 max-w-[480px] text-[15px] leading-[1.6] text-fg-muted">
                 {t("spontaneous.body")}
               </p>
-              <a
-                href={mailto}
-                className="mt-6 inline-flex items-center gap-2.5 rounded-[var(--radius)] bg-accent px-[26px] py-[15px] font-medium text-accent-fg transition hover:-translate-y-0.5"
-              >
-                {t("spontaneous.cta")} <span className="text-lg">→</span>
-              </a>
-              <p className="mt-4 text-[14px] text-fg-muted">
-                {t("spontaneous.or")}{" "}
+              <p className="mt-6 text-[17px] text-fg-muted">
+                {t("spontaneous.emailLabel")}{" "}
                 <a
                   href={mailto}
-                  className="font-medium text-accent underline decoration-accent/40 underline-offset-2 transition hover:decoration-accent"
+                  className="font-semibold text-accent underline decoration-accent/40 underline-offset-2 transition hover:decoration-accent"
                 >
                   {siteConfig.contactEmail}
                 </a>

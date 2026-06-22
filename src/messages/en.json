@@ -1145,9 +1145,8 @@
     "spontaneous": {
       "title": "Think you're a fit anyway?",
       "body": "If you're passionate about automation and AI applied to real businesses and believe you can contribute, write to us. Tell us who you are, what you do, and attach your CV.",
-      "cta": "Send your application",
       "subject": "Open application — Agenflow",
-      "or": "or write to us directly at",
+      "emailLabel": "Write to us at",
       "note": "We read everything that comes in. If it's a fit, we'll get back to you."
     }
   },
