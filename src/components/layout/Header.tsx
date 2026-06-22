@@ -30,7 +30,7 @@ function Dropdown({
     >
       <button
         type="button"
-        className="inline-flex items-center gap-1.5 px-3 py-2.5 text-[15px] font-medium text-fg-muted transition hover:text-accent"
+        className="inline-flex items-center gap-1.5 px-3 py-2.5 text-[15px] font-medium text-fg-muted transition hover:text-fg-hover"
       >
         {label}
         <span className="text-[10px] opacity-70">▾</span>
@@ -41,7 +41,7 @@ function Dropdown({
             <Link
               key={i}
               href={it.href}
-              className="block rounded-[var(--radius)] px-3 py-2.5 text-[14.5px] font-semibold text-fg transition hover:bg-surface-2"
+              className="block rounded-[var(--radius)] px-3 py-2.5 text-[14.5px] font-semibold text-fg transition hover:bg-surface-2 hover:text-accent"
             >
               {it.name}
             </Link>
@@ -105,7 +105,7 @@ export function Header() {
           <Dropdown label={nav("resources")} items={resourceItems} />
           <Link
             href="/precios"
-            className="px-3 py-2.5 text-[15px] font-medium text-fg-muted transition hover:text-accent"
+            className="px-3 py-2.5 text-[15px] font-medium text-fg-muted transition hover:text-fg-hover"
           >
             {nav("pricing")}
           </Link>
