@@ -430,6 +430,11 @@
       "eyebrow": "Cómo nace un producto",
       "title": "Del conocimiento del sector a un producto que se usa cada día.",
       "intro": "No partimos de una idea en abstracto. Partimos de un sector y de quien lo vive de cerca.",
+      "stack": [
+        { "name": "Conocimiento del sector", "sub": "Cómo trabaja el negocio de verdad" },
+        { "name": "Automatización + IA", "sub": "Integradas desde el núcleo" },
+        { "name": "Producto por sector", "sub": "Listo para usar cada día" }
+      ],
       "steps": [
         {
           "step": "01",

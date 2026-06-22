@@ -430,6 +430,11 @@
       "eyebrow": "How a product is born",
       "title": "From sector knowledge to a product used every day.",
       "intro": "We don't start from an abstract idea. We start from a sector and from those who live it up close.",
+      "stack": [
+        { "name": "Sector knowledge", "sub": "How the business really works" },
+        { "name": "Automation + AI", "sub": "Built in from the core" },
+        { "name": "Software by sector", "sub": "Ready to use every day" }
+      ],
       "steps": [
         {
           "step": "01",

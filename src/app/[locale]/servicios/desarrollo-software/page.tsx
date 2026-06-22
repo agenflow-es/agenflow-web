@@ -8,7 +8,7 @@ import { SectionHeader } from "@/components/layout/SectionHeader";
 import { PageHero } from "@/components/layout/PageHero";
 import { FaqList } from "@/components/layout/FaqList";
 import { AccentCard } from "@/components/ui/AccentCard";
-import { SpotlightCard } from "@/components/visuals/SpotlightCard";
+import { LayeredStack } from "@/components/visuals/LayeredStack";
 
 type Pillar = { name: string; desc: string };
 type Step = { step: string; name: string; desc: string };
@@ -78,26 +78,38 @@ export default async function DesarrolloPage({
       {/* The model */}
       <section className="border-b border-border bg-surface">
         <Container className="py-[clamp(72px,10vw,140px)]">
-          <Reveal>
-            <SectionHeader
-              eyebrow={t("model.eyebrow")}
-              title={t("model.title")}
-              intro={t("model.intro")}
-            />
-            <div className="grid gap-5 md:grid-cols-3">
-              {steps.map((s, i) => (
-                <SpotlightCard key={i}>
-                  <span className="flex h-11 w-11 items-center justify-center rounded-full bg-accent font-label text-[15px] font-semibold text-accent-fg">
-                    {s.step}
-                  </span>
-                  <h3 className="mt-5 font-display text-[20px] font-semibold">
-                    {s.name}
-                  </h3>
-                  <p className="mt-2.5 leading-[1.6] text-fg-muted">{s.desc}</p>
-                </SpotlightCard>
-              ))}
-            </div>
-          </Reveal>
+          <div className="grid items-center gap-12 lg:grid-cols-[0.95fr_1.05fr] lg:gap-16">
+            <Reveal>
+              <LayeredStack
+                layers={t.raw("model.stack") as { name: string; sub: string }[]}
+              />
+            </Reveal>
+            <Reveal>
+              <SectionHeader
+                eyebrow={t("model.eyebrow")}
+                title={t("model.title")}
+                intro={t("model.intro")}
+                align="left"
+              />
+              <ol className="mt-8 space-y-5">
+                {steps.map((s, i) => (
+                  <li key={i} className="flex gap-4">
+                    <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-accent font-label text-[13px] font-semibold text-accent-fg">
+                      {s.step}
+                    </span>
+                    <div>
+                      <h3 className="font-display text-[17px] font-semibold">
+                        {s.name}
+                      </h3>
+                      <p className="mt-1 text-[14.5px] leading-[1.55] text-fg-muted">
+                        {s.desc}
+                      </p>
+                    </div>
+                  </li>
+                ))}
+              </ol>
+            </Reveal>
+          </div>
         </Container>
       </section>
 
