@@ -897,6 +897,17 @@
       "eyebrow": "What we're building",
       "title": "Our software for the sector.",
       "intro": "Our own software for the sector: specialized, with AI inside.",
+      "inbox": {
+        "title": "Unified inbox",
+        "badge": "3 new",
+        "rows": [
+          { "icon": "whatsapp", "channel": "WhatsApp", "preview": "Is the downtown flat still available?" },
+          { "icon": "email", "channel": "Email", "preview": "I'd like to book a viewing" },
+          { "icon": "phone", "channel": "Call", "preview": "Transcribed and answered on its own" },
+          { "icon": "portal", "channel": "Idealista", "preview": "New lead requesting information" }
+        ],
+        "footer": "The agent replies and books viewings, 24/7"
+      },
       "items": [
         {
           "name": "fincai",

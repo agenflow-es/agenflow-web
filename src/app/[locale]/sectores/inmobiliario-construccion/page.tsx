@@ -10,6 +10,7 @@ import { FaqList } from "@/components/layout/FaqList";
 import { CtaSection } from "@/components/layout/CtaSection";
 import { AccentCard } from "@/components/ui/AccentCard";
 import { SpotlightCard } from "@/components/visuals/SpotlightCard";
+import { OmnichannelInbox } from "@/components/visuals/OmnichannelInbox";
 
 type PainItem = { pain: string; fix: string };
 type PainGroup = { name: string; items: PainItem[] };
@@ -173,12 +174,30 @@ export default async function InmobiliarioPage({
               intro={t("products.intro")}
               align="left"
             />
-            <div className="mt-12 grid gap-5 sm:grid-cols-2">
-              {products.map((p, i) => (
-                <ProductCard key={i} p={p} />
-              ))}
-            </div>
           </Reveal>
+          <div className="mt-12 grid gap-10 lg:grid-cols-2 lg:items-center lg:gap-16">
+            <Reveal>
+              <OmnichannelInbox
+                title={t("products.inbox.title")}
+                badge={t("products.inbox.badge")}
+                rows={
+                  t.raw("products.inbox.rows") as {
+                    icon: string;
+                    channel: string;
+                    preview: string;
+                  }[]
+                }
+                footer={t("products.inbox.footer")}
+              />
+            </Reveal>
+            <Reveal>
+              <div className="grid gap-5">
+                {products.map((p, i) => (
+                  <ProductCard key={i} p={p} />
+                ))}
+              </div>
+            </Reveal>
+          </div>
         </Container>
       </section>
 

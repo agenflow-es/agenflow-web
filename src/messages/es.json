@@ -897,6 +897,17 @@
       "eyebrow": "Lo que construimos",
       "title": "Nuestro software para el sector.",
       "intro": "Software propio para el sector: especializado y con la IA dentro.",
+      "inbox": {
+        "title": "Bandeja unificada",
+        "badge": "3 nuevos",
+        "rows": [
+          { "icon": "whatsapp", "channel": "WhatsApp", "preview": "¿Sigue disponible el piso del centro?" },
+          { "icon": "email", "channel": "Email", "preview": "Me gustaría agendar una visita" },
+          { "icon": "phone", "channel": "Llamada", "preview": "Transcrita y respondida sola" },
+          { "icon": "portal", "channel": "Idealista", "preview": "Nuevo lead solicita información" }
+        ],
+        "footer": "El agente responde y agenda visitas, 24/7"
+      },
       "items": [
         {
           "name": "fincai",
