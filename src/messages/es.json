@@ -299,16 +299,17 @@
       ]
     },
     "eyebrow": "Automatización de procesos",
-    "title": "El trabajo manual que repites cada semana, hecho solo.",
-    "subtitle": "Conectamos tus herramientas y automatizamos las tareas que consumen las horas de tu equipo. Tú te quedas con el criterio; la máquina, con lo repetitivo. Y se nota en semanas.",
+    "title": "Toda empresa tiene procesos. Las que crecen, los tienen optimizados.",
+    "subtitle": "Conectamos tus herramientas y automatizamos las tareas repetitivas que consumen las horas de tu equipo, para que esas horas vayan a lo que de verdad hace crecer el negocio.",
     "ctaPrimary": "Solicitar presupuesto",
     "ctaSecondary": "Ver cómo funciona",
     "problem": {
       "eyebrow": "El coste de hacerlo a mano",
-      "title": "Cada tarea manual parece pequeña. Sumadas, te cuestan una persona a jornada completa.",
+      "title": "Cada tarea manual parece pequeña. Sumadas, frenan tu negocio.",
       "items": [
         "Copiar datos de un sitio a otro, rellenar los mismos campos, mover archivos.",
         "Informes que alguien arma a mano cada semana —y que llegan tarde.",
+        "Clientes potenciales que te escriben y reciben respuesta tarde —o nunca.",
         "Seguimientos que se olvidan y errores que se cuelan cuando hay prisa."
       ]
     },
@@ -320,8 +321,8 @@
       "outcomesLabel": "Lo que recibes",
       "hub": "Agenflow",
       "hubDesc": "Automatización + IA",
-      "sources": ["Email", "Hojas", "CRM / ERP", "Documentos"],
-      "outcomes": ["Datos al día", "Informes listos", "Avisos a tiempo"]
+      "sources": ["Email", "WhatsApp", "Hojas de cálculo", "CRM / ERP", "Documentos", "Calendario"],
+      "outcomes": ["Datos al día", "Informes listos", "Avisos a tiempo", "Clientes satisfechos", "Más rentabilidad", "Tiempo recuperado"]
     },
     "capabilities": {
       "eyebrow": "Qué automatizamos",
@@ -333,19 +334,19 @@
         },
         {
           "name": "Documentos y formularios",
-          "desc": "Extraemos, clasificamos y rellenamos documentos automáticamente. Facturas, contratos, expedientes —leídos y procesados con IA."
+          "desc": "Extraemos, clasificamos y rellenamos documentos automáticamente. Facturas, contratos, expedientes."
         },
         {
           "name": "Informes y paneles",
-          "desc": "Los números que armas a mano cada semana, generados solos y listos en el momento en que los abres."
+          "desc": "Tus números, recogidos solos y presentados en paneles visuales y ordenados: lo importante de un vistazo, listo en cuanto lo abres."
         },
         {
           "name": "Avisos y seguimiento",
-          "desc": "Recordatorios, alertas y seguimientos que se disparan en el momento justo. Nada se queda en el tintero."
+          "desc": "Recordatorios, alertas y seguimientos que se disparan en el momento justo, para vosotros y vuestros clientes. Nada se queda en el tintero."
         },
         {
           "name": "Atención y respuestas",
-          "desc": "Respuestas automáticas a las consultas frecuentes por email o chat, con el tono y la información correctos."
+          "desc": "Respuestas automáticas a las consultas frecuentes por email, chat o WhatsApp, con el tono y la información correctos."
         },
         {
           "name": "Procesos únicos",
@@ -377,7 +378,7 @@
     },
     "reassurance": {
       "title": "Sin romper lo que ya funciona.",
-      "body": "Nos integramos con tus herramientas actuales, no las sustituimos a la fuerza. Tu equipo sigue trabajando igual —solo que sin la parte tediosa. Y todo con tus datos en la UE y bajo control."
+      "body": "Nos integramos con tus herramientas actuales, no las sustituimos a la fuerza —salvo que nos lo pidas—. Tu equipo sigue trabajando igual, solo que sin la parte tediosa. Y todo con tus datos en la UE y bajo control."
     },
     "finalCta": {
       "title": "¿Qué tarea te quitarías de encima mañana?",

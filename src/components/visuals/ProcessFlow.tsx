@@ -2,10 +2,18 @@
 // Beam, but fixed-coordinate + pure CSS so it never needs layout measurement).
 // Server component: no hooks, animations come from globals.css keyframes.
 // Tokens (--accent, --bg-elev, --iso-*) make it theme-aware automatically.
+// Each side's pills are spread evenly, so it adapts to 3–6 items per column.
 
-const LEFT_Y = [40, 132, 224, 316];
-const RIGHT_Y = [84, 180, 276];
 const HUB = { x: 380, y: 180 };
+const TOP = 40;
+const BOTTOM = 320;
+
+// Evenly distribute n pills between TOP and BOTTOM, centred on the hub.
+function spread(n: number): number[] {
+  if (n <= 1) return [(TOP + BOTTOM) / 2];
+  const step = (BOTTOM - TOP) / (n - 1);
+  return Array.from({ length: n }, (_, i) => TOP + i * step);
+}
 
 export function ProcessFlow({
   sources,
@@ -16,8 +24,10 @@ export function ProcessFlow({
   outcomes: string[];
   hub: string;
 }) {
-  const src = sources.slice(0, 4);
-  const out = outcomes.slice(0, 3);
+  const src = sources.slice(0, 6);
+  const out = outcomes.slice(0, 6);
+  const leftY = spread(src.length);
+  const rightY = spread(out.length);
 
   return (
     <figure className="m-0">
@@ -30,8 +40,8 @@ export function ProcessFlow({
       >
         {/* source → hub connections */}
         {src.map((_, i) => {
-          const y = LEFT_Y[i];
-          const d = `M 160 ${y} C 252 ${y}, 252 ${HUB.y}, 328 ${HUB.y}`;
+          const y = leftY[i];
+          const d = `M 162 ${y} C 252 ${y}, 252 ${HUB.y}, 328 ${HUB.y}`;
           return (
             <g key={`ls${i}`}>
               <path d={d} fill="none" stroke="var(--border-strong)" strokeWidth="1.5" />
@@ -42,7 +52,7 @@ export function ProcessFlow({
                 strokeWidth="2.5"
                 strokeLinecap="round"
                 strokeDasharray="2 14"
-                style={{ animation: "af-dash 1s linear infinite", animationDelay: `${i * 0.18}s` }}
+                style={{ animation: "af-dash 1s linear infinite", animationDelay: `${i * 0.16}s` }}
               />
             </g>
           );
@@ -50,8 +60,8 @@ export function ProcessFlow({
 
         {/* hub → outcome connections */}
         {out.map((_, i) => {
-          const y = RIGHT_Y[i];
-          const d = `M 432 ${HUB.y} C 510 ${HUB.y}, 510 ${y}, 592 ${y}`;
+          const y = rightY[i];
+          const d = `M 432 ${HUB.y} C 510 ${HUB.y}, 510 ${y}, 590 ${y}`;
           return (
             <g key={`ro${i}`}>
               <path d={d} fill="none" stroke="var(--border-strong)" strokeWidth="1.5" />
@@ -62,7 +72,7 @@ export function ProcessFlow({
                 strokeWidth="2.5"
                 strokeLinecap="round"
                 strokeDasharray="2 14"
-                style={{ animation: "af-dash 1s linear infinite", animationDelay: `${0.4 + i * 0.18}s` }}
+                style={{ animation: "af-dash 1s linear infinite", animationDelay: `${0.4 + i * 0.16}s` }}
               />
             </g>
           );
@@ -87,11 +97,11 @@ export function ProcessFlow({
 
         {/* source pills */}
         {src.map((label, i) => {
-          const y = LEFT_Y[i];
+          const y = leftY[i];
           return (
             <g key={`lp${i}`}>
-              <rect x="28" y={y - 23} width="132" height="46" rx="12" fill="var(--bg-elev)" stroke="var(--border)" />
-              <text x="94" y={y} textAnchor="middle" dominantBaseline="central" fontSize="14" fontWeight="500" fill="var(--text)">
+              <rect x="26" y={y - 21} width="136" height="42" rx="11" fill="var(--bg-elev)" stroke="var(--border)" />
+              <text x="94" y={y} textAnchor="middle" dominantBaseline="central" fontSize="13" fontWeight="500" fill="var(--text)">
                 {label}
               </text>
             </g>
@@ -100,11 +110,11 @@ export function ProcessFlow({
 
         {/* outcome pills */}
         {out.map((label, i) => {
-          const y = RIGHT_Y[i];
+          const y = rightY[i];
           return (
             <g key={`op${i}`}>
-              <rect x="592" y={y - 23} width="140" height="46" rx="12" fill="var(--bg-elev)" stroke="var(--border)" />
-              <text x="662" y={y} textAnchor="middle" dominantBaseline="central" fontSize="14" fontWeight="500" fill="var(--text)">
+              <rect x="590" y={y - 21} width="156" height="42" rx="11" fill="var(--bg-elev)" stroke="var(--border)" />
+              <text x="668" y={y} textAnchor="middle" dominantBaseline="central" fontSize="13" fontWeight="500" fill="var(--text)">
                 {label}
               </text>
             </g>

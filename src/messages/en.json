@@ -299,16 +299,17 @@
       ]
     },
     "eyebrow": "Process automation",
-    "title": "The manual work you repeat every week, done on its own.",
-    "subtitle": "We connect your tools and automate the tasks that eat your team's hours. You keep the judgment; the machine takes the repetitive part. And it shows in weeks.",
+    "title": "Every company has processes. The ones that grow keep them optimized.",
+    "subtitle": "We connect your tools and automate the repetitive work that eats your team's hours, so those hours go to what actually grows the business.",
     "ctaPrimary": "Request a quote",
     "ctaSecondary": "See how it works",
     "problem": {
       "eyebrow": "The cost of doing it by hand",
-      "title": "Each manual task looks small. Added up, they cost you a full-time person.",
+      "title": "Each manual task looks small. Together, they hold your business back.",
       "items": [
         "Copying data from one place to another, filling the same fields, moving files.",
         "Reports someone assembles by hand every week —and that arrive late.",
+        "Potential customers who message you and get a reply late —or never.",
         "Follow-ups that get forgotten and errors that slip in when things are rushed."
       ]
     },
@@ -320,8 +321,8 @@
       "outcomesLabel": "What you get",
       "hub": "Agenflow",
       "hubDesc": "Automation + AI",
-      "sources": ["Email", "Sheets", "CRM / ERP", "Documents"],
-      "outcomes": ["Live data", "Reports ready", "Timely alerts"]
+      "sources": ["Email", "WhatsApp", "Spreadsheets", "CRM / ERP", "Documents", "Calendar"],
+      "outcomes": ["Live data", "Reports ready", "Timely alerts", "Happy customers", "More profit", "Time recovered"]
     },
     "capabilities": {
       "eyebrow": "What we automate",
@@ -333,19 +334,19 @@
         },
         {
           "name": "Documents & forms",
-          "desc": "We extract, classify and fill documents automatically. Invoices, contracts, files —read and processed with AI."
+          "desc": "We extract, classify and fill documents automatically. Invoices, contracts, files."
         },
         {
           "name": "Reports & dashboards",
-          "desc": "The numbers you assemble by hand every week, generated on their own and ready the moment you open them."
+          "desc": "Your numbers, gathered on their own and laid out in clean, visual dashboards: what matters at a glance, ready the moment you open them."
         },
         {
           "name": "Alerts & follow-up",
-          "desc": "Reminders, alerts and follow-ups that fire at the right moment. Nothing falls through the cracks."
+          "desc": "Reminders, alerts and follow-ups that fire at the right moment, for you and for your customers. Nothing falls through the cracks."
         },
         {
           "name": "Replies & support",
-          "desc": "Automatic answers to frequent questions over email or chat, with the right tone and the right information."
+          "desc": "Automatic answers to frequent questions over email, chat or WhatsApp, with the right tone and the right information."
         },
         {
           "name": "Unique processes",
@@ -377,7 +378,7 @@
     },
     "reassurance": {
       "title": "Without breaking what already works.",
-      "body": "We integrate with your current tools, we don't force them out. Your team keeps working the same way —just without the tedious part. And all with your data in the EU and under control."
+      "body": "We integrate with your current tools, we don't force them out —unless you ask us to. Your team keeps working the same way, just without the tedious part. And all with your data in the EU and under control."
     },
     "finalCta": {
       "title": "What task would you take off your plate tomorrow?",
