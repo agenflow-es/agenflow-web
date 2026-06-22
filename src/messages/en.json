@@ -68,7 +68,6 @@
     "about": "About",
     "resources": "Resources",
     "contact": "Contact",
-    "cta": "Request a consultation",
     "menuOpen": "Open menu",
     "menuClose": "Close menu"
   },
@@ -1167,7 +1166,6 @@
         "body": "Tell us how you work today and we'll tell you what can be improved —and whether one of our products fits."
       }
     },
-    "emailLabel": "Or email us at",
     "form": {
       "name": "Name",
       "email": "Email",

@@ -1,5 +1,6 @@
 import { Container, Eyebrow } from "@/components/ui/primitives";
 import { Link } from "@/i18n/navigation";
+import { HeroSideGlows } from "@/components/visuals/HeroSideGlows";
 import { cn } from "@/lib/utils";
 
 type Cta = { label: string; href: string };
@@ -51,13 +52,7 @@ export function PageHero({
 }) {
   return (
     <section className="relative overflow-hidden border-b border-border">
-      <div
-        className="pointer-events-none absolute inset-0"
-        style={{
-          background:
-            "radial-gradient(ellipse 80% 60% at 50% 0%, var(--accent-soft), transparent 70%)",
-        }}
-      />
+      <HeroSideGlows />
       <Container
         className={cn(
           "relative py-[clamp(64px,10vw,120px)] text-center",

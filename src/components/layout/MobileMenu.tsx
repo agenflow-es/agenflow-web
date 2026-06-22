@@ -117,7 +117,7 @@ export function MobileMenu({
               </Link>
             </div>
             <Link
-              href="/contacto?reason=consultoria"
+              href="/contacto"
               onClick={close}
               className="mt-3 block rounded-[var(--radius)] bg-accent px-5 py-3 text-center text-[15px] font-semibold text-accent-fg transition hover:-translate-y-0.5"
             >

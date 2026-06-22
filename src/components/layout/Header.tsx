@@ -108,10 +108,10 @@ export function Header() {
           <ThemeToggle />
           <LocaleSwitcher />
           <Link
-            href="/contacto?reason=consultoria"
+            href="/contacto"
             className="hidden rounded-[var(--radius)] bg-accent px-[18px] py-2.5 text-[14px] font-semibold text-accent-fg transition hover:-translate-y-0.5 lg:inline-flex"
           >
-            {nav("cta")}
+            {nav("contact")}
           </Link>
           <MobileMenu
             serviceItems={serviceItems}
@@ -122,7 +122,7 @@ export function Header() {
               sectors: nav("sectors"),
               resources: nav("resources"),
               pricing: nav("pricing"),
-              cta: nav("cta"),
+              cta: nav("contact"),
               open: nav("menuOpen"),
               close: nav("menuClose"),
             }}

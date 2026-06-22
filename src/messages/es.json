@@ -68,7 +68,6 @@
     "about": "Nosotros",
     "resources": "Recursos",
     "contact": "Contacto",
-    "cta": "Solicitar consultoría",
     "menuOpen": "Abrir menú",
     "menuClose": "Cerrar menú"
   },
@@ -1167,7 +1166,6 @@
         "body": "Dinos cómo trabajáis hoy y te decimos qué se puede mejorar —y si encaja alguno de nuestros productos."
       }
     },
-    "emailLabel": "O escríbenos a",
     "form": {
       "name": "Nombre",
       "email": "Email",
