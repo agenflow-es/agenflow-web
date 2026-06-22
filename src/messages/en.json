@@ -1194,32 +1194,35 @@
           "heading": "What data we process",
           "body": [
             "We process the data you provide when you fill in the contact form: your name, your email and, optionally, your company name and the content of your message.",
+            "If you subscribe to our newsletter, we process your email address and the record of your consent to send it to you.",
             "We do not collect special categories of data, we do not build profiles and we do not make automated decisions about you."
           ]
         },
         {
           "heading": "Purpose",
           "body": [
-            "We use your data solely to respond to your enquiry and to get in touch with you regarding Agenflow's services.",
-            "We do not send unsolicited marketing communications."
+            "We use the contact form data to respond to your enquiry and to get in touch with you regarding Agenflow's services.",
+            "If you subscribe to the newsletter, we use your email to send you our communications about automation and AI. We do not send marketing communications to anyone who has not subscribed."
           ]
         },
         {
           "heading": "Legal basis",
           "body": [
-            "The legal basis for processing is your consent, given when you submit the form, and our legitimate interest in responding to the requests you send us (Article 6.1.a and 6.1.f GDPR)."
+            "The legal basis for processing is your consent, given when you submit the form, and our legitimate interest in responding to the requests you send us (Article 6.1.a and 6.1.f GDPR).",
+            "For the newsletter, the legal basis is your explicit consent (Article 6.1.a GDPR), which you can withdraw at any time by unsubscribing."
           ]
         },
         {
           "heading": "Retention",
           "body": [
-            "We keep your data for as long as needed to handle your request and, afterwards, for the periods required by law. Once it is no longer necessary, we delete it."
+            "We keep your data for as long as needed to handle your request and, afterwards, for the periods required by law. Once it is no longer necessary, we delete it.",
+            "If you subscribe to the newsletter, we keep your email for as long as you remain subscribed; when you unsubscribe, we stop using it."
           ]
         },
         {
           "heading": "Recipients and processors",
           "body": [
-            "We do not share your data with third parties except where legally required. To run the site and send the contact form we rely on providers acting as data processors: Vercel (site hosting) and Resend (delivery of the contact email), with whom we maintain the agreements required by the GDPR.",
+            "We do not share your data with third parties except where legally required. To run the site and send the contact form we rely on providers acting as data processors: Vercel (site hosting) and Resend (delivery of the contact email and management of the newsletter subscriber list), with whom we maintain the agreements required by the GDPR.",
             "Where any of these providers processes data outside the European Economic Area, it does so under the appropriate safeguards set out in the GDPR."
           ]
         },

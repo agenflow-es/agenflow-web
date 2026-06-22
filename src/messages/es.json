@@ -1194,32 +1194,35 @@
           "heading": "Qué datos tratamos",
           "body": [
             "Tratamos los datos que nos facilitas al rellenar el formulario de contacto: tu nombre, tu email y, de forma opcional, el nombre de tu empresa y el contenido de tu mensaje.",
+            "Si te suscribes a nuestra newsletter, tratamos tu dirección de email y el registro de tu consentimiento para enviártela.",
             "No recogemos categorías especiales de datos, no elaboramos perfiles y no tomamos decisiones automatizadas sobre ti."
           ]
         },
         {
           "heading": "Con qué finalidad",
           "body": [
-            "Utilizamos tus datos únicamente para atender tu consulta y ponernos en contacto contigo en relación con los servicios de Agenflow.",
-            "No te enviamos comunicaciones comerciales no solicitadas."
+            "Utilizamos los datos del formulario de contacto para atender tu consulta y ponernos en contacto contigo en relación con los servicios de Agenflow.",
+            "Si te suscribes a la newsletter, utilizamos tu email para enviarte nuestras comunicaciones sobre automatización e IA. No enviamos comunicaciones comerciales a quien no se ha suscrito."
           ]
         },
         {
           "heading": "Base jurídica",
           "body": [
-            "La base jurídica del tratamiento es tu consentimiento, que prestas al enviar el formulario, y el interés legítimo en responder a las solicitudes que nos diriges (artículo 6.1.a y 6.1.f del RGPD)."
+            "La base jurídica del tratamiento es tu consentimiento, que prestas al enviar el formulario, y el interés legítimo en responder a las solicitudes que nos diriges (artículo 6.1.a y 6.1.f del RGPD).",
+            "En el caso de la newsletter, la base jurídica es tu consentimiento expreso (artículo 6.1.a del RGPD), que puedes retirar en cualquier momento dándote de baja."
           ]
         },
         {
           "heading": "Conservación",
           "body": [
-            "Conservamos tus datos durante el tiempo necesario para atender tu solicitud y, después, durante los plazos legalmente exigibles. Cuando dejan de ser necesarios, los suprimimos."
+            "Conservamos tus datos durante el tiempo necesario para atender tu solicitud y, después, durante los plazos legalmente exigibles. Cuando dejan de ser necesarios, los suprimimos.",
+            "Si te suscribes a la newsletter, conservamos tu email mientras sigas suscrito; cuando te das de baja, dejamos de utilizarlo."
           ]
         },
         {
           "heading": "Destinatarios y encargados",
           "body": [
-            "No cedemos tus datos a terceros, salvo obligación legal. Para el funcionamiento del sitio y el envío del formulario nos apoyamos en proveedores que actúan como encargados del tratamiento: Vercel (alojamiento del sitio) y Resend (envío del email de contacto), con los que mantenemos los acuerdos exigidos por el RGPD.",
+            "No cedemos tus datos a terceros, salvo obligación legal. Para el funcionamiento del sitio y el envío del formulario nos apoyamos en proveedores que actúan como encargados del tratamiento: Vercel (alojamiento del sitio) y Resend (envío del email de contacto y gestión de la lista de suscriptores de la newsletter), con los que mantenemos los acuerdos exigidos por el RGPD.",
             "Si alguno de estos proveedores trata datos fuera del Espacio Económico Europeo, lo hace con las garantías adecuadas previstas en el RGPD."
           ]
         },
