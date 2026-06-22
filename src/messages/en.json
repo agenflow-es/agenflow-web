@@ -747,6 +747,14 @@
       "eyebrow": "What we automate",
       "title": "The firm's processes, running on their own.",
       "intro": "We start with what weighs on you most today and leave it working; from there we move on to the rest.",
+      "feed": [
+        "Accounting audit reviewed",
+        "Mismatch detected and fixed",
+        "Document classified and filed",
+        "Deadline flagged in time",
+        "Client report generated",
+        "Court date added to the calendar"
+      ],
       "items": [
         {
           "name": "Accounting audit",

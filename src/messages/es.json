@@ -747,6 +747,14 @@
       "eyebrow": "Lo que automatizamos",
       "title": "Procesos del despacho, funcionando solos.",
       "intro": "Empezamos por lo que más te pesa hoy y lo dejamos funcionando; desde ahí seguimos con el resto.",
+      "feed": [
+        "Auditoría contable revisada",
+        "Descuadre detectado y corregido",
+        "Documento clasificado y archivado",
+        "Vencimiento detectado a tiempo",
+        "Informe al cliente generado",
+        "Plazo añadido al calendario"
+      ],
       "items": [
         {
           "name": "Auditoría contable",

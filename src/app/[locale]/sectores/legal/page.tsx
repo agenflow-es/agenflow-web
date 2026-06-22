@@ -9,6 +9,7 @@ import { FaqList } from "@/components/layout/FaqList";
 import { CtaSection } from "@/components/layout/CtaSection";
 import { AccentCard } from "@/components/ui/AccentCard";
 import { SpotlightCard } from "@/components/visuals/SpotlightCard";
+import { AutomationFeed } from "@/components/visuals/AutomationFeed";
 
 type PainItem = { pain: string; fix: string };
 type Capability = { name: string; desc: string };
@@ -104,19 +105,30 @@ export default async function LegalPage({
       {/* What we automate */}
       <section className="border-b border-border bg-surface">
         <Container className="py-[clamp(72px,10vw,140px)]">
-          <Reveal>
-            <SectionHeader
-              eyebrow={t("automate.eyebrow")}
-              title={t("automate.title")}
-              intro={t("automate.intro")}
-              align="left"
-            />
-            <div className="mt-12 grid gap-5 sm:grid-cols-2">
-              {automate.map((c, i) => (
-                <AccentCard key={i} title={c.name} desc={c.desc} background="bg" />
-              ))}
-            </div>
-          </Reveal>
+          <div className="grid items-center gap-10 lg:grid-cols-2 lg:gap-16">
+            <Reveal>
+              <SectionHeader
+                eyebrow={t("automate.eyebrow")}
+                title={t("automate.title")}
+                intro={t("automate.intro")}
+                align="left"
+              />
+              <div className="mt-8 grid gap-4">
+                {automate.map((c, i) => (
+                  <AccentCard
+                    key={i}
+                    title={c.name}
+                    desc={c.desc}
+                    background="bg"
+                    compact
+                  />
+                ))}
+              </div>
+            </Reveal>
+            <Reveal>
+              <AutomationFeed items={t.raw("automate.feed") as string[]} />
+            </Reveal>
+          </div>
         </Container>
       </section>
 
