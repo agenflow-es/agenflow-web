@@ -218,23 +218,33 @@
     "faq": {
       "title": "Preguntas frecuentes",
       "items": [
-        { "q": "¿La consultoría es gratis?", "a": "No. Es una sesión de trabajo de pago en la que analizamos tu operación y sales con un plan claro de qué automatizar y por dónde empezar. El plan es tuyo, lo ejecutes con nosotros o no." },
-        { "q": "¿Cuánto dura y qué me llevo?", "a": "En pocos días tienes un diagnóstico con las oportunidades de automatización priorizadas por impacto y un plan de implementación con los resultados esperados." },
-        { "q": "¿Necesito equipo técnico?", "a": "No. Aportamos toda la parte técnica; tú pones el conocimiento de tu negocio. Nos integramos con tu equipo y tus herramientas actuales." }
+        { "q": "¿Cuánto dura y qué me llevo?", "a": "Depende de cada caso, pero la sesión suele durar entre 1 y 2 horas. Después analizamos lo que hemos visto y te enviamos el plan —con las oportunidades priorizadas por impacto y los resultados esperados— en un máximo de 48 horas." },
+        { "q": "¿Cómo me preparo para la sesión?", "a": "Con nada especial. Ven con tu día a día en la cabeza; si tienes a mano cómo entran tus clientes, qué herramientas usáis y dónde se atasca el equipo, mejor. El resto lo sacamos juntos en la sesión." },
+        { "q": "¿Necesito equipo técnico?", "a": "No. Aportamos toda la parte técnica; tú pones el conocimiento de tu negocio. Nos integramos con tu equipo y tus herramientas actuales." },
+        { "q": "¿Me compromete a seguir con vosotros?", "a": "No. El plan que sale de la consultoría es tuyo y puedes ejecutarlo con nosotros, con tu equipo o con quien quieras. Sin permanencia ni letra pequeña." }
       ]
     },
     "eyebrow": "Consultoría de IA",
-    "title": "Hablemos de tu negocio. Sin tecnicismos, directo a lo que importa.",
-    "subtitle": "Una sesión de trabajo con quien va a diseñar tu solución. Analizamos tu operación a fondo, detectamos dónde la tecnología te hace ganar tiempo y dinero, y sales con un plan claro de por dónde empezar.",
+    "title": "Hablemos de tu negocio.",
+    "subtitle": "Sin tecnicismos, directo a lo que importa. Analizamos tu operación a fondo, detectamos dónde la tecnología te hace ganar tiempo y dinero, y sales con un plan claro de por dónde empezar.",
     "ctaPrimary": "Solicitar consultoría",
-    "ctaSecondary": "Ver cómo funciona",
     "forWho": {
       "eyebrow": "¿Te suena?",
-      "title": "Sabes que pierdes tiempo en tareas que podrían ir solas. Pero no sabes por dónde empezar.",
+      "title": "Intuyes que tu negocio puede producir más con lo que ya tiene. Pero no sabes por dónde empezar.",
       "items": [
         "Tu equipo repite el mismo trabajo manual cada semana.",
-        "Has oído hablar de la IA, pero no sabes qué encaja en tu negocio.",
+        "Has oído hablar de la IA, pero no sabes cómo encaja en tu negocio.",
         "No quieres un proyecto enorme: quieres saber qué mueve la aguja primero."
+      ]
+    },
+    "uncover": {
+      "eyebrow": "Oportunidades reales",
+      "title": "Lo que casi siempre aparece.",
+      "intro": "Cada negocio es distinto, pero hay oportunidades que se repiten. Estas son las que más veces destapamos —y que casi nunca se ven desde dentro.",
+      "items": [
+        { "name": "Trabajo que se monta a mano", "desc": "Informes, listados y números que alguien arma cada semana y que pueden generarse solos." },
+        { "name": "Cosas que dependen de la memoria", "desc": "Seguimientos, avisos y respuestas que se escapan cuando hay prisa. Automatizarlos quita el riesgo." },
+        { "name": "Los mismos datos, varias veces", "desc": "Información que se teclea o se copia de una herramienta a otra, con el doble de tiempo y de errores." }
       ]
     },
     "process": {
@@ -271,7 +281,7 @@
     "expert": {
       "eyebrow": "Con quién hablas",
       "title": "Te atiende quien va a construir tu solución.",
-      "body": "Nada de comerciales ni intermediarios. La persona que analiza tu operación es la misma que diseña y construye lo que viene después. Conocemos el contexto de tu sector —inmobiliario y legal— y hablamos tu idioma, no el de un manual técnico."
+      "body": "Nada de comerciales ni intermediarios: hablas directamente con quienes van a diseñar y construir tu solución. Conocemos el contexto de tu sector y hablamos tu idioma, no el de un manual técnico."
     },
     "finalCta": {
       "title": "Pongamos el foco en lo que te hace crecer.",

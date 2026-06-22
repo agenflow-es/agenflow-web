@@ -7,6 +7,7 @@ import { SectionHeader } from "@/components/layout/SectionHeader";
 import { PageHero } from "@/components/layout/PageHero";
 import { FaqList } from "@/components/layout/FaqList";
 import { CtaSection } from "@/components/layout/CtaSection";
+import { AccentCard } from "@/components/ui/AccentCard";
 import { StepTimeline } from "@/components/visuals/StepTimeline";
 
 type Step = { step: string; name: string; desc: string; takeaway: string };
@@ -40,7 +41,6 @@ export default async function ConsultoriaPage({
         title={t("title")}
         subtitle={t("subtitle")}
         cta={{ label: t("ctaPrimary"), href: "/contacto?reason=consultoria" }}
-        ctaSecondary={{ label: t("ctaSecondary"), href: "#como" }}
       />
 
       {/* For who / problem */}
@@ -65,6 +65,31 @@ export default async function ConsultoriaPage({
                 </li>
               ))}
             </ul>
+          </Reveal>
+        </Container>
+      </section>
+
+      {/* What we usually uncover */}
+      <section className="border-b border-border">
+        <Container className="py-[clamp(72px,10vw,140px)]">
+          <Reveal>
+            <SectionHeader
+              eyebrow={t("uncover.eyebrow")}
+              title={t("uncover.title")}
+              intro={t("uncover.intro")}
+            />
+            <div className="mx-auto grid max-w-[920px] gap-5 sm:grid-cols-3">
+              {(t.raw("uncover.items") as { name: string; desc: string }[]).map(
+                (it, i) => (
+                  <AccentCard
+                    key={i}
+                    title={it.name}
+                    desc={it.desc}
+                    background="surface"
+                  />
+                ),
+              )}
+            </div>
           </Reveal>
         </Container>
       </section>

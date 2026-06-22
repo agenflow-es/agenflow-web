@@ -218,23 +218,33 @@
     "faq": {
       "title": "Frequently asked questions",
       "items": [
-        { "q": "Is the consultation free?", "a": "No. It's a paid working session where we analyze your operation and you leave with a clear plan of what to automate and where to start. The plan is yours, whether you execute it with us or not." },
-        { "q": "How long is it and what do I get?", "a": "Within a few days you have a diagnosis with automation opportunities prioritized by impact and an implementation plan with the expected results." },
-        { "q": "Do I need a technical team?", "a": "No. We bring the whole technical side; you bring the knowledge of your business. We integrate with your team and your current tools." }
+        { "q": "How long is it and what do I get?", "a": "It depends on each case, but the session usually lasts 1 to 2 hours. Afterwards we analyze what we've seen and send you the plan —with opportunities prioritized by impact and the expected results— within 48 hours at most." },
+        { "q": "How do I prepare for the session?", "a": "Nothing special needed. Come with your day-to-day in mind; if you have a sense of how customers come in, what tools you use and where the team gets stuck, even better. We work out the rest together in the session." },
+        { "q": "Do I need a technical team?", "a": "No. We bring the whole technical side; you bring the knowledge of your business. We integrate with your team and your current tools." },
+        { "q": "Does it commit me to working with you?", "a": "No. The plan from the consultation is yours, and you can run it with us, with your team, or with whoever you want. No lock-in, no fine print." }
       ]
     },
     "eyebrow": "AI consulting",
-    "title": "Let's talk about your business. No jargon, straight to what matters.",
-    "subtitle": "A working session with the person who will design your solution. We analyze your operation in depth, find where technology saves you time and money, and you leave with a clear plan of where to start.",
+    "title": "Let's talk about your business.",
+    "subtitle": "No jargon, straight to what matters. We analyze your operation in depth, find where technology saves you time and money, and you leave with a clear plan of where to start.",
     "ctaPrimary": "Request a consultation",
-    "ctaSecondary": "See how it works",
     "forWho": {
       "eyebrow": "Sound familiar?",
-      "title": "You know you're losing time on work that could run itself. But you don't know where to start.",
+      "title": "You sense your business could produce more with what it already has. But you don't know where to start.",
       "items": [
         "Your team repeats the same manual work every week.",
-        "You've heard about AI, but you don't know what fits your business.",
+        "You've heard about AI, but you don't know how it fits your business.",
         "You don't want a huge project: you want to know what moves the needle first."
+      ]
+    },
+    "uncover": {
+      "eyebrow": "Real opportunities",
+      "title": "What almost always shows up.",
+      "intro": "Every business is different, but some opportunities repeat. These are the ones we uncover most often —and they're hard to spot from the inside.",
+      "items": [
+        { "name": "Work done by hand", "desc": "Reports, lists and numbers someone assembles every week that could generate themselves." },
+        { "name": "Things that rely on memory", "desc": "Follow-ups, reminders and replies that slip when things get busy. Automating them removes the risk." },
+        { "name": "The same data, more than once", "desc": "Information typed or copied from one tool to another —double the time, double the errors." }
       ]
     },
     "process": {
@@ -271,7 +281,7 @@
     "expert": {
       "eyebrow": "Who you talk to",
       "title": "You're served by the person who will build your solution.",
-      "body": "No salespeople, no middlemen. The person who analyzes your operation is the same one who designs and builds what comes next. We know your sector's context —real estate and legal— and we speak your language, not a technical manual's."
+      "body": "No salespeople, no middlemen: you talk directly with the people who will design and build your solution. We know your sector's context and we speak your language, not a technical manual's."
     },
     "finalCta": {
       "title": "Let's focus on what makes you grow.",
