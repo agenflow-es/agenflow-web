@@ -17,9 +17,10 @@ type Product = {
   sector: string;
   desc: string;
   status?: string;
-  href: string;
+  href?: string;
+  external?: boolean;
+  cta?: string;
 };
-type Reason = { name: string; desc: string };
 
 export async function generateMetadata({
   params,
@@ -41,7 +42,6 @@ export default async function DesarrolloPage({
   const pillars = t.raw("thesis.pillars") as Pillar[];
   const steps = t.raw("model.steps") as Step[];
   const products = t.raw("showcase.items") as Product[];
-  const reasons = t.raw("why.items") as Reason[];
   const tSectors = await getTranslations("sectors");
   const sectorLinks = tSectors.raw("items") as { name: string; href: string }[];
 
@@ -124,68 +124,88 @@ export default async function DesarrolloPage({
               align="left"
             />
             <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-              {products.map((p, i) => (
-                <Link
-                  key={i}
-                  href={p.href}
-                  className="group flex flex-col rounded-[var(--radius-lg)] border border-border bg-surface p-6 shadow-[var(--shadow)] transition duration-200 hover:-translate-y-1 hover:border-accent"
-                >
-                  <div className="flex items-start justify-between gap-3">
-                    <span className="font-display text-[22px] font-semibold lowercase">
-                      {p.name}
+              {products.map((p, i) => {
+                const inner = (
+                  <>
+                    <div className="flex items-start justify-between gap-3">
+                      <span className="font-display text-[22px] font-semibold">
+                        {p.name}
+                      </span>
+                      {p.status && (
+                        <span className="inline-flex shrink-0 items-center gap-1.5 rounded-full border border-border px-2.5 py-1 font-label text-[10.5px] uppercase tracking-[0.08em] text-fg-muted">
+                          <span aria-hidden className="h-1.5 w-1.5 rounded-full bg-accent" />
+                          {p.status}
+                        </span>
+                      )}
+                    </div>
+                    <span className="mt-1 font-label text-[12px] uppercase tracking-[0.1em] text-accent">
+                      {p.sector}
                     </span>
-                    {p.status && (
-                      <span className="inline-flex shrink-0 items-center gap-1.5 rounded-full border border-border px-2.5 py-1 font-label text-[10.5px] uppercase tracking-[0.08em] text-fg-muted">
-                        <span aria-hidden className="h-1.5 w-1.5 rounded-full bg-accent" />
-                        {p.status}
+                    <p className="mt-4 flex-1 text-[15px] leading-[1.6] text-fg-muted">
+                      {p.desc}
+                    </p>
+                    {p.href && p.cta && (
+                      <span className="mt-5 inline-flex items-center gap-1.5 text-[14px] font-semibold text-fg transition group-hover:text-accent">
+                        {p.cta}
+                        <span aria-hidden className="transition group-hover:translate-x-0.5">
+                          →
+                        </span>
                       </span>
                     )}
+                  </>
+                );
+                const base =
+                  "flex flex-col rounded-[var(--radius-lg)] border border-border bg-surface p-6 shadow-[var(--shadow)]";
+                const interactive =
+                  " group transition duration-200 hover:-translate-y-1 hover:border-accent";
+                if (p.href && p.external) {
+                  return (
+                    <a
+                      key={i}
+                      href={p.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className={base + interactive}
+                    >
+                      {inner}
+                    </a>
+                  );
+                }
+                if (p.href) {
+                  return (
+                    <Link key={i} href={p.href} className={base + interactive}>
+                      {inner}
+                    </Link>
+                  );
+                }
+                return (
+                  <div key={i} className={base}>
+                    {inner}
                   </div>
-                  <span className="mt-1 font-label text-[12px] uppercase tracking-[0.1em] text-accent">
-                    {p.sector}
-                  </span>
-                  <p className="mt-4 flex-1 text-[15px] leading-[1.6] text-fg-muted">
-                    {p.desc}
-                  </p>
-                  <span className="mt-5 inline-flex items-center gap-1.5 text-[14px] font-semibold text-fg transition group-hover:text-accent">
-                    {t("showcase.cta")}
-                    <span aria-hidden className="transition group-hover:translate-x-0.5">
-                      →
-                    </span>
-                  </span>
-                </Link>
-              ))}
+                );
+              })}
             </div>
           </Reveal>
         </Container>
       </section>
 
-      {/* Why us */}
+      {/* Vision */}
       <section className="border-b border-border bg-surface">
-        <Container className="py-[clamp(72px,10vw,140px)]">
+        <Container className="max-w-[820px] py-[clamp(72px,10vw,140px)] text-center">
           <Reveal>
-            <SectionHeader
-              eyebrow={t("why.eyebrow")}
-              title={t("why.title")}
-              align="left"
-            />
-            <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
-              {reasons.map((r, i) => (
-                <AccentCard key={i} title={r.name} desc={r.desc} background="bg" bar={false} compact />
-              ))}
-            </div>
+            <Eyebrow>{t("why.eyebrow")}</Eyebrow>
+            <h2 className="mx-auto mt-4 max-w-[20ch] font-display text-[clamp(28px,3.8vw,46px)] font-bold leading-[1.1] tracking-[-0.022em] text-balance">
+              {t("why.title")}
+            </h2>
+            <p className="mx-auto mt-6 max-w-[58ch] text-[clamp(16px,1.6vw,19px)] leading-[1.65] text-fg-muted text-pretty">
+              {t("why.body")}
+            </p>
           </Reveal>
         </Container>
       </section>
-
-      {/* FAQ */}
-      <FaqList
-        title={t("faq.title")}
-        items={t.raw("faq.items") as { q: string; a: string }[]}
-      />
 
       {/* Split CTA */}
-      <section className="relative overflow-hidden">
+      <section className="relative overflow-hidden border-b border-border">
         <div
           className="pointer-events-none absolute inset-0"
           style={{
@@ -242,6 +262,12 @@ export default async function DesarrolloPage({
           </Reveal>
         </Container>
       </section>
+
+      {/* FAQ */}
+      <FaqList
+        title={t("faq.title")}
+        items={t.raw("faq.items") as { q: string; a: string }[]}
+      />
     </>
   );
 }

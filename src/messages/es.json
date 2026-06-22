@@ -390,14 +390,14 @@
     "faq": {
       "title": "Preguntas frecuentes",
       "items": [
-        { "q": "¿Desarrolláis software para cualquier empresa?", "a": "Diseñamos productos especializados por sector, con la IA dentro. Si conoces un sector a fondo y ves el software que le falta, ponemos la tecnología." },
+        { "q": "¿Desarrolláis software para cualquier empresa?", "a": "Diseñamos productos especializados por sector, con la IA dentro. Si conoces un sector a fondo y ves el software que le falta, ponemos la tecnología: cuéntanoslo y lo construimos juntos." },
         { "q": "¿En qué se diferencia de una herramienta genérica?", "a": "El producto se diseña para un tipo de negocio concreto, así que habla su idioma desde el primer día en lugar de obligarte a adaptarte tú." },
         { "q": "¿Cuál es el modelo y el precio?", "a": "Cada producto por sector tiene su propio modelo y precio en su página. Para construir algo nuevo juntos, hablamos de tu caso." }
       ]
     },
     "eyebrow": "Software por sector",
-    "title": "Construimos el software que tu sector no encuentra en el mercado.",
-    "subtitle": "No adaptamos herramientas genéricas: diseñamos productos para un tipo de negocio concreto, con la IA dentro. Software que ya conoce tu sector el día que lo abres.",
+    "title": "El software que tu sector necesita, dedicado solo a él.",
+    "subtitle": "Tu sector tiene necesidades que el software de siempre nunca cubrió. Hoy sí se pueden resolver, con un producto robusto y fiable creado solo para él.",
     "cta": "Hablemos de tu sector",
     "thesis": {
       "eyebrow": "La tesis",
@@ -410,11 +410,11 @@
         },
         {
           "name": "Con IA dentro",
-          "desc": "La inteligencia artificial no es un añadido: es parte del producto desde el núcleo."
+          "desc": "Integramos el poder de la IA en cada producto: es lo que le permite ayudar a tu negocio al máximo, no un extra."
         },
         {
           "name": "Crece contigo",
-          "desc": "Pensado para escalar a más casos, más volumen y más equipo sin rehacerlo."
+          "desc": "Una arquitectura pensada para crecer —más volumen, más casos— sin sumar costes estructurales fijos."
         }
       ]
     },
@@ -449,49 +449,34 @@
       "eyebrow": "Nuestros productos por sector",
       "title": "Software propio, especializado por sector.",
       "intro": "Cada producto resuelve el trabajo real de un tipo de negocio, con la IA dentro.",
-      "cta": "Ver sector",
       "items": [
         {
-          "name": "fincai",
+          "name": "FincAI",
           "sector": "Administración de fincas",
           "desc": "Software con IA para que los administradores gestionen sus comunidades mucho mejor.",
-          "href": "/sectores/inmobiliario-construccion"
+          "href": "https://fincai.es",
+          "external": true,
+          "cta": "Ver producto"
         },
         {
-          "name": "replo",
+          "name": "Replo",
           "sector": "Inmobiliarias",
           "desc": "Gestión de leads de punta a punta: bandeja omnicanal, agente de WhatsApp, voz y gestión de visitas.",
-          "href": "/sectores/inmobiliario-construccion"
+          "status": "Web en construcción"
         },
         {
           "name": "Sector legal",
           "sector": "Despachos",
           "desc": "Producto con IA para despachos: automatiza el trabajo de auditoría contable, documentación y plazos.",
-          "href": "/sectores/legal"
+          "href": "/sectores/legal",
+          "cta": "Ver sector"
         }
       ]
     },
     "why": {
-      "eyebrow": "Por qué con nosotros",
-      "title": "Construimos producto, no presentaciones.",
-      "items": [
-        {
-          "name": "Producto real",
-          "desc": "Desarrollamos y operamos nuestro propio software. Lo que proponemos, sabemos construirlo."
-        },
-        {
-          "name": "IA nativa",
-          "desc": "La IA va integrada en el producto, resolviendo trabajo real —no como demo."
-        },
-        {
-          "name": "Foco por sector",
-          "desc": "Conocemos el contexto del sector. El producto habla su idioma."
-        },
-        {
-          "name": "Datos protegidos",
-          "desc": "RGPD por diseño y datos en la UE. La base de cómo construimos."
-        }
-      ]
+      "eyebrow": "Pioneros",
+      "title": "El software del futuro, construido hoy.",
+      "body": "Toda empresa acabará necesitando una infraestructura digital que sostenga sus operaciones y su crecimiento: automatizada y con inteligencia artificial en el núcleo. Ese futuro ya está aquí —y quien se adelante jugará con ventaja. El resto, correrá por detrás."
     },
     "split": {
       "eyebrow": "Dos formas de empezar",

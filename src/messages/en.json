@@ -390,14 +390,14 @@
     "faq": {
       "title": "Frequently asked questions",
       "items": [
-        { "q": "Do you build software for any company?", "a": "We design products specialized by sector, with AI inside. If you know a sector inside out and see the software it's missing, we bring the technology." },
+        { "q": "Do you build software for any company?", "a": "We design products specialized by sector, with AI inside. If you know a sector inside out and see the software it's missing, we bring the technology: tell us about it and let's build it together." },
         { "q": "How is it different from a generic tool?", "a": "The product is designed for one specific type of business, so it speaks its language from day one instead of forcing you to adapt." },
         { "q": "What's the model and pricing?", "a": "Each product by sector has its own model and pricing on its page. To build something new together, let's talk about your case." }
       ]
     },
     "eyebrow": "Software by sector",
-    "title": "We build the software your sector can't find on the market.",
-    "subtitle": "We don't adapt generic tools: we design products for one specific type of business, with AI inside. Software that already knows your sector the day you open it.",
+    "title": "The software your sector needs, dedicated only to it.",
+    "subtitle": "Your sector has needs that off-the-shelf software never covered. Today they can be solved —with a robust, reliable product built only for it.",
     "cta": "Let's talk about your sector",
     "thesis": {
       "eyebrow": "The thesis",
@@ -410,11 +410,11 @@
         },
         {
           "name": "AI inside",
-          "desc": "Artificial intelligence isn't an add-on: it's part of the product from the core."
+          "desc": "We build the power of AI into every product: it's what lets it help your business to the fullest, not an extra."
         },
         {
           "name": "Grows with you",
-          "desc": "Built to scale to more cases, more volume and a bigger team without rebuilding it."
+          "desc": "An architecture built to grow —more volume, more cases— without adding fixed structural costs."
         }
       ]
     },
@@ -449,49 +449,34 @@
       "eyebrow": "Our products by sector",
       "title": "Our own software, specialized by sector.",
       "intro": "Each product solves the real work of one type of business, with AI inside.",
-      "cta": "See sector",
       "items": [
         {
-          "name": "fincai",
+          "name": "FincAI",
           "sector": "Property management",
           "desc": "AI software so property managers can run their communities far better.",
-          "href": "/sectores/inmobiliario-construccion"
+          "href": "https://fincai.es",
+          "external": true,
+          "cta": "View product"
         },
         {
-          "name": "replo",
+          "name": "Replo",
           "sector": "Real estate agencies",
           "desc": "End-to-end lead management: omnichannel inbox, WhatsApp agent, voice and visit scheduling.",
-          "href": "/sectores/inmobiliario-construccion"
+          "status": "Site under construction"
         },
         {
           "name": "Legal sector",
           "sector": "Law firms",
           "desc": "AI software for law firms: automates accounting-audit work, documentation and deadlines.",
-          "href": "/sectores/legal"
+          "href": "/sectores/legal",
+          "cta": "Explore sector"
         }
       ]
     },
     "why": {
-      "eyebrow": "Why us",
-      "title": "We build product, not presentations.",
-      "items": [
-        {
-          "name": "Real product",
-          "desc": "We develop and run our own software. What we propose, we know how to build."
-        },
-        {
-          "name": "Native AI",
-          "desc": "AI is integrated into the product, solving real work —not as a demo."
-        },
-        {
-          "name": "Sector focus",
-          "desc": "We know the sector's context. The product speaks its language."
-        },
-        {
-          "name": "Protected data",
-          "desc": "GDPR by design and EU-hosted data. The foundation of how we build."
-        }
-      ]
+      "eyebrow": "Pioneers",
+      "title": "The software of the future, built today.",
+      "body": "Every business will end up needing a digital infrastructure that sustains its operations and growth: automated, with artificial intelligence at its core. That future is already here —and those who move first will have the edge. The rest will be playing catch-up."
     },
     "split": {
       "eyebrow": "Two ways to start",
