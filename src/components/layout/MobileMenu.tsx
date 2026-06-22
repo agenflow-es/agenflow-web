@@ -40,13 +40,16 @@ function Group({
 export function MobileMenu({
   serviceItems,
   sectorItems,
+  resourceItems,
   labels,
 }: {
   serviceItems: NavItem[];
   sectorItems: NavItem[];
+  resourceItems: NavItem[];
   labels: {
     services: string;
     sectors: string;
+    resources: string;
     pricing: string;
     about: string;
     cta: string;
@@ -104,6 +107,7 @@ export function MobileMenu({
           >
             <Group title={labels.services} items={serviceItems} onNavigate={close} />
             <Group title={labels.sectors} items={sectorItems} onNavigate={close} />
+            <Group title={labels.resources} items={resourceItems} onNavigate={close} />
             <div className="mt-2 border-t border-border pt-2">
               <Link
                 href="/precios"

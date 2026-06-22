@@ -65,6 +65,7 @@ export function Header() {
   const tServices = useTranslations("services");
   const tSectors = useTranslations("sectors");
   const tServicePages = useTranslations("servicePages");
+  const tResources = useTranslations("resourcesHub");
   const serviceItems: NavItem[] = [
     ...(tServices.raw("items") as NavItem[]),
     {
@@ -73,6 +74,9 @@ export function Header() {
     },
   ];
   const sectorItems = tSectors.raw("items") as NavItem[];
+  const resourceItems: NavItem[] = (
+    tResources.raw("items") as { name: string; href: string }[]
+  ).map(({ name, href }) => ({ name, href }));
 
   return (
     <header
@@ -98,6 +102,7 @@ export function Header() {
         <nav className="hidden items-center justify-center gap-1 lg:flex">
           <Dropdown label={nav("services")} items={serviceItems} />
           <Dropdown label={nav("sectors")} items={sectorItems} />
+          <Dropdown label={nav("resources")} items={resourceItems} />
           <Link
             href="/precios"
             className="px-3 py-2.5 text-[15px] font-medium text-fg-muted transition hover:text-fg-hover"
@@ -124,9 +129,11 @@ export function Header() {
           <MobileMenu
             serviceItems={serviceItems}
             sectorItems={sectorItems}
+            resourceItems={resourceItems}
             labels={{
               services: nav("services"),
               sectors: nav("sectors"),
+              resources: nav("resources"),
               pricing: nav("pricing"),
               about: nav("about"),
               cta: nav("cta"),

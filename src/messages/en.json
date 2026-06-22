@@ -39,6 +39,22 @@
     "nosotros": {
       "title": "About",
       "description": "Agenflow was born from engineering on demanding projects: we bring automated systems and AI to Spanish SMBs so they become more profitable and resilient."
+    },
+    "recursos": {
+      "title": "Resources",
+      "description": "Guides, an automation savings calculator and a newsletter to help you produce more without growing costs with automation and AI."
+    },
+    "blog": {
+      "title": "Blog",
+      "description": "Practical ideas on automation and artificial intelligence applied to SMBs. No jargon, no hype."
+    },
+    "newsletter": {
+      "title": "Newsletter",
+      "description": "What we see working in automation and AI, every now and then and to the point. Actionable ideas and real cases, no spam."
+    },
+    "calculadoraRoi": {
+      "title": "Automation ROI calculator",
+      "description": "Estimate in a minute the time and money you recover by automating repetitive tasks in your business."
     }
   },
   "nav": {
@@ -46,6 +62,7 @@
     "sectors": "Sectors",
     "pricing": "Pricing",
     "about": "About",
+    "resources": "Resources",
     "contact": "Contact",
     "cta": "Request a consultation",
     "menuOpen": "Open menu",
@@ -1031,6 +1048,85 @@
       "subtitle": "Tell us how you work today and we'll tell you where to start.",
       "cta": "Request a consultation"
     }
+  },
+  "resourcesHub": {
+    "eyebrow": "Resources",
+    "title": "Tools and know-how to decide better",
+    "subtitle": "Practical guides, a calculator to put numbers on your operation and a newsletter so you don't miss what we apply with clients.",
+    "items": [
+      {
+        "name": "Blog",
+        "desc": "Practical ideas on automation and AI applied to SMBs, no hype.",
+        "href": "/recursos/blog"
+      },
+      {
+        "name": "Newsletter",
+        "desc": "What we see working in automation and AI, every now and then and to the point.",
+        "href": "/recursos/newsletter"
+      },
+      {
+        "name": "ROI calculator",
+        "desc": "Estimate in a minute how much time and money you recover by automating.",
+        "href": "/recursos/calculadora-roi"
+      }
+    ]
+  },
+  "blogPage": {
+    "eyebrow": "Blog",
+    "title": "Automation and AI, explained for your business",
+    "subtitle": "Practical ideas to produce more without growing costs. No jargon, no hype.",
+    "readMore": "Read article",
+    "backToBlog": "Back to the blog",
+    "empty": "No articles published yet.",
+    "ctaTitle": "Shall we apply it in your business?",
+    "ctaSubtitle": "Tell us how you work today and we'll tell you where to start.",
+    "ctaCta": "Request a consultation"
+  },
+  "newsletterPage": {
+    "eyebrow": "Newsletter",
+    "title": "What we see working in automation and AI",
+    "subtitle": "Every now and then, actionable ideas and real (anonymized) cases to produce more without growing costs. To the point and no spam.",
+    "bullets": [
+      "Practical ideas you can apply this week",
+      "What we automate with clients and the results it gets",
+      "Only when we have something worth it: no spam"
+    ],
+    "form": {
+      "email": "Your email",
+      "emailPlaceholder": "name@company.com",
+      "consent": "I agree to receive Agenflow's newsletter and I've read the <privacy>privacy policy</privacy>.",
+      "submit": "Subscribe",
+      "sending": "Sending…",
+      "success": "Done! You're subscribed. We'll write when we have something worth it.",
+      "error": "We couldn't complete your subscription. Please try again.",
+      "errors": {
+        "email": "Enter a valid email",
+        "consent": "We need your consent to subscribe you"
+      }
+    },
+    "note": "You can unsubscribe anytime from any email we send you."
+  },
+  "roiPage": {
+    "eyebrow": "ROI calculator",
+    "title": "How much does automating save you?",
+    "subtitle": "Put numbers on your operation in a minute. Estimate the time and money you recover by automating repetitive tasks.",
+    "inputs": {
+      "people": "People working on the task",
+      "hours": "Hours/week per person on repetitive tasks",
+      "cost": "Cost per hour",
+      "automation": "Share that can be automated"
+    },
+    "results": {
+      "title": "Your estimate",
+      "hoursMonth": "Hours recovered per month",
+      "savingMonth": "Monthly savings",
+      "savingYear": "Yearly savings",
+      "note": "These are the resources you stop spending on tasks automation can take over."
+    },
+    "disclaimer": "Rough estimate. Real savings depend on your specific case; we fine-tune it with you in a consultation.",
+    "ctaTitle": "I want those savings in my business",
+    "ctaSubtitle": "We'll tell you what to automate first to get there, with a clear plan.",
+    "cta": "Request a consultation"
   },
   "contactPage": {
     "title": "Let's talk about your operation",

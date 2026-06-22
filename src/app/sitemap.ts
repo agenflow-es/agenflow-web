@@ -1,6 +1,7 @@
 import type { MetadataRoute } from "next";
 import { routing } from "@/i18n/routing";
 import { siteConfig } from "@/lib/site";
+import { getPosts } from "@/content/blog/posts";
 
 const paths = [
   "",
@@ -13,6 +14,12 @@ const paths = [
   "/sectores/inmobiliario-construccion",
   "/precios",
   "/nosotros",
+  "/recursos",
+  "/recursos/blog",
+  "/recursos/newsletter",
+  "/recursos/calculadora-roi",
+  // Blog posts (same slug across locales).
+  ...getPosts(routing.defaultLocale).map((p) => `/recursos/blog/${p.slug}`),
   "/contacto",
   "/privacidad",
   "/aviso-legal",

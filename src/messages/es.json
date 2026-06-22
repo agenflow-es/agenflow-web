@@ -39,6 +39,22 @@
     "nosotros": {
       "title": "Nosotros",
       "description": "Agenflow nace de la ingeniería en proyectos exigentes: llevamos sistemas automatizados e IA a las pymes españolas para que sean más rentables y robustas."
+    },
+    "recursos": {
+      "title": "Recursos",
+      "description": "Guías, una calculadora de ahorro por automatización y una newsletter para producir más sin crecer en costes con automatización e IA."
+    },
+    "blog": {
+      "title": "Blog",
+      "description": "Ideas prácticas sobre automatización e inteligencia artificial aplicadas a pymes. Sin tecnicismos y sin humo."
+    },
+    "newsletter": {
+      "title": "Newsletter",
+      "description": "Lo que vemos funcionar en automatización e IA, cada cierto tiempo y al grano. Ideas aplicables y casos reales, sin spam."
+    },
+    "calculadoraRoi": {
+      "title": "Calculadora de ROI de automatización",
+      "description": "Estima en un minuto el tiempo y el dinero que recuperas al automatizar tareas repetitivas en tu negocio."
     }
   },
   "nav": {
@@ -46,6 +62,7 @@
     "sectors": "Sectores",
     "pricing": "Precios",
     "about": "Nosotros",
+    "resources": "Recursos",
     "contact": "Contacto",
     "cta": "Solicitar consultoría",
     "menuOpen": "Abrir menú",
@@ -1031,6 +1048,85 @@
       "subtitle": "Cuéntanos cómo trabajáis hoy y te decimos por dónde empezar.",
       "cta": "Solicitar consultoría"
     }
+  },
+  "resourcesHub": {
+    "eyebrow": "Recursos",
+    "title": "Herramientas y conocimiento para decidir mejor",
+    "subtitle": "Guías prácticas, una calculadora para poner números a tu operación y una newsletter para no perderte lo que aplicamos con clientes.",
+    "items": [
+      {
+        "name": "Blog",
+        "desc": "Ideas prácticas sobre automatización e IA aplicada a pymes, sin humo.",
+        "href": "/recursos/blog"
+      },
+      {
+        "name": "Newsletter",
+        "desc": "Lo que vemos funcionar en automatización e IA, cada cierto tiempo y al grano.",
+        "href": "/recursos/newsletter"
+      },
+      {
+        "name": "Calculadora ROI",
+        "desc": "Estima en un minuto cuánto tiempo y dinero recuperas al automatizar.",
+        "href": "/recursos/calculadora-roi"
+      }
+    ]
+  },
+  "blogPage": {
+    "eyebrow": "Blog",
+    "title": "Automatización e IA, explicadas para tu negocio",
+    "subtitle": "Ideas prácticas para producir más sin crecer en costes. Sin tecnicismos y sin humo.",
+    "readMore": "Leer artículo",
+    "backToBlog": "Volver al blog",
+    "empty": "Aún no hay artículos publicados.",
+    "ctaTitle": "¿Lo aplicamos en tu negocio?",
+    "ctaSubtitle": "Cuéntanos cómo trabajáis hoy y te decimos por dónde empezar.",
+    "ctaCta": "Solicitar consultoría"
+  },
+  "newsletterPage": {
+    "eyebrow": "Newsletter",
+    "title": "Lo que vemos funcionar en automatización e IA",
+    "subtitle": "Cada cierto tiempo, ideas aplicables y casos reales (anonimizados) para producir más sin crecer en costes. Al grano y sin spam.",
+    "bullets": [
+      "Ideas prácticas que puedes aplicar esta semana",
+      "Qué automatizamos con clientes y qué resultado da",
+      "Solo cuando tenemos algo que merece la pena: sin spam"
+    ],
+    "form": {
+      "email": "Tu email",
+      "emailPlaceholder": "nombre@empresa.com",
+      "consent": "Acepto recibir la newsletter de Agenflow y he leído la <privacy>política de privacidad</privacy>.",
+      "submit": "Suscribirme",
+      "sending": "Enviando…",
+      "success": "¡Hecho! Ya estás suscrito. Te escribiremos cuando tengamos algo que merezca la pena.",
+      "error": "No se pudo completar la suscripción. Inténtalo de nuevo.",
+      "errors": {
+        "email": "Introduce un email válido",
+        "consent": "Necesitamos tu consentimiento para suscribirte"
+      }
+    },
+    "note": "Puedes darte de baja cuando quieras desde cualquier email que te enviemos."
+  },
+  "roiPage": {
+    "eyebrow": "Calculadora ROI",
+    "title": "¿Cuánto te ahorra automatizar?",
+    "subtitle": "Pon números a tu operación en un minuto. Estima el tiempo y el dinero que recuperas al automatizar tareas repetitivas.",
+    "inputs": {
+      "people": "Personas dedicadas a la tarea",
+      "hours": "Horas/semana por persona en tareas repetitivas",
+      "cost": "Coste por hora",
+      "automation": "Parte que se puede automatizar"
+    },
+    "results": {
+      "title": "Tu estimación",
+      "hoursMonth": "Horas recuperadas al mes",
+      "savingMonth": "Ahorro mensual",
+      "savingYear": "Ahorro anual",
+      "note": "Son los recursos que dejas de gastar en tareas que una automatización puede asumir."
+    },
+    "disclaimer": "Estimación orientativa. El ahorro real depende de tu caso concreto; lo afinamos contigo en una consultoría.",
+    "ctaTitle": "Quiero ese ahorro en mi negocio",
+    "ctaSubtitle": "Te decimos qué automatizar primero para conseguirlo, con un plan claro.",
+    "cta": "Solicitar consultoría"
   },
   "contactPage": {
     "title": "Hablemos de tu operación",
