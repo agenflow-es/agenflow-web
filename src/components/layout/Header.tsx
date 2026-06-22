@@ -64,15 +64,8 @@ export function Header() {
   const nav = useTranslations("nav");
   const tServices = useTranslations("services");
   const tSectors = useTranslations("sectors");
-  const tServicePages = useTranslations("servicePages");
   const tResources = useTranslations("resourcesHub");
-  const serviceItems: NavItem[] = [
-    ...(tServices.raw("items") as NavItem[]),
-    {
-      name: tServicePages("presenciaOnline.title"),
-      href: "/servicios/presencia-online",
-    },
-  ];
+  const serviceItems = tServices.raw("items") as NavItem[];
   const sectorItems = tSectors.raw("items") as NavItem[];
   const resourceItems: NavItem[] = (
     tResources.raw("items") as { name: string; href: string }[]

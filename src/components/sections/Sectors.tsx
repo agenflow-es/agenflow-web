@@ -2,6 +2,7 @@ import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
 import { Container, Eyebrow } from "@/components/ui/primitives";
 import { Reveal } from "@/components/motion/Reveal";
+import { RealEstateVisual, LegalVisual } from "@/components/visuals/SectorVisuals";
 
 type Item = {
   label: string;
@@ -34,15 +35,17 @@ export function Sectors() {
                 className="group flex flex-col overflow-hidden rounded-[var(--radius-lg)] border border-border bg-bg shadow-[var(--shadow)] transition duration-200 hover:-translate-y-1.5 hover:border-accent"
               >
                 <div
-                  className="relative flex aspect-[16/10] items-end bg-surface-2 p-4"
+                  className="relative aspect-[16/10] overflow-hidden border-b border-border bg-surface-2"
                   style={{
                     backgroundImage:
                       "repeating-linear-gradient(135deg,var(--grid) 0 2px,transparent 2px 13px)",
                   }}
                 >
-                  <span className="rounded-[5px] border border-dashed border-border-strong bg-bg px-2.5 py-1.5 font-label text-[11px] uppercase tracking-[0.13em] text-fg-faint">
-                    {item.name}
-                  </span>
+                  {item.href.includes("/sectores/legal") ? (
+                    <LegalVisual />
+                  ) : (
+                    <RealEstateVisual />
+                  )}
                 </div>
                 <div className="p-7">
                   <Eyebrow className="text-[12px]">{item.label}</Eyebrow>

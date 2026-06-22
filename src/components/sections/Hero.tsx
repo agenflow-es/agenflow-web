@@ -18,16 +18,8 @@ export function Hero() {
         />
       </div>
 
-      <Container className="relative z-[1] flex max-w-[1000px] flex-col items-center pb-[clamp(80px,12vw,150px)] pt-[clamp(56px,9vw,104px)] text-center">
-        <span className="inline-flex items-center gap-2 rounded-full border border-border bg-[var(--accent-soft)] px-3 py-[7px] font-label text-[12.5px] font-medium uppercase tracking-[0.13em] text-accent">
-          <span
-            className="h-1.5 w-1.5 rounded-full bg-accent"
-            style={{ animation: "af-blink 2.2s infinite" }}
-          />
-          {t("eyebrow")}
-        </span>
-
-        <h1 className="mt-6 max-w-[16ch] font-display text-[clamp(34px,5.2vw,64px)] font-bold leading-[1.04] tracking-[-0.022em] text-balance">
+      <Container className="relative z-[1] flex max-w-[1000px] flex-col items-center pb-[clamp(80px,12vw,150px)] pt-[clamp(72px,11vw,128px)] text-center">
+        <h1 className="max-w-[16ch] font-display text-[clamp(34px,5.2vw,64px)] font-bold leading-[1.04] tracking-[-0.022em] text-balance">
           {t("title")}
         </h1>
         <p className="mt-6 max-w-[600px] text-[clamp(17px,1.6vw,21px)] leading-[1.55] text-fg-muted text-pretty">
@@ -41,12 +33,12 @@ export function Hero() {
           >
             {t("ctaPrimary")} <span className="text-lg">→</span>
           </Link>
-          <Link
-            href="/servicios"
+          <a
+            href="#services"
             className="inline-flex items-center gap-2.5 rounded-[var(--radius)] border border-border-strong px-[26px] py-[15px] font-medium text-fg transition hover:bg-surface"
           >
             {t("ctaSecondary")}
-          </Link>
+          </a>
         </div>
 
         <div className="mt-12 flex flex-wrap items-center justify-center gap-x-5 gap-y-3 font-label text-[11.5px] uppercase tracking-[0.13em] text-fg-faint">

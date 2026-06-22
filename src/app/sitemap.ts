@@ -5,7 +5,6 @@ import { getPosts } from "@/content/blog/posts";
 
 const paths = [
   "",
-  "/servicios",
   "/servicios/consultoria-ia",
   "/servicios/automatizacion-ia",
   "/servicios/desarrollo-software",
