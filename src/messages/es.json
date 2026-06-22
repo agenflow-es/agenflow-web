@@ -818,20 +818,21 @@
     },
     "eyebrow": "Sector · Inmobiliario y construcción",
     "title": "Tecnología propia para inmobiliarias y administradores de fincas.",
-    "subtitle": "Conocemos cómo trabaja el sector y construimos el software con IA que le falta: para captar y vender más, y para gestionar comunidades sin fricción.",
+    "subtitle": "El sector pierde clientes por llegar tarde y horas en papeleo. Construimos el software con IA que lo arregla, para inmobiliarias y administradores de fincas.",
     "cta": "Hablar de tu caso",
     "problem": {
       "eyebrow": "El día a día del sector",
-      "title": "Demasiado tiempo en tareas que podrían ir solas.",
+      "title": "Demasiado tiempo en tareas que podrían automatizarse.",
       "items": [
         "Leads que entran por mil canales y se enfrían antes de que alguien responda.",
         "Visitas, llamadas y WhatsApps imposibles de seguir a mano.",
-        "Comunidades con documentación, incidencias y juntas que devoran horas."
+        "Comunidades con documentación, incidencias y juntas que devoran horas.",
+        "Oportunidades que se escapan cada día porque nadie llega a tiempo."
       ]
     },
     "pains": {
       "eyebrow": "Dolores del sector, resueltos",
-      "title": "Lo que te roba el día, hecho solo.",
+      "title": "Sabemos exactamente dónde pierdes tiempo y clientes.",
       "intro": "Conocemos los atascos reales de cada negocio del sector —y construimos para quitarlos de en medio.",
       "groups": [
         {
@@ -887,28 +888,26 @@
       },
       "items": [
         {
-          "name": "fincai",
+          "name": "FincAI",
           "for": "Administración de fincas",
           "desc": "Software con IA para que los administradores gestionen sus comunidades mucho mejor: un agente que orquesta documentación, incidencias y comunicación.",
-          "cta": "Conoce fincai",
+          "cta": "Ver producto",
           "href": "https://fincai.es",
           "external": true
         },
         {
-          "name": "replo",
+          "name": "Replo",
           "for": "Inmobiliarias",
           "desc": "Gestión de leads de punta a punta: bandeja omnicanal, agente de WhatsApp, voz y gestión de visitas. Para responder el primero y vender más.",
-          "status": "Muy pronto",
-          "cta": "Avísame del lanzamiento",
-          "href": "/contacto?reason=lanzamiento",
-          "external": false
+          "status": "Web en construcción"
         }
       ]
     },
     "construction": {
       "eyebrow": "Construcción y reformas",
+      "badge": "Próximamente",
       "title": "Lo que más cuesta no es la obra: es todo lo que la rodea.",
-      "intro": "Coordinar, documentar y hacer seguimiento se llevan las horas que deberían ir a construir. Eso lo automatizamos con consultoría y automatización.",
+      "intro": "Coordinar, documentar y hacer seguimiento se llevan las horas que deberían ir a construir. Es la próxima vertical que estamos preparando —y esto es lo que vamos a resolver.",
       "items": [
         {
           "pain": "Partes de obra y avances en WhatsApp y papel.",
@@ -927,7 +926,7 @@
           "fix": "Toda la documentación de obra ordenada y a un clic, lista para cualquier auditoría."
         }
       ],
-      "note": "Empezamos por lo que más te pesa y lo dejamos funcionando."
+      "note": "En preparación. Cuéntanos tu caso si te interesa y te avisamos."
     },
     "segments": {
       "eyebrow": "Para quién es",

@@ -13,6 +13,7 @@ type SectionHeaderProps = {
   eyebrow: string;
   title: string;
   intro?: string;
+  badge?: string;
   align?: "center" | "left";
   maxWidth?: 680 | 720 | 760;
   className?: string;
@@ -22,6 +23,7 @@ export function SectionHeader({
   eyebrow,
   title,
   intro,
+  badge,
   align = "center",
   maxWidth = 720,
   className,
@@ -35,7 +37,21 @@ export function SectionHeader({
         className,
       )}
     >
-      <Eyebrow>{eyebrow}</Eyebrow>
+      {badge ? (
+        <div
+          className={cn(
+            "flex flex-wrap items-center gap-2.5",
+            centered && "justify-center",
+          )}
+        >
+          <Eyebrow>{eyebrow}</Eyebrow>
+          <span className="inline-flex items-center rounded-full border border-border bg-surface-2 px-2.5 py-1 font-label text-[10.5px] font-medium uppercase tracking-[0.1em] text-fg-faint">
+            {badge}
+          </span>
+        </div>
+      ) : (
+        <Eyebrow>{eyebrow}</Eyebrow>
+      )}
       <h2
         className={cn(
           "mt-4 font-display font-bold tracking-[-0.022em] text-balance",

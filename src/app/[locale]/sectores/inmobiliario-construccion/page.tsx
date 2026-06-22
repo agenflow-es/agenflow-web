@@ -20,18 +20,16 @@ type Product = {
   for: string;
   desc: string;
   status?: string;
-  cta: string;
-  href: string;
-  external: boolean;
+  cta?: string;
+  href?: string;
+  external?: boolean;
 };
 
 function ProductCard({ p }: { p: Product }) {
   const inner = (
     <>
       <div className="flex items-start justify-between gap-3">
-        <span className="font-display text-[22px] font-semibold lowercase">
-          {p.name}
-        </span>
+        <span className="font-display text-[22px] font-semibold">{p.name}</span>
         {p.status && (
           <span className="inline-flex shrink-0 items-center gap-1.5 rounded-full border border-border px-2.5 py-1 font-label text-[10.5px] uppercase tracking-[0.08em] text-fg-muted">
             <span aria-hidden className="h-1.5 w-1.5 rounded-full bg-accent" />
@@ -45,27 +43,42 @@ function ProductCard({ p }: { p: Product }) {
       <p className="mt-4 flex-1 text-[15px] leading-[1.6] text-fg-muted">
         {p.desc}
       </p>
-      <span className="mt-5 inline-flex items-center gap-1.5 text-[14px] font-semibold text-fg transition group-hover:text-accent">
-        {p.cta}
-        <span aria-hidden className="transition group-hover:translate-x-0.5">
-          {p.external ? "↗" : "→"}
+      {p.href && p.cta && (
+        <span className="mt-5 inline-flex items-center gap-1.5 text-[14px] font-semibold text-fg transition group-hover:text-accent">
+          {p.cta}
+          <span aria-hidden className="transition group-hover:translate-x-0.5">
+            {p.external ? "↗" : "→"}
+          </span>
         </span>
-      </span>
+      )}
     </>
   );
 
-  const className =
-    "group flex flex-col rounded-[var(--radius-lg)] border border-border bg-bg p-7 shadow-[var(--shadow)] transition duration-200 hover:-translate-y-1 hover:border-accent";
+  const base =
+    "flex flex-col rounded-[var(--radius-lg)] border border-border bg-bg p-7 shadow-[var(--shadow)]";
+  const interactive =
+    " group transition duration-200 hover:-translate-y-1 hover:border-accent";
 
-  return p.external ? (
-    <a href={p.href} target="_blank" rel="noopener noreferrer" className={className}>
-      {inner}
-    </a>
-  ) : (
-    <Link href={p.href} className={className}>
-      {inner}
-    </Link>
-  );
+  if (p.href && p.external) {
+    return (
+      <a
+        href={p.href}
+        target="_blank"
+        rel="noopener noreferrer"
+        className={base + interactive}
+      >
+        {inner}
+      </a>
+    );
+  }
+  if (p.href) {
+    return (
+      <Link href={p.href} className={base + interactive}>
+        {inner}
+      </Link>
+    );
+  }
+  return <div className={base}>{inner}</div>;
 }
 
 export async function generateMetadata({
@@ -207,6 +220,7 @@ export default async function InmobiliarioPage({
           <Reveal>
             <SectionHeader
               eyebrow={t("construction.eyebrow")}
+              badge={t("construction.badge")}
               title={t("construction.title")}
               intro={t("construction.intro")}
               align="left"

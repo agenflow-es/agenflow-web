@@ -818,20 +818,21 @@
     },
     "eyebrow": "Sector · Real estate & construction",
     "title": "Our own technology for real estate agencies and property managers.",
-    "subtitle": "We know how the sector works and we build the AI software it's missing: to capture and sell more, and to manage communities without friction.",
+    "subtitle": "The sector loses clients to slow replies and hours lost to paperwork. We build the AI software that fixes it, for real estate agencies and property managers.",
     "cta": "Talk about your case",
     "problem": {
       "eyebrow": "The sector's day-to-day",
-      "title": "Too much time on tasks that could run themselves.",
+      "title": "Too much time on tasks that could be automated.",
       "items": [
         "Leads coming in through a dozen channels and going cold before anyone replies.",
         "Visits, calls and WhatsApps impossible to track by hand.",
-        "Communities with documents, incidents and meetings that eat up hours."
+        "Communities with documents, incidents and meetings that eat up hours.",
+        "Opportunities slipping away every day because no one gets to them in time."
       ]
     },
     "pains": {
       "eyebrow": "Sector pains, solved",
-      "title": "What eats your day, done on its own.",
+      "title": "We know exactly where you lose time and clients.",
       "intro": "We know the real bottlenecks of each business in the sector —and we build to clear them out of the way.",
       "groups": [
         {
@@ -887,28 +888,26 @@
       },
       "items": [
         {
-          "name": "fincai",
+          "name": "FincAI",
           "for": "Property management",
           "desc": "AI software so property managers can run their communities far better: an agent that orchestrates documents, incidents and communication.",
-          "cta": "Discover fincai",
+          "cta": "View product",
           "href": "https://fincai.es",
           "external": true
         },
         {
-          "name": "replo",
+          "name": "Replo",
           "for": "Real estate agencies",
           "desc": "End-to-end lead management: omnichannel inbox, WhatsApp agent, voice and visit scheduling. So you reply first and sell more.",
-          "status": "Coming soon",
-          "cta": "Notify me at launch",
-          "href": "/contacto?reason=lanzamiento",
-          "external": false
+          "status": "Site under construction"
         }
       ]
     },
     "construction": {
       "eyebrow": "Construction & renovation",
+      "badge": "Coming soon",
       "title": "The hard part isn't the build: it's everything around it.",
-      "intro": "Coordinating, documenting and following up eat the hours that should go into building. We automate that with consulting and automation.",
+      "intro": "Coordinating, documenting and following up eat the hours that should go into building. It's the next vertical we're preparing —and this is what we'll solve.",
       "items": [
         {
           "pain": "Site reports and progress in WhatsApp and on paper.",
@@ -927,7 +926,7 @@
           "fix": "All site documentation organized and one click away, ready for any audit."
         }
       ],
-      "note": "We start with what weighs on you most and leave it working."
+      "note": "In the works. Tell us your case if you're interested and we'll keep you posted."
     },
     "segments": {
       "eyebrow": "Who it's for",
