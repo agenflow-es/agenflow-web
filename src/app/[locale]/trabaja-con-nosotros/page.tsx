@@ -71,7 +71,16 @@ export default async function CareersPage({
               >
                 {t("spontaneous.cta")} <span className="text-lg">→</span>
               </a>
-              <p className="mt-4 text-[13px] text-fg-faint">
+              <p className="mt-4 text-[14px] text-fg-muted">
+                {t("spontaneous.or")}{" "}
+                <a
+                  href={mailto}
+                  className="font-medium text-accent underline decoration-accent/40 underline-offset-2 transition hover:decoration-accent"
+                >
+                  {siteConfig.contactEmail}
+                </a>
+              </p>
+              <p className="mt-3 text-[13px] text-fg-faint">
                 {t("spontaneous.note")}
               </p>
             </div>

@@ -1137,16 +1137,17 @@
   "careersPage": {
     "eyebrow": "Work with us",
     "title": "Let's build Agenflow together",
-    "subtitle": "We're a small team automating real operations with AI. We grow slowly and deliberately: when we open a position, it shows up here.",
+    "subtitle": "We're a small team automating real operations with AI. If you want to build that with us, this is the place.",
     "openings": {
       "title": "No open positions right now",
-      "body": "We're heads-down building and don't have any roles posted yet. When we open one, you'll see it on this page with all the details."
+      "body": "When we open a position, you'll see it here with all the details."
     },
     "spontaneous": {
       "title": "Think you're a fit anyway?",
       "body": "If you're passionate about automation and AI applied to real businesses and believe you can contribute, write to us. Tell us who you are, what you do, and attach your CV.",
       "cta": "Send your application",
       "subject": "Open application — Agenflow",
+      "or": "or write to us directly at",
       "note": "We read everything that comes in. If it's a fit, we'll get back to you."
     }
   },

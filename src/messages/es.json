@@ -1137,16 +1137,17 @@
   "careersPage": {
     "eyebrow": "Trabaja con nosotros",
     "title": "Construyamos Agenflow juntos",
-    "subtitle": "Somos un equipo pequeño que automatiza operaciones reales con IA. Crecemos despacio y con criterio: cuando abrimos una posición, aparece aquí.",
+    "subtitle": "Somos un equipo pequeño que automatiza operaciones reales con IA. Si quieres construir eso con nosotros, este es tu sitio.",
     "openings": {
       "title": "No hay vacantes abiertas ahora mismo",
-      "body": "Estamos en plena construcción y todavía no tenemos posiciones publicadas. Cuando abramos una, la verás en esta página con todos los detalles."
+      "body": "Cuando abramos una posición, la verás aquí con todos los detalles."
     },
     "spontaneous": {
       "title": "¿Crees que encajas igualmente?",
       "body": "Si te apasiona la automatización y la IA aplicada a negocios reales y crees que puedes aportar, escríbenos. Cuéntanos quién eres, qué sabes hacer y adjunta tu CV.",
       "cta": "Enviar candidatura",
       "subject": "Candidatura espontánea — Agenflow",
+      "or": "o escríbenos directamente a",
       "note": "Leemos todo lo que llega. Si encaja, te contestamos."
     }
   },
