@@ -35,6 +35,10 @@
     "pricing": {
       "title": "Precios",
       "description": "Presupuesto a medida según el alcance real de tu proyecto. Solo la presencia online va por paquetes cerrados."
+    },
+    "nosotros": {
+      "title": "Nosotros",
+      "description": "Agenflow nace de la ingeniería en proyectos exigentes: llevamos sistemas automatizados e IA a las pymes españolas para que sean más rentables y robustas."
     }
   },
   "nav": {
@@ -945,12 +949,88 @@
     }
   },
   "aboutPage": {
-    "title": "Nosotros",
-    "intro": "Ayudamos a los negocios a producir más sin crecer en costes: entendemos su operación e integramos la automatización y la tecnología que la hacen más rápida, rentable y escalable.",
-    "body": "Trabajamos con foco en legal e inmobiliario y desarrollamos nuestro propio software por sector. No te atiende un comercial: te atiende quien va a analizar tu operación y construir la solución.",
-    "expertTitle": "Hablas con quien lo construye",
-    "expertBody": "Sin intermediarios: la persona que diseña tu solución es la que se sienta contigo desde el primer día.",
-    "cta": "Solicitar consultoría"
+    "eyebrow": "Nosotros",
+    "title": "Nacimos dentro del problema que resolvemos",
+    "subtitle": "Años de ingeniería en proyectos exigentes nos enseñaron una cosa: un negocio es rentable cuando, por dentro, sus sistemas están bien definidos y orquestados. Agenflow lleva esos sistemas —ahora potenciados con IA— a las pymes españolas.",
+    "ctaPrimary": "Solicitar consultoría",
+    "ctaSecondary": "Nuestra historia",
+    "origin": {
+      "eyebrow": "El origen",
+      "title": "De la construcción de hospitales a Agenflow",
+      "paragraphs": [
+        "Agenflow lo funda un ingeniero industrial con más de 6 años de experiencia en construcción y proyectos internacionales de hospitales: obras enormes, con cientos de personas y miles de detalles que tienen que encajar. Ahí se aprende rápido que un proyecto sale adelante —y es rentable— cuando por dentro hay sistemas bien definidos y orquestados.",
+        "También se vive el otro lado. Como todos sus compañeros, sufría el mismo problema: jornadas larguísimas, sin tiempo para nada y procesos con un margen de mejora enorme. Mucho esfuerzo invertido en tareas que un buen sistema podía resolver.",
+        "La idea de montar algo propio siempre estuvo ahí. Cuando vio lo que la automatización y la inteligencia artificial podían hacer con esos procesos, no se lo pensó: dedicó más de un año a formarse y a aplicarlo en real, hasta fundar Agenflow."
+      ]
+    },
+    "mission": {
+      "eyebrow": "Misión",
+      "title": "Ayudar a las pymes españolas a ser más rentables y más robustas",
+      "body": "Integramos sistemas automatizados e inteligencia artificial en la operación del día a día para que produzcas más sin crecer en costes, con procesos que aguantan cuando el negocio crece."
+    },
+    "focus": {
+      "eyebrow": "Sectores",
+      "title": "Sectores que conocemos de cerca",
+      "intro": "Por experiencia, Agenflow mira siempre al inmobiliario y la construcción: sabemos dónde duele y cómo resolverlo. Y damos un peso especial al sector legal por partida doble: es un campo que gana mucho con estos sistemas y, a la vez, nos mantiene cerca del cumplimiento normativo y jurídico que rodea a un negocio como el nuestro.",
+      "items": [
+        {
+          "title": "Inmobiliario y construcción",
+          "desc": "Captación, gestión de comunidades, documentación y obra: automatizamos los procesos que más tiempo consumen en el sector.",
+          "href": "/sectores/inmobiliario-construccion",
+          "linkLabel": "Ver sector"
+        },
+        {
+          "title": "Legal",
+          "desc": "Auditoría contable, documentación y plazos del despacho, con la confidencialidad como base de todo.",
+          "href": "/sectores/legal",
+          "linkLabel": "Ver sector"
+        }
+      ]
+    },
+    "values": {
+      "eyebrow": "Cómo trabajamos",
+      "title": "Cómo trabajamos",
+      "items": [
+        {
+          "title": "Hablas con quien lo construye",
+          "desc": "Sin intermediarios. Quien analiza tu operación es quien diseña y construye la solución, desde el primer día."
+        },
+        {
+          "title": "Resultados primero",
+          "desc": "La IA y la automatización son la herramienta, no el titular. Lo que medimos es tiempo recuperado y procesos que dejan de fallar."
+        },
+        {
+          "title": "Foco por sector",
+          "desc": "No hacemos de todo para todos. Nos especializamos para entender el negocio antes de tocar nada."
+        },
+        {
+          "title": "Confidencialidad y seguridad",
+          "desc": "RGPD por diseño, datos en la UE y acuerdos de confidencialidad. Tu información se trata con el mismo cuidado que la nuestra."
+        }
+      ]
+    },
+    "faq": {
+      "title": "Preguntas frecuentes",
+      "items": [
+        {
+          "q": "¿Trabajáis solo con inmobiliario, construcción y legal?",
+          "a": "Son los sectores donde llegamos más a fondo, pero la automatización y la IA aplican a cualquier pyme con procesos repetitivos. Si tu operación tiene tareas que se repiten, hablemos."
+        },
+        {
+          "q": "¿Hace falta saber de tecnología para trabajar con vosotros?",
+          "a": "No. Tú conoces tu negocio; nosotros lo traducimos en sistemas. Te explicamos cada paso en tu idioma, sin tecnicismos."
+        },
+        {
+          "q": "¿Por dónde se empieza?",
+          "a": "Por una consultoría: analizamos tu operación y te llevas un plan claro, lo ejecutes con nosotros o no."
+        }
+      ]
+    },
+    "finalCta": {
+      "title": "¿Hablamos de tu operación?",
+      "subtitle": "Cuéntanos cómo trabajáis hoy y te decimos por dónde empezar.",
+      "cta": "Solicitar consultoría"
+    }
   },
   "contactPage": {
     "title": "Hablemos de tu operación",

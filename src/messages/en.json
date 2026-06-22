@@ -35,6 +35,10 @@
     "pricing": {
       "title": "Pricing",
       "description": "Tailored quotes based on the real scope of your project. Only online presence comes as fixed packages."
+    },
+    "nosotros": {
+      "title": "About",
+      "description": "Agenflow was born from engineering on demanding projects: we bring automated systems and AI to Spanish SMBs so they become more profitable and resilient."
     }
   },
   "nav": {
@@ -945,12 +949,88 @@
     }
   },
   "aboutPage": {
-    "title": "About",
-    "intro": "We help businesses produce more without growing costs: we understand their operation and integrate the automation and technology that make it faster, more profitable and scalable.",
-    "body": "We focus on legal and real estate and develop our own software by sector. You won't get a salesperson: you'll get the person who will analyze your operation and build the solution.",
-    "expertTitle": "You talk to who builds it",
-    "expertBody": "No middlemen: the person who designs your solution is the one who sits with you from day one.",
-    "cta": "Request a consultation"
+    "eyebrow": "About",
+    "title": "We were born inside the problem we solve",
+    "subtitle": "Years of engineering on demanding projects taught us one thing: a business is profitable when, on the inside, its systems are well defined and orchestrated. Agenflow brings those systems —now powered by AI— to Spanish SMBs.",
+    "ctaPrimary": "Request a consultation",
+    "ctaSecondary": "Our story",
+    "origin": {
+      "eyebrow": "Origin",
+      "title": "From building hospitals to Agenflow",
+      "paragraphs": [
+        "Agenflow was founded by an industrial engineer with over 6 years in construction and international hospital projects: huge builds, with hundreds of people and thousands of details that all have to fit together. There you learn fast that a project succeeds —and turns a profit— when the systems inside are well defined and orchestrated.",
+        "You also live the other side. Like all of his colleagues, he suffered the same problem: endless hours, no time for anything, and processes with enormous room for improvement. A lot of effort spent on tasks a good system could handle.",
+        "The idea of building something of his own was always there. When he saw what automation and artificial intelligence could do with those processes, he didn't think twice: he spent more than a year learning and applying it for real, until he founded Agenflow."
+      ]
+    },
+    "mission": {
+      "eyebrow": "Mission",
+      "title": "Help Spanish SMBs become more profitable and more resilient",
+      "body": "We integrate automated systems and artificial intelligence into day-to-day operations so you produce more without growing costs, with processes that hold up as the business grows."
+    },
+    "focus": {
+      "eyebrow": "Sectors",
+      "title": "Sectors we know first-hand",
+      "intro": "From experience, Agenflow always looks to real estate and construction: we know where it hurts and how to fix it. And we give the legal sector special weight for two reasons: it's a field that gains a lot from these systems and, at the same time, it keeps us close to the regulatory and legal compliance that surrounds a business like ours.",
+      "items": [
+        {
+          "title": "Real estate & construction",
+          "desc": "Lead capture, community management, paperwork and site work: we automate the processes that eat the most time in the sector.",
+          "href": "/sectores/inmobiliario-construccion",
+          "linkLabel": "See sector"
+        },
+        {
+          "title": "Legal",
+          "desc": "Accounting audits, documentation and deadlines for the firm, with confidentiality as the baseline for everything.",
+          "href": "/sectores/legal",
+          "linkLabel": "See sector"
+        }
+      ]
+    },
+    "values": {
+      "eyebrow": "How we work",
+      "title": "How we work",
+      "items": [
+        {
+          "title": "You talk to who builds it",
+          "desc": "No middlemen. The person who analyzes your operation is the one who designs and builds the solution, from day one."
+        },
+        {
+          "title": "Results first",
+          "desc": "AI and automation are the tool, not the headline. What we measure is time recovered and processes that stop failing."
+        },
+        {
+          "title": "Focus by sector",
+          "desc": "We don't do everything for everyone. We specialize to understand the business before touching anything."
+        },
+        {
+          "title": "Confidentiality & security",
+          "desc": "GDPR by design, data in the EU and confidentiality agreements. Your information is handled with the same care as our own."
+        }
+      ]
+    },
+    "faq": {
+      "title": "Frequently asked questions",
+      "items": [
+        {
+          "q": "Do you only work with real estate, construction and legal?",
+          "a": "Those are the sectors we go deepest in, but automation and AI apply to any SMB with repetitive processes. If your operation has tasks that repeat, let's talk."
+        },
+        {
+          "q": "Do I need to know about technology to work with you?",
+          "a": "No. You know your business; we translate it into systems. We explain every step in your language, no jargon."
+        },
+        {
+          "q": "Where do we start?",
+          "a": "With a consultation: we analyze your operation and you walk away with a clear plan, whether you execute it with us or not."
+        }
+      ]
+    },
+    "finalCta": {
+      "title": "Shall we talk about your operation?",
+      "subtitle": "Tell us how you work today and we'll tell you where to start.",
+      "cta": "Request a consultation"
+    }
   },
   "contactPage": {
     "title": "Let's talk about your operation",
