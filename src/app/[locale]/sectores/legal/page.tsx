@@ -7,9 +7,9 @@ import { SectionHeader } from "@/components/layout/SectionHeader";
 import { PageHero } from "@/components/layout/PageHero";
 import { FaqList } from "@/components/layout/FaqList";
 import { CtaSection } from "@/components/layout/CtaSection";
-import { AccentCard } from "@/components/ui/AccentCard";
 import { SpotlightCard } from "@/components/visuals/SpotlightCard";
 import { AutomationFeed } from "@/components/visuals/AutomationFeed";
+import { ShieldVisual } from "@/components/visuals/ShieldVisual";
 
 type PainItem = { pain: string; fix: string };
 type Capability = { name: string; desc: string };
@@ -34,7 +34,7 @@ export default async function LegalPage({
   const t = await getTranslations("legalPage");
   const problem = t.raw("problem.items") as string[];
   const pains = t.raw("pains.items") as PainItem[];
-  const automate = t.raw("automate.items") as Capability[];
+  const automateBody = t.raw("automate.body") as string[];
   const steps = t.raw("delivery.steps") as Step[];
   const trust = t.raw("trust.items") as Capability[];
 
@@ -110,18 +110,16 @@ export default async function LegalPage({
               <SectionHeader
                 eyebrow={t("automate.eyebrow")}
                 title={t("automate.title")}
-                intro={t("automate.intro")}
                 align="left"
               />
-              <div className="mt-8 grid gap-4">
-                {automate.map((c, i) => (
-                  <AccentCard
+              <div className="mt-6 space-y-4">
+                {automateBody.map((p, i) => (
+                  <p
                     key={i}
-                    title={c.name}
-                    desc={c.desc}
-                    background="bg"
-                    compact
-                  />
+                    className="text-[16.5px] leading-[1.65] text-fg-muted text-pretty"
+                  >
+                    {p}
+                  </p>
                 ))}
               </div>
             </Reveal>
@@ -161,19 +159,49 @@ export default async function LegalPage({
       {/* Trust & confidentiality */}
       <section className="border-b border-border bg-surface">
         <Container className="py-[clamp(72px,10vw,140px)]">
-          <Reveal>
-            <SectionHeader
-              eyebrow={t("trust.eyebrow")}
-              title={t("trust.title")}
-              intro={t("trust.intro")}
-              align="left"
-            />
-            <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
-              {trust.map((c, i) => (
-                <AccentCard key={i} title={c.name} desc={c.desc} background="bg" compact />
-              ))}
-            </div>
-          </Reveal>
+          <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
+            <Reveal>
+              <ShieldVisual />
+            </Reveal>
+
+            <Reveal>
+              <SectionHeader
+                eyebrow={t("trust.eyebrow")}
+                title={t("trust.title")}
+                intro={t("trust.intro")}
+                align="left"
+              />
+              <ul className="mt-8 space-y-5">
+                {trust.map((item, i) => (
+                  <li key={i} className="flex gap-3.5">
+                    <span className="mt-0.5 grid h-9 w-9 shrink-0 place-items-center rounded-[9px] bg-[var(--accent-soft)] text-accent">
+                      <svg
+                        width="16"
+                        height="16"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth="2"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        aria-hidden
+                      >
+                        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                      </svg>
+                    </span>
+                    <div>
+                      <h3 className="font-display text-[18px] font-semibold">
+                        {item.name}
+                      </h3>
+                      <p className="mt-1 text-[14.5px] leading-[1.55] text-fg-muted">
+                        {item.desc}
+                      </p>
+                    </div>
+                  </li>
+                ))}
+              </ul>
+            </Reveal>
+          </div>
         </Container>
       </section>
 

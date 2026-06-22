@@ -684,28 +684,28 @@
     "faq": {
       "title": "Frequently asked questions",
       "items": [
-        { "q": "Which firm processes do you automate?", "a": "We start with accounting audit —where we have the most experience— and move on to document review, deadlines and client reports." },
+        { "q": "Which firm processes do you automate?", "a": "We start where you lose the most time today —accounting audit, document review, deadlines, client reports— and, really, any repetitive process in the firm." },
         { "q": "Is it safe with sensitive data?", "a": "Yes. We work with GDPR by design, data in the EU, a confidentiality agreement and encryption with access control. Confidentiality is the baseline." },
         { "q": "Do I have to change my tools?", "a": "No. We automate on top of how you work today and integrate with your team." }
       ]
     },
     "eyebrow": "Sector · Law firms",
-    "title": "Less manual work in the firm. More hours for your clients.",
-    "subtitle": "We know how a law firm works and we automate the processes that eat the most time —starting with accounting audit— to cut manual work, reduce errors and give your team back its hours.",
+    "title": "Less manual work. More time to practice law.",
+    "subtitle": "We know how a law firm works and we bring automation and AI to the documentary, repetitive load that eats the most time: less work by hand, fewer errors and more hours for your team.",
     "cta": "Request a consultation",
     "problem": {
       "eyebrow": "The firm's day-to-day",
-      "title": "The firm's hours go into tasks that could run themselves.",
+      "title": "The documentary load grows. The team's hours don't.",
       "items": [
-        "Reviewing accounts and documents by hand, case after case.",
-        "Discrepancies and typos that surface late and force you to redo the work.",
-        "Deadlines and deliverables tracked from memory, with the risk one slips through."
+        "Every case drags contracts, accounts and filings that someone reviews and reconciles by hand, one by one.",
+        "The same data is keyed in and copied from one tool to another — and that's where the error slips in.",
+        "Deadlines, due dates and deliverables that depend on no one, with everything on their plate, slipping up."
       ]
     },
     "pains": {
-      "eyebrow": "The firm's pains, solved",
-      "title": "What eats your hours, done on its own.",
-      "intro": "We know a firm's real bottlenecks and we automate each one so your team stops fighting them.",
+      "eyebrow": "Where a firm gets stuck",
+      "title": "Four bottlenecks you'll recognize instantly.",
+      "intro": "You know them well. Here's what we automate in each one.",
       "items": [
         {
           "pain": "Reconciling accounts and reviewing documentation by hand, case after case.",
@@ -727,8 +727,11 @@
     },
     "automate": {
       "eyebrow": "What we automate",
-      "title": "The firm's processes, running on their own.",
-      "intro": "We start with what weighs on you most today and leave it working; from there we move on to the rest.",
+      "title": "If it's repetitive, it can be automated.",
+      "body": [
+        "We start where you lose the most time today and move on to the rest: accounting and bank reconciliation, document review, deadline tracking and client reports.",
+        "And it's not a closed list. If there's a repetitive task in your firm that eats up hours, we analyze it, map it and implement it. You tell us where it hurts; we automate it."
+      ],
       "feed": [
         "Accounting audit reviewed",
         "Mismatch detected and fixed",
@@ -736,24 +739,6 @@
         "Deadline flagged in time",
         "Client report generated",
         "Court date added to the calendar"
-      ],
-      "items": [
-        {
-          "name": "Accounting audit",
-          "desc": "Reconciliation, cross-checking and review of accounts, with discrepancy and error detection done by the system. It's where we have the most experience."
-        },
-        {
-          "name": "Document review",
-          "desc": "Reading, classifying and extracting data from documents and case files, with no typing or copying by hand."
-        },
-        {
-          "name": "Deadlines & due dates",
-          "desc": "Automatic control of key dates, with alerts and reminders so no deadline depends on memory."
-        },
-        {
-          "name": "Client reports",
-          "desc": "Reports and deliverables generated from the work already done, ready to review and send."
-        }
       ]
     },
     "delivery": {
@@ -780,8 +765,8 @@
     },
     "trust": {
       "eyebrow": "Trust & confidentiality",
-      "title": "Your data and your clients' data, protected.",
-      "intro": "A firm handles sensitive information. We work with confidentiality and security as the baseline, not an add-on.",
+      "title": "Your firm's confidentiality is ours too.",
+      "intro": "You work under professional privilege. So do we: your firm's information and your clients' is protected at every step, not as an add-on.",
       "items": [
         {
           "name": "GDPR by design",

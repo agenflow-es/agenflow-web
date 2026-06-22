@@ -684,28 +684,28 @@
     "faq": {
       "title": "Preguntas frecuentes",
       "items": [
-        { "q": "¿Qué procesos del despacho automatizáis?", "a": "Empezamos por la auditoría contable —donde más experiencia tenemos— y seguimos con la revisión de documentación, los plazos y los informes al cliente." },
+        { "q": "¿Qué procesos del despacho automatizáis?", "a": "Empezamos por donde más tiempo pierdes hoy —auditoría contable, revisión documental, plazos, informes al cliente— y, en realidad, por cualquier proceso repetitivo del despacho." },
         { "q": "¿Es seguro con datos sensibles?", "a": "Sí. Trabajamos con RGPD por diseño, datos en la UE, acuerdo de confidencialidad y cifrado con control de accesos. La confidencialidad es la base." },
         { "q": "¿Tengo que cambiar mis herramientas?", "a": "No. Automatizamos sobre tu forma de trabajar actual y nos integramos con tu equipo." }
       ]
     },
     "eyebrow": "Sector · Despachos de abogados",
-    "title": "Menos trabajo manual en el despacho. Más horas para tus clientes.",
-    "subtitle": "Conocemos cómo trabaja un despacho y automatizamos los procesos que más tiempo consumen —empezando por la auditoría contable— para reducir el trabajo a mano, recortar errores y devolverle horas a tu equipo.",
+    "title": "Menos trabajo manual. Más tiempo para ejercer.",
+    "subtitle": "Conocemos cómo trabaja un despacho y aplicamos automatización e IA a la carga documental y repetitiva que más tiempo consume: menos trabajo a mano, menos errores y más horas para tu equipo.",
     "cta": "Solicitar consultoría",
     "problem": {
       "eyebrow": "El día a día del despacho",
-      "title": "Las horas del despacho se van en tareas que podrían ir solas.",
+      "title": "La carga documental crece. Las horas del equipo, no.",
       "items": [
-        "Revisión de cuentas y documentos que se repite a mano, expediente tras expediente.",
-        "Descuadres y erratas que aparecen tarde y obligan a rehacer el trabajo.",
-        "Plazos y entregas que se controlan de memoria, con el riesgo de que alguno se escape."
+        "Cada expediente arrastra contratos, cuentas y escritos que alguien revisa y cuadra a mano, uno a uno.",
+        "Los mismos datos se teclean y se copian de una herramienta a otra — y ahí es donde se cuela el error.",
+        "Plazos, vencimientos y entregas que dependen de que nadie, con todo encima, se despiste."
       ]
     },
     "pains": {
-      "eyebrow": "Dolores del despacho, resueltos",
-      "title": "Lo que te quita horas, hecho solo.",
-      "intro": "Conocemos los atascos reales de un despacho y automatizamos cada uno para que tu equipo deje de pelearse con ellos.",
+      "eyebrow": "Dónde se atasca un despacho",
+      "title": "Cuatro frenos que reconocerás al instante.",
+      "intro": "Los conoces de sobra. Esto es lo que automatizamos en cada uno.",
       "items": [
         {
           "pain": "Cuadrar cuentas y revisar documentación se hace a mano, expediente tras expediente.",
@@ -727,8 +727,11 @@
     },
     "automate": {
       "eyebrow": "Lo que automatizamos",
-      "title": "Procesos del despacho, funcionando solos.",
-      "intro": "Empezamos por lo que más te pesa hoy y lo dejamos funcionando; desde ahí seguimos con el resto.",
+      "title": "Si es repetitivo, se puede automatizar.",
+      "body": [
+        "Empezamos por donde más tiempo pierdes hoy y seguimos con el resto: auditoría y conciliación contable, revisión documental, control de plazos e informes al cliente.",
+        "Y no es una lista cerrada. Si en tu despacho hay una tarea repetitiva que consume horas, la analizamos, la mapeamos y la implementamos. Tú nos dices dónde duele; nosotros lo automatizamos."
+      ],
       "feed": [
         "Auditoría contable revisada",
         "Descuadre detectado y corregido",
@@ -736,24 +739,6 @@
         "Vencimiento detectado a tiempo",
         "Informe al cliente generado",
         "Plazo añadido al calendario"
-      ],
-      "items": [
-        {
-          "name": "Auditoría contable",
-          "desc": "Cuadre, conciliación y revisión de cuentas, con la detección de descuadres y errores hecha por el sistema. Es donde más experiencia tenemos."
-        },
-        {
-          "name": "Revisión de documentación",
-          "desc": "Lectura, clasificación y extracción de datos de documentos y expedientes, sin teclear ni copiar a mano."
-        },
-        {
-          "name": "Plazos y vencimientos",
-          "desc": "Control automático de fechas clave, con avisos y recordatorios para que ningún plazo dependa de la memoria."
-        },
-        {
-          "name": "Informes al cliente",
-          "desc": "Generación de informes y entregables a partir del trabajo ya hecho, listos para revisar y enviar."
-        }
       ]
     },
     "delivery": {
@@ -780,8 +765,8 @@
     },
     "trust": {
       "eyebrow": "Confianza y confidencialidad",
-      "title": "Tus datos y los de tus clientes, protegidos.",
-      "intro": "Un despacho maneja información sensible. Trabajamos con la confidencialidad y la seguridad como base, no como añadido.",
+      "title": "La confidencialidad de tu despacho también es la nuestra.",
+      "intro": "Trabajas bajo secreto profesional. Nosotros trabajamos igual: la información de tu despacho y la de tus clientes está protegida en cada paso, no como un añadido.",
       "items": [
         {
           "name": "RGPD por diseño",
