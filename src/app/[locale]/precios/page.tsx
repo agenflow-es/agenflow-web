@@ -184,6 +184,9 @@ export default async function PreciosPage({
                   </tbody>
                 </table>
               </div>
+              <p className="mt-4 text-[13.5px] leading-[1.5] text-fg-faint">
+                {tp("compare.note")}
+              </p>
             </div>
 
             {/* Recurring maintenance add-on */}

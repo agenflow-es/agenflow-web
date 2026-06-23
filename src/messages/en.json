@@ -512,7 +512,8 @@
       "items": [
         { "q": "What is AI visibility (GEO)?", "a": "We work so ChatGPT, Perplexity, Google AI and Gemini know and recommend your business, just as SEO works your position on Google." },
         { "q": "Do you guarantee AI will recommend me?", "a": "We don't promise guaranteed rankings or recommendations. We work your visibility with method; results depend on many factors." },
-        { "q": "Do you only build new websites?", "a": "We bring your website and digital presence up to date. Three plans, from essential to maximum visibility, plus an optional monthly maintenance." }
+        { "q": "Do you only build new websites?", "a": "We bring your website and digital presence up to date. Three plans, from essential to maximum visibility, plus an optional managed maintenance." },
+        { "q": "Can I add online booking or a calendar?", "a": "Yes. Online booking/calendar is an add-on you can attach to any plan, so your clients can book or schedule on their own, 24/7." }
       ]
     },
     "eyebrow": "Online presence",
@@ -571,38 +572,38 @@
       "items": [
         {
           "name": "Essential",
-          "info": "Your website, up to date and ready to convert.",
+          "info": "Your website, done right and ready.",
           "features": [
-            { "text": "Desktop + mobile website, responsive and HTTPS" },
-            { "text": "Copy & messaging + booking CTA + WhatsApp" },
+            { "text": "Custom website, fast and flawless on mobile and desktop (responsive + HTTPS)" },
+            { "text": "Copy & CTA built to get you contacted (WhatsApp and call)" },
             { "text": "Optimized speed (Core Web Vitals)" },
-            { "text": "Basic Google Business profile" },
-            { "text": "2 weeks post-launch support" }
+            { "text": "Basic Google Business profile, tuned up" },
+            { "text": "Contact form delivered to your inbox" }
           ]
         },
         {
           "name": "Professional",
-          "info": "Visible in your area and capturing bookings.",
+          "info": "Get found in your area and chosen over the rest.",
           "highlighted": true,
           "features": [
             { "text": "Everything in Essential" },
             { "text": "On-page SEO", "tooltip": "Schema, metadata, Google Analytics 4 and Search Console set up." },
-            { "text": "Advanced Google Business profile" },
             { "text": "Local SEO", "tooltip": "Citations/NAP, local keywords and review management to rank in your area." },
+            { "text": "Advanced Google Business profile, optimized to win clients" },
             { "text": "Website in 2 languages" },
-            { "text": "Booking/calendar integration + conversion analytics" },
-            { "text": "1 month post-launch support" }
+            { "text": "Analytics: how many people visit and where they come from" }
           ]
         },
         {
           "name": "Visibility 360",
-          "info": "Get found on Google and in AI.",
+          "info": "To own your market, in the AI era too.",
           "features": [
             { "text": "Everything in Professional" },
-            { "text": "GEO: visibility in AI", "tooltip": "Optimization so ChatGPT, Perplexity, Google AI and Gemini know and recommend your business." },
-            { "text": "CRO + initial SEO content + automations" },
-            { "text": "Website in up to 4 languages" },
-            { "text": "1 month post-launch support" }
+            { "text": "Show up in AI answers (ChatGPT, Gemini…)", "tooltip": "Optimization so ChatGPT, Perplexity, Google AI and Gemini know and recommend your business, not just Google." },
+            { "text": "CRO: optimization to turn more visits into clients" },
+            { "text": "Initial content ready to rank" },
+            { "text": "Automations to save repetitive work" },
+            { "text": "Website in up to 4 languages" }
           ]
         }
       ]
@@ -612,34 +613,38 @@
       "title": "What each plan includes.",
       "cols": ["Essential", "Professional", "Visibility 360"],
       "rows": [
-        { "feat": "Desktop + mobile website, responsive, HTTPS", "vals": ["true", "true", "true"] },
-        { "feat": "Copy/messaging + booking CTA + WhatsApp", "vals": ["true", "true", "true"] },
+        { "feat": "Responsive website (mobile + desktop), HTTPS", "vals": ["true", "true", "true"] },
+        { "feat": "Copy & CTA + WhatsApp and call", "vals": ["true", "true", "true"] },
         { "feat": "Speed (Core Web Vitals)", "vals": ["true", "true", "true"] },
+        { "feat": "Contact form to your inbox", "vals": ["true", "true", "true"] },
+        { "feat": "Google Business profile (GBP)", "vals": ["Basic", "Advanced", "Advanced"] },
         { "feat": "On-page SEO (schema, metas, GA4, Search Console)", "vals": ["false", "true", "true"] },
-        { "feat": "Google Business profile optimized", "vals": ["Basic", "Advanced", "Advanced"] },
         { "feat": "Local SEO (citations/NAP, keywords, reviews)", "vals": ["false", "true", "true"] },
+        { "feat": "Visitor and traffic-source analytics", "vals": ["false", "true", "true"] },
         { "feat": "Multilingual", "vals": ["false", "2 languages", "Up to 4"] },
-        { "feat": "Booking/calendar integration + analytics", "vals": ["false", "true", "true"] },
-        { "feat": "GEO — visibility in AI (ChatGPT, Perplexity, Google AI, Gemini)", "vals": ["false", "false", "true"], "star": true },
-        { "feat": "CRO + initial SEO content + automations", "vals": ["false", "false", "true"] },
-        { "feat": "Post-launch support", "vals": ["2 weeks", "1 month", "1 month"] }
-      ]
+        { "feat": "Visibility in AI (ChatGPT, Perplexity, Google AI, Gemini)", "vals": ["false", "false", "true"], "star": true },
+        { "feat": "CRO: conversion optimization", "vals": ["false", "false", "true"] },
+        { "feat": "Initial content to rank", "vals": ["false", "false", "true"] },
+        { "feat": "Automations for repetitive tasks", "vals": ["false", "false", "true"] },
+        { "feat": "Booking / online calendar", "vals": ["Add-on", "Add-on", "Add-on"] }
+      ],
+      "note": "Booking/online calendar comes as an optional add-on: add it to any plan, since not every business needs it."
     },
     "addon": {
-      "eyebrow": "To scale",
-      "title": "Maintenance & Visibility",
-      "body": "What matters isn't launching: it's staying at the top. SEO and GEO are ongoing work —search engines and AIs change every month.",
+      "eyebrow": "To keep it alive",
+      "title": "Managed maintenance: your website alive, secure and up to date.",
+      "body": "Launching is only the start. Managed maintenance keeps your website secure, backed up and running, and your SEO, GEO and AI visibility up to date —because search engines and AIs change every month. It includes support and the small day-to-day changes. It comes included with your plan by default; it's optional and you can cancel it whenever you want.",
       "points": [
-        "Hosting, updates and security",
-        "Ongoing SEO and GEO",
-        "Improvements and support every month"
+        "Hosting, SSL, domain and backups monitored",
+        "Local SEO, Google profile and AI visibility kept current",
+        "Support included and small changes every month"
       ],
-      "note": "Optional recurring service. We tailor it to your plan."
+      "note": "Recurring service, included by default and optional. Tailored to your plan."
     },
     "plansLink": {
       "eyebrow": "Plans and pricing",
       "title": "Three plans to bring you up to date.",
-      "body": "Three levels —from essential to maximum visibility— plus an optional monthly maintenance to keep everything up to date and running. See what each plan includes on the pricing page.",
+      "body": "Three levels —from essential to maximum visibility—, with an optional managed maintenance to keep everything up to date and running. See what each plan includes on the pricing page.",
       "cta": "See plans and pricing"
     },
     "finalCta": {

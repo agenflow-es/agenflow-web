@@ -512,7 +512,8 @@
       "items": [
         { "q": "¿Qué es la visibilidad en IA (GEO)?", "a": "Trabajamos para que ChatGPT, Perplexity, Google AI y Gemini conozcan y recomienden tu negocio, igual que el SEO trabaja tu posición en Google." },
         { "q": "¿Garantizáis que la IA me recomiende?", "a": "No prometemos posiciones ni recomendaciones garantizadas. Trabajamos tu visibilidad con método; los resultados dependen de muchos factores." },
-        { "q": "¿Solo hacéis webs nuevas?", "a": "Ponemos al día tu web y tu presencia digital. Tres planes, del esencial al de máxima visibilidad, más un mantenimiento mensual opcional." }
+        { "q": "¿Solo hacéis webs nuevas?", "a": "Ponemos al día tu web y tu presencia digital. Tres planes, del esencial al de máxima visibilidad, más un mantenimiento gestionado opcional." },
+        { "q": "¿Puedo añadir reservas o agenda online?", "a": "Sí. Las reservas/agenda online son un complemento (add-on) que se añade a cualquier plan, para que tus clientes pidan cita o reserven solos las 24 horas." }
       ]
     },
     "eyebrow": "Presencia online",
@@ -571,38 +572,38 @@
       "items": [
         {
           "name": "Esencial",
-          "info": "Tu web, al día y lista para convertir.",
+          "info": "Tu web, lista y bien hecha.",
           "features": [
-            { "text": "Web desktop + móvil, responsive y con HTTPS" },
-            { "text": "Copy y mensaje + CTA de reserva + WhatsApp" },
+            { "text": "Web a medida, rápida y perfecta en móvil y ordenador (responsive + HTTPS)" },
+            { "text": "Textos y CTA para que te contacten (WhatsApp y llamada)" },
             { "text": "Velocidad optimizada (Core Web Vitals)" },
-            { "text": "Ficha de Google básica" },
-            { "text": "Soporte 2 semanas post-lanzamiento" }
+            { "text": "Ficha de Google básica, puesta a punto" },
+            { "text": "Formulario de contacto que llega a tu correo" }
           ]
         },
         {
           "name": "Profesional",
-          "info": "Visible en tu zona y captando reservas.",
+          "info": "Que te encuentren en tu zona y te elijan a ti.",
           "highlighted": true,
           "features": [
             { "text": "Todo lo de Esencial" },
             { "text": "SEO on-page", "tooltip": "Schema, metadatos, Google Analytics 4 y Search Console configurados." },
-            { "text": "Ficha de Google avanzada" },
             { "text": "SEO local", "tooltip": "Citas/NAP, keywords locales y gestión de reseñas para posicionar en tu zona." },
+            { "text": "Ficha de Google avanzada, optimizada para captar clientes" },
             { "text": "Web en 2 idiomas" },
-            { "text": "Integración de reservas/agenda + analítica de conversión" },
-            { "text": "Soporte 1 mes post-lanzamiento" }
+            { "text": "Analítica: cuánta gente te visita y de dónde viene" }
           ]
         },
         {
           "name": "Visibilidad 360",
-          "info": "Que te encuentren en Google y en la IA.",
+          "info": "Para dominar tu mercado, también en la era de la IA.",
           "features": [
             { "text": "Todo lo de Profesional" },
-            { "text": "GEO: visibilidad en IA", "tooltip": "Optimización para que ChatGPT, Perplexity, Google AI y Gemini conozcan y recomienden tu negocio." },
-            { "text": "CRO + contenido SEO inicial + automatizaciones" },
-            { "text": "Web hasta 4 idiomas" },
-            { "text": "Soporte 1 mes post-lanzamiento" }
+            { "text": "Aparecer en las respuestas de la IA (ChatGPT, Gemini…)", "tooltip": "Optimización para que ChatGPT, Perplexity, Google AI y Gemini conozcan y recomienden tu negocio, no solo Google." },
+            { "text": "CRO: optimización para convertir más visitas en clientes" },
+            { "text": "Contenido inicial preparado para posicionar" },
+            { "text": "Automatizaciones para ahorrar trabajo repetitivo" },
+            { "text": "Web hasta 4 idiomas" }
           ]
         }
       ]
@@ -612,34 +613,38 @@
       "title": "Qué incluye cada plan.",
       "cols": ["Esencial", "Profesional", "Visibilidad 360"],
       "rows": [
-        { "feat": "Web desktop + móvil, responsive, HTTPS", "vals": ["true", "true", "true"] },
-        { "feat": "Copy/mensaje + CTA de reserva + WhatsApp", "vals": ["true", "true", "true"] },
+        { "feat": "Web responsive (móvil + ordenador), HTTPS", "vals": ["true", "true", "true"] },
+        { "feat": "Textos y CTA + WhatsApp y llamada", "vals": ["true", "true", "true"] },
         { "feat": "Velocidad (Core Web Vitals)", "vals": ["true", "true", "true"] },
+        { "feat": "Formulario de contacto al correo", "vals": ["true", "true", "true"] },
+        { "feat": "Ficha de Google (GBP)", "vals": ["Básica", "Avanzada", "Avanzada"] },
         { "feat": "SEO on-page (schema, metas, GA4, Search Console)", "vals": ["false", "true", "true"] },
-        { "feat": "Ficha de Google (GBP) optimizada", "vals": ["Básico", "Avanzado", "Avanzado"] },
         { "feat": "SEO local (citas/NAP, keywords, reseñas)", "vals": ["false", "true", "true"] },
+        { "feat": "Analítica de visitas y origen del tráfico", "vals": ["false", "true", "true"] },
         { "feat": "Multilingüe", "vals": ["false", "2 idiomas", "Hasta 4"] },
-        { "feat": "Integración reservas/agenda + analítica", "vals": ["false", "true", "true"] },
-        { "feat": "GEO — visibilidad en IA (ChatGPT, Perplexity, Google AI, Gemini)", "vals": ["false", "false", "true"], "star": true },
-        { "feat": "CRO + contenido SEO inicial + automatizaciones", "vals": ["false", "false", "true"] },
-        { "feat": "Soporte post-lanzamiento", "vals": ["2 semanas", "1 mes", "1 mes"] }
-      ]
+        { "feat": "Visibilidad en IA (ChatGPT, Perplexity, Google AI, Gemini)", "vals": ["false", "false", "true"], "star": true },
+        { "feat": "CRO: optimización de conversión", "vals": ["false", "false", "true"] },
+        { "feat": "Contenido inicial para posicionar", "vals": ["false", "false", "true"] },
+        { "feat": "Automatizaciones para tareas repetitivas", "vals": ["false", "false", "true"] },
+        { "feat": "Reservas / agenda online", "vals": ["Add-on", "Add-on", "Add-on"] }
+      ],
+      "note": "Reservas/agenda online va como complemento opcional (add-on): se añade a cualquier plan, porque no todos los negocios lo necesitan."
     },
     "addon": {
-      "eyebrow": "Para escalar",
-      "title": "Mantenimiento & Visibilidad",
-      "body": "Lo importante no es lanzar: es mantenerse arriba. El SEO y el GEO son trabajo continuo —los buscadores y las IAs cambian cada mes.",
+      "eyebrow": "Para mantenerlo vivo",
+      "title": "Mantenimiento gestionado: tu web viva, segura y al día.",
+      "body": "Lanzar es solo el principio. El mantenimiento gestionado mantiene tu web segura, respaldada y funcionando, y el SEO, el GEO y la visibilidad en IA al día —porque buscadores e IAs cambian cada mes. Incluye el soporte y los pequeños cambios del día a día. Va incluido de serie con tu plan; es opcional y puedes darlo de baja cuando quieras.",
       "points": [
-        "Hosting, actualizaciones y seguridad",
-        "SEO y GEO continuos",
-        "Mejoras y soporte cada mes"
+        "Hosting, SSL, dominio y copias de seguridad vigilados",
+        "SEO local, ficha de Google y visibilidad en IA al día",
+        "Soporte incluido y pequeños cambios cada mes"
       ],
-      "note": "Servicio recurrente opcional. Lo ajustamos a tu plan."
+      "note": "Servicio recurrente, incluido de serie y opcional. Se ajusta a tu plan."
     },
     "plansLink": {
       "eyebrow": "Planes y precios",
       "title": "Tres planes para ponerte al día.",
-      "body": "Tres niveles —del esencial al de máxima visibilidad— más un mantenimiento mensual opcional para tenerlo todo al día y funcionando. Mira qué incluye cada plan en la página de precios.",
+      "body": "Tres niveles —del esencial al de máxima visibilidad—, con un mantenimiento gestionado opcional para tenerlo todo al día y funcionando. Mira qué incluye cada plan en la página de precios.",
       "cta": "Ver planes y precios"
     },
     "finalCta": {
