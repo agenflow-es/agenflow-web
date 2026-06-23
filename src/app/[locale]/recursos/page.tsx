@@ -58,7 +58,7 @@ export default async function RecursosPage({
         title={tf("title")}
         subtitle={tf("subtitle")}
         cta={tf("cta")}
-        href="/contacto?reason=consultoria"
+        href="/contacto?reason=consultoria&subject=consultoria"
       />
     </>
   );

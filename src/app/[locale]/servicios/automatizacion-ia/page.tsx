@@ -44,7 +44,7 @@ export default async function AutomatizacionPage({
         eyebrow={t("eyebrow")}
         title={t("title")}
         subtitle={t("subtitle")}
-        cta={{ label: t("ctaPrimary"), href: "/contacto?reason=presupuesto" }}
+        cta={{ label: t("ctaPrimary"), href: "/contacto?reason=presupuesto&subject=automatizacion" }}
       />
 
       {/* Problem */}
@@ -165,7 +165,7 @@ export default async function AutomatizacionPage({
         title={t("finalCta.title")}
         subtitle={t("finalCta.subtitle")}
         cta={t("finalCta.cta")}
-        href="/contacto?reason=presupuesto"
+        href="/contacto?reason=presupuesto&subject=automatizacion"
       />
     </>
   );

@@ -40,7 +40,7 @@ export default async function ConsultoriaPage({
         eyebrow={t("eyebrow")}
         title={t("title")}
         subtitle={t("subtitle")}
-        cta={{ label: t("ctaPrimary"), href: "/contacto?reason=consultoria" }}
+        cta={{ label: t("ctaPrimary"), href: "/contacto?reason=consultoria&subject=consultoria" }}
       />
 
       {/* For who / problem */}
@@ -174,7 +174,7 @@ export default async function ConsultoriaPage({
         title={t("finalCta.title")}
         subtitle={t("finalCta.subtitle")}
         cta={t("finalCta.cta")}
-        href="/contacto?reason=consultoria"
+        href="/contacto?reason=consultoria&subject=consultoria"
       />
     </>
   );

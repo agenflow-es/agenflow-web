@@ -121,7 +121,7 @@ export default async function BlogPostPage({
         title={t("ctaTitle")}
         subtitle={t("ctaSubtitle")}
         cta={t("ctaCta")}
-        href="/contacto?reason=consultoria"
+        href="/contacto?reason=consultoria&subject=consultoria"
       />
     </>
   );

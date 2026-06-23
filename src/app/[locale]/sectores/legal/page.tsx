@@ -45,7 +45,7 @@ export default async function LegalPage({
         eyebrow={t("eyebrow")}
         title={t("title")}
         subtitle={t("subtitle")}
-        cta={{ label: t("cta"), href: "/contacto?reason=consultoria" }}
+        cta={{ label: t("cta"), href: "/contacto?reason=consultoria&subject=legal" }}
       />
 
       {/* Problem */}
@@ -216,7 +216,7 @@ export default async function LegalPage({
         title={t("finalCta.title")}
         subtitle={t("finalCta.subtitle")}
         cta={t("finalCta.cta")}
-        href="/contacto?reason=consultoria"
+        href="/contacto?reason=consultoria&subject=legal"
       />
     </>
   );

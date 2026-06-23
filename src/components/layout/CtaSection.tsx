@@ -9,7 +9,7 @@ export function CtaSection({
   title,
   subtitle,
   cta,
-  href = "/contacto?reason=consultoria",
+  href = "/contacto?reason=consultoria&subject=consultoria",
   variant = "page",
 }: {
   title: string;

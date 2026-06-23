@@ -162,7 +162,7 @@ export function RoiCalculator() {
           {t("ctaSubtitle")}
         </p>
         <Link
-          href="/contacto?reason=consultoria"
+          href="/contacto?reason=consultoria&subject=automatizacion"
           className="mt-6 inline-flex items-center gap-2.5 rounded-[var(--radius)] bg-accent px-[26px] py-[15px] font-medium text-accent-fg transition hover:-translate-y-0.5"
         >
           {t("cta")} <span className="text-lg">→</span>

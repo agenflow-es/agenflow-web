@@ -5,10 +5,20 @@ import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
 import { useTranslations } from "next-intl";
+import { ChevronDown } from "lucide-react";
 import { Link } from "@/i18n/navigation";
 import { sendContact } from "@/lib/contact-actions";
+import {
+  CONTACT_SUBJECTS,
+  DEFAULT_CONTACT_SUBJECT,
+  type ContactSubject,
+} from "@/lib/contact-subjects";
 
-export function ContactForm() {
+export function ContactForm({
+  defaultSubject = DEFAULT_CONTACT_SUBJECT,
+}: {
+  defaultSubject?: ContactSubject;
+}) {
   const t = useTranslations("contactPage.form");
   const [status, setStatus] = useState<"idle" | "ok" | "error">("idle");
   const [errorKind, setErrorKind] = useState<string>("failed");
@@ -17,6 +27,7 @@ export function ContactForm() {
     name: z.string().min(2, t("errors.name")),
     email: z.string().email(t("errors.email")),
     company: z.string().optional(),
+    subject: z.enum(CONTACT_SUBJECTS),
     message: z.string().min(10, t("errors.message")),
     // Honeypot: stays empty for real users; bots that fill it are dropped server-side.
     website: z.string().optional(),
@@ -28,7 +39,10 @@ export function ContactForm() {
     handleSubmit,
     reset,
     formState: { errors, isSubmitting },
-  } = useForm<Values>({ resolver: zodResolver(schema) });
+  } = useForm<Values>({
+    resolver: zodResolver(schema),
+    defaultValues: { subject: defaultSubject },
+  });
 
   async function onSubmit(values: Values) {
     setStatus("idle");
@@ -44,6 +58,10 @@ export function ContactForm() {
 
   const fieldClass =
     "mt-1 w-full rounded-[var(--radius)] border border-border bg-transparent px-4 py-2.5 text-sm text-fg outline-none transition focus:border-accent";
+  // Solid (non-transparent) background so the native option popup is legible in
+  // dark mode; appearance-none drops the native arrow, so we add our own.
+  const selectClass =
+    "mt-1 w-full appearance-none rounded-[var(--radius)] border border-border bg-bg px-4 py-2.5 pr-10 text-sm text-fg outline-none transition focus:border-accent";
 
   return (
     <form onSubmit={handleSubmit(onSubmit)} className="mt-8 space-y-4" noValidate>
@@ -87,6 +105,24 @@ export function ContactForm() {
           {t("company")}
         </label>
         <input id="company" className={fieldClass} {...register("company")} />
+      </div>
+      <div>
+        <label className="text-sm font-medium text-fg" htmlFor="subject">
+          {t("subject")}
+        </label>
+        <div className="relative">
+          <select id="subject" className={selectClass} {...register("subject")}>
+            {CONTACT_SUBJECTS.map((key) => (
+              <option key={key} value={key} className="bg-bg text-fg">
+                {t(`subjects.${key}`)}
+              </option>
+            ))}
+          </select>
+          <ChevronDown
+            aria-hidden
+            className="pointer-events-none absolute right-3 top-1/2 h-4 w-4 -translate-y-1/2 text-fg-faint"
+          />
+        </div>
       </div>
       <div>
         <label className="text-sm font-medium text-fg" htmlFor="message">

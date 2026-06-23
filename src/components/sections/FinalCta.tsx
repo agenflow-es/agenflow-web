@@ -9,7 +9,7 @@ export function FinalCta() {
       title={t("title")}
       subtitle={t("subtitle")}
       cta={t("cta")}
-      href="/contacto?reason=consultoria"
+      href="/contacto?reason=consultoria&subject=consultoria"
     />
   );
 }

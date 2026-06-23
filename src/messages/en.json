@@ -215,7 +215,7 @@
     ]
   },
   "footer": {
-    "tagline": "AI software, specialized by sector.",
+    "tagline": "We turn slow processes into capacity to grow.",
     "rights": "All rights reserved.",
     "contact": "Contact",
     "about": "About us",
@@ -546,6 +546,19 @@
           "name": "GEO: visibility in AI",
           "desc": "More and more people ask ChatGPT, Perplexity or Google AI instead of searching. GEO makes AI know your business and recommend it."
         }
+      ]
+    },
+    "audience": {
+      "eyebrow": "Who it's for",
+      "title": "For local businesses like yours.",
+      "intro": "You don't need to be in a specific sector: if you want to be found —on Google and in AI—, this is for you.",
+      "items": [
+        { "name": "Clinics & beauty centers", "desc": "Dental, physio, aesthetics or hair: get found and get booked." },
+        { "name": "Electricians & installers", "desc": "HVAC, plumbing or solar: show up when people search your service nearby." },
+        { "name": "Hospitality & local retail", "desc": "Bars, restaurants and shops: a fast site, an up-to-date Google profile and reviews that add up." },
+        { "name": "Firms & professional services", "desc": "Advisors, lawyers or consultancies: a presence that conveys the trust you sell." },
+        { "name": "Renovations & home services", "desc": "Construction, maintenance or cleaning: win quotes without relying on word of mouth." },
+        { "name": "Any SMB with local customers", "desc": "If your customers are nearby, we help them find you before the competition." }
       ]
     },
     "audit": {
@@ -928,8 +941,8 @@
       "title": "What we price around your case.",
       "intro": "Consulting, automation and software by sector: the scope is set by your operation, so the price is too. We send a fixed quote as soon as we understand it.",
       "items": [
-        { "name": "AI consulting", "desc": "We understand your operation and you leave with a clear plan of where to start.", "cta": "Request a quote", "ctaHref": "/contacto?reason=presupuesto", "link": "View service", "linkHref": "/servicios/consultoria-ia" },
-        { "name": "Process automation", "desc": "We build and roll out the solution on your tools.", "cta": "Request a quote", "ctaHref": "/contacto?reason=presupuesto", "link": "View service", "linkHref": "/servicios/automatizacion-ia" },
+        { "name": "AI consulting", "desc": "We understand your operation and you leave with a clear plan of where to start.", "cta": "Request a quote", "ctaHref": "/contacto?reason=presupuesto&subject=consultoria", "link": "View service", "linkHref": "/servicios/consultoria-ia" },
+        { "name": "Process automation", "desc": "We build and roll out the solution on your tools.", "cta": "Request a quote", "ctaHref": "/contacto?reason=presupuesto&subject=automatizacion", "link": "View service", "linkHref": "/servicios/automatizacion-ia" },
         { "name": "Software by sector", "desc": "Product specialized by vertical, with AI inside.", "note": "Each product's price is on its own page.", "cta": "See products by sector", "ctaHref": "/servicios/desarrollo-software" }
       ]
     },
@@ -1011,7 +1024,7 @@
       "items": [
         {
           "q": "Do you only work with real estate, construction and legal?",
-          "a": "Those are the sectors we go deepest in, but automation and AI apply to any SMB with repetitive processes. If your operation has tasks that repeat, let's talk."
+          "a": "With our own software we go deepest in real estate, construction and legal. But automation, AI and online-presence improvement (web, SEO and AI visibility) work for any SMB or local business —clinics, beauty, electricians, installers, hospitality, retail…—. If you have repetitive tasks or want to be found better online, let's talk."
         },
         {
           "q": "Do I need to know about technology to work with you?",
@@ -1149,6 +1162,16 @@
       "name": "Name",
       "email": "Email",
       "company": "Company (optional)",
+      "subject": "How can we help you?",
+      "subjects": {
+        "presencia": "Online presence",
+        "consultoria": "AI consulting",
+        "automatizacion": "Process automation",
+        "software": "Software by sector",
+        "inmobiliario": "Real estate & construction",
+        "legal": "Legal sector",
+        "otro": "Something else"
+      },
       "message": "What do you want to improve?",
       "submit": "Send message",
       "sending": "Sending…",

@@ -4,11 +4,17 @@ import { headers } from "next/headers";
 import { z } from "zod";
 import { Resend } from "resend";
 import { siteConfig } from "@/lib/site";
+import {
+  CONTACT_SUBJECT_EMAIL_LABELS,
+  normalizeSubject,
+} from "@/lib/contact-subjects";
 
 const schema = z.object({
   name: z.string().min(2),
   email: z.string().email(),
   company: z.string().optional(),
+  // What the request is about. Coerced to a valid subject so it's always set.
+  subject: z.string().optional(),
   // Cap length as a basic anti-flood guard.
   message: z.string().min(10).max(5000),
   // Honeypot: hidden field that humans never see. Optional + must stay empty.
@@ -46,7 +52,7 @@ export async function sendContact(
 ): Promise<{ ok: boolean; error?: ContactError }> {
   const parsed = schema.safeParse(input);
   if (!parsed.success) return { ok: false, error: "validation" };
-  const { name, email, company, message, website } = parsed.data;
+  const { name, email, company, subject, message, website } = parsed.data;
 
   // Honeypot: if the hidden field came back filled, it's a bot. Silently drop
   // and report success so the bot gets no signal that it was caught.
@@ -64,13 +70,14 @@ export async function sendContact(
   }
 
   const safeName = oneLine(name);
+  const subjectLabel = CONTACT_SUBJECT_EMAIL_LABELS[normalizeSubject(subject)];
   const resend = new Resend(apiKey);
   const { error } = await resend.emails.send({
     from: `Agenflow Web <${process.env.CONTACT_FROM ?? "web@notifications.agenflow.es"}>`,
     to: process.env.CONTACT_EMAIL ?? siteConfig.contactEmail,
     replyTo: email,
-    subject: `Nuevo contacto web — ${safeName}`,
-    text: `Nombre: ${safeName}\nEmail: ${email}\nEmpresa: ${company ? oneLine(company) : "-"}\n\n${message}`,
+    subject: `Nuevo contacto web · ${subjectLabel} — ${safeName}`,
+    text: `Asunto: ${subjectLabel}\nNombre: ${safeName}\nEmail: ${email}\nEmpresa: ${company ? oneLine(company) : "-"}\n\n${message}`,
   });
 
   return { ok: !error, error: error ? "failed" : undefined };

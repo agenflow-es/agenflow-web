@@ -3,6 +3,7 @@ import { getTranslations, setRequestLocale } from "next-intl/server";
 import { ContactForm } from "@/components/contact/ContactForm";
 import { Container } from "@/components/ui/primitives";
 import { buildMetadata } from "@/lib/metadata";
+import { normalizeSubject } from "@/lib/contact-subjects";
 
 const REASONS = ["consultoria", "presupuesto", "lanzamiento", "caso"] as const;
 
@@ -20,10 +21,10 @@ export default async function ContactPage({
   searchParams,
 }: {
   params: Promise<{ locale: string }>;
-  searchParams: Promise<{ reason?: string }>;
+  searchParams: Promise<{ reason?: string; subject?: string }>;
 }) {
   const { locale } = await params;
-  const { reason } = await searchParams;
+  const { reason, subject } = await searchParams;
   setRequestLocale(locale);
   const t = await getTranslations("contactPage");
 
@@ -35,13 +36,17 @@ export default async function ContactPage({
   const title = variant ? t(`variants.${variant}.title`) : t("title");
   const body = variant ? t(`variants.${variant}.body`) : t("body");
 
+  // What the request is *about* — pre-selects the form's subject field so the
+  // visitor doesn't have to explain which service they're asking about.
+  const defaultSubject = normalizeSubject(subject);
+
   return (
     <Container className="max-w-2xl py-24">
       <h1 className="font-display text-4xl font-bold tracking-[-0.022em]">
         {title}
       </h1>
       <p className="mt-6 text-lg leading-[1.6] text-fg-muted">{body}</p>
-      <ContactForm />
+      <ContactForm defaultSubject={defaultSubject} />
     </Container>
   );
 }

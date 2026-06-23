@@ -111,7 +111,7 @@ export default async function InmobiliarioPage({
         eyebrow={t("eyebrow")}
         title={t("title")}
         subtitle={t("subtitle")}
-        cta={{ label: t("cta"), href: "/contacto?reason=caso" }}
+        cta={{ label: t("cta"), href: "/contacto?reason=caso&subject=inmobiliario" }}
       />
 
       {/* Problem */}
@@ -280,7 +280,7 @@ export default async function InmobiliarioPage({
         title={t("finalCta.title")}
         subtitle={t("finalCta.subtitle")}
         cta={t("finalCta.cta")}
-        href="/contacto?reason=caso"
+        href="/contacto?reason=caso&subject=inmobiliario"
       />
     </>
   );

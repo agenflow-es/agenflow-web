@@ -32,6 +32,7 @@ export default async function PresenciaPage({
   const t = await getTranslations("presenciaPage");
   const problem = t.raw("problem.items") as string[];
   const shiftCards = t.raw("shift.cards") as Card[];
+  const audienceCards = t.raw("audience.items") as Card[];
 
   return (
     <>
@@ -40,7 +41,7 @@ export default async function PresenciaPage({
         eyebrow={t("eyebrow")}
         title={t("title")}
         subtitle={t("subtitle")}
-        cta={{ label: t("cta"), href: "/contacto?reason=presupuesto" }}
+        cta={{ label: t("cta"), href: "/contacto?reason=presupuesto&subject=presencia" }}
       />
 
       {/* Problem */}
@@ -82,6 +83,25 @@ export default async function PresenciaPage({
             <div className="grid gap-5 md:grid-cols-3">
               {shiftCards.map((c, i) => (
                 <AccentCard key={i} title={c.name} desc={c.desc} background="bg" />
+              ))}
+            </div>
+          </Reveal>
+        </Container>
+      </section>
+
+      {/* Who it's for — any local business, not just our software verticals */}
+      <section className="border-b border-border">
+        <Container className="py-[clamp(72px,10vw,140px)]">
+          <Reveal>
+            <SectionHeader
+              eyebrow={t("audience.eyebrow")}
+              title={t("audience.title")}
+              intro={t("audience.intro")}
+              maxWidth={760}
+            />
+            <div className="grid gap-5 md:grid-cols-3">
+              {audienceCards.map((c, i) => (
+                <AccentCard key={i} title={c.name} desc={c.desc} />
               ))}
             </div>
           </Reveal>
@@ -142,7 +162,7 @@ export default async function PresenciaPage({
         title={t("finalCta.title")}
         subtitle={t("finalCta.subtitle")}
         cta={t("finalCta.cta")}
-        href="/contacto?reason=presupuesto"
+        href="/contacto?reason=presupuesto&subject=presencia"
       />
     </>
   );

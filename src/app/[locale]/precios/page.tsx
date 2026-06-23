@@ -63,7 +63,7 @@ export default async function PreciosPage({
     features: p.features,
     highlighted: p.highlighted,
     badge: p.highlighted ? popularLabel : undefined,
-    btn: { text: planCta, href: "/contacto?reason=presupuesto" },
+    btn: { text: planCta, href: "/contacto?reason=presupuesto&subject=presencia" },
   }));
 
   return (

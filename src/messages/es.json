@@ -215,7 +215,7 @@
     ]
   },
   "footer": {
-    "tagline": "Software con IA, especializado por sector.",
+    "tagline": "Convertimos procesos lentos en capacidad para crecer.",
     "rights": "Todos los derechos reservados.",
     "contact": "Contacto",
     "about": "Sobre nosotros",
@@ -546,6 +546,19 @@
           "name": "GEO: visibilidad en IA",
           "desc": "Cada vez más gente pregunta a ChatGPT, Perplexity o Google AI en vez de buscar. El GEO hace que la IA conozca tu negocio y lo recomiende."
         }
+      ]
+    },
+    "audience": {
+      "eyebrow": "Para quién es",
+      "title": "Para negocios locales como el tuyo.",
+      "intro": "No hace falta ser de un sector concreto: si quieres que te encuentren —en Google y en la IA—, esto es para ti.",
+      "items": [
+        { "name": "Clínicas y centros de estética", "desc": "Dental, fisioterapia, estética o peluquería: que te encuentren y te reserven cita." },
+        { "name": "Electricistas e instaladores", "desc": "Climatización, fontanería o placas solares: aparece cuando buscan tu servicio en tu zona." },
+        { "name": "Hostelería y comercio local", "desc": "Bares, restaurantes y tiendas: web rápida, ficha de Google al día y reseñas que suman." },
+        { "name": "Despachos y servicios profesionales", "desc": "Asesorías, abogados o consultorías: una presencia que transmite la confianza que vendes." },
+        { "name": "Reformas y servicios a domicilio", "desc": "Construcción, mantenimiento o limpieza: capta presupuestos sin depender del boca a boca." },
+        { "name": "Cualquier pyme con clientes locales", "desc": "Si tus clientes están cerca, te ayudamos a que te encuentren antes que a la competencia." }
       ]
     },
     "audit": {
@@ -928,8 +941,8 @@
       "title": "Lo que presupuestamos por tu caso.",
       "intro": "Consultoría, automatización y software por sector: el alcance lo marca tu operación, así que el precio también. Te pasamos un presupuesto cerrado en cuanto la entendemos.",
       "items": [
-        { "name": "Consultoría de IA", "desc": "Entendemos tu operación y te vas con un plan claro de por dónde empezar.", "cta": "Solicitar presupuesto", "ctaHref": "/contacto?reason=presupuesto", "link": "Ver servicio", "linkHref": "/servicios/consultoria-ia" },
-        { "name": "Automatización de procesos", "desc": "Construimos e implantamos la solución sobre tus herramientas.", "cta": "Solicitar presupuesto", "ctaHref": "/contacto?reason=presupuesto", "link": "Ver servicio", "linkHref": "/servicios/automatizacion-ia" },
+        { "name": "Consultoría de IA", "desc": "Entendemos tu operación y te vas con un plan claro de por dónde empezar.", "cta": "Solicitar presupuesto", "ctaHref": "/contacto?reason=presupuesto&subject=consultoria", "link": "Ver servicio", "linkHref": "/servicios/consultoria-ia" },
+        { "name": "Automatización de procesos", "desc": "Construimos e implantamos la solución sobre tus herramientas.", "cta": "Solicitar presupuesto", "ctaHref": "/contacto?reason=presupuesto&subject=automatizacion", "link": "Ver servicio", "linkHref": "/servicios/automatizacion-ia" },
         { "name": "Software por sector", "desc": "Producto especializado por vertical, con la IA dentro.", "note": "El precio de cada producto está en su propia página.", "cta": "Ver productos por sector", "ctaHref": "/servicios/desarrollo-software" }
       ]
     },
@@ -1011,7 +1024,7 @@
       "items": [
         {
           "q": "¿Trabajáis solo con inmobiliario, construcción y legal?",
-          "a": "Son los sectores donde llegamos más a fondo, pero la automatización y la IA aplican a cualquier pyme con procesos repetitivos. Si tu operación tiene tareas que se repiten, hablemos."
+          "a": "Con nuestro software propio vamos a fondo en inmobiliario, construcción y legal. Pero la automatización, la IA y la mejora de presencia online (web, SEO y visibilidad en IA) sirven a cualquier pyme o negocio local —clínicas, estética, electricistas, instaladores, hostelería, comercio…—. Si tienes tareas repetitivas o quieres que te encuentren mejor online, hablemos."
         },
         {
           "q": "¿Hace falta saber de tecnología para trabajar con vosotros?",
@@ -1149,6 +1162,16 @@
       "name": "Nombre",
       "email": "Email",
       "company": "Empresa (opcional)",
+      "subject": "¿En qué podemos ayudarte?",
+      "subjects": {
+        "presencia": "Mejora de presencia online",
+        "consultoria": "Consultoría de IA",
+        "automatizacion": "Automatización de procesos",
+        "software": "Software por sector",
+        "inmobiliario": "Inmobiliario y construcción",
+        "legal": "Sector legal",
+        "otro": "Otra cosa"
+      },
       "message": "¿Qué quieres mejorar?",
       "submit": "Enviar mensaje",
       "sending": "Enviando…",

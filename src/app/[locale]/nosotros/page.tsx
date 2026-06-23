@@ -47,7 +47,7 @@ export default async function NosotrosPage({
         eyebrow={t("eyebrow")}
         title={t("title")}
         subtitle={t("subtitle")}
-        cta={{ label: t("ctaPrimary"), href: "/contacto?reason=consultoria" }}
+        cta={{ label: t("ctaPrimary"), href: "/contacto?reason=consultoria&subject=consultoria" }}
         ctaSecondary={{ label: t("ctaSecondary"), href: "#origen" }}
       />
 
@@ -141,7 +141,7 @@ export default async function NosotrosPage({
         title={t("finalCta.title")}
         subtitle={t("finalCta.subtitle")}
         cta={t("finalCta.cta")}
-        href="/contacto?reason=consultoria"
+        href="/contacto?reason=consultoria&subject=consultoria"
       />
     </>
   );

@@ -58,7 +58,7 @@ export function AiVisibilityCheck() {
             {state.answer}
           </p>
           <Link
-            href="/contacto"
+            href="/contacto?subject=presencia"
             className="mt-4 inline-flex items-center gap-1.5 text-[14.5px] font-semibold text-accent transition hover:gap-2.5"
           >
             {t("resultCta")} <span aria-hidden>→</span>

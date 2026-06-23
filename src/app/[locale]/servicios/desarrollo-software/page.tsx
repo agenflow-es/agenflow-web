@@ -52,7 +52,7 @@ export default async function DesarrolloPage({
         eyebrow={t("eyebrow")}
         title={t("title")}
         subtitle={t("subtitle")}
-        cta={{ label: t("cta"), href: "/contacto" }}
+        cta={{ label: t("cta"), href: "/contacto?reason=presupuesto&subject=software" }}
       />
 
       {/* Thesis */}
@@ -242,7 +242,7 @@ export default async function DesarrolloPage({
                 </div>
               </div>
               <Link
-                href="/contacto"
+                href="/contacto?reason=presupuesto&subject=software"
                 className="group rounded-[var(--radius-lg)] border border-l-2 border-border border-l-accent bg-surface p-8 shadow-[var(--shadow)] transition duration-200 hover:-translate-y-1 hover:border-accent"
               >
                 <h3 className="font-display text-[clamp(20px,2.4vw,26px)] font-bold tracking-[-0.018em]">
