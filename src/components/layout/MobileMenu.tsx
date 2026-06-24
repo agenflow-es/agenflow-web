@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { createPortal } from "react-dom";
 import { Menu, X } from "lucide-react";
 import { Link } from "@/i18n/navigation";
 
@@ -37,6 +38,12 @@ function Group({
 // Mobile navigation (<lg). Reuses the same nav data as the desktop Header,
 // passed in as props so there is a single source of truth. Closes on link
 // click, overlay click and Escape; locks body scroll while open.
+//
+// The overlay is rendered into a portal on document.body — NOT inline — because
+// the sticky <header> uses backdrop-filter, which makes it the containing block
+// for position:fixed descendants. Rendered inline, the fixed overlay would be
+// sized against the 68px header (collapsing to ~0 height); the portal restores
+// viewport-relative positioning so the panel fills the screen.
 export function MobileMenu({
   serviceItems,
   sectorItems,
@@ -57,7 +64,10 @@ export function MobileMenu({
   };
 }) {
   const [open, setOpen] = useState(false);
+  const [mounted, setMounted] = useState(false);
   const close = () => setOpen(false);
+
+  useEffect(() => setMounted(true), []);
 
   useEffect(() => {
     if (!open) return;
@@ -86,46 +96,56 @@ export function MobileMenu({
         {open ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
       </button>
 
-      {open && (
-        <div className="fixed inset-x-0 bottom-0 top-[68px] z-40" onClick={close}>
+      {open &&
+        mounted &&
+        createPortal(
           <div
-            aria-hidden
-            className="absolute inset-0"
-            style={{
-              background: "color-mix(in srgb, var(--bg) 55%, transparent)",
-              backdropFilter: "blur(2px)",
-            }}
-          />
-          <nav
-            id="mobile-menu"
-            role="dialog"
-            aria-modal="true"
-            aria-label={labels.services}
-            onClick={(e) => e.stopPropagation()}
-            className="absolute inset-x-0 top-0 max-h-full overflow-y-auto border-b border-border bg-surface p-5 shadow-[var(--shadow)]"
+            className="fixed inset-x-0 bottom-0 top-[68px] z-40 lg:hidden"
+            onClick={close}
           >
-            <Group title={labels.services} items={serviceItems} onNavigate={close} />
-            <Group title={labels.sectors} items={sectorItems} onNavigate={close} />
-            <Group title={labels.resources} items={resourceItems} onNavigate={close} />
-            <div className="mt-2 border-t border-border pt-2">
-              <Link
-                href="/precios"
-                onClick={close}
-                className="block rounded-[var(--radius)] px-3 py-3 text-[15px] font-semibold text-fg transition hover:bg-surface-2"
-              >
-                {labels.pricing}
-              </Link>
-            </div>
-            <Link
-              href="/contacto"
-              onClick={close}
-              className="mt-3 block rounded-[var(--radius)] bg-accent px-5 py-3 text-center text-[15px] font-semibold text-accent-fg transition hover:-translate-y-0.5"
+            <div
+              aria-hidden
+              className="absolute inset-0"
+              style={{
+                background: "color-mix(in srgb, var(--bg) 55%, transparent)",
+                backdropFilter: "blur(2px)",
+              }}
+            />
+            <nav
+              id="mobile-menu"
+              role="dialog"
+              aria-modal="true"
+              aria-label={labels.services}
+              onClick={(e) => e.stopPropagation()}
+              className="absolute inset-x-0 top-0 max-h-full overflow-y-auto border-b border-border bg-surface p-5 shadow-[var(--shadow)]"
             >
-              {labels.cta}
-            </Link>
-          </nav>
-        </div>
-      )}
+              <Group title={labels.services} items={serviceItems} onNavigate={close} />
+              <Group title={labels.sectors} items={sectorItems} onNavigate={close} />
+              <Group
+                title={labels.resources}
+                items={resourceItems}
+                onNavigate={close}
+              />
+              <div className="mt-2 border-t border-border pt-2">
+                <Link
+                  href="/precios"
+                  onClick={close}
+                  className="block rounded-[var(--radius)] px-3 py-3 text-[15px] font-semibold text-fg transition hover:bg-surface-2"
+                >
+                  {labels.pricing}
+                </Link>
+              </div>
+              <Link
+                href="/contacto"
+                onClick={close}
+                className="mt-3 block rounded-[var(--radius)] bg-accent px-5 py-3 text-center text-[15px] font-semibold text-accent-fg transition hover:-translate-y-0.5"
+              >
+                {labels.cta}
+              </Link>
+            </nav>
+          </div>,
+          document.body,
+        )}
     </div>
   );
 }

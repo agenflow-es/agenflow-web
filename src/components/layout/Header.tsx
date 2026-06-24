@@ -87,7 +87,7 @@ export function Header() {
         WebkitBackdropFilter: "blur(14px)",
       }}
     >
-      <Container className="grid h-[68px] grid-cols-[1fr_auto_1fr] items-center gap-4">
+      <Container className="flex h-[68px] items-center justify-between gap-4 lg:grid lg:grid-cols-[1fr_auto_1fr]">
         <Link
           href="/"
           aria-label="Agenflow"
@@ -113,7 +113,11 @@ export function Header() {
 
         <div className="flex items-center justify-self-end gap-2.5">
           <ThemeToggle />
-          <LocaleSwitcher />
+          {/* Language switcher: desktop only. 98% of traffic is Spanish, so on
+              mobile it's dropped from the header and lives in the footer. */}
+          <div className="hidden lg:flex">
+            <LocaleSwitcher />
+          </div>
           <Link
             href="/contacto"
             className="hidden rounded-[var(--radius)] bg-accent px-[18px] py-2.5 text-[14px] font-semibold text-accent-fg transition hover:-translate-y-0.5 lg:inline-flex"
