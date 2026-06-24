@@ -21,10 +21,12 @@
   --grid: rgba(255, 255, 255, 0.04);
   --radius: 6px;
   --radius-lg: 10px;
-  /* Isotipo (logo) — light-on-dark variant */
-  --iso-1: #a0b6ff;
+  /* Isotipo (logo) — light-on-dark variant.
+     Order matches the real mark: dark lamina at the bottom (iso-1),
+     light at the top (iso-3) — same direction as the light theme. */
+  --iso-1: #5b82ff;
   --iso-2: #7898ff;
-  --iso-3: #5b82ff;
+  --iso-3: #a0b6ff;
 
   /* shadcn / 21st.dev semantic tokens → mapped onto the brand system.
      These let registry components (npx shadcn add) inherit our theme.
