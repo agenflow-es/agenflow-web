@@ -8,6 +8,7 @@ import { useTranslations } from "next-intl";
 import { ChevronDown } from "lucide-react";
 import { Link } from "@/i18n/navigation";
 import { sendContact } from "@/lib/contact-actions";
+import { postInboundCapture } from "@/lib/inbound-capture";
 import {
   CONTACT_SUBJECTS,
   DEFAULT_CONTACT_SUBJECT,
@@ -46,6 +47,9 @@ export function ContactForm({
 
   async function onSubmit(values: Values) {
     setStatus("idle");
+    // Captura 24/7 en el SaaS (Edge Function), en paralelo a Resend. Fire-and-forget:
+    // best-effort, si falla NO afecta al envío ni a la UI (que las decide sendContact).
+    postInboundCapture(values);
     const res = await sendContact(values);
     if (res.ok) {
       setStatus("ok");
