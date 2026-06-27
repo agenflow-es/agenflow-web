@@ -22,6 +22,11 @@ Tinta texto / negro ............ #14161D
 Neutro claro (fondos) .......... #EDEAE3
 Fondo oscuro / tile ............ #0B0E1A  (degradado #141A30 → #0A0E1D)
 
+  Nota web: el azul de marca es #5B82FF. En tema CLARO, los
+  elementos interactivos (enlaces/botones) usan un azul más
+  profundo #2F54EB SOLO para cumplir contraste AA; no es un
+  color de marca nuevo.
+
 Sombras del símbolo (NO usar sueltas, solo dentro del símbolo):
   sobre claro ... #5B82FF · #4B6CD7 · #344F9F
   sobre oscuro .. #5B82FF · #7898FF · #A0B6FF
@@ -31,6 +36,10 @@ Sombras del símbolo (NO usar sueltas, solo dentro del símbolo):
 Space Grotesk — SemiBold (600), tracking -0.035em.
 El wordmark va siempre en minúsculas.
 Los SVG llevan la fuente incrustada (se ven bien sin conexión).
+
+  Nota web: Space Grotesk es SOLO para el wordmark de la marca.
+  La interfaz de la web usa Inter (cuerpo/UI) y JetBrains Mono
+  (detalles mono). No sustituir la UI por Space Grotesk.
 
 4. ESPACIO DE SEGURIDAD Y TAMAÑO MÍNIMO
 ----------------------------------------------------------------
@@ -70,4 +79,4 @@ favicon/  Web y app
 social/   agenflow-og-1200x630.png (Open Graph / redes)
 
 ----------------------------------------------------------------
-hola@agenflow.es
+info@agenflow.es

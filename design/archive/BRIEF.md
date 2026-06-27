@@ -1,7 +1,14 @@
-# Brief — Nueva web Agenflow
+# Brief — Nueva web Agenflow · 📦 HISTÓRICO / ARCHIVADO
 
-> Documento vivo. Fuente de verdad para contenido, estructura y diseño (Claude Design) y para el desarrollo.
-> Estado: **v0.2 — borrador** · Última actualización: 2026-06-20
+> **Archivado 2026-06-24.** Documento de planificación original. La web ya superó
+> este brief: parte del contenido está desactualizado (CTA "Solicitar diagnóstico",
+> protocolo de 4 fases, paquetes de precios antiguos, nav con "Nosotros"). Se conserva
+> por su razonamiento y sus decisiones de posicionamiento, no como fuente de verdad.
+>
+> **Fuente de verdad actual:** marca → `design/agenflow-brand/MARCA.txt` + `src/app/globals.css`;
+> copy → `src/messages/{es,en}.json`; modelo de negocio/precios → Notion (Agenflow > Servicio Web > Modelo de negocio).
+>
+> _Estado original: v0.2 — borrador · 2026-06-20_
 
 ---
 
