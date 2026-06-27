@@ -73,7 +73,7 @@ export async function sendContact(
   const subjectLabel = CONTACT_SUBJECT_EMAIL_LABELS[normalizeSubject(subject)];
   const resend = new Resend(apiKey);
   const { error } = await resend.emails.send({
-    from: `Agenflow Web <${process.env.CONTACT_FROM ?? "web@notifications.agenflow.es"}>`,
+    from: `Agenflow Web <${process.env.CONTACT_FROM ?? "web@hola.agenflow.es"}>`,
     to: process.env.CONTACT_EMAIL ?? siteConfig.contactEmail,
     replyTo: email,
     subject: `Nuevo contacto web · ${subjectLabel} — ${safeName}`,
