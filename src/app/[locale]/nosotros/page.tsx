@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { buildMetadata } from "@/lib/metadata";
 import { Container, Eyebrow } from "@/components/ui/primitives";
@@ -8,7 +9,6 @@ import { PageHero } from "@/components/layout/PageHero";
 import { AccentCard } from "@/components/ui/AccentCard";
 import { FaqList } from "@/components/layout/FaqList";
 import { CtaSection } from "@/components/layout/CtaSection";
-import { StepTimeline } from "@/components/visuals/StepTimeline";
 
 type FocusItem = {
   title: string;
@@ -36,7 +36,6 @@ export default async function NosotrosPage({
   setRequestLocale(locale);
   const t = await getTranslations("aboutPage");
   const paragraphs = t.raw("origin.paragraphs") as string[];
-  const milestones = t.raw("origin.milestones") as { title: string; sub?: string }[];
   const focus = t.raw("focus.items") as FocusItem[];
   const values = t.raw("values.items") as Value[];
 
@@ -51,39 +50,65 @@ export default async function NosotrosPage({
         ctaSecondary={{ label: t("ctaSecondary"), href: "#origen" }}
       />
 
-      {/* Origin story */}
+      {/* Origin — photo + presentation, two columns */}
       <section id="origen" className="scroll-mt-20 border-b border-border">
-        <Container className="max-w-[820px] py-[clamp(72px,10vw,140px)]">
+        <Container className="max-w-[1040px] py-[clamp(72px,10vw,140px)]">
           <Reveal>
-            <Eyebrow>{t("origin.eyebrow")}</Eyebrow>
-            <h2 className="mt-4 font-display text-[clamp(26px,3.4vw,40px)] font-bold leading-[1.12] tracking-[-0.022em] text-balance">
-              {t("origin.title")}
-            </h2>
-            <div className="mt-8 space-y-5 text-[17px] leading-[1.7] text-fg-muted">
-              {paragraphs.map((p, i) => (
-                <p key={i}>{p}</p>
-              ))}
-            </div>
-            <div className="mt-14">
-              <StepTimeline items={milestones} highlightLast />
+            <div className="grid items-center gap-10 md:grid-cols-[300px_1fr] md:gap-14 lg:gap-16">
+              {/* Photo + caption */}
+              <figure className="m-0">
+                <div className="relative aspect-[4/5] w-full max-w-[320px] overflow-hidden rounded-[var(--radius-lg)] border border-border shadow-[var(--shadow)]">
+                  <Image
+                    src="/equipo/francisco.png"
+                    alt={t("origin.photoAlt")}
+                    fill
+                    sizes="(max-width: 768px) 320px, 300px"
+                    className="object-cover"
+                  />
+                </div>
+                <figcaption className="mt-4 flex items-center gap-3">
+                  <span className="h-px w-8 shrink-0 bg-accent" aria-hidden />
+                  <span>
+                    <span className="block font-semibold">
+                      {t("origin.name")}
+                    </span>
+                    <span className="block text-[14px] text-fg-muted">
+                      {t("origin.role")}
+                    </span>
+                  </span>
+                </figcaption>
+              </figure>
+              {/* Presentation text */}
+              <div>
+                <Eyebrow>{t("origin.eyebrow")}</Eyebrow>
+                <h2 className="mt-4 font-display text-[clamp(26px,3.4vw,40px)] font-bold leading-[1.12] tracking-[-0.022em] text-balance">
+                  {t("origin.title")}
+                </h2>
+                <div className="mt-7 space-y-5 text-[17px] leading-[1.7] text-fg-muted">
+                  {paragraphs.map((p, i) => (
+                    <p key={i}>{p}</p>
+                  ))}
+                </div>
+              </div>
             </div>
           </Reveal>
         </Container>
       </section>
 
-      {/* Mission */}
+      {/* Mission — first-person quote */}
       <section className="border-b border-border bg-surface">
         <Container className="max-w-[860px] py-[clamp(72px,10vw,140px)]">
           <Reveal>
-            <div className="rounded-[var(--radius-lg)] border border-border border-l-2 border-l-accent bg-bg p-8 shadow-[var(--shadow)] sm:p-10">
+            <figure className="m-0 rounded-[var(--radius-lg)] border border-border border-l-2 border-l-accent bg-bg p-8 shadow-[var(--shadow)] sm:p-10">
               <Eyebrow>{t("mission.eyebrow")}</Eyebrow>
-              <h2 className="mt-4 font-display text-[clamp(24px,3vw,36px)] font-bold leading-[1.12] tracking-[-0.022em] text-balance">
-                {t("mission.title")}
-              </h2>
-              <p className="mt-5 text-[17px] leading-[1.6] text-fg-muted">
-                {t("mission.body")}
-              </p>
-            </div>
+              <blockquote className="mt-5 font-display text-[clamp(22px,2.8vw,32px)] font-semibold leading-[1.3] tracking-[-0.018em] text-balance">
+                {`“${t("mission.quote")}”`}
+              </blockquote>
+              <figcaption className="mt-6 flex items-center gap-3 text-[14px] text-fg-muted">
+                <span className="h-px w-8 shrink-0 bg-accent" aria-hidden />
+                {t("mission.author")}
+              </figcaption>
+            </figure>
           </Reveal>
         </Container>
       </section>
