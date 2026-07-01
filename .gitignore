@@ -27,6 +27,12 @@
 # stray local brand-asset copy (not part of the repo)
 /design/agenflow-brand/favicon/icon-maskable-512_biiger.png
 
+# internal docs — local only, never pushed (identity, strategy, previews)
+/design/agenflow-brand/IDENTIDAD.md
+/design/preview/
+/design/shadcn-componentes-seleccion.md
+/marketing/
+
 # debug
 npm-debug.log*
 yarn-debug.log*
