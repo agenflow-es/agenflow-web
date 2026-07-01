@@ -467,6 +467,7 @@
       "items": [
         {
           "name": "FincAI",
+          "status": "Live",
           "sector": "Property management",
           "desc": "AI software so property managers can run their communities far better.",
           "href": "https://fincai.es",
@@ -475,9 +476,12 @@
         },
         {
           "name": "Replo",
+          "status": "Live",
           "sector": "Real estate agencies",
           "desc": "End-to-end lead management: omnichannel inbox, WhatsApp agent, voice and visit scheduling.",
-          "status": "Site under construction"
+          "href": "https://replo.es",
+          "external": true,
+          "cta": "View product"
         },
         {
           "name": "Legal sector",
@@ -865,6 +869,7 @@
       "items": [
         {
           "name": "FincAI",
+          "status": "Live",
           "for": "Property management",
           "desc": "AI software so property managers can run their communities far better: an agent that orchestrates documents, incidents and communication.",
           "cta": "View product",
@@ -873,9 +878,12 @@
         },
         {
           "name": "Replo",
+          "status": "Live",
           "for": "Real estate agencies",
           "desc": "End-to-end lead management: omnichannel inbox, WhatsApp agent, voice and visit scheduling. So you reply first and sell more.",
-          "status": "Site under construction"
+          "href": "https://replo.es",
+          "external": true,
+          "cta": "View product"
         }
       ]
     },
