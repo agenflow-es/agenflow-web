@@ -467,6 +467,7 @@
       "items": [
         {
           "name": "FincAI",
+          "status": "Operativo",
           "sector": "Administración de fincas",
           "desc": "Software con IA para que los administradores gestionen sus comunidades mucho mejor.",
           "href": "https://fincai.es",
@@ -475,9 +476,12 @@
         },
         {
           "name": "Replo",
+          "status": "Operativo",
           "sector": "Inmobiliarias",
           "desc": "Gestión de leads de punta a punta: bandeja omnicanal, agente de WhatsApp, voz y gestión de visitas.",
-          "status": "Web en construcción"
+          "href": "https://replo.es",
+          "external": true,
+          "cta": "Ver producto"
         },
         {
           "name": "Sector legal",
@@ -865,6 +869,7 @@
       "items": [
         {
           "name": "FincAI",
+          "status": "Operativo",
           "for": "Administración de fincas",
           "desc": "Software con IA para que los administradores gestionen sus comunidades mucho mejor: un agente que orquesta documentación, incidencias y comunicación.",
           "cta": "Ver producto",
@@ -873,9 +878,12 @@
         },
         {
           "name": "Replo",
+          "status": "Operativo",
           "for": "Inmobiliarias",
           "desc": "Gestión de leads de punta a punta: bandeja omnicanal, agente de WhatsApp, voz y gestión de visitas. Para responder el primero y vender más.",
-          "status": "Web en construcción"
+          "href": "https://replo.es",
+          "external": true,
+          "cta": "Ver producto"
         }
       ]
     },
