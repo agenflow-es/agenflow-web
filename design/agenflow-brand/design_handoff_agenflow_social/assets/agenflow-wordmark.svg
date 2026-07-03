@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-8 92 434 146" width="868" height="292" role="img" aria-label="agenflow">
+  <defs>
+    
+    <mask id="fcut">
+      <rect x="-8" y="92" width="434" height="146" fill="#fff"></rect>
+      <polygon points="224.71,101.6 234.81,101.6 224.71,125.6" fill="#000"></polygon>
+    </mask>
+  </defs>
+  <text x="0" y="200" font-family="&#39;Space Grotesk&#39;,&#39;Helvetica Neue&#39;,Arial,sans-serif" font-weight="600" font-size="100" letter-spacing="-3.5" fill="#14161d" mask="url(#fcut)">agenflow</text>
+</svg>
