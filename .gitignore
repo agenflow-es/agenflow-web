@@ -41,6 +41,9 @@ yarn-error.log*
 # vercel
 .vercel
 
+# claude code scratch output (screenshot-verifier, etc.)
+/.claude/tmp/
+
 # typescript
 *.tsbuildinfo
 next-env.d.ts
