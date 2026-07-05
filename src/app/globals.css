@@ -15,6 +15,7 @@
   --border: rgba(255, 255, 255, 0.09);
   --border-strong: rgba(255, 255, 255, 0.17);
   --accent: #5b82ff;
+  --accent-bright: #5b82ff;
   --accent-fg: #ffffff;
   --accent-soft: rgba(91, 130, 255, 0.14);
   --shadow: 0 1px 0 rgba(255, 255, 255, 0.04) inset, 0 14px 40px rgba(0, 0, 0, 0.45);
@@ -61,6 +62,7 @@
   --border: rgba(0, 0, 0, 0.10);
   --border-strong: rgba(0, 0, 0, 0.18);
   --accent: #2f54eb;
+  --accent-bright: #5b82ff;
   --accent-fg: #ffffff;
   --accent-soft: rgba(47, 84, 235, 0.08);
   --shadow: 0 1px 2px rgba(0, 0, 0, 0.04), 0 16px 40px rgba(0, 0, 0, 0.07);
@@ -101,6 +103,7 @@
   --color-border: var(--border);
   --color-border-strong: var(--border-strong);
   --color-accent: var(--accent);
+  --color-accent-bright: var(--accent-bright);
   --color-accent-fg: var(--accent-fg);
   /* shadcn / 21st.dev color utilities (bg-primary, text-muted-foreground, …) */
   --color-background: var(--background);
@@ -121,7 +124,7 @@
   --color-ring: var(--ring);
   --font-display: var(--font-inter);
   --font-body: var(--font-inter);
-  --font-label: var(--font-jetbrains-mono);
+  --font-label: var(--font-geist-mono);
   --font-wordmark: var(--font-space-grotesk);
   --animate-fade-scale: fade-scale 0.2s ease-out;
   @keyframes fade-scale {
@@ -153,7 +156,10 @@ body {
   font-family: var(--font-inter), system-ui, sans-serif;
   font-size: 17px;
   line-height: 1.6;
-  overflow-x: hidden;
+  /* clip (not hidden) contains full-bleed sections horizontally WITHOUT turning
+     body into a scroll container — `hidden` would, which breaks position:sticky
+     for nested elements (e.g. ScrollNarrative's panel). */
+  overflow-x: clip;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
 }
@@ -161,6 +167,15 @@ body {
 ::selection {
   background: var(--accent);
   color: #fff;
+}
+
+/* Mono labels (Geist Mono, uppercase): subtle grey on light, brand blue on dark
+   — the faint grey disappears on the dark theme, so switch it to the accent. */
+.text-label-adaptive {
+  color: var(--text-faint);
+}
+[data-theme="dark"] .text-label-adaptive {
+  color: var(--accent);
 }
 
 /* Theme toggle icon: show sun in dark, moon in light (no JS state needed) */
@@ -203,6 +218,19 @@ body {
 @keyframes af-blink {
   0%, 100% { opacity: 1; }
   50% { opacity: 0.25; }
+}
+/* LogoMarquee: track is duplicated, so -50% lands seamlessly on the copy. */
+@keyframes af-marquee {
+  to { transform: translateX(-50%); }
+}
+/* SystemFlow: a light beam that flows along the connectors between steps. */
+@keyframes af-beam {
+  from { transform: translateX(-120%); }
+  to { transform: translateX(320%); }
+}
+@keyframes af-beam-y {
+  from { transform: translateY(-120%); }
+  to { transform: translateY(320%); }
 }
 
 @media (prefers-reduced-motion: reduce) {

@@ -1,0 +1,497 @@
+<!doctype html>
+<html lang="es" data-theme="dark">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Agenflow — Maqueta de home (preview)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet" />
+<link href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@3/dist/tabler-icons.min.css" rel="stylesheet" />
+<style>
+:root{
+  --bg:#0a0a0b; --bg-elev:#141417; --bg-elev2:#1d1d22;
+  --text:#f2f2f4; --text-hover:#fff; --text-muted:#9a9aa4; --text-faint:#67676f;
+  --border:rgba(255,255,255,.09); --border-strong:rgba(255,255,255,.17);
+  --accent:#5b82ff; --accent-fg:#fff; --accent-soft:rgba(91,130,255,.14);
+  --grid:rgba(255,255,255,.04); --radius:6px; --radius-lg:10px;
+}
+[data-theme="light"]{
+  --bg:#fff; --bg-elev:#f7f7f9; --bg-elev2:#eeeef1;
+  --text:#0c0c0f; --text-hover:#0a0a0b; --text-muted:#5b5b65; --text-faint:#9a9aa2;
+  --border:rgba(0,0,0,.10); --border-strong:rgba(0,0,0,.18);
+  --accent:#2f54eb; --accent-soft:rgba(47,84,235,.08); --grid:rgba(0,0,0,.035);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--text);font-family:Inter,system-ui,sans-serif;font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+.container{max-width:1180px;margin:0 auto;padding:0 24px}
+.section{padding:clamp(64px,9vw,120px) 0;position:relative}
+.section--alt{background:var(--bg-elev)}
+.eyebrow{font-family:"JetBrains Mono",monospace;font-size:12px;text-transform:uppercase;letter-spacing:.14em;color:var(--accent);margin-bottom:16px;display:inline-block}
+.h2{font-size:clamp(26px,3.4vw,40px);font-weight:700;line-height:1.1;letter-spacing:-.02em;max-width:18ch}
+.lead{color:var(--text-muted);font-size:clamp(16px,1.5vw,19px);max-width:60ch;margin-top:14px;line-height:1.55}
+.accent{color:var(--accent)}
+.center{text-align:center}.center .h2,.center .lead{margin-left:auto;margin-right:auto}
+.btn{display:inline-flex;align-items:center;gap:9px;border-radius:var(--radius);padding:14px 24px;font-weight:500;font-size:15px;transition:transform .15s,background .15s;cursor:pointer;border:1px solid transparent}
+.btn-primary{background:var(--accent);color:var(--accent-fg)}
+.btn-primary:hover{transform:translateY(-2px)}
+.btn-ghost{border-color:var(--border-strong);color:var(--text)}
+.btn-ghost:hover{background:var(--bg-elev)}
+.card{background:var(--bg-elev);border:1px solid var(--border);border-radius:var(--radius-lg);padding:24px}
+.card .ic{width:40px;height:40px;border-radius:var(--radius);background:var(--accent-soft);color:var(--accent);display:flex;align-items:center;justify-content:center;font-size:21px;margin-bottom:16px}
+.card h3{font-size:17px;font-weight:600;margin-bottom:7px}
+.card p{color:var(--text-muted);font-size:14.5px;line-height:1.55}
+.grid{display:grid;gap:16px}
+.muted{color:var(--text-muted)}.faint{color:var(--text-faint)}
+.morelink{color:var(--accent);font-weight:500;font-size:14.5px;display:inline-flex;align-items:center;gap:6px;margin-top:18px}
+/* header */
+header{position:sticky;top:0;z-index:50;background:color-mix(in srgb,var(--bg) 82%,transparent);backdrop-filter:blur(12px);border-bottom:1px solid var(--border)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:64px}
+.wm{font-family:"Space Grotesk",sans-serif;font-weight:700;font-size:20px;letter-spacing:-.01em}
+.nav-links{display:flex;gap:28px;font-size:14.5px;color:var(--text-muted)}
+.nav-links a:hover{color:var(--text)}
+.nav-right{display:flex;align-items:center;gap:14px}
+.icon-btn{width:36px;height:36px;border-radius:var(--radius);border:1px solid var(--border);background:transparent;color:var(--text-muted);display:flex;align-items:center;justify-content:center;cursor:pointer;font-size:18px}
+.icon-btn:hover{color:var(--text);border-color:var(--border-strong)}
+@media(max-width:860px){.nav-links{display:none}}
+/* hero */
+.hero{position:relative;overflow:hidden;text-align:center;padding:clamp(72px,11vw,130px) 0}
+.aurora{position:absolute;inset:0;z-index:0;pointer-events:none;
+  background:
+   radial-gradient(50% 40% at 50% 0%,var(--accent-soft),transparent 70%),
+   radial-gradient(40% 50% at 18% 22%,rgba(91,130,255,.10),transparent 70%),
+   radial-gradient(40% 50% at 82% 18%,rgba(120,152,255,.09),transparent 70%)}
+.hero .container{position:relative;z-index:1}
+.hero h1{font-size:clamp(34px,5.2vw,62px);font-weight:700;line-height:1.05;letter-spacing:-.022em;max-width:17ch;margin:0 auto}
+.hero .lead{margin:22px auto 0;max-width:62ch}
+.cta-row{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-top:34px}
+.proof{display:flex;gap:18px;justify-content:center;flex-wrap:wrap;margin-top:44px;font-family:"JetBrains Mono",monospace;font-size:11.5px;text-transform:uppercase;letter-spacing:.12em;color:var(--text-faint)}
+.proof span{display:inline-flex;align-items:center;gap:9px}
+.proof span::before{content:"";width:4px;height:4px;border-radius:50%;background:var(--border-strong)}
+.proof span:first-child::before{display:none}
+/* section heads */
+.sechead{margin-bottom:44px}
+.sechead .lead{margin-top:14px}
+/* bento */
+.bento{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.bento .flag{grid-column:span 2;grid-row:span 2;background:linear-gradient(180deg,var(--accent-soft),transparent),var(--bg-elev);border:1px solid var(--border-strong);display:flex;flex-direction:column;justify-content:flex-end}
+.bento .flag .tag{font-family:"JetBrains Mono",monospace;font-size:11px;text-transform:uppercase;letter-spacing:.12em;color:var(--accent);margin-bottom:auto}
+.bento .flag h3{font-size:24px;font-weight:700;margin:18px 0 8px}
+.bento .mini h3{font-size:15px;margin-bottom:4px}
+.bento .mini p{font-size:13.5px}
+@media(max-width:820px){.bento{grid-template-columns:1fr 1fr}.bento .flag{grid-column:span 2;grid-row:auto}}
+@media(max-width:520px){.bento{grid-template-columns:1fr}.bento .flag{grid-column:auto}}
+/* results */
+.results{grid-template-columns:repeat(3,1fr)}
+@media(max-width:820px){.results{grid-template-columns:1fr 1fr}}
+@media(max-width:520px){.results{grid-template-columns:1fr}}
+/* consultoria */
+.consult{display:grid;grid-template-columns:1.3fr 1fr;gap:24px;align-items:stretch}
+@media(max-width:820px){.consult{grid-template-columns:1fr}}
+.steps{display:flex;flex-direction:column;gap:14px}
+.step{display:flex;gap:16px;align-items:flex-start}
+.step .n{flex:none;width:34px;height:34px;border-radius:50%;border:1px solid var(--border-strong);display:flex;align-items:center;justify-content:center;font-family:"JetBrains Mono",monospace;font-size:13px;color:var(--accent)}
+.step h4{font-size:16px;font-weight:600}
+.step p{color:var(--text-muted);font-size:14px}
+.deliver{background:var(--accent-soft);border:1px solid var(--accent);border-radius:var(--radius-lg);padding:26px;display:flex;flex-direction:column}
+.deliver .k{font-family:"JetBrains Mono",monospace;font-size:11px;text-transform:uppercase;letter-spacing:.12em;color:var(--accent);margin-bottom:12px}
+.deliver h4{font-size:19px;font-weight:600;line-height:1.3;margin-bottom:10px}
+.deliver p{color:var(--text-muted);font-size:14.5px;margin-bottom:auto}
+.deliver .btn{margin-top:22px;align-self:flex-start}
+/* escenario */
+.esc{background:var(--bg-elev);border:1px solid var(--border);border-radius:var(--radius-lg);padding:30px;max-width:920px;margin:0 auto}
+.esc .tag{font-family:"JetBrains Mono",monospace;font-size:11px;text-transform:uppercase;letter-spacing:.1em;color:var(--text-faint)}
+.esc h3{font-size:clamp(20px,2.4vw,26px);font-weight:700;margin:10px 0 16px;letter-spacing:-.01em}
+.chips{display:flex;gap:9px;flex-wrap:wrap;margin-bottom:22px}
+.chip{display:inline-flex;align-items:center;gap:6px;background:var(--accent-soft);color:var(--accent);font-size:12.5px;font-weight:500;padding:5px 12px;border-radius:var(--radius)}
+.esc-grid{display:grid;grid-template-columns:1.25fr 1fr;gap:24px;align-items:start}
+@media(max-width:760px){.esc-grid{grid-template-columns:1fr}}
+.estep{margin-bottom:16px}
+.estep .l{font-family:"JetBrains Mono",monospace;font-size:11px;text-transform:uppercase;letter-spacing:.1em;color:var(--accent);margin-bottom:5px}
+.estep p{font-size:14.5px;color:var(--text);line-height:1.55}
+.inbox{background:var(--bg-elev2);border:1px solid var(--border);border-radius:var(--radius);padding:14px 15px}
+.inbox .top{display:flex;justify-content:space-between;align-items:center;margin-bottom:6px}
+.inbox .top span{font-size:12.5px;color:var(--text-muted);font-weight:500}
+.inbox .badge{background:var(--accent-soft);color:var(--accent);font-size:11px;font-weight:500;padding:2px 8px;border-radius:var(--radius)}
+.irow{display:flex;gap:11px;align-items:center;padding:10px 0;border-bottom:1px solid var(--border)}
+.irow:last-of-type{border-bottom:0}
+.irow i{font-size:19px;color:var(--text-muted)}
+.irow .wa{color:#25d366}
+.irow .ch{font-size:13px;font-weight:500}
+.irow .pv{font-size:12px;color:var(--text-muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.irow .tx{min-width:0;flex:1}
+.live{display:flex;align-items:center;gap:8px;margin-top:10px;font-size:12.5px;color:var(--text-muted)}
+.live .dot{width:7px;height:7px;border-radius:50%;background:#25d366;box-shadow:0 0 0 0 rgba(37,211,102,.5);animation:pulse 2s infinite}
+@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(37,211,102,.45)}70%{box-shadow:0 0 0 7px rgba(37,211,102,0)}100%{box-shadow:0 0 0 0 rgba(37,211,102,0)}}
+.result{display:flex;gap:12px;align-items:flex-start;margin-top:22px;background:var(--accent-soft);border-radius:var(--radius);padding:15px 17px}
+.result i{font-size:20px;color:var(--accent);margin-top:2px}
+.result .l{font-family:"JetBrains Mono",monospace;font-size:11px;text-transform:uppercase;letter-spacing:.1em;color:var(--accent);margin-bottom:3px}
+.result p{font-size:14.5px;line-height:1.5}
+/* products */
+.prods{grid-template-columns:1fr 1fr}
+@media(max-width:760px){.prods{grid-template-columns:1fr}}
+.prod{position:relative;overflow:hidden}
+.prod .scr{height:120px;border-radius:var(--radius);background:
+   linear-gradient(135deg,var(--accent-soft),transparent),var(--bg-elev2);
+   border:1px solid var(--border);margin-bottom:18px;display:flex;align-items:center;justify-content:center;color:var(--text-faint);font-size:30px}
+.statusbadge{position:absolute;top:18px;right:18px;font-family:"JetBrains Mono",monospace;font-size:10.5px;text-transform:uppercase;letter-spacing:.08em;color:var(--text-muted);background:var(--bg);border:1px solid var(--border-strong);padding:4px 9px;border-radius:100px}
+.prod .sec{font-size:12.5px;color:var(--accent);font-weight:500;margin-bottom:5px}
+.prod h3{font-size:19px;font-weight:700;margin-bottom:7px}
+/* frontier */
+.frontier{display:grid;grid-template-columns:1.2fr .8fr;gap:30px;align-items:center}
+@media(max-width:760px){.frontier{grid-template-columns:1fr}}
+.orbit{aspect-ratio:1;max-width:260px;margin:0 auto;border-radius:50%;border:1px solid var(--border);position:relative;display:flex;align-items:center;justify-content:center}
+.orbit::before,.orbit::after{content:"";position:absolute;border:1px solid var(--border);border-radius:50%}
+.orbit::before{inset:26px}.orbit::after{inset:54px}
+.orbit .core{width:54px;height:54px;border-radius:50%;background:var(--accent-soft);color:var(--accent);display:flex;align-items:center;justify-content:center;font-size:26px;z-index:1}
+.orbit .sat{position:absolute;width:30px;height:30px;border-radius:50%;background:var(--bg-elev);border:1px solid var(--border-strong);display:flex;align-items:center;justify-content:center;font-size:15px;color:var(--text-muted)}
+.orbit .s1{top:-2px;left:calc(50% - 15px)}.orbit .s2{right:8px;bottom:34px}.orbit .s3{left:8px;bottom:34px}
+/* security */
+.sec-grid{grid-template-columns:repeat(4,1fr)}
+@media(max-width:900px){.sec-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:520px){.sec-grid{grid-template-columns:1fr}}
+/* testimonials reserved */
+.ghosts{grid-template-columns:repeat(3,1fr)}
+@media(max-width:760px){.ghosts{grid-template-columns:1fr}}
+.ghost{border:1.5px dashed var(--border-strong);background:transparent;border-radius:var(--radius-lg);padding:24px;color:var(--text-faint)}
+.ghost .q{font-size:15px;line-height:1.5;margin-bottom:18px}
+.ghost .who{display:flex;align-items:center;gap:10px}
+.ghost .av{width:34px;height:34px;border-radius:50%;border:1.5px dashed var(--border-strong)}
+.reserved-note{text-align:center;color:var(--text-faint);font-size:13.5px;margin-top:24px;font-style:italic}
+/* founder */
+.founder{display:grid;grid-template-columns:1fr 320px;gap:36px;align-items:center}
+@media(max-width:760px){.founder{grid-template-columns:1fr}}
+.founder .photo{aspect-ratio:4/5;border-radius:var(--radius-lg);background:var(--bg-elev2);border:1px solid var(--border);display:flex;flex-direction:column;align-items:center;justify-content:center;color:var(--text-faint);gap:10px}
+.founder .photo i{font-size:42px}
+.founder blockquote{font-size:clamp(18px,2.2vw,24px);line-height:1.4;font-weight:500;letter-spacing:-.01em}
+.founder .sig{margin-top:18px;color:var(--text-muted);font-size:14.5px}
+/* faq */
+.faq details{border-bottom:1px solid var(--border);padding:18px 0}
+.faq summary{font-size:17px;font-weight:600;cursor:pointer;list-style:none;display:flex;justify-content:space-between;gap:16px}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary i{color:var(--text-muted);transition:transform .2s;font-size:20px}
+.faq details[open] summary i{transform:rotate(45deg)}
+.faq details p{color:var(--text-muted);font-size:15px;margin-top:12px;max-width:72ch}
+/* closing cta */
+.closing{background:linear-gradient(180deg,var(--accent-soft),transparent);border-top:1px solid var(--border);text-align:center}
+.closing h2{font-size:clamp(26px,3.6vw,42px);font-weight:700;letter-spacing:-.02em;max-width:20ch;margin:0 auto}
+/* footer */
+footer{border-top:1px solid var(--border);padding:46px 0;color:var(--text-muted);font-size:14px}
+.foot{display:flex;justify-content:space-between;gap:30px;flex-wrap:wrap}
+.foot a:hover{color:var(--text)}
+/* preview ribbon + reveal */
+.ribbon{position:fixed;left:16px;bottom:16px;z-index:99;background:var(--bg-elev);border:1px solid var(--border-strong);border-radius:100px;padding:8px 16px;font-size:12px;color:var(--text-muted);box-shadow:0 8px 30px rgba(0,0,0,.4)}
+.ribbon b{color:var(--text);font-weight:600}
+html.js .reveal{opacity:0;transform:translateY(16px);transition:opacity .6s ease,transform .6s ease}
+html.js .reveal.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){html.js .reveal{opacity:1;transform:none}}
+</style>
+<script>document.documentElement.classList.add('js')</script>
+</head>
+<body>
+
+<header>
+  <div class="container nav">
+    <div class="wm">agenflow</div>
+    <nav class="nav-links">
+      <a href="#hacemos">Servicios</a>
+      <a href="#paraquien">Inmobiliario</a>
+      <a href="#construimos">Precios</a>
+      <a href="#">Recursos</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+    <div class="nav-right">
+      <button class="icon-btn" id="theme" aria-label="Cambiar tema"><i class="ti ti-sun"></i></button>
+      <a href="#contacto" class="btn btn-primary" style="padding:10px 18px;font-size:14px">Consultoría</a>
+    </div>
+  </div>
+</header>
+
+<!-- 1 · HERO -->
+<section class="hero">
+  <div class="aurora"></div>
+  <div class="container">
+    <h1>Convertimos procesos lentos en capacidad para <span class="accent">crecer</span>.</h1>
+    <p class="lead">Integramos automatización e IA en la operación de tu pyme: el mismo equipo produciendo mucho más. Empieza por una consultoría y te decimos exactamente qué automatizar primero.</p>
+    <div class="cta-row">
+      <a href="#contacto" class="btn btn-primary">Solicitar consultoría <i class="ti ti-arrow-right"></i></a>
+      <a href="#hacemos" class="btn btn-ghost">Ver servicios</a>
+    </div>
+    <div class="proof">
+      <span>Especialistas en el inmueble</span>
+      <span>Software propio por sector</span>
+      <span>RGPD y datos en la UE</span>
+    </div>
+  </div>
+</section>
+
+<!-- 2 · QUÉ HACEMOS -->
+<section class="section" id="hacemos">
+  <div class="container">
+    <div class="sechead reveal">
+      <span class="eyebrow">Qué hacemos</span>
+      <h2 class="h2">Automatización + IA para tu pyme. <span class="accent">A medida o como producto.</span></h2>
+      <p class="lead">La casa donde se construyen las soluciones. Cualquier negocio, cualquier sector: entendemos tu operación y construimos lo que la hace crecer, desde una automatización a medida hasta software propio.</p>
+    </div>
+    <div class="grid results reveal">
+      <div class="card"><div class="ic"><i class="ti ti-bulb"></i></div><h3>Consultoría de IA</h3><p>Analizamos tu operación y sales con un plan claro de qué automatizar primero.</p></div>
+      <div class="card"><div class="ic"><i class="ti ti-arrows-shuffle"></i></div><h3>Automatización de procesos</h3><p>Conectamos tus herramientas y quitamos el trabajo manual que frena al equipo.</p></div>
+      <div class="card"><div class="ic"><i class="ti ti-code"></i></div><h3>Software por sector</h3><p>Construimos el software que tu sector necesita y el mercado no ofrece.</p></div>
+      <div class="card"><div class="ic"><i class="ti ti-world"></i></div><h3>Presencia online</h3><p>Renovamos tu web y tu visibilidad para que te encuentren y vendas más.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- 3 · PARA QUIÉN -->
+<section class="section section--alt" id="paraquien">
+  <div class="container">
+    <div class="sechead reveal">
+      <span class="eyebrow">Para quién</span>
+      <h2 class="h2">Para cualquier pyme. <span class="accent">Especialistas en el inmueble.</span></h2>
+      <p class="lead">Servimos a cualquier negocio — pero donde más profundo llegamos es en todo lo que rodea a un inmueble. Ahí construimos producto propio.</p>
+    </div>
+    <div class="bento reveal">
+      <div class="card flag">
+        <span class="tag">Especialidad de cabecera</span>
+        <h3>El inmueble</h3>
+        <p class="muted">Inmobiliarias, administración de fincas, construcción, reformas e instaladores. El sector que más conocemos — y donde nacen FincAI y Replo.</p>
+      </div>
+      <div class="card mini"><h3>Clínicas y estética</h3><p class="muted">Que te encuentren y te reserven cita.</p></div>
+      <div class="card mini"><h3>Asesorías y despachos</h3><p class="muted">Menos papeleo, más tiempo para el cliente.</p></div>
+      <div class="card mini"><h3>Hostelería y comercio</h3><p class="muted">Web rápida y ficha de Google al día.</p></div>
+      <div class="card mini"><h3>Cualquier negocio local</h3><p class="muted">Si tienes tareas repetitivas, hablemos.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- 4 · QUÉ APORTAMOS -->
+<section class="section" id="aportamos">
+  <div class="container">
+    <div class="sechead center reveal">
+      <span class="eyebrow">Lo que consigues</span>
+      <h2 class="h2">No vendemos IA. Vendemos lo que tu negocio <span class="accent">gana</span>.</h2>
+    </div>
+    <div class="grid results reveal">
+      <div class="card"><div class="ic"><i class="ti ti-clock"></i></div><h3>Tiempo recuperado</h3><p>Horas de trabajo manual que vuelven a tu equipo, cada semana.</p></div>
+      <div class="card"><div class="ic"><i class="ti ti-trending-up"></i></div><h3>Más productividad</h3><p>El mismo equipo produciendo mucho más, sin sumar gente.</p></div>
+      <div class="card"><div class="ic"><i class="ti ti-bolt"></i></div><h3>Competitividad</h3><p>Respondes antes y mejor que quien tienes al lado.</p></div>
+      <div class="card"><div class="ic"><i class="ti ti-coin"></i></div><h3>Más rentabilidad</h3><p>Menos coste por tarea, más margen en cada operación.</p></div>
+      <div class="card"><div class="ic"><i class="ti ti-chart-arrows-vertical"></i></div><h3>Márgenes que crecen</h3><p>Procesos que dejan de escaparse — y de costarte dinero.</p></div>
+      <div class="card"><div class="ic"><i class="ti ti-sparkles"></i></div><h3>Siempre actualizado</h3><p>Tu negocio en la última frontera de la IA, sin estar pendiente.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- 5 · CONSULTORÍA -->
+<section class="section section--alt">
+  <div class="container">
+    <div class="sechead reveal">
+      <span class="eyebrow">Cómo se empieza</span>
+      <h2 class="h2">Todo arranca con una <span class="accent">consultoría</span>.</h2>
+      <p class="lead">Una sesión de trabajo, no una reunión comercial. Analizamos tu operación a fondo y le ponemos números a la oportunidad.</p>
+    </div>
+    <div class="consult reveal">
+      <div class="card">
+        <div class="steps">
+          <div class="step"><div class="n">01</div><div><h4>Escuchamos tu operación a fondo</h4><p>Radiografía de cómo trabaja tu negocio de verdad y dónde se atasca.</p></div></div>
+          <div class="step"><div class="n">02</div><div><h4>Detectamos las oportunidades reales</h4><p>Qué tiene sentido automatizar en tu caso, priorizado por impacto.</p></div></div>
+          <div class="step"><div class="n">03</div><div><h4>Te entregamos un plan accionable</h4><p>Qué automatizar, en qué orden y qué impacto esperar.</p></div></div>
+        </div>
+      </div>
+      <div class="deliver">
+        <span class="k">Te llevas</span>
+        <h4>Un análisis completo de tu operación + un plan de acción priorizado.</h4>
+        <p>Es tuyo, lo ejecutes con nosotros o no. Sin permanencia ni letra pequeña.</p>
+        <a href="#contacto" class="btn btn-primary">Solicitar consultoría <i class="ti ti-arrow-right"></i></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 6 · EJEMPLO -->
+<section class="section">
+  <div class="container">
+    <div class="sechead center reveal">
+      <span class="eyebrow">Un ejemplo</span>
+      <h2 class="h2">Así se ve una automatización por dentro.</h2>
+    </div>
+    <div class="esc reveal">
+      <span class="tag">Ejemplo ilustrativo · Inmobiliaria</span>
+      <h3>Deja de perder clientes por contestar tarde</h3>
+      <div class="chips">
+        <span class="chip"><i class="ti ti-trending-up"></i> Más ventas</span>
+        <span class="chip"><i class="ti ti-bolt"></i> Competitividad</span>
+        <span class="chip"><i class="ti ti-clock"></i> Tiempo recuperado</span>
+      </div>
+      <div class="esc-grid">
+        <div>
+          <div class="estep"><div class="l">El caso</div><p>Son las 22:14. Entra un lead por Idealista preguntando por un piso. Tu equipo ya ha cerrado.</p></div>
+          <div class="estep"><div class="l">Lo que cuesta hoy</div><p>Nadie lo ve hasta mañana. Para entonces ha escrito a tres agencias más y visita con la que contestó primero. No se perdió por falta de interés: se enfrió por tiempo.</p></div>
+          <div class="estep" style="margin-bottom:0"><div class="l">Cómo queda con Agenflow</div><p>Un agente de WhatsApp y voz responde en segundos, resuelve lo básico, califica al interesado y le agenda la visita según tu calendario. A primera hora tu comercial la encuentra ya cerrada.</p></div>
+        </div>
+        <div class="inbox">
+          <div class="top"><span>Bandeja unificada</span><span class="badge">3 nuevos</span></div>
+          <div class="irow"><i class="ti ti-brand-whatsapp wa"></i><div class="tx"><div class="ch">WhatsApp</div><div class="pv">¿Sigue disponible el piso del centro?</div></div></div>
+          <div class="irow"><i class="ti ti-mail"></i><div class="tx"><div class="ch">Email</div><div class="pv">Me gustaría agendar una visita</div></div></div>
+          <div class="irow"><i class="ti ti-phone"></i><div class="tx"><div class="ch">Llamada</div><div class="pv">Transcrita y respondida sola</div></div></div>
+          <div class="irow"><i class="ti ti-building-estate"></i><div class="tx"><div class="ch">Idealista</div><div class="pv">Nuevo lead solicita información</div></div></div>
+          <div class="live"><span class="dot"></span> Responde y agenda visitas · 24/7</div>
+        </div>
+      </div>
+      <div class="result">
+        <i class="ti ti-arrow-up-right"></i>
+        <div><div class="l">El resultado</div><p>Respondes el primero, a cualquier hora y sin ampliar el equipo. Cada lead que antes se enfriaba ahora es una visita en agenda.</p></div>
+      </div>
+    </div>
+    <div class="center"><a href="#construimos" class="morelink">Ver más ejemplos en automatización <i class="ti ti-arrow-right"></i></a></div>
+  </div>
+</section>
+
+<!-- 7 · LO QUE CONSTRUIMOS -->
+<section class="section section--alt" id="construimos">
+  <div class="container">
+    <div class="sechead reveal">
+      <span class="eyebrow">Lo que construimos</span>
+      <h2 class="h2">Software propio, especializado por sector.</h2>
+      <p class="lead">Cuando un sector necesita una herramienta que el mercado no ofrece, la construimos — con la IA dentro desde el primer día.</p>
+    </div>
+    <div class="grid prods reveal">
+      <div class="card prod">
+        <span class="statusbadge">En desarrollo</span>
+        <div class="scr"><i class="ti ti-building-community"></i></div>
+        <div class="sec">Administración de fincas</div>
+        <h3>FincAI</h3>
+        <p>Software con IA para que los administradores gestionen sus comunidades mucho mejor: documentación, incidencias y comunicación, orquestadas por un agente.</p>
+      </div>
+      <div class="card prod">
+        <span class="statusbadge">En construcción</span>
+        <div class="scr"><i class="ti ti-home-search"></i></div>
+        <div class="sec">Inmobiliarias</div>
+        <h3>Replo</h3>
+        <p>Gestión de leads de punta a punta: bandeja omnicanal, agente de WhatsApp y voz, y gestión de visitas. Para responder el primero y vender más.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 8 · ESTAR A LA ÚLTIMA -->
+<section class="section">
+  <div class="container">
+    <div class="frontier">
+      <div class="reveal">
+        <span class="eyebrow">Siempre a la última</span>
+        <h2 class="h2">La IA agéntica cambia cada mes. <span class="accent">Vivimos en esa frontera por ti.</span></h2>
+        <p class="lead">Las técnicas de software con agentes de IA avanzan cada semana en 2026. Las seguimos de cerca y las llevamos a tu negocio, para que estés siempre al día sin tener que estar pendiente.</p>
+        <a href="#" class="morelink">Pruébalo: mira qué sabe la IA de tu negocio <i class="ti ti-arrow-right"></i></a>
+      </div>
+      <div class="orbit reveal">
+        <div class="core"><i class="ti ti-cpu"></i></div>
+        <div class="sat s1"><i class="ti ti-robot"></i></div>
+        <div class="sat s2"><i class="ti ti-message-chatbot"></i></div>
+        <div class="sat s3"><i class="ti ti-sparkles"></i></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 9 · SEGURIDAD -->
+<section class="section section--alt">
+  <div class="container">
+    <div class="sechead reveal">
+      <span class="eyebrow">Seguridad y cumplimiento</span>
+      <h2 class="h2">Tus datos, protegidos y bajo control.</h2>
+      <p class="lead">Trabajas con información sensible. Cumplir y protegerla no es un extra: es la base de cómo trabajamos.</p>
+    </div>
+    <div class="grid sec-grid reveal">
+      <div class="card"><div class="ic"><i class="ti ti-shield-check"></i></div><h3>RGPD por diseño</h3><p>Cumplimos el reglamento europeo desde el primer día, no como un añadido.</p></div>
+      <div class="card"><div class="ic"><i class="ti ti-server-2"></i></div><h3>Datos en la UE</h3><p>Proveedores que cumplen el RGPD; transferencias con las garantías del reglamento.</p></div>
+      <div class="card"><div class="ic"><i class="ti ti-file-certificate"></i></div><h3>Contrato y confidencialidad</h3><p>Acuerdo de encargado del tratamiento (DPA) y confidencialidad con cada cliente.</p></div>
+      <div class="card"><div class="ic"><i class="ti ti-lock"></i></div><h3>Cifrado y accesos</h3><p>Información cifrada y acceso por mínimo privilegio: solo quien debe accede a lo que debe.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- 10 · TESTIMONIOS (reservado) -->
+<section class="section">
+  <div class="container">
+    <div class="sechead center reveal">
+      <span class="eyebrow">Testimonios</span>
+      <h2 class="h2">Lo que dirán tus primeros clientes.</h2>
+    </div>
+    <div class="grid ghosts reveal">
+      <div class="ghost"><div class="q">“…”</div><div class="who"><div class="av"></div><div>Cliente · sector</div></div></div>
+      <div class="ghost"><div class="q">“…”</div><div class="who"><div class="av"></div><div>Cliente · sector</div></div></div>
+      <div class="ghost"><div class="q">“…”</div><div class="who"><div class="av"></div><div>Cliente · sector</div></div></div>
+    </div>
+    <p class="reserved-note">Hueco reservado en el diseño. Lo rellenamos con testimonios reales en cuanto los haya — nunca inventados.</p>
+  </div>
+</section>
+
+<!-- 11 · QUIÉN ESTÁ DETRÁS -->
+<section class="section section--alt">
+  <div class="container">
+    <div class="founder">
+      <div class="reveal">
+        <span class="eyebrow">Quién está detrás</span>
+        <blockquote>“Un negocio es rentable cuando, por dentro, sus sistemas están bien definidos y orquestados. Eso lo aprendí construyendo hospitales. Hoy lo llevo a las pymes — con IA.”</blockquote>
+        <p class="sig">Fundador de Agenflow · Ingeniero industrial, +6 años en construcción y proyectos de hospitales.</p>
+        <a href="#" class="morelink">Conoce nuestra historia <i class="ti ti-arrow-right"></i></a>
+      </div>
+      <div class="photo reveal"><i class="ti ti-user"></i><span style="font-size:12px">Foto del fundador</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- 12 · FAQ -->
+<section class="section">
+  <div class="container" style="max-width:820px">
+    <div class="sechead reveal"><span class="eyebrow">Preguntas frecuentes</span><h2 class="h2">Lo que suelen preguntarnos.</h2></div>
+    <div class="faq reveal">
+      <details open><summary>¿Trabajáis con empresas sin equipo técnico? <i class="ti ti-plus"></i></summary><p>Sí. Aportamos toda la parte técnica y nos integramos con tu equipo. Tú pones el conocimiento del negocio; nosotros, la solución.</p></details>
+      <details><summary>¿Cuánto tarda en verse resultados? <i class="ti ti-plus"></i></summary><p>La consultoría, en días. Las primeras automatizaciones en producción se miden en semanas, no en meses.</p></details>
+      <details><summary>¿Cómo protegéis nuestros datos? <i class="ti ti-plus"></i></summary><p>Cumplimiento RGPD, datos alojados en la UE, acuerdo de confidencialidad y cifrado con control de accesos.</p></details>
+      <details><summary>No tengo claro qué automatizar. ¿Por dónde empiezo? <i class="ti ti-plus"></i></summary><p>Por la consultoría: analizamos tu operación y te decimos exactamente qué automatizar primero y qué impacto esperar.</p></details>
+    </div>
+  </div>
+</section>
+
+<!-- 13 · CTA CIERRE -->
+<section class="section closing" id="contacto">
+  <div class="container">
+    <div class="reveal">
+      <h2>Tu competencia preferiría que no nos conocieras.</h2>
+      <p class="lead" style="margin:16px auto 0">Cada semana sin automatizar es margen que se queda por el camino. Empieza por una consultoría: te decimos qué automatizar primero.</p>
+      <div class="cta-row"><a href="#" class="btn btn-primary">Solicitar consultoría <i class="ti ti-arrow-right"></i></a></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container foot">
+    <div>
+      <div class="wm" style="font-size:18px;margin-bottom:8px">agenflow</div>
+      <div class="faint" style="font-size:13px;max-width:34ch">Convertimos procesos lentos en capacidad para crecer.</div>
+    </div>
+    <div style="display:flex;gap:48px;flex-wrap:wrap">
+      <div><div style="color:var(--text);font-weight:600;margin-bottom:10px;font-size:14px">Servicios</div><div style="display:grid;gap:7px"><a href="#">Consultoría</a><a href="#">Automatización</a><a href="#">Software por sector</a><a href="#">Presencia online</a></div></div>
+      <div><div style="color:var(--text);font-weight:600;margin-bottom:10px;font-size:14px">Empresa</div><div style="display:grid;gap:7px"><a href="#">Inmobiliario</a><a href="#">Nosotros</a><a href="#">Precios</a><a href="#">Contacto</a></div></div>
+    </div>
+  </div>
+</footer>
+
+<div class="ribbon"><b>Maqueta de previsualización</b> — no es la web final · pulsa <i class="ti ti-sun" style="vertical-align:-2px"></i> para tema claro</div>
+
+<script>
+const btn=document.getElementById('theme');
+btn.addEventListener('click',()=>{
+  const light=document.documentElement.getAttribute('data-theme')==='light';
+  document.documentElement.setAttribute('data-theme',light?'dark':'light');
+  btn.innerHTML=light?'<i class="ti ti-sun"></i>':'<i class="ti ti-moon"></i>';
+});
+const io=new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>

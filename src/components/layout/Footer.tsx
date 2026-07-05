@@ -40,7 +40,9 @@ export function Footer() {
   const sectorItems = tSectors.raw("items") as NavItem[];
 
   return (
-    <footer className="border-t border-border bg-surface">
+    // Footer is always dark, in both themes: data-theme="dark" re-declares the
+    // dark tokens for this subtree, so bg/text/border flip regardless of the page theme.
+    <footer data-theme="dark" className="border-t border-border bg-surface text-fg">
       <Container className="pb-8 pt-[clamp(48px,7vw,80px)]">
         <div className="grid gap-10 md:grid-cols-[1.4fr_repeat(3,1fr)]">
           <div className="min-w-[220px]">

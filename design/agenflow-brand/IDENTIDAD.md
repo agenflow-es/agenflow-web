@@ -2,7 +2,7 @@
 
 > La brújula de Agenflow: por qué existimos, qué defendemos y cómo nos reconocen.
 > Pensado para perdurar **décadas**: las herramientas cambiarán; esto no.
-> Estado: **v1 — borrador para afinar con Francisco** · 2026-06-28
+> Estado: **v2 — definitivo, revisado con Francisco** · 2026-07-03 (v1: 2026-06-28)
 > Para la identidad **visual** (logo, color, tipografía), ver `MARCA.txt`.
 
 ---
@@ -27,7 +27,7 @@ Un tejido de pymes que **compiten de tú a tú con las grandes**, porque por den
 
 ## 3. El problema que existimos para resolver
 
-A la mayoría de los negocios no les falta esfuerzo ni talento: **les falta sistema.** Pierden tiempo, margen y oportunidades en trabajo manual y en procesos que nadie ve. Y la tecnología que podría resolverlo avanza tan rápido que es imposible seguirle el ritmo mientras sacas tu negocio adelante. Ahí entramos nosotros.
+A la mayoría de los negocios no les falta esfuerzo ni talento: **les falta sistema.** Sus procesos son tan lentos que el día a día los desborda —el equipo va siempre por detrás, apagando fuegos, sin tiempo para pensar ni para crecer—. Y la tecnología que podría resolverlo avanza tan rápido que es imposible seguirle el ritmo mientras sacas tu negocio adelante. Ahí entramos nosotros.
 
 ---
 
@@ -53,21 +53,21 @@ La capa más luminosa porque es la que mira al cliente: lo que ve y vive. Tiempo
 No somos una agencia de IA más. La diferencia no está en las herramientas —esas las tiene cualquiera— sino en cómo trabajamos:
 
 1. **Vendemos resultados, no tecnología.** Las agencias venden la herramienta de moda; nosotros, lo que tu negocio gana. La IA es el medio, nunca el titular.
-2. **Hablas con quien lo construye.** Sin comerciales ni intermediarios. Quien te entiende es quien diseña y construye tu solución. Venimos de la ingeniería de sistemas en proyectos donde un fallo costaba millones —construcción, hospitales—: pensamos en sistemas que aguantan cuando el negocio crece, no en demos que impresionan y se caen.
-3. **Somos una casa que construye producto, no una agencia de encargos.** Nuestro trabajo a medida madura en software propio por sector (FincAI, Replo). Eso nos da profundidad, criterio y soluciones que mejoran con cada cliente.
-4. **Profundos donde importa, abiertos a todos.** Vamos a fondo en un territorio —el inmueble— hasta dominarlo; pero servimos a cualquier pyme. Si dominamos un sector así, daremos con la solución del tuyo.
+2. **Trato cercano, sin capas de comerciales.** En Agenflow encuentras una empresa que se implica de verdad en que tu negocio funcione —no un departamento de ventas vendiendo lo que otro ejecuta después—. Venimos de la ingeniería de sistemas en proyectos donde un fallo costaba millones —construcción, hospitales—: pensamos en sistemas que aguantan cuando el negocio crece, no en demos que impresionan y se caen.
+3. **Somos una casa que construye producto, no una agencia de encargos.** Nuestro trabajo a medida madura en software propio por sector — hoy en desarrollo: FincAI y Replo (sus webs ya están operativas). Eso nos da profundidad, criterio y soluciones que mejoran con cada cliente.
+4. **Profundos donde importa, abiertos a todos.** El inmueble —inmobiliaria, construcción, notaría— es el territorio donde vamos a fondo: es el camino más claro que vemos hoy para ganar la profundidad real que luego aplicamos a cualquier pyme.
 5. **Siempre en la frontera, al servicio del problema.** Adoptamos lo último porque sirve a tu resultado, no porque esté de moda.
 
 ---
 
 ## 6. Valores — cómo trabajamos cada día
 
-1. **El resultado por delante.** Medimos tiempo recuperado y margen, no líneas de código ni "proyectos de IA". Si algo no mueve la aguja del negocio, no lo hacemos.
-2. **Hablas con quien lo construye.** Quien te entiende, te lo construye. Sin capas de intermediarios.
-3. **Pensamos en sistemas que perduran.** Ingeniería, robustez, orquestación. Construido para aguantar cuando el negocio crece, no para salir del paso.
-4. **Siempre en la frontera.** Usar la mejor herramienta de cada momento es una obligación, no un adorno. Aprender continuamente es parte del trabajo.
-5. **Honestidad radical.** Sin humo, sin cifras inventadas, sin testimonios falsos. Te decimos también lo que no te conviene —aunque sea que no nos necesitas.
-6. **Confianza y confidencialidad.** Los datos del cliente se tratan con el mismo cuidado que los nuestros. RGPD por diseño, no como añadido.
+1. **Si no ahorra tiempo o dinero de verdad, no lo construimos.** No medimos líneas de código ni "proyectos de IA" — medimos lo que cambia en tu día a día.
+2. **Quien te escucha es quien programa.** Sin comerciales de por medio vendiendo lo que otro construye después.
+3. **Construimos para que aguante, no para salir del paso.** Pensado para cuando tu negocio crezca, no para la demo de la primera reunión.
+4. **Cambiamos de herramienta antes de que tengas que pedirlo tú.** Aprender lo último no es un extra, es parte del trabajo.
+5. **Si no te conviene, te lo decimos — aunque perdamos la venta.** Sin humo, sin cifras inventadas, sin testimonios falsos.
+6. **Tratamos tus datos como los nuestros.** RGPD de fábrica, no de parche.
 
 ---
 
@@ -95,7 +95,7 @@ Definirnos también es marcar la frontera:
 ## 9. Cómo lo decimos — voz y eslogan
 
 - **Eslogan:** *Convertimos procesos lentos en capacidad para crecer.*
-- **Voz:** presente y directa · sobria, sin jerga · beneficios de negocio antes que tecnología · la IA es la herramienta, no el titular · sin cifras de precio · español · voz de empresa.
+- **Voz:** ver `brand-voice.md` — es el documento operativo de tono (cercano, natural, sin jerga), se actualiza con más frecuencia que esta identidad y no se duplica aquí para evitar que se desincronicen.
 - **Identidad visual:** ver `MARCA.txt` (logo, color `#5B82FF`, tipografía, usos).
 
 ---
