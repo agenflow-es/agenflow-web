@@ -30,16 +30,14 @@ export default async function DevServiciosPage({
         eyebrow="Servicios"
         title={
           <>
-            <span className="text-fg-muted">
-              Distintos servicios, un mismo objetivo:
-            </span>
+            <span className="text-fg-muted">Menos operativa,</span>
             <br />
-            que tu negocio funcione mejor por dentro.
+            más negocio.
           </>
         }
-        subtitle="Desde entender qué te frena hasta construir y mantener el sistema que lo resuelve. Esto es lo que hacemos."
+        subtitle="Entendemos qué te frena y construimos el sistema que lo resuelve, para que crezcas con el mismo equipo."
         primary={{ label: "Cuéntanos tu caso", href: "#" }}
-        proof="Consultoría · Automatización · Software por sector · Presencia online"
+        proof="Consultoría · Automatización · Software a medida · Web con IA"
       />
 
       {/* Services — indexed spec list (4 services) */}
@@ -50,9 +48,9 @@ export default async function DevServiciosPage({
         <Container className="text-center">
           <Reveal>
             <p className="mx-auto max-w-[26ch] font-display text-[clamp(26px,4.4vw,46px)] font-semibold leading-[1.14] tracking-[-0.02em]">
-              <span className="text-fg-muted">¿No sabes cuál necesitas?</span>{" "}
+              <span className="text-fg-muted">Cada mes que lo dejas pasar,</span>{" "}
               <span className="text-fg">
-                Nosotros tampoco, hasta que vemos tu negocio por dentro.
+                tu competencia ya lo está automatizando.
               </span>
             </p>
 
@@ -61,12 +59,12 @@ export default async function DevServiciosPage({
                 href="/contacto"
                 className="inline-flex items-center gap-2 rounded-[var(--radius)] bg-accent px-7 py-4 text-[15px] font-semibold text-accent-fg transition-transform hover:-translate-y-0.5"
               >
-                Cuéntanos tu caso <span aria-hidden>→</span>
+                Reserva tu consultoría <span aria-hidden>→</span>
               </Link>
             </div>
 
             <div className="mt-6 font-label text-[11.5px] uppercase tracking-[0.14em] text-label-adaptive">
-              Gratis · Sin compromiso · Te respondemos en menos de 24 h
+              Una sesión · Sales con un plan, no con un compromiso
             </div>
           </Reveal>
         </Container>

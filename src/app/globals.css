@@ -232,6 +232,12 @@ body {
   from { transform: translateY(-120%); }
   to { transform: translateY(320%); }
 }
+/* ServicesOverview: tab panel fades in when you switch service. */
+@keyframes af-tab-in {
+  from { opacity: 0; transform: translateY(6px); }
+  to { opacity: 1; transform: none; }
+}
+.tab-panel-anim { animation: af-tab-in 0.35s cubic-bezier(0.22, 1, 0.36, 1) both; }
 
 @media (prefers-reduced-motion: reduce) {
   *,
