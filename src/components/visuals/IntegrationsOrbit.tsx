@@ -49,7 +49,7 @@ function Ring({ diameter }: { diameter: number }) {
   return (
     <div
       aria-hidden
-      className="pointer-events-none absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 rounded-full border border-border"
+      className="pointer-events-none absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 rounded-full border border-accent/25"
       style={{ width: diameter, height: diameter }}
     />
   );
