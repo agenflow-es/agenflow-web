@@ -80,9 +80,9 @@ const SERVICES: Service[] = [
   },
   {
     id: "04",
-    tab: "Web con IA",
+    tab: "Presencia online",
     icon: Globe,
-    title: "Webs para la era de la IA",
+    title: "Mejora de presencia online",
     promise: "Que te encuentren donde ahora se busca.",
     body: "La IA cambió cómo te buscan: hoy mucha gente pregunta a ChatGPT antes que a Google. Rehacemos tu web entera —estructura, contenido, diseño y tripas técnicas— para ese mundo.",
     does: [
@@ -92,7 +92,7 @@ const SERVICES: Service[] = [
       { label: "Base técnica rápida", desc: "Web veloz, cuidada y fácil de mantener." },
     ],
     close: "Visible en Google. Y en ChatGPT.",
-    href: "/servicios/webs-ia",
+    href: "/servicios/presencia-online",
   },
 ];
 
