@@ -123,12 +123,12 @@ export default async function DevPresenciaOnlinePage({
             <Reveal>
               <Eyebrow>Compruébalo</Eyebrow>
               <h2 className={`mt-4 max-w-[18ch] ${H2}`}>
-                ¿Qué dice la IA de tu negocio ahora mismo?
+                ¿Te recomienda la IA cuando buscan lo que ofreces?
               </h2>
               <p className="mt-6 max-w-[46ch] text-[16px] leading-relaxed text-fg-muted">
-                Escribe tu negocio y pregúntaselo. Si la IA no te conoce —o
-                cuenta algo que no es—, tus clientes están viendo exactamente
-                eso.
+                Pregúntale lo que preguntaría un cliente que busca tu servicio en
+                tu zona. Si tu negocio no aparece en la respuesta, para ellos
+                tampoco existe.
               </p>
             </Reveal>
 

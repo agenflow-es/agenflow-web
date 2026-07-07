@@ -565,7 +565,7 @@
       "eyebrow": "Una prueba rápida",
       "title": "¿Sabes qué dice la IA de tu negocio ahora mismo?",
       "body": "Escribe el nombre de tu negocio y tu ciudad. Le preguntamos a una IA con acceso a internet y te enseñamos aquí mismo qué sabe de ti. Casi siempre la respuesta sorprende —y ahí se ve el trabajo que hay por hacer.",
-      "placeholder": "Ej.: Cafetería La Esquina, Valencia",
+      "placeholder": "Dime las mejores clínicas dentales de Málaga",
       "loading": "Preguntando a la IA por tu negocio…",
       "answerLabel": "Esto dice la IA",
       "resultCta": "Quiero que la IA me conozca",
