@@ -1,14 +1,26 @@
 "use client";
 
 import { useRef, useState } from "react";
-import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
 import { Container, Logo } from "@/components/ui/primitives";
-import { LocaleSwitcher } from "./LocaleSwitcher";
 import { ThemeToggle } from "@/components/theme/ThemeToggle";
 import { MobileMenu } from "./MobileMenu";
+// Note: the web is Spanish-only for now, so the nav is hardcoded in Spanish and
+// the LocaleSwitcher is not rendered (kept in the codebase to re-enable EN later).
 
 type NavItem = { name: string; href: string };
+
+const TOP_LINKS: NavItem[] = [
+  { name: "Servicios", href: "/servicios" },
+  { name: "Inmueble", href: "/inmueble" },
+  { name: "Consultoría", href: "/consultoria" },
+];
+const RECURSOS: NavItem[] = [
+  { name: "Blog", href: "/recursos/blog" },
+  { name: "Calculadora de ROI", href: "/recursos/calculadora-roi" },
+  { name: "Newsletter", href: "/recursos/newsletter" },
+];
+const NOSOTROS: NavItem = { name: "Nosotros", href: "/nosotros" };
 
 function Dropdown({ label, items }: { label: string; items: NavItem[] }) {
   const [open, setOpen] = useState(false);
@@ -48,7 +60,7 @@ function Dropdown({ label, items }: { label: string; items: NavItem[] }) {
       {open && (
         <div
           role="menu"
-          className="absolute left-0 top-[calc(100%-4px)] min-w-[260px] rounded-[var(--radius-lg)] border border-border bg-surface p-2 shadow-[var(--shadow)]"
+          className="absolute left-0 top-[calc(100%-4px)] min-w-[240px] rounded-[var(--radius-lg)] border border-border bg-surface p-2 shadow-[var(--shadow)]"
         >
           {items.map((it) => (
             <Link
@@ -68,16 +80,6 @@ function Dropdown({ label, items }: { label: string; items: NavItem[] }) {
 }
 
 export function Header() {
-  const nav = useTranslations("nav");
-  const tServices = useTranslations("services");
-  const tSectors = useTranslations("sectors");
-  const tResources = useTranslations("resourcesHub");
-  const serviceItems = tServices.raw("items") as NavItem[];
-  const sectorItems = tSectors.raw("items") as NavItem[];
-  const resourceItems: NavItem[] = (
-    tResources.raw("items") as { name: string; href: string }[]
-  ).map(({ name, href }) => ({ name, href }));
-
   return (
     <header
       className="sticky top-0 z-50 border-b border-border"
@@ -100,42 +102,41 @@ export function Header() {
         </Link>
 
         <nav className="hidden items-center justify-center gap-1 lg:flex">
-          <Dropdown label={nav("services")} items={serviceItems} />
-          <Dropdown label={nav("sectors")} items={sectorItems} />
-          <Dropdown label={nav("resources")} items={resourceItems} />
+          {TOP_LINKS.map((l) => (
+            <Link
+              key={l.href}
+              href={l.href}
+              className="px-3 py-2.5 text-[15px] font-medium text-fg-muted transition hover:text-fg-hover"
+            >
+              {l.name}
+            </Link>
+          ))}
+          <Dropdown label="Recursos" items={RECURSOS} />
           <Link
-            href="/precios"
+            href={NOSOTROS.href}
             className="px-3 py-2.5 text-[15px] font-medium text-fg-muted transition hover:text-fg-hover"
           >
-            {nav("pricing")}
+            {NOSOTROS.name}
           </Link>
         </nav>
 
         <div className="flex items-center justify-self-end gap-2.5">
           <ThemeToggle />
-          {/* Language switcher: desktop only. 98% of traffic is Spanish, so on
-              mobile it's dropped from the header and lives in the footer. */}
-          <div className="hidden lg:flex">
-            <LocaleSwitcher />
-          </div>
           <Link
             href="/contacto"
             className="hidden rounded-[var(--radius)] bg-accent px-[18px] py-2.5 text-[14px] font-semibold text-accent-fg transition hover:-translate-y-0.5 lg:inline-flex"
           >
-            {nav("contact")}
+            Contacto
           </Link>
           <MobileMenu
-            serviceItems={serviceItems}
-            sectorItems={sectorItems}
-            resourceItems={resourceItems}
+            topLinks={TOP_LINKS}
+            recursos={RECURSOS}
+            nosotros={NOSOTROS}
             labels={{
-              services: nav("services"),
-              sectors: nav("sectors"),
-              resources: nav("resources"),
-              pricing: nav("pricing"),
-              cta: nav("contact"),
-              open: nav("menuOpen"),
-              close: nav("menuClose"),
+              recursos: "Recursos",
+              cta: "Contacto",
+              open: "Abrir menú",
+              close: "Cerrar menú",
             }}
           />
         </div>

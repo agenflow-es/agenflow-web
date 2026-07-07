@@ -21,7 +21,9 @@ export async function generateMetadata({
   params: Promise<{ locale: string }>;
 }): Promise<Metadata> {
   const { locale } = await params;
-  return buildMetadata({ locale, key: "legal", path: "/sectores/legal" });
+  // Vertical aparcada: fuera del nav y no indexable por ahora.
+  const meta = await buildMetadata({ locale, key: "legal", path: "/sectores/legal" });
+  return { ...meta, robots: { index: false, follow: false } };
 }
 
 export default async function LegalPage({

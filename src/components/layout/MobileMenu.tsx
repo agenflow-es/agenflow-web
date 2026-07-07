@@ -45,29 +45,23 @@ function Group({
 // sized against the 68px header (collapsing to ~0 height); the portal restores
 // viewport-relative positioning so the panel fills the screen.
 export function MobileMenu({
-  serviceItems,
-  sectorItems,
-  resourceItems,
+  topLinks,
+  recursos,
+  nosotros,
   labels,
 }: {
-  serviceItems: NavItem[];
-  sectorItems: NavItem[];
-  resourceItems: NavItem[];
+  topLinks: NavItem[];
+  recursos: NavItem[];
+  nosotros: NavItem;
   labels: {
-    services: string;
-    sectors: string;
-    resources: string;
-    pricing: string;
+    recursos: string;
     cta: string;
     open: string;
     close: string;
   };
 }) {
   const [open, setOpen] = useState(false);
-  const [mounted, setMounted] = useState(false);
   const close = () => setOpen(false);
-
-  useEffect(() => setMounted(true), []);
 
   useEffect(() => {
     if (!open) return;
@@ -97,7 +91,6 @@ export function MobileMenu({
       </button>
 
       {open &&
-        mounted &&
         createPortal(
           <div
             className="fixed inset-x-0 bottom-0 top-[68px] z-40 lg:hidden"
@@ -115,26 +108,35 @@ export function MobileMenu({
               id="mobile-menu"
               role="dialog"
               aria-modal="true"
-              aria-label={labels.services}
+              aria-label="Menú"
               onClick={(e) => e.stopPropagation()}
               className="absolute inset-x-0 top-0 max-h-full overflow-y-auto border-b border-border bg-surface p-5 shadow-[var(--shadow)]"
             >
-              <Group title={labels.services} items={serviceItems} onNavigate={close} />
-              <Group title={labels.sectors} items={sectorItems} onNavigate={close} />
-              <Group
-                title={labels.resources}
-                items={resourceItems}
-                onNavigate={close}
-              />
-              <div className="mt-2 border-t border-border pt-2">
+              <div className="mb-2">
+                {topLinks.map((it) => (
+                  <Link
+                    key={it.href}
+                    href={it.href}
+                    onClick={close}
+                    className="block rounded-[var(--radius)] px-3 py-2.5 text-[15px] font-semibold text-fg transition hover:bg-surface-2"
+                  >
+                    {it.name}
+                  </Link>
+                ))}
+              </div>
+
+              <Group title={labels.recursos} items={recursos} onNavigate={close} />
+
+              <div className="border-t border-border pt-2">
                 <Link
-                  href="/precios"
+                  href={nosotros.href}
                   onClick={close}
                   className="block rounded-[var(--radius)] px-3 py-3 text-[15px] font-semibold text-fg transition hover:bg-surface-2"
                 >
-                  {labels.pricing}
+                  {nosotros.name}
                 </Link>
               </div>
+
               <Link
                 href="/contacto"
                 onClick={close}

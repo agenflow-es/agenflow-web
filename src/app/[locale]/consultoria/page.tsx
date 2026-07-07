@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import { notFound } from "next/navigation";
 import { setRequestLocale } from "next-intl/server";
 import { Container } from "@/components/ui/primitives";
 import { Reveal } from "@/components/motion/Reveal";
@@ -11,8 +10,9 @@ import { FaqList } from "@/components/layout/FaqList";
 // Dev-only: the paid consultation page (Línea B) — funnel step 1 + SEO landing.
 // Full page in preview before wiring to i18n + the real /consultoria route.
 export const metadata: Metadata = {
-  title: "Dev · Consultoría (preview)",
-  robots: { index: false, follow: false },
+  title: "Consultoría de IA y automatización para pymes | Agenflow",
+  description:
+    "Una sesión para entender tu negocio por dentro y salir con un plan claro: qué automatizar, dónde suma la IA y con qué retorno.",
 };
 
 const CONTACT_HREF = "/contacto?reason=consultoria&subject=consultoria";
@@ -45,7 +45,6 @@ export default async function DevConsultoriaPage({
 }: {
   params: Promise<{ locale: string }>;
 }) {
-  if (process.env.NODE_ENV === "production") notFound();
   const { locale } = await params;
   setRequestLocale(locale);
 

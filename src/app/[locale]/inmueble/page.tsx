@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import { notFound } from "next/navigation";
 import { setRequestLocale } from "next-intl/server";
 import { Building2, Users, Wrench } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
@@ -19,8 +18,9 @@ import { FaqList } from "@/components/layout/FaqList";
 // "próximamente" without revealing the (top-secret) product. Preview before
 // wiring to i18n + the real /inmueble route.
 export const metadata: Metadata = {
-  title: "Dev · Inmueble (preview)",
-  robots: { index: false, follow: false },
+  title: "IA y automatización para el mundo del inmueble | Agenflow",
+  description:
+    "Inmobiliaria, instaladores y administración de fincas: automatizamos e integramos IA en cada eslabón para que no se te escape ni una oportunidad.",
 };
 
 const H2 =
@@ -148,7 +148,6 @@ export default async function DevInmueblePage({
 }: {
   params: Promise<{ locale: string }>;
 }) {
-  if (process.env.NODE_ENV === "production") notFound();
   const { locale } = await params;
   setRequestLocale(locale);
 

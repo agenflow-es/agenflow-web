@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import { notFound } from "next/navigation";
 import { setRequestLocale } from "next-intl/server";
 import { Blocks, PenTool, Sparkles, LayoutDashboard } from "lucide-react";
 import { Container, Eyebrow } from "@/components/ui/primitives";
@@ -17,8 +16,9 @@ import { FaqList } from "@/components/layout/FaqList";
 // → one system", and a 5-phase build (more steps than automation, to signal a
 // bigger project). Preview before wiring to i18n + the real route.
 export const metadata: Metadata = {
-  title: "Dev · Software a medida (preview)",
-  robots: { index: false, follow: false },
+  title: "Software a medida para tu empresa | Agenflow",
+  description:
+    "Cuando una automatización no basta: una plataforma dedicada que reúne tus procesos, tus datos y tu IA en un solo sistema hecho para ti.",
 };
 
 const H2 =
@@ -109,7 +109,6 @@ export default async function DevSoftwareMedidaPage({
 }: {
   params: Promise<{ locale: string }>;
 }) {
-  if (process.env.NODE_ENV === "production") notFound();
   const { locale } = await params;
   setRequestLocale(locale);
 

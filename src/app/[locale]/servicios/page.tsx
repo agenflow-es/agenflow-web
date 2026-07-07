@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import { notFound } from "next/navigation";
 import { setRequestLocale } from "next-intl/server";
 import { Container } from "@/components/ui/primitives";
 import { Reveal } from "@/components/motion/Reveal";
@@ -10,8 +9,9 @@ import { ServicesOverview } from "@/components/sections/ServicesOverview";
 // Dev-only: the single services page (Línea B). Full page in preview before
 // wiring to i18n + the real /servicios route. Never indexed.
 export const metadata: Metadata = {
-  title: "Dev · Servicios (preview)",
-  robots: { index: false, follow: false },
+  title: "Servicios de automatización e IA para pymes | Agenflow",
+  description:
+    "Consultoría, automatización de procesos, software a medida y mejora de presencia online. Empiezas por el servicio que tu negocio necesita hoy.",
 };
 
 export default async function DevServiciosPage({
@@ -19,7 +19,6 @@ export default async function DevServiciosPage({
 }: {
   params: Promise<{ locale: string }>;
 }) {
-  if (process.env.NODE_ENV === "production") notFound();
   const { locale } = await params;
   setRequestLocale(locale);
 

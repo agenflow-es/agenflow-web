@@ -3,22 +3,22 @@ import { routing } from "@/i18n/routing";
 import { siteConfig } from "@/lib/site";
 import { getPosts } from "@/content/blog/posts";
 
+// Spanish-only for now: the sitemap lists the /es URLs (no EN alternates yet).
 const paths = [
   "",
-  "/servicios/consultoria-ia",
+  "/servicios",
   "/servicios/automatizacion-ia",
-  "/servicios/desarrollo-software",
+  "/servicios/software-medida",
   "/servicios/presencia-online",
-  "/sectores/legal",
-  "/sectores/inmobiliario-construccion",
-  "/precios",
+  "/consultoria",
+  "/inmueble",
   "/nosotros",
   "/trabaja-con-nosotros",
   "/recursos",
   "/recursos/blog",
   "/recursos/newsletter",
   "/recursos/calculadora-roi",
-  // Blog posts (same slug across locales).
+  // Blog posts.
   ...getPosts(routing.defaultLocale).map((p) => `/recursos/blog/${p.slug}`),
   "/contacto",
   "/privacidad",
@@ -27,15 +27,10 @@ const paths = [
 ];
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const { locales, defaultLocale } = routing;
+  const { defaultLocale } = routing;
 
   return paths.map((path) => ({
     url: `${siteConfig.url}/${defaultLocale}${path}`,
-    alternates: {
-      languages: Object.fromEntries(
-        locales.map((l) => [l, `${siteConfig.url}/${l}${path}`]),
-      ),
-    },
     changeFrequency: "monthly",
     priority: path === "" ? 1 : 0.7,
   }));

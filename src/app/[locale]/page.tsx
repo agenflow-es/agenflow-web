@@ -1,11 +1,11 @@
 import { setRequestLocale } from "next-intl/server";
-import { Hero } from "@/components/sections/Hero";
-import { Services } from "@/components/sections/Services";
-import { Sectors } from "@/components/sections/Sectors";
-import { Security } from "@/components/sections/Security";
-import { WhyUs } from "@/components/sections/WhyUs";
-import { FinalCta } from "@/components/sections/FinalCta";
-import { Faq } from "@/components/sections/Faq";
+import { HeroLineaB } from "@/components/sections/HeroLineaB";
+import { PainBlock } from "@/components/sections/PainBlock";
+import { ProcessSteps } from "@/components/sections/ProcessSteps";
+import { SystemsInAction } from "@/components/sections/SystemsInAction";
+import { ProductShowcase } from "@/components/sections/ProductShowcase";
+import { Founder } from "@/components/sections/Founder";
+import { ClosingCta } from "@/components/sections/ClosingCta";
 
 export default async function HomePage({
   params,
@@ -17,13 +17,26 @@ export default async function HomePage({
 
   return (
     <>
-      <Hero />
-      <Services />
-      <Sectors />
-      <Security />
-      <WhyUs />
-      <FinalCta />
-      <Faq />
+      <HeroLineaB
+        eyebrow="Automatización e IA para pymes"
+        title={
+          <>
+            <span className="text-fg-muted">No hablamos de IA.</span>
+            <br />
+            La ponemos a funcionar en tu negocio.
+          </>
+        }
+        subtitle="Automatizamos el trabajo manual que te frena —facturas, datos, informes, seguimientos— para que crezcas con el mismo equipo. Convertimos procesos lentos en capacidad para crecer."
+        primary={{ label: "Cuéntanos tu caso", href: "/contacto" }}
+        proof="Consultoría · Automatización · Software a medida"
+      />
+
+      <PainBlock />
+      <ProcessSteps />
+      <SystemsInAction />
+      <ProductShowcase />
+      <Founder />
+      <ClosingCta />
     </>
   );
 }
