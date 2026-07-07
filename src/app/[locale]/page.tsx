@@ -4,7 +4,6 @@ import { PainBlock } from "@/components/sections/PainBlock";
 import { ProcessSteps } from "@/components/sections/ProcessSteps";
 import { SystemsInAction } from "@/components/sections/SystemsInAction";
 import { ProductShowcase } from "@/components/sections/ProductShowcase";
-import { Founder } from "@/components/sections/Founder";
 import { ClosingCta } from "@/components/sections/ClosingCta";
 
 export default async function HomePage({
@@ -35,7 +34,6 @@ export default async function HomePage({
       <ProcessSteps />
       <SystemsInAction />
       <ProductShowcase />
-      <Founder />
       <ClosingCta />
     </>
   );

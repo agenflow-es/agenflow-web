@@ -47,7 +47,8 @@ export function ProcessSteps() {
           </h2>
         </Reveal>
 
-        <div className="mt-14">
+        {/* Desktop/laptop: the scroll-pinned narrative (the signature effect). */}
+        <div className="mt-14 hidden lg:block">
           <ScrollNarrative
             steps={STEPS}
             renderPanel={(active) => (
@@ -64,6 +65,27 @@ export function ProcessSteps() {
               </div>
             )}
           />
+        </div>
+
+        {/* Mobile: plain fixed cards (no pinning — the sticky panel overlapped
+            the text on small screens). */}
+        <div className="mt-10 space-y-4 lg:hidden">
+          {STEPS.map((step) => (
+            <div
+              key={step.id}
+              className="rounded-2xl border border-border bg-gradient-to-b from-surface to-bg p-6"
+            >
+              <div className="font-label text-[12px] font-medium uppercase tracking-[0.14em] text-accent">
+                {step.label}
+              </div>
+              <h3 className="mt-2 font-display text-[21px] font-semibold leading-tight text-fg">
+                {step.title}
+              </h3>
+              <div className="mt-2.5 text-[15px] leading-relaxed text-fg-muted">
+                {step.body}
+              </div>
+            </div>
+          ))}
         </div>
       </Container>
     </section>
