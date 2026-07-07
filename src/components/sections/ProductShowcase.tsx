@@ -179,11 +179,12 @@ export function ProductShowcase() {
         <Reveal>
           <Eyebrow>Producto propio</Eyebrow>
           <h2 className="mt-4 max-w-[22ch] font-display text-[clamp(26px,4vw,42px)] font-semibold leading-[1.1] tracking-[-0.02em] text-fg">
-            Hacemos que el negocio del inmueble funcione mejor por dentro.
+            Y en el inmueble, hemos ido un paso más allá.
           </h2>
-          <p className="mt-4 max-w-[54ch] text-[16px] leading-relaxed text-fg-muted">
-            Productos nuestros para el mundo del inmueble: uno para inmobiliarias,
-            otro para administración de fincas.
+          <p className="mt-4 max-w-[56ch] text-[16px] leading-relaxed text-fg-muted">
+            No solo construimos sistemas a medida para tu negocio: en el sector
+            que mejor conocemos, el inmueble, tenemos <strong className="font-semibold text-fg">producto propio</strong>. Uno para
+            inmobiliarias y otro para administración de fincas.
           </p>
         </Reveal>
 
