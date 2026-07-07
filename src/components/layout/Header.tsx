@@ -10,8 +10,13 @@ import { MobileMenu } from "./MobileMenu";
 
 type NavItem = { name: string; href: string };
 
+const SERVICIOS: NavItem[] = [
+  { name: "Automatización de procesos", href: "/servicios/automatizacion-ia" },
+  { name: "Software a medida", href: "/servicios/software-medida" },
+  { name: "Presencia online", href: "/servicios/presencia-online" },
+  { name: "Ver todos los servicios", href: "/servicios" },
+];
 const TOP_LINKS: NavItem[] = [
-  { name: "Servicios", href: "/servicios" },
   { name: "Inmueble", href: "/inmueble" },
   { name: "Consultoría", href: "/consultoria" },
 ];
@@ -102,6 +107,7 @@ export function Header() {
         </Link>
 
         <nav className="hidden items-center justify-center gap-1 lg:flex">
+          <Dropdown label="Servicios" items={SERVICIOS} />
           {TOP_LINKS.map((l) => (
             <Link
               key={l.href}
@@ -129,10 +135,12 @@ export function Header() {
             Contacto
           </Link>
           <MobileMenu
+            servicios={SERVICIOS}
             topLinks={TOP_LINKS}
             recursos={RECURSOS}
             nosotros={NOSOTROS}
             labels={{
+              servicios: "Servicios",
               recursos: "Recursos",
               cta: "Contacto",
               open: "Abrir menú",
