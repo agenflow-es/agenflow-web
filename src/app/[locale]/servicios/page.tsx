@@ -6,8 +6,8 @@ import { Link } from "@/i18n/navigation";
 import { HeroLineaB } from "@/components/sections/HeroLineaB";
 import { ServicesOverview } from "@/components/sections/ServicesOverview";
 
-// Dev-only: the single services page (Línea B). Full page in preview before
-// wiring to i18n + the real /servicios route. Never indexed.
+// The services overview page (Línea B): a tabbed navigator across the four
+// services, each linking to its dedicated landing.
 export const metadata: Metadata = {
   title: "Servicios de automatización e IA para pymes | Agenflow",
   description:
@@ -35,8 +35,8 @@ export default async function DevServiciosPage({
           </>
         }
         subtitle="Entendemos qué te frena y construimos el sistema que lo resuelve, para que crezcas con el mismo equipo."
-        primary={{ label: "Cuéntanos tu caso", href: "#" }}
-        proof="Consultoría · Automatización · Software a medida · Web con IA"
+        primary={{ label: "Cuéntanos tu caso", href: "/contacto" }}
+        proof="Consultoría · Automatización · Software a medida · Presencia online"
       />
 
       {/* Services — indexed spec list (4 services) */}
@@ -46,8 +46,9 @@ export default async function DevServiciosPage({
       <section className="border-t border-border bg-surface py-[clamp(80px,13vw,168px)]">
         <Container className="text-center">
           <Reveal>
-            <p className="mx-auto max-w-[26ch] font-display text-[clamp(26px,4.4vw,46px)] font-semibold leading-[1.14] tracking-[-0.02em]">
-              <span className="text-fg-muted">Cada mes que lo dejas pasar,</span>{" "}
+            <p className="mx-auto max-w-[24ch] font-display text-[clamp(26px,4.4vw,46px)] font-semibold leading-[1.14] tracking-[-0.02em]">
+              <span className="text-fg-muted">Cada mes que lo dejas pasar,</span>
+              <br />
               <span className="text-fg">
                 tu competencia ya lo está automatizando.
               </span>

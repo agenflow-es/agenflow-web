@@ -155,13 +155,7 @@ export default async function DevInmueblePage({
     <>
       <HeroLineaB
         eyebrow="El mundo del inmueble"
-        title={
-          <>
-            <span className="text-fg-muted">Inmobiliaria, instaladores, fincas.</span>
-            <br />
-            Tu negocio del inmueble, funcionando por dentro.
-          </>
-        }
+        title={<>Tu negocio del inmueble, funcionando por dentro.</>}
         subtitle="Automatizamos e integramos IA en cada eslabón de tu negocio, del primer contacto con el cliente a la gestión de la finca, para que no se te escape ni una oportunidad y llegues a todo con el equipo que ya tienes."
         primary={{ label: "Cuéntanos tu caso", href: CONTACT_HREF }}
         proof="Inmobiliaria · Instaladores · Administración de fincas"

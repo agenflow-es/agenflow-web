@@ -14,10 +14,11 @@ export function ClosingCta() {
     <section className="border-t border-border bg-surface py-[clamp(80px,13vw,168px)]">
       <Container className="text-center">
         <Reveal>
-          <p className="mx-auto max-w-[30ch] font-display text-[clamp(26px,4.4vw,46px)] font-semibold leading-[1.14] tracking-[-0.02em]">
+          <p className="mx-auto max-w-[26ch] font-display text-[clamp(26px,4.4vw,46px)] font-semibold leading-[1.14] tracking-[-0.02em]">
             <span className="text-fg-muted">
               La IA ya está aquí. Los pocos con un plan, liderarán.
-            </span>{" "}
+            </span>
+            <br />
             <span className="text-fg">Nosotros construimos para esos pocos.</span>
           </p>
 

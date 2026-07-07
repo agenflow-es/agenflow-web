@@ -19,13 +19,22 @@ import { cn } from "@/lib/utils";
 function Word({
   children,
   progress,
-  range,
+  start,
+  end,
 }: {
   children: string;
   progress: MotionValue<number>;
-  range: [number, number];
+  start: number;
+  end: number;
 }) {
-  const opacity = useTransform(progress, range, [0.12, 1]);
+  // Explicit 4-stop map: faint until its turn (start), ramp to solid (end), and
+  // then HELD solid all the way to the end of the scroll (1) — the word never
+  // fades back out once revealed.
+  const opacity = useTransform(
+    progress,
+    [0, start, end, 1],
+    [0.12, 0.12, 1, 1],
+  );
   return (
     <motion.span style={{ opacity }}>
       {children}
@@ -67,20 +76,29 @@ export function TextReveal({
   }
 
   const total = lines.reduce((n, l) => n + l.split(" ").length, 0);
+  // Finish revealing well before the end of the scroll (COMPLETE), so from there
+  // to the end the whole sentence stays fully visible (held) while still pinned —
+  // instead of the last word landing just as the section scrolls away.
+  const COMPLETE = 0.6;
   let idx = 0;
 
   return (
-    <div ref={ref} className={cn("relative h-[150vh]", containerClassName)}>
+    <div ref={ref} className={cn("relative h-[130vh]", containerClassName)}>
       <div className="sticky top-0 flex h-screen items-center justify-center">
         <p className={className}>
           {lines.map((line, li) => (
             <span key={li}>
               {line.split(" ").map((word) => {
                 const i = idx++;
-                const start = i / total;
-                const end = start + 1 / total;
+                const start = (i / total) * COMPLETE;
+                const end = ((i + 1) / total) * COMPLETE;
                 return (
-                  <Word key={i} progress={scrollYProgress} range={[start, end]}>
+                  <Word
+                    key={i}
+                    progress={scrollYProgress}
+                    start={start}
+                    end={end}
+                  >
                     {word}
                   </Word>
                 );
