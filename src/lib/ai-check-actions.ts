@@ -32,7 +32,7 @@ const NOT_FOUND_MESSAGE: Record<"es" | "en", string> = {
 // (Vercel) instances don't share memory, so for production this should move to
 // a durable store (Vercel KV / Upstash Redis). Good enough as a first guard.
 const WINDOW_MS = 10 * 60 * 1000;
-const MAX_PER_WINDOW = 5;
+const MAX_PER_WINDOW = 3;
 const hits = new Map<string, number[]>();
 
 function rateLimited(ip: string): boolean {
@@ -84,16 +84,17 @@ export async function checkAiVisibility(input: unknown): Promise<AiCheckResult> 
 
   const system =
     locale === "en"
-      ? "The user writes what a potential customer would ask an AI assistant to find a business like theirs (for example: 'the best dental clinics in Málaga'); sometimes they may write a business name directly. Use web search and answer that query the way an AI assistant would. ALWAYS START your reply with a tag: write exactly [NO_ENCONTRADO] if there's barely any reliable information or you can't give real names; or [ENCONTRADO] if you can answer. If the tag is [NO_ENCONTRADO], add nothing after it. If the tag is [ENCONTRADO], after it write 2–3 very short sentences (about 50 words max) in plain running text —no headings, no lists, no bullets, no emojis, no bold, no markdown— naming the real businesses that actually come up or are recommended in the answer, so the user can see whether theirs is there or not. No preamble, don't comment on the query, don't end with questions or offers, and never invent data or cite URLs. Answer in English."
-      : "El usuario escribe lo que preguntaría un posible cliente a un asistente de IA para encontrar un negocio como el suyo (por ejemplo: «las mejores clínicas dentales de Málaga»); a veces puede escribir directamente el nombre de un negocio. Usa la búsqueda web y responde a esa consulta como lo haría un asistente de IA. EMPIEZA SIEMPRE tu respuesta con una etiqueta: escribe exactamente [NO_ENCONTRADO] si apenas hay información fiable o no puedes dar nombres reales; o [ENCONTRADO] si sí puedes responder. Si la etiqueta es [NO_ENCONTRADO], no añadas nada después. Si la etiqueta es [ENCONTRADO], tras ella escribe 2 o 3 frases muy breves (máximo unas 50 palabras) en texto plano y corrido —sin títulos, sin listas, sin viñetas, sin emojis, sin negritas y sin ningún markdown— nombrando los negocios reales que aparecen o se recomiendan en la respuesta, para que el usuario pueda ver si el suyo está o no. No añadas introducción ni comentes la consulta, no termines con preguntas ni ofrecimientos, y nunca inventes datos ni cites URLs. Responde en español.";
+      ? "The user writes what a potential customer would ask an AI assistant to find a business like theirs (for example: 'the best dental clinics in Málaga'); sometimes they may write a business name directly. Use web search and answer that query the way an AI assistant would. ALWAYS START your reply with a tag: write exactly [NO_ENCONTRADO] if there's barely any reliable information or you can't give real names; or [ENCONTRADO] if you can answer. If the tag is [NO_ENCONTRADO], add nothing after it. If the tag is [ENCONTRADO], after it write 2 very short sentences (about 40 words max) in plain running text —no headings, no lists, no bullets, no emojis, no bold, no markdown— naming at most 3 or 4 of the real businesses that come up or are recommended, so the user can see whether theirs is there or not. No preamble, don't comment on the query, don't end with questions or offers, and never invent data or cite URLs. Answer in English."
+      : "El usuario escribe lo que preguntaría un posible cliente a un asistente de IA para encontrar un negocio como el suyo (por ejemplo: «las mejores clínicas dentales de Málaga»); a veces puede escribir directamente el nombre de un negocio. Usa la búsqueda web y responde a esa consulta como lo haría un asistente de IA. EMPIEZA SIEMPRE tu respuesta con una etiqueta: escribe exactamente [NO_ENCONTRADO] si apenas hay información fiable o no puedes dar nombres reales; o [ENCONTRADO] si sí puedes responder. Si la etiqueta es [NO_ENCONTRADO], no añadas nada después. Si la etiqueta es [ENCONTRADO], tras ella escribe 2 frases muy breves (máximo unas 40 palabras) en texto plano y corrido —sin títulos, sin listas, sin viñetas, sin emojis, sin negritas y sin ningún markdown— nombrando como mucho 3 o 4 de los negocios reales que aparecen o se recomiendan, para que el usuario pueda ver si el suyo está o no. No añadas introducción ni comentes la consulta, no termines con preguntas ni ofrecimientos, y nunca inventes datos ni cites URLs. Responde en español.";
 
   try {
     const client = new Anthropic({ apiKey });
     const response = await client.messages.create({
       model: MODEL,
-      max_tokens: 500,
+      max_tokens: 220,
       system,
-      tools: [{ type: "web_search_20260209", name: "web_search", max_uses: 3 }],
+      // max_uses limita las búsquedas web (lo más caro) por llamada.
+      tools: [{ type: "web_search_20260209", name: "web_search", max_uses: 2 }],
       messages: [{ role: "user", content: business }],
     });
 
