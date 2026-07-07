@@ -1,10 +1,23 @@
-import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
 import { Container, Logo } from "@/components/ui/primitives";
-import { LocaleSwitcher } from "./LocaleSwitcher";
 import { siteConfig } from "@/lib/site";
+// Spanish-only for now: footer links hardcoded in Spanish, LocaleSwitcher not
+// rendered (kept in the codebase to re-enable EN later).
 
 type NavItem = { name: string; href: string };
+
+const SERVICIOS: NavItem[] = [
+  { name: "Automatización de procesos", href: "/servicios/automatizacion-ia" },
+  { name: "Software a medida", href: "/servicios/software-medida" },
+  { name: "Presencia online", href: "/servicios/presencia-online" },
+  { name: "Consultoría", href: "/consultoria" },
+  { name: "Inmueble", href: "/inmueble" },
+];
+const RECURSOS: NavItem[] = [
+  { name: "Blog", href: "/recursos/blog" },
+  { name: "Calculadora de ROI", href: "/recursos/calculadora-roi" },
+  { name: "Newsletter", href: "/recursos/newsletter" },
+];
 
 function FooterLink({
   href,
@@ -32,15 +45,10 @@ function ColTitle({ children }: { children: React.ReactNode }) {
 }
 
 export function Footer() {
-  const t = useTranslations("footer");
-  const nav = useTranslations("nav");
-  const tServices = useTranslations("services");
-  const tSectors = useTranslations("sectors");
-  const serviceItems = tServices.raw("items") as NavItem[];
-  const sectorItems = tSectors.raw("items") as NavItem[];
-
   return (
-    <footer className="border-t border-border bg-surface">
+    // Footer is always dark, in both themes: data-theme="dark" re-declares the
+    // dark tokens for this subtree, so bg/text/border flip regardless of the page theme.
+    <footer data-theme="dark" className="border-t border-border bg-surface text-fg">
       <Container className="pb-8 pt-[clamp(48px,7vw,80px)]">
         <div className="grid gap-10 md:grid-cols-[1.4fr_repeat(3,1fr)]">
           <div className="min-w-[220px]">
@@ -51,13 +59,13 @@ export function Footer() {
               </span>
             </div>
             <p className="max-w-[30ch] text-sm leading-[1.55] text-fg-muted">
-              {t("tagline")}
+              Convertimos procesos lentos en capacidad para crecer.
             </p>
           </div>
 
           <div>
-            <ColTitle>{t("groups.services")}</ColTitle>
-            {serviceItems.map((l) => (
+            <ColTitle>Servicios</ColTitle>
+            {SERVICIOS.map((l) => (
               <FooterLink key={l.href} href={l.href}>
                 {l.name}
               </FooterLink>
@@ -65,8 +73,8 @@ export function Footer() {
           </div>
 
           <div>
-            <ColTitle>{t("groups.sectors")}</ColTitle>
-            {sectorItems.map((l) => (
+            <ColTitle>Recursos</ColTitle>
+            {RECURSOS.map((l) => (
               <FooterLink key={l.href} href={l.href}>
                 {l.name}
               </FooterLink>
@@ -74,10 +82,9 @@ export function Footer() {
           </div>
 
           <div>
-            <ColTitle>{t("groups.company")}</ColTitle>
-            <FooterLink href="/nosotros">{t("about")}</FooterLink>
-            <FooterLink href="/trabaja-con-nosotros">{t("careers")}</FooterLink>
-            <FooterLink href="/precios">{nav("pricing")}</FooterLink>
+            <ColTitle>Empresa</ColTitle>
+            <FooterLink href="/nosotros">Sobre nosotros</FooterLink>
+            <FooterLink href="/trabaja-con-nosotros">Trabaja con nosotros</FooterLink>
             <a
               href={`mailto:${siteConfig.contactEmail}`}
               className="mb-2.5 block text-[14.5px] text-fg-muted transition hover:text-fg-hover"
@@ -99,18 +106,17 @@ export function Footer() {
           <span className="text-[13px] text-fg-faint">
             © 2026 Agenflow ·{" "}
             <Link href="/aviso-legal" className="transition hover:text-fg-hover">
-              {t("legalNotice")}
+              Aviso legal
             </Link>{" "}
             ·{" "}
             <Link href="/privacidad" className="transition hover:text-fg-hover">
-              {t("privacy")}
+              Privacidad
             </Link>{" "}
             ·{" "}
             <Link href="/cookies" className="transition hover:text-fg-hover">
-              {t("cookies")}
+              Cookies
             </Link>
           </span>
-          <LocaleSwitcher />
         </div>
       </Container>
     </footer>

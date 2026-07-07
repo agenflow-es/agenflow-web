@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<meta name="design_doc_mode" content="canvas">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&family=Space+Grotesk:wght@600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  *{ box-sizing:border-box; }
+  .frame-label{ font-family:'Geist Mono',monospace; font-size:19px; letter-spacing:0.04em; text-transform:uppercase; color:#7e88a6; margin-bottom:14px; cursor:grab; }
+</style>
+</helmet>
+
+<!-- ================= BOARD TITLE ================= -->
+<div style="position:absolute; left:0; top:0; width:4900px;">
+  <div data-drags-parent="1" style="font-family:'Geist Mono',monospace; font-size:22px; letter-spacing:0.18em; text-transform:uppercase; color:#5B82FF; cursor:grab;">Agenflow · Instagram — Línea B</div>
+  <div style="font-family:Inter,sans-serif; font-weight:800; font-size:38px; color:#14161D; margin-top:6px;">Tema light · esquemas e infografías · ritmo de feed</div>
+  <div style="font-family:Inter,sans-serif; font-weight:400; font-size:19px; color:#5d6275; margin-top:4px; max-width:1280px;">El mismo sistema técnico en dos temas (dark + light) para alternar en el feed, más posts visuales resueltos como esquemas e infografías estáticas — el feed no admite movimiento. Sin rejilla en los posts blancos; rejilla muy tenue en los oscuros.</div>
+</div>
+
+<!-- ================= SECTION 1 ================= -->
+<div style="position:absolute; left:0; top:150px; width:1200px;">
+  <div data-drags-parent="1" style="display:flex; align-items:baseline; gap:14px; cursor:grab;">
+    <span style="font-family:Inter,sans-serif; font-weight:900; font-size:42px; color:#5B82FF; line-height:1;">1</span>
+    <span style="font-family:Inter,sans-serif; font-weight:800; font-size:28px; color:#14161D;">Tema light — mismas plantillas</span>
+  </div>
+  <div style="font-family:Inter,sans-serif; font-weight:400; font-size:19px; color:#5d6275; margin-top:6px;">Fondo blanco limpio (sin rejilla), tinta #14161D, isotipo en su versión oscura. Mismo chrome, márgenes y reglas que el dark.</div>
+</div>
+
+<!-- LIGHT · PORTADA -->
+<div style="position:absolute; left:0; top:300px; width:1080px;">
+  <div data-drags-parent="1" class="frame-label">Light · Portada</div>
+  <div style="position:relative; width:1080px; height:1350px; border-radius:6px; overflow:hidden; box-shadow:0 24px 60px rgba(0,0,0,.18); background:#FFFFFF; color:#14161D; font-family:Inter,sans-serif;">
+    <div style="position:absolute; inset:48px; border:1px solid rgba(20,22,29,.14);"></div>
+    <div style="position:absolute; left:40px; top:40px; color:#5B82FF; font-family:'Geist Mono',monospace; font-size:24px; line-height:1;">+</div>
+    <div style="position:absolute; right:40px; top:40px; color:#5B82FF; font-family:'Geist Mono',monospace; font-size:24px; line-height:1;">+</div>
+    <div style="position:absolute; left:40px; bottom:34px; color:#5B82FF; font-family:'Geist Mono',monospace; font-size:24px; line-height:1;">+</div>
+    <div style="position:absolute; right:40px; bottom:34px; color:#5B82FF; font-family:'Geist Mono',monospace; font-size:24px; line-height:1;">+</div>
+    <div style="position:absolute; inset:48px; padding:60px; display:flex; flex-direction:column; justify-content:space-between;">
+      <div style="display:flex; justify-content:space-between; align-items:center; font-family:'Geist Mono',monospace; font-size:23px; color:#8a8f9c; border-bottom:1px solid rgba(20,22,29,.14); padding-bottom:26px;">
+        <span>agenflow · serie-01</span>
+        <span style="color:#5B82FF;">[ 01 / 09 ]</span>
+      </div>
+      <div style="display:flex; align-items:center; gap:40px;">
+        <div style="width:150px; height:150px; flex:none;">
+          <svg viewBox="0 0 64 64" width="100%" height="100%"><polygon points="8,50 32,50 44,40 20,40" fill="#344f9f"></polygon><polygon points="15,38 39,38 51,28 27,28" fill="#4b6cd7"></polygon><polygon points="22,26 46,26 58,16 34,16" fill="#5b82ff"></polygon></svg>
+        </div>
+        <div style="flex:none; width:1px; height:150px; background:rgba(20,22,29,.16);"></div>
+        <div style="font-family:'Geist Mono',monospace; font-size:22px; line-height:1.8; color:#9a9eaa;">
+          <div>capa_01 · captura</div>
+          <div>capa_02 · proceso</div>
+          <div>capa_03 · resultado</div>
+        </div>
+      </div>
+      <h1 style="margin:0; font-weight:700; font-size:72px; line-height:1.06; letter-spacing:-0.022em; color:#14161D;">7 tareas que tu pyme ya puede dejar de hacer <span style="color:#5B82FF;">a mano</span></h1>
+      <div style="display:flex; justify-content:space-between; align-items:center; font-family:'Geist Mono',monospace; font-size:23px; color:#8a8f9c; border-top:1px solid rgba(20,22,29,.14); padding-top:26px;">
+        <span style="color:#14161D;">// guárdalo 🔖</span>
+        <span>agenflow.es</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- LIGHT · CONTENIDO -->
+<div style="position:absolute; left:1200px; top:300px; width:1080px;">
+  <div data-drags-parent="1" class="frame-label">Light · Contenido</div>
+  <div style="position:relative; width:1080px; height:1350px; border-radius:6px; overflow:hidden; box-shadow:0 24px 60px rgba(0,0,0,.18); background:#FFFFFF; color:#14161D; font-family:Inter,sans-serif;">
+    <div style="position:absolute; inset:48px; border:1px solid rgba(20,22,29,.14);"></div>
+    <div style="position:absolute; inset:48px; padding:60px; display:flex; flex-direction:column; justify-content:space-between;">
+      <div style="display:flex; justify-content:space-between; align-items:center; font-family:'Geist Mono',monospace; font-size:23px; color:#8a8f9c; border-bottom:1px solid rgba(20,22,29,.14); padding-bottom:26px;">
+        <span>tarea-01 · datos</span>
+        <span style="color:#5B82FF;">[ 02 / 09 ]</span>
+      </div>
+      <h2 style="margin:0; font-weight:700; font-size:58px; line-height:1.05; letter-spacing:-0.02em; color:#14161D;">Pasar datos de un sitio a otro</h2>
+      <div style="display:flex; align-items:center; justify-content:center; gap:0;">
+        <div style="flex:1; text-align:center; border:1px solid rgba(20,22,29,.2); border-radius:4px; padding:34px 10px; font-family:'Geist Mono',monospace; font-size:30px; color:#3a3f4d;">email</div>
+        <div style="font-family:'Geist Mono',monospace; font-size:30px; color:#5B82FF; padding:0 18px;">──▸</div>
+        <div style="flex:1; text-align:center; border:1px solid rgba(20,22,29,.2); border-radius:4px; padding:34px 10px; font-family:'Geist Mono',monospace; font-size:30px; color:#3a3f4d;">hoja</div>
+        <div style="font-family:'Geist Mono',monospace; font-size:30px; color:#5B82FF; padding:0 18px;">──▸</div>
+        <div style="flex:1; text-align:center; border:1px solid #5B82FF; background:rgba(91,130,255,.1); border-radius:4px; padding:34px 10px; font-family:'Geist Mono',monospace; font-size:30px; color:#14161D;">CRM</div>
+      </div>
+      <p style="margin:0; font-weight:400; font-size:36px; line-height:1.3; color:#5d6275;">Lo que hoy te roba media mañana, <span style="color:#14161D; font-weight:600;">hecho solo</span>.</p>
+      <div style="display:flex; justify-content:space-between; align-items:center; font-family:'Geist Mono',monospace; font-size:23px; color:#8a8f9c; border-top:1px solid rgba(20,22,29,.14); padding-top:26px;">
+        <span style="color:#5B82FF;">media mañana → 0 min</span>
+        <span>agenflow.es</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- LIGHT · CIERRE -->
+<div style="position:absolute; left:2400px; top:300px; width:1080px;">
+  <div data-drags-parent="1" class="frame-label">Light · Cierre / CTA</div>
+  <div style="position:relative; width:1080px; height:1350px; border-radius:6px; overflow:hidden; box-shadow:0 24px 60px rgba(0,0,0,.18); background:#FFFFFF; color:#14161D; font-family:Inter,sans-serif;">
+    <div style="position:absolute; inset:48px; border:1px solid rgba(20,22,29,.14);"></div>
+    <div style="position:absolute; left:40px; top:40px; color:#5B82FF; font-family:'Geist Mono',monospace; font-size:24px; line-height:1;">+</div>
+    <div style="position:absolute; right:40px; bottom:34px; color:#5B82FF; font-family:'Geist Mono',monospace; font-size:24px; line-height:1;">+</div>
+    <div style="position:absolute; inset:48px; padding:60px; display:flex; flex-direction:column; justify-content:space-between;">
+      <div style="display:flex; justify-content:space-between; align-items:center; font-family:'Geist Mono',monospace; font-size:23px; color:#8a8f9c; border-bottom:1px solid rgba(20,22,29,.14); padding-bottom:26px;">
+        <span>cierre · cta</span>
+        <span style="color:#5B82FF;">[ 09 / 09 ]</span>
+      </div>
+      <div style="width:150px; height:150px;">
+        <svg viewBox="0 0 64 64" width="100%" height="100%"><polygon points="8,50 32,50 44,40 20,40" fill="#344f9f"></polygon><polygon points="15,38 39,38 51,28 27,28" fill="#4b6cd7"></polygon><polygon points="22,26 46,26 58,16 34,16" fill="#5b82ff"></polygon></svg>
+      </div>
+      <h2 style="margin:0; font-weight:700; font-size:68px; line-height:1.04; letter-spacing:-0.022em; color:#14161D;">¿Cuál te quita <span style="color:#5B82FF;">más tiempo</span>?<br><span style="font-size:42px; font-weight:400; color:#5d6275;">Te decimos por cuál empezar.</span></h2>
+      <div style="font-family:'Geist Mono',monospace; font-size:30px; color:#14161D; background:rgba(91,130,255,.08); border:1px solid rgba(91,130,255,.35); border-radius:6px; padding:28px 32px;"><span style="color:#5B82FF;">&gt;</span> consultoría <span style="color:#5B82FF;">--en-bio</span></div>
+      <div style="display:flex; justify-content:flex-end; align-items:center; font-family:'Geist Mono',monospace; font-size:23px; color:#8a8f9c; border-top:1px solid rgba(20,22,29,.14); padding-top:26px;">
+        <span>agenflow.es</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- ================= SECTION 2 ================= -->
+<div style="position:absolute; left:0; top:1830px; width:1200px;">
+  <div data-drags-parent="1" style="display:flex; align-items:baseline; gap:14px; cursor:grab;">
+    <span style="font-family:Inter,sans-serif; font-weight:900; font-size:42px; color:#5B82FF; line-height:1;">2</span>
+    <span style="font-family:Inter,sans-serif; font-weight:800; font-size:28px; color:#14161D;">Posts visuales (esquemas)</span>
+  </div>
+  <div style="font-family:Inter,sans-serif; font-weight:400; font-size:19px; color:#5d6275; margin-top:6px;">Infografías y esquemas estáticos con los elementos del sistema. El feed no admite movimiento: todo se resuelve en composición fija.</div>
+</div>
+
+<!-- VISUAL 1 · CAPAS EN FLUJO (dark) -->
+<div style="position:absolute; left:0; top:1980px; width:1080px;">
+  <div data-drags-parent="1" class="frame-label">Visual A · Capas en flujo</div>
+  <div style="position:relative; width:1080px; height:1350px; border-radius:6px; overflow:hidden; box-shadow:0 24px 60px rgba(0,0,0,.45); background:radial-gradient(120% 90% at 50% 18%,#141A30 0%,#0A0E1D 70%); color:#EDEAE3; font-family:Inter,sans-serif;">
+    <div style="position:absolute; inset:0; background-image:repeating-linear-gradient(0deg,rgba(120,152,255,.04) 0 1px,transparent 1px 64px),repeating-linear-gradient(90deg,rgba(120,152,255,.04) 0 1px,transparent 1px 64px);"></div>
+    <div style="position:absolute; inset:48px; border:1px solid rgba(91,130,255,.16);"></div>
+    <div style="position:absolute; inset:48px; padding:60px; display:flex; flex-direction:column; justify-content:space-between;">
+      <div style="display:flex; justify-content:space-between; align-items:center; font-family:'Geist Mono',monospace; font-size:23px; color:#7e88a6;">
+        <span>capas · automatización</span>
+        <span style="color:#7898FF;">[ esquema ]</span>
+      </div>
+      <div style="display:flex; flex-direction:column; align-items:center; gap:26px;">
+        <div style="display:flex; align-items:center; gap:30px;"><div style="width:380px; height:104px; clip-path:polygon(33.3% 0,100% 0,66.7% 100%,0 100%); background:#5b82ff;"></div><span style="font-family:'Geist Mono',monospace; font-size:25px; color:#cdd3e6; width:190px;">capturar</span></div>
+        <div style="display:flex; align-items:center; gap:30px;"><div style="width:380px; height:104px; clip-path:polygon(33.3% 0,100% 0,66.7% 100%,0 100%); background:#4b6cd7;"></div><span style="font-family:'Geist Mono',monospace; font-size:25px; color:#9aa2bf; width:190px;">procesar</span></div>
+        <div style="display:flex; align-items:center; gap:30px;"><div style="width:380px; height:104px; clip-path:polygon(33.3% 0,100% 0,66.7% 100%,0 100%); background:#344f9f;"></div><span style="font-family:'Geist Mono',monospace; font-size:25px; color:#9aa2bf; width:190px;">resolver</span></div>
+      </div>
+      <div style="display:flex; justify-content:space-between; align-items:flex-end;">
+        <span style="font-weight:700; font-size:46px; color:#F3F1EC; line-height:1.05;">Cada tarea, una <span style="color:#5B82FF;">capa</span><br>que encaja sola.</span>
+        <img src="assets/agenflow-wordmark-blanco.svg" style="height:36px; display:block; opacity:.9;" alt="agenflow">
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- VISUAL 2 · PIPELINE VIVO (light) -->
+<div style="position:absolute; left:1200px; top:1980px; width:1080px;">
+  <div data-drags-parent="1" class="frame-label">Visual B · Flujo de datos</div>
+  <div style="position:relative; width:1080px; height:1350px; border-radius:6px; overflow:hidden; box-shadow:0 24px 60px rgba(0,0,0,.18); background:#FFFFFF; color:#14161D; font-family:Inter,sans-serif;">
+    <div style="position:absolute; inset:48px; border:1px solid rgba(20,22,29,.14);"></div>
+    <div style="position:absolute; inset:48px; padding:60px; display:flex; flex-direction:column; justify-content:space-between;">
+      <div style="display:flex; justify-content:space-between; align-items:center; font-family:'Geist Mono',monospace; font-size:23px; color:#8a8f9c;">
+        <span>flujo · de datos</span>
+        <span style="color:#5B82FF;">[ esquema ]</span>
+      </div>
+      <div style="display:flex; flex-direction:column; gap:50px;">
+        <svg viewBox="0 0 840 60" width="100%" height="60" style="overflow:visible;">
+          <line x1="40" y1="30" x2="788" y2="30" stroke="#5B82FF" stroke-width="3"></line>
+          <path d="M788 30 L770 21 L770 39 Z" fill="#5B82FF"></path>
+          <circle cx="40" cy="30" r="11" fill="#5B82FF"></circle>
+          <circle cx="414" cy="30" r="11" fill="#5B82FF"></circle>
+        </svg>
+        <div style="display:flex; justify-content:space-between; gap:24px;">
+          <div style="flex:1; text-align:center; border:1px solid rgba(20,22,29,.2); border-radius:6px; padding:34px 8px; font-family:'Geist Mono',monospace; font-size:30px; color:#3a3f4d;">email</div>
+          <div style="flex:1; text-align:center; border:1px solid rgba(20,22,29,.2); border-radius:6px; padding:34px 8px; font-family:'Geist Mono',monospace; font-size:30px; color:#3a3f4d;">hoja</div>
+          <div style="flex:1; text-align:center; border:1px solid #5B82FF; background:rgba(91,130,255,.1); border-radius:6px; padding:34px 8px; font-family:'Geist Mono',monospace; font-size:30px; color:#14161D;">CRM</div>
+        </div>
+      </div>
+      <div style="display:flex; justify-content:space-between; align-items:flex-end;">
+        <span style="font-weight:700; font-size:46px; color:#14161D; line-height:1.05;">Tus datos, <span style="color:#5B82FF;">conectados</span><br>sin tocar nada.</span>
+        <img src="uploads/agenflow-wordmark.svg" style="height:36px; display:block; opacity:.9;" alt="agenflow">
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- VISUAL 3 · REJILLA / ESCANEO (dark) -->
+<div style="position:absolute; left:2400px; top:1980px; width:1080px;">
+  <div data-drags-parent="1" class="frame-label">Visual C · Mapa de proceso</div>
+  <div style="position:relative; width:1080px; height:1350px; border-radius:6px; overflow:hidden; box-shadow:0 24px 60px rgba(0,0,0,.45); background:#0B0E1A; color:#EDEAE3; font-family:Inter,sans-serif;">
+    <div style="position:absolute; inset:0; background-image:repeating-linear-gradient(0deg,rgba(120,152,255,.04) 0 1px,transparent 1px 72px),repeating-linear-gradient(90deg,rgba(120,152,255,.04) 0 1px,transparent 1px 72px);"></div>
+    <div style="position:absolute; inset:48px; border:1px solid rgba(91,130,255,.16);"></div>
+    <div style="position:absolute; inset:48px; padding:60px; display:flex; flex-direction:column; justify-content:space-between;">
+      <div style="display:flex; justify-content:space-between; align-items:center; font-family:'Geist Mono',monospace; font-size:23px; color:#7e88a6;">
+        <span>procesos · convergen</span>
+        <span style="color:#7898FF;">[ esquema ]</span>
+      </div>
+      <div style="display:flex; flex-direction:column; align-items:center; gap:22px;">
+        <div style="display:flex; gap:18px;">
+          <span style="font-family:'Geist Mono',monospace; font-size:25px; color:#cdd3e6; border:1px solid rgba(91,130,255,.32); border-radius:6px; padding:18px 22px;">email</span>
+          <span style="font-family:'Geist Mono',monospace; font-size:25px; color:#cdd3e6; border:1px solid rgba(91,130,255,.32); border-radius:6px; padding:18px 22px;">formularios</span>
+          <span style="font-family:'Geist Mono',monospace; font-size:25px; color:#cdd3e6; border:1px solid rgba(91,130,255,.32); border-radius:6px; padding:18px 22px;">chats</span>
+        </div>
+        <svg viewBox="0 0 420 70" width="420" height="70"><path d="M70 6 L210 60 M210 6 L210 60 M350 6 L210 60" stroke="#5B82FF" stroke-width="2" fill="none"></path><circle cx="210" cy="62" r="5" fill="#5B82FF"></circle></svg>
+        <div style="display:flex; align-items:center; gap:18px; border:1px solid #5B82FF; background:rgba(91,130,255,.12); border-radius:8px; padding:24px 34px;">
+          <div style="width:52px; height:52px;"><svg viewBox="0 0 64 64" width="100%" height="100%"><polygon points="8,50 32,50 44,40 20,40" fill="#a0b6ff"></polygon><polygon points="15,38 39,38 51,28 27,28" fill="#7898ff"></polygon><polygon points="22,26 46,26 58,16 34,16" fill="#5b82ff"></polygon></svg></div>
+          <span style="font-family:'Geist Mono',monospace; font-size:27px; color:#F3F1EC;">agenflow</span>
+        </div>
+        <div style="font-family:'Geist Mono',monospace; font-size:30px; color:#5B82FF;">▼</div>
+        <span style="font-family:'Geist Mono',monospace; font-size:25px; color:#0A0E1D; background:#5B82FF; border-radius:6px; padding:18px 26px;">una respuesta</span>
+      </div>
+      <div style="display:flex; justify-content:space-between; align-items:flex-end;">
+        <span style="font-weight:700; font-size:46px; color:#F3F1EC; line-height:1.05;">Muchas entradas,<br>un solo <span style="color:#5B82FF;">flujo</span>.</span>
+        <img src="assets/agenflow-wordmark-blanco.svg" style="height:36px; display:block; opacity:.9;" alt="agenflow">
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- VISUAL 4 · MARCA VIVA (light) -->
+<div style="position:absolute; left:3600px; top:1980px; width:1080px;">
+  <div data-drags-parent="1" class="frame-label">Visual D · Sello de marca</div>
+  <div style="position:relative; width:1080px; height:1350px; border-radius:6px; overflow:hidden; box-shadow:0 24px 60px rgba(0,0,0,.18); background:#FFFFFF; color:#14161D; font-family:Inter,sans-serif;">
+    <div style="position:absolute; inset:48px; border:1px solid rgba(20,22,29,.14);"></div>
+    <div style="position:absolute; inset:48px; padding:60px; display:flex; flex-direction:column; justify-content:space-between;">
+      <div style="display:flex; justify-content:space-between; align-items:center; font-family:'Geist Mono',monospace; font-size:23px; color:#8a8f9c;">
+        <span>marca · isotipo</span>
+        <span style="color:#5B82FF;">[ esquema ]</span>
+      </div>
+      <div style="display:flex; flex-direction:column; align-items:center; justify-content:center; gap:48px;">
+        <div style="position:relative; width:320px; height:300px; display:flex; align-items:center; justify-content:center;">
+          <div style="position:absolute; width:230px; height:230px; border:1px solid rgba(91,130,255,.28); border-radius:50%;"></div>
+          <div style="position:absolute; width:300px; height:300px; border:1px solid rgba(91,130,255,.14); border-radius:50%;"></div>
+          <div style="width:150px; height:150px;"><svg viewBox="0 0 64 64" width="100%" height="100%"><polygon points="8,50 32,50 44,40 20,40" fill="#344f9f"></polygon><polygon points="15,38 39,38 51,28 27,28" fill="#4b6cd7"></polygon><polygon points="22,26 46,26 58,16 34,16" fill="#5b82ff"></polygon></svg></div>
+        </div>
+        <img src="uploads/agenflow-wordmark.svg" style="height:64px; display:block;" alt="agenflow">
+      </div>
+      <div style="display:flex; justify-content:space-between; align-items:flex-end; font-family:'Geist Mono',monospace; font-size:23px; color:#8a8f9c;">
+        <span>// qué es agenflow</span>
+        <span>agenflow.es</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- ================= SECTION 3 ================= -->
+<div style="position:absolute; left:0; top:3560px; width:1200px;">
+  <div data-drags-parent="1" style="display:flex; align-items:baseline; gap:14px; cursor:grab;">
+    <span style="font-family:Inter,sans-serif; font-weight:900; font-size:42px; color:#5B82FF; line-height:1;">3</span>
+    <span style="font-family:Inter,sans-serif; font-weight:800; font-size:28px; color:#14161D;">Ritmo del feed</span>
+  </div>
+  <div style="font-family:Inter,sans-serif; font-weight:400; font-size:19px; color:#5d6275; margin-top:6px;">Cómo se ven juntos en el grid: damero dark / light para una simetría reconocible.</div>
+</div>
+
+<!-- FEED MOCKUP -->
+<div style="position:absolute; left:0; top:3680px; width:1076px;">
+  <div data-drags-parent="1" class="frame-label">Grid · primeras 12 publicaciones</div>
+  <div style="display:grid; grid-template-columns:repeat(3,348px); gap:16px;">
+
+    <!-- R1C1 dark -->
+    <div style="height:435px; border-radius:3px; overflow:hidden; background:#0B0E1A; position:relative; border:1px solid rgba(91,130,255,.18);">
+      <div style="position:absolute; inset:0; background-image:repeating-linear-gradient(0deg,rgba(120,152,255,.035) 0 1px,transparent 1px 30px),repeating-linear-gradient(90deg,rgba(120,152,255,.035) 0 1px,transparent 1px 30px);"></div>
+      <div style="position:absolute; inset:0; padding:22px; display:flex; flex-direction:column; justify-content:space-between;">
+        <div style="display:flex; justify-content:space-between; font-family:'Geist Mono',monospace; font-size:13px; color:#7e88a6;"><span>serie-01</span><span style="color:#7898FF;">01/09</span></div>
+        <div style="width:46px; height:46px;"><svg viewBox="0 0 64 64" width="100%" height="100%"><polygon points="8,50 32,50 44,40 20,40" fill="#a0b6ff"></polygon><polygon points="15,38 39,38 51,28 27,28" fill="#7898ff"></polygon><polygon points="22,26 46,26 58,16 34,16" fill="#5b82ff"></polygon></svg></div>
+        <div style="font-family:Inter,sans-serif; font-weight:700; font-size:27px; line-height:1.12; color:#F3F1EC;">7 tareas <span style="color:#5B82FF;">a mano</span></div>
+        <div style="font-family:'Geist Mono',monospace; font-size:12px; color:#7e88a6;">// guárdalo</div>
+      </div>
+    </div>
+    <!-- R1C2 light -->
+    <div style="height:435px; border-radius:3px; overflow:hidden; background:#FFFFFF; position:relative; border:1px solid rgba(20,22,29,.12);">
+      <div style="position:absolute; inset:0; padding:22px; display:flex; flex-direction:column; justify-content:space-between;">
+        <div style="display:flex; justify-content:space-between; font-family:'Geist Mono',monospace; font-size:13px; color:#8a8f9c;"><span>cita</span><span style="color:#5B82FF;">idea</span></div>
+        <div style="font-family:Inter,sans-serif; font-weight:900; font-size:60px; line-height:.4; color:#5B82FF;">“</div>
+        <div style="font-family:Inter,sans-serif; font-weight:700; font-size:26px; line-height:1.12; color:#14161D;">El <span style="color:#5B82FF;">criterio</span> manda.</div>
+        <div style="font-family:'Geist Mono',monospace; font-size:12px; color:#8a8f9c;">— agenflow</div>
+      </div>
+    </div>
+    <!-- R1C3 dark -->
+    <div style="height:435px; border-radius:3px; overflow:hidden; background:#0B0E1A; position:relative; border:1px solid rgba(91,130,255,.18);">
+      <div style="position:absolute; inset:0; background-image:repeating-linear-gradient(0deg,rgba(120,152,255,.035) 0 1px,transparent 1px 30px),repeating-linear-gradient(90deg,rgba(120,152,255,.035) 0 1px,transparent 1px 30px);"></div>
+      <div style="position:absolute; inset:0; padding:22px; display:flex; flex-direction:column; justify-content:space-between;">
+        <div style="display:flex; justify-content:space-between; font-family:'Geist Mono',monospace; font-size:13px; color:#7e88a6;"><span>tarea-01</span><span style="color:#7898FF;">02/09</span></div>
+        <div style="font-family:Inter,sans-serif; font-weight:700; font-size:27px; line-height:1.12; color:#F3F1EC;">Pasar datos de un sitio a otro</div>
+        <div style="display:flex; gap:6px; font-family:'Geist Mono',monospace; font-size:12px; color:#cdd3e6;"><span>email</span><span style="color:#5B82FF;">▸</span><span>hoja</span><span style="color:#5B82FF;">▸</span><span style="color:#5B82FF;">CRM</span></div>
+      </div>
+    </div>
+
+    <!-- R2C1 light -->
+    <div style="height:435px; border-radius:3px; overflow:hidden; background:#FFFFFF; position:relative; border:1px solid rgba(20,22,29,.12);">
+      <div style="position:absolute; inset:0; padding:22px; display:flex; flex-direction:column; justify-content:space-between;">
+        <div style="display:flex; justify-content:space-between; font-family:'Geist Mono',monospace; font-size:13px; color:#8a8f9c;"><span>tarea-02</span><span style="color:#5B82FF;">03/09</span></div>
+        <div style="font-family:Inter,sans-serif; font-weight:700; font-size:27px; line-height:1.12; color:#14161D;">Responder a tus clientes <span style="color:#5B82FF;">24/7</span></div>
+        <div style="font-family:'Geist Mono',monospace; font-size:12px; color:#8a8f9c;">asistente</div>
+      </div>
+    </div>
+    <!-- R2C2 dark VISUAL -->
+    <div style="height:435px; border-radius:3px; overflow:hidden; background:radial-gradient(120% 90% at 50% 20%,#141A30,#0A0E1D 72%); position:relative; border:1px solid rgba(91,130,255,.3);">
+      <div style="position:absolute; inset:0; background-image:repeating-linear-gradient(0deg,rgba(120,152,255,.035) 0 1px,transparent 1px 30px),repeating-linear-gradient(90deg,rgba(120,152,255,.035) 0 1px,transparent 1px 30px);"></div>
+      <div style="position:absolute; inset:0; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:14px;">
+        <div style="width:150px; height:42px; clip-path:polygon(33.3% 0,100% 0,66.7% 100%,0 100%); background:#5b82ff;"></div>
+        <div style="width:150px; height:42px; clip-path:polygon(33.3% 0,100% 0,66.7% 100%,0 100%); background:#4b6cd7;"></div>
+        <div style="width:150px; height:42px; clip-path:polygon(33.3% 0,100% 0,66.7% 100%,0 100%); background:#344f9f;"></div>
+      </div>
+      <div style="position:absolute; left:22px; bottom:20px; font-family:'Geist Mono',monospace; font-size:13px; color:#7898FF;">[ visual ]</div>
+    </div>
+    <!-- R2C3 light -->
+    <div style="height:435px; border-radius:3px; overflow:hidden; background:#FFFFFF; position:relative; border:1px solid rgba(20,22,29,.12);">
+      <div style="position:absolute; inset:0; padding:22px; display:flex; flex-direction:column; justify-content:space-between;">
+        <div style="display:flex; justify-content:space-between; font-family:'Geist Mono',monospace; font-size:13px; color:#8a8f9c;"><span>antes ▸ después</span><span style="color:#5B82FF;">·</span></div>
+        <div style="font-family:Inter,sans-serif; font-weight:700; font-size:27px; line-height:1.12; color:#14161D;">Hecho <span style="color:#5B82FF;">solo</span>, sin tocar nada</div>
+        <div style="font-family:'Geist Mono',monospace; font-size:12px; color:#8a8f9c;">cualitativo</div>
+      </div>
+    </div>
+
+    <!-- R3C1 dark -->
+    <div style="height:435px; border-radius:3px; overflow:hidden; background:#0B0E1A; position:relative; border:1px solid rgba(91,130,255,.18);">
+      <div style="position:absolute; inset:0; background-image:repeating-linear-gradient(0deg,rgba(120,152,255,.035) 0 1px,transparent 1px 30px),repeating-linear-gradient(90deg,rgba(120,152,255,.035) 0 1px,transparent 1px 30px);"></div>
+      <div style="position:absolute; inset:0; padding:22px; display:flex; flex-direction:column; justify-content:space-between;">
+        <div style="display:flex; justify-content:space-between; font-family:'Geist Mono',monospace; font-size:13px; color:#7e88a6;"><span>qué es</span><span style="color:#7898FF;">portada</span></div>
+        <div style="font-family:Inter,sans-serif; font-weight:700; font-size:27px; line-height:1.12; color:#F3F1EC;">Procesos lentos en <span style="color:#5B82FF;">crecimiento</span></div>
+        <div style="font-family:'Geist Mono',monospace; font-size:12px; color:#7e88a6;">agenflow.es</div>
+      </div>
+    </div>
+    <!-- R3C2 light VISUAL -->
+    <div style="height:435px; border-radius:3px; overflow:hidden; background:#FFFFFF; position:relative; border:1px solid rgba(91,130,255,.3);">
+      <div style="position:absolute; inset:0; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:24px;">
+        <svg viewBox="0 0 280 30" width="78%" height="30" style="overflow:visible;">
+          <line x1="14" y1="15" x2="258" y2="15" stroke="#5B82FF" stroke-width="3"></line>
+          <path d="M258 15 L246 9 L246 21 Z" fill="#5B82FF"></path>
+          <circle cx="14" cy="15" r="7" fill="#5B82FF"></circle>
+          <circle cx="136" cy="15" r="7" fill="#5B82FF"></circle>
+        </svg>
+        <div style="font-family:Inter,sans-serif; font-weight:700; font-size:24px; color:#14161D;">datos <span style="color:#5B82FF;">conectados</span></div>
+      </div>
+      <div style="position:absolute; left:22px; bottom:20px; font-family:'Geist Mono',monospace; font-size:13px; color:#5B82FF;">[ visual ]</div>
+    </div>
+    <!-- R3C3 dark -->
+    <div style="height:435px; border-radius:3px; overflow:hidden; background:#0B0E1A; position:relative; border:1px solid rgba(91,130,255,.18);">
+      <div style="position:absolute; inset:0; background-image:repeating-linear-gradient(0deg,rgba(120,152,255,.035) 0 1px,transparent 1px 30px),repeating-linear-gradient(90deg,rgba(120,152,255,.035) 0 1px,transparent 1px 30px);"></div>
+      <div style="position:absolute; inset:0; padding:22px; display:flex; flex-direction:column; justify-content:space-between;">
+        <div style="display:flex; justify-content:space-between; font-family:'Geist Mono',monospace; font-size:13px; color:#7e88a6;"><span>cierre</span><span style="color:#7898FF;">09/09</span></div>
+        <div style="width:46px; height:46px;"><svg viewBox="0 0 64 64" width="100%" height="100%"><polygon points="8,50 32,50 44,40 20,40" fill="#a0b6ff"></polygon><polygon points="15,38 39,38 51,28 27,28" fill="#7898ff"></polygon><polygon points="22,26 46,26 58,16 34,16" fill="#5b82ff"></polygon></svg></div>
+        <div style="font-family:'Geist Mono',monospace; font-size:15px; color:#cdd3e6;"><span style="color:#5B82FF;">&gt;</span> consultoría <span style="color:#7898FF;">--bio</span></div>
+      </div>
+    </div>
+
+    <!-- R4C1 light -->
+    <div style="height:435px; border-radius:3px; overflow:hidden; background:#FFFFFF; position:relative; border:1px solid rgba(20,22,29,.12);">
+      <div style="position:absolute; inset:0; padding:22px; display:flex; flex-direction:column; justify-content:space-between;">
+        <div style="display:flex; justify-content:space-between; font-family:'Geist Mono',monospace; font-size:13px; color:#8a8f9c;"><span>anuncio</span><span style="color:#5B82FF;">nuevo</span></div>
+        <div style="font-family:Inter,sans-serif; font-weight:700; font-size:27px; line-height:1.12; color:#14161D;">Asistente <span style="color:#5B82FF;">24/7</span> para tu pyme</div>
+        <div style="font-family:'Geist Mono',monospace; font-size:12px; color:#8a8f9c;">&gt; más --bio</div>
+      </div>
+    </div>
+    <!-- R4C2 dark -->
+    <div style="height:435px; border-radius:3px; overflow:hidden; background:#0B0E1A; position:relative; border:1px solid rgba(91,130,255,.18);">
+      <div style="position:absolute; inset:0; background-image:repeating-linear-gradient(0deg,rgba(120,152,255,.035) 0 1px,transparent 1px 30px),repeating-linear-gradient(90deg,rgba(120,152,255,.035) 0 1px,transparent 1px 30px);"></div>
+      <div style="position:absolute; inset:0; padding:22px; display:flex; flex-direction:column; justify-content:space-between;">
+        <div style="display:flex; justify-content:space-between; font-family:'Geist Mono',monospace; font-size:13px; color:#7e88a6;"><span>destacada</span><span style="color:#7898FF;">§</span></div>
+        <div style="font-family:'Geist Mono',monospace; font-size:64px; color:#5B82FF; line-height:.8;">§</div>
+        <div style="font-family:'Geist Mono',monospace; font-size:14px; color:#cdd3e6;">legal</div>
+      </div>
+    </div>
+    <!-- R4C3 light -->
+    <div style="height:435px; border-radius:3px; overflow:hidden; background:#FFFFFF; position:relative; border:1px solid rgba(20,22,29,.12);">
+      <div style="position:absolute; inset:0; padding:22px; display:flex; flex-direction:column; justify-content:space-between;">
+        <div style="display:flex; justify-content:space-between; font-family:'Geist Mono',monospace; font-size:13px; color:#8a8f9c;"><span>tarea-03</span><span style="color:#5B82FF;">04/09</span></div>
+        <div style="font-family:Inter,sans-serif; font-weight:700; font-size:27px; line-height:1.12; color:#14161D;">Agendar sin <span style="color:#5B82FF;">ida y vuelta</span></div>
+        <div style="font-family:'Geist Mono',monospace; font-size:12px; color:#8a8f9c;">calendario</div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- FEED NOTE -->
+<div style="position:absolute; left:1180px; top:3680px; width:740px;">
+  <div data-drags-parent="1" class="frame-label">Regla de ritmo</div>
+  <div style="width:740px; border-radius:6px; background:#EDEAE3; color:#14161D; padding:46px; font-family:Inter,sans-serif; box-shadow:0 16px 40px rgba(0,0,0,.14);">
+    <div style="font-family:'Geist Mono',monospace; font-size:21px; letter-spacing:0.1em; text-transform:uppercase; color:#5B82FF; margin-bottom:20px;">Feed — cómo alternar</div>
+    <div style="font-family:Inter,sans-serif; font-weight:500; font-size:24px; color:#2a2e3a; line-height:1.5;">
+      · <b>Damero dark / light:</b> cada post alterna el tema respecto a sus vecinos. El grid se lee como un patrón, no como un muro plano.<br><br>
+      · <b>Carruseles:</b> elige UN tema por carrusel (todas sus slides iguales); en el grid solo cuenta su portada.<br><br>
+      · <b>Visuales (esquemas):</b> infografías fijas que caen en el centro o en diagonal como acentos; respetan el tema de su casilla.<br><br>
+      · <b>El azul</b> aparece en todas las casillas (palabra clave / índice) — es el hilo que cose dark y light.
+    </div>
+  </div>
+</div>
+
+<!-- ================= SECTION 4 · FUENTE SECUNDARIA ================= -->
+<div style="position:absolute; left:2000px; top:3560px; width:1200px;">
+  <div data-drags-parent="1" style="display:flex; align-items:baseline; gap:14px; cursor:grab;">
+    <span style="font-family:Inter,sans-serif; font-weight:900; font-size:42px; color:#5B82FF; line-height:1;">4</span>
+    <span style="font-family:Inter,sans-serif; font-weight:800; font-size:28px; color:#14161D;">Fuente secundaria — alternativas</span>
+  </div>
+  <div style="font-family:Inter,sans-serif; font-weight:400; font-size:19px; color:#5d6275; margin-top:6px;">La mono aparece en índices, etiquetas y nodos. Mismo texto en 4 candidatas. Inter (titulares) no cambia.</div>
+</div>
+
+<div style="position:absolute; left:2000px; top:3680px; width:1200px;">
+  <div data-drags-parent="1" class="frame-label">Comparativa de monoespaciadas</div>
+  <div style="width:1200px; border-radius:6px; background:#0B0E1A; color:#EDEAE3; padding:56px; box-shadow:0 24px 60px rgba(0,0,0,.4); display:flex; flex-direction:column; gap:30px;">
+
+    <!-- IBM Plex Mono · recomendada -->
+    <div style="border:1px solid rgba(255,255,255,.1); border-radius:8px; padding:30px 34px; display:flex; flex-direction:column; gap:14px;">
+      <span style="font-family:Inter,sans-serif; font-weight:800; font-size:24px; color:#F3F1EC;">IBM Plex Mono</span>
+      <div style="font-family:'IBM Plex Mono', monospace; font-size:30px; color:#cdd3e6; letter-spacing:0;">[ 02 / 09 ] &nbsp; email <span style="color:#5B82FF;">→</span> hoja <span style="color:#5B82FF;">→</span> CRM</div>
+      <div style="font-family:Inter,sans-serif; font-weight:400; font-size:18px; color:#9aa2bf;">Técnica pero cálida y muy legible en miniatura. Tiene el mismo aire editorial-premium que Inter; es la que mejor casa con la marca.</div>
+    </div>
+
+    <!-- Geist Mono -->
+    <div style="border:1px solid rgba(91,130,255,.45); background:rgba(91,130,255,.07); border-radius:8px; padding:30px 34px; display:flex; flex-direction:column; gap:14px;">
+      <div style="display:flex; align-items:center; gap:14px;">
+        <span style="font-family:Inter,sans-serif; font-weight:800; font-size:24px; color:#F3F1EC;">Geist Mono</span>
+        <span style="font-family:Inter,sans-serif; font-weight:600; font-size:15px; color:#0A0E1D; background:#5B82FF; border-radius:999px; padding:5px 14px;">ELEGIDA</span>
+      </div>
+      <div style="font-family:'Geist Mono',monospace; font-size:30px; color:#cdd3e6; letter-spacing:0;">[ 02 / 09 ] &nbsp; email <span style="color:#5B82FF;">→</span> hoja <span style="color:#5B82FF;">→</span> CRM</div>
+      <div style="font-family:Inter,sans-serif; font-weight:400; font-size:18px; color:#9aa2bf;">La de Vercel: neutra, geométrica, muy "producto". Ideal si quieres tirar todavía más hacia el listón Vercel/Linear.</div>
+    </div>
+
+    <!-- Space Mono -->
+    <div style="border:1px solid rgba(255,255,255,.1); border-radius:8px; padding:30px 34px; display:flex; flex-direction:column; gap:14px;">
+      <span style="font-family:Inter,sans-serif; font-weight:800; font-size:24px; color:#F3F1EC;">Space Mono</span>
+      <div style="font-family:'Space Mono',monospace; font-size:30px; color:#cdd3e6; letter-spacing:0;">[ 02 / 09 ] &nbsp; email <span style="color:#5B82FF;">→</span> hoja <span style="color:#5B82FF;">→</span> CRM</div>
+      <div style="font-family:Inter,sans-serif; font-weight:400; font-size:18px; color:#9aa2bf;">Con más carácter y detalle retro-técnico. Hermana de Space Grotesk (el wordmark), así que rima con la firma — pero pesa más en bloques largos.</div>
+    </div>
+
+    <!-- JetBrains Mono · actual -->
+    <div style="border:1px solid rgba(255,255,255,.1); border-radius:8px; padding:30px 34px; display:flex; flex-direction:column; gap:14px;">
+      <div style="display:flex; align-items:center; gap:14px;">
+        <span style="font-family:Inter,sans-serif; font-weight:800; font-size:24px; color:#9aa2bf;">JetBrains Mono</span>
+        <span style="font-family:Inter,sans-serif; font-weight:600; font-size:15px; color:#9aa2bf; border:1px solid rgba(255,255,255,.18); border-radius:999px; padding:4px 13px;">ANTERIOR</span>
+      </div>
+      <div style="font-family:'JetBrains Mono', monospace; font-size:30px; color:#7e88a6; letter-spacing:0;">[ 02 / 09 ] &nbsp; email <span style="color:#5B82FF;">→</span> hoja <span style="color:#5B82FF;">→</span> CRM</div>
+      <div style="font-family:Inter,sans-serif; font-weight:400; font-size:18px; color:#6a7295;">Correcta, pero más "IDE/código" y algo genérica en redes. Es la que quieres sustituir.</div>
+    </div>
+
+    <div style="font-family:Inter,sans-serif; font-weight:400; font-size:18px; color:#7e88a6; border-top:1px solid rgba(255,255,255,.1); padding-top:22px;">Decidido: <span style="color:#F3F1EC; font-weight:600;">Geist Mono</span> — la dejo fija en todo el sistema.</div>
+  </div>
+</div>
+</x-dc>
+</body>
+</html>

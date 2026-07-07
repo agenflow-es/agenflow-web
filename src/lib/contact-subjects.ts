@@ -22,8 +22,8 @@ export const CONTACT_SUBJECT_EMAIL_LABELS: Record<ContactSubject, string> = {
   presencia: "Mejora de presencia online",
   consultoria: "Consultoría de IA",
   automatizacion: "Automatización de procesos",
-  software: "Software por sector",
-  inmobiliario: "Inmobiliario y construcción",
+  software: "Software a medida",
+  inmobiliario: "El mundo del inmueble",
   legal: "Sector legal",
   otro: "Otro / sin especificar",
 };

@@ -1,5 +1,11 @@
 import type { Metadata } from "next";
-import { Inter, JetBrains_Mono, Space_Grotesk } from "next/font/google";
+import {
+  Inter,
+  Geist_Mono,
+  Space_Grotesk,
+  Fraunces,
+  DM_Serif_Display,
+} from "next/font/google";
 import { notFound } from "next/navigation";
 import { NextIntlClientProvider, hasLocale } from "next-intl";
 import {
@@ -21,15 +27,30 @@ const inter = Inter({
   variable: "--font-inter",
   display: "swap",
 });
-const jetbrainsMono = JetBrains_Mono({
+const geistMono = Geist_Mono({
   subsets: ["latin"],
-  variable: "--font-jetbrains-mono",
+  variable: "--font-geist-mono",
   display: "swap",
 });
 const spaceGrotesk = Space_Grotesk({
   subsets: ["latin"],
   weight: ["500", "600", "700"],
   variable: "--font-space-grotesk",
+  display: "swap",
+});
+// Partner-product display faces — used ONLY inside their branded product cards
+// (Replo = Fraunces, FincAI = DM Serif Display), so each product renders in its
+// own real identity. Not for Agenflow copy.
+const fraunces = Fraunces({
+  subsets: ["latin"],
+  weight: ["600"],
+  variable: "--font-fraunces",
+  display: "swap",
+});
+const dmSerif = DM_Serif_Display({
+  subsets: ["latin"],
+  weight: ["400"],
+  variable: "--font-dmserif",
   display: "swap",
 });
 
@@ -74,7 +95,7 @@ export default async function LocaleLayout({
     <html
       lang={locale}
       suppressHydrationWarning
-      className={`${inter.variable} ${jetbrainsMono.variable} ${spaceGrotesk.variable} h-full`}
+      className={`${inter.variable} ${geistMono.variable} ${spaceGrotesk.variable} ${fraunces.variable} ${dmSerif.variable} h-full`}
     >
       <body className="flex min-h-full flex-col bg-bg text-fg">
         <a

@@ -1,7 +1,7 @@
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
 import { Container } from "@/components/ui/primitives";
-import { HeroAuroraBg } from "@/components/visuals/HeroAuroraBg";
+import { HeroBlueprint } from "@/components/visuals/HeroBlueprint";
 
 export function Hero() {
   const t = useTranslations("hero");
@@ -10,7 +10,7 @@ export function Hero() {
   return (
     <section className="relative overflow-hidden">
       <div className="pointer-events-none absolute inset-0 z-0">
-        <HeroAuroraBg />
+        <HeroBlueprint />
         {/* Fade the background into the page below. */}
         <div
           className="absolute inset-x-0 bottom-0 h-44"

@@ -12,7 +12,11 @@ import {
 const schema = z.object({
   name: z.string().min(2),
   email: z.string().email(),
+  phone: z.string().optional(),
   company: z.string().optional(),
+  companyUrl: z.string().optional(),
+  sector: z.string().optional(),
+  teamSize: z.string().optional(),
   // What the request is about. Coerced to a valid subject so it's always set.
   subject: z.string().optional(),
   // Cap length as a basic anti-flood guard.
@@ -52,7 +56,8 @@ export async function sendContact(
 ): Promise<{ ok: boolean; error?: ContactError }> {
   const parsed = schema.safeParse(input);
   if (!parsed.success) return { ok: false, error: "validation" };
-  const { name, email, company, subject, message, website } = parsed.data;
+  const { name, email, phone, company, companyUrl, sector, teamSize, subject, message, website } =
+    parsed.data;
 
   // Honeypot: if the hidden field came back filled, it's a bot. Silently drop
   // and report success so the bot gets no signal that it was caught.
@@ -77,7 +82,18 @@ export async function sendContact(
     to: process.env.CONTACT_EMAIL ?? siteConfig.contactEmail,
     replyTo: email,
     subject: `Nuevo contacto web · ${subjectLabel} — ${safeName}`,
-    text: `Asunto: ${subjectLabel}\nNombre: ${safeName}\nEmail: ${email}\nEmpresa: ${company ? oneLine(company) : "-"}\n\n${message}`,
+    text: [
+      `Asunto: ${subjectLabel}`,
+      `Nombre: ${safeName}`,
+      `Email: ${email}`,
+      `Teléfono: ${phone ? oneLine(phone) : "-"}`,
+      `Empresa: ${company ? oneLine(company) : "-"}`,
+      `Web: ${companyUrl ? oneLine(companyUrl) : "-"}`,
+      `Sector: ${sector ? oneLine(sector) : "-"}`,
+      `Tamaño del equipo: ${teamSize ? oneLine(teamSize) : "-"}`,
+      "",
+      message,
+    ].join("\n"),
   });
 
   return { ok: !error, error: error ? "failed" : undefined };

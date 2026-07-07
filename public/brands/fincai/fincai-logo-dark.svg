@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 180" width="520" height="180">
+  
+  <rect width="520" height="180" fill="#0E1418"></rect>
+  <text class="finc" x="40" y="120">Finc</text>
+  <line class="rule" x1="338" y1="68" x2="338" y2="112"></line>
+  <text class="ai" x="352" y="100">AI</text>
+</svg>

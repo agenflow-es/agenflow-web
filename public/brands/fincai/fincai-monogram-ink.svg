@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256">
+  
+  <rect width="256" height="256" rx="52" fill="#0E1418"></rect>
+  <text class="f" x="122" y="182" text-anchor="middle">F</text>
+  <text class="ai" x="162" y="116">ai</text>
+</svg>

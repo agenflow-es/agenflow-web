@@ -1,6 +1,5 @@
 import { Container, Eyebrow } from "@/components/ui/primitives";
 import { Link } from "@/i18n/navigation";
-import { HeroSideGlows } from "@/components/visuals/HeroSideGlows";
 import { cn } from "@/lib/utils";
 
 type Cta = { label: string; href: string };
@@ -51,11 +50,10 @@ export function PageHero({
   maxWidth?: 820 | 860;
 }) {
   return (
-    <section className="relative overflow-hidden border-b border-border">
-      <HeroSideGlows />
+    <section className="border-b border-border">
       <Container
         className={cn(
-          "relative py-[clamp(64px,10vw,120px)] text-center",
+          "py-[clamp(64px,10vw,120px)] text-center",
           MAX_W[maxWidth],
         )}
       >

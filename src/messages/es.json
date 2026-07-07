@@ -569,7 +569,7 @@
       "eyebrow": "Una prueba rápida",
       "title": "¿Sabes qué dice la IA de tu negocio ahora mismo?",
       "body": "Escribe el nombre de tu negocio y tu ciudad. Le preguntamos a una IA con acceso a internet y te enseñamos aquí mismo qué sabe de ti. Casi siempre la respuesta sorprende —y ahí se ve el trabajo que hay por hacer.",
-      "placeholder": "Ej.: Cafetería La Esquina, Valencia",
+      "placeholder": "Dime las mejores clínicas dentales de Málaga",
       "loading": "Preguntando a la IA por tu negocio…",
       "answerLabel": "Esto dice la IA",
       "resultCta": "Quiero que la IA me conozca",
@@ -987,19 +987,19 @@
     "focus": {
       "eyebrow": "Sectores",
       "title": "Sectores que conocemos de cerca",
-      "intro": "Por experiencia, Agenflow mira siempre al inmobiliario y la construcción: sabemos dónde duele y cómo resolverlo. Y damos un peso especial al sector legal por partida doble: es un campo que gana mucho con estos sistemas y, a la vez, nos mantiene cerca del cumplimiento normativo y jurídico que rodea a un negocio como el nuestro.",
+      "intro": "El sector que más dominamos es el mundo del inmueble —inmobiliaria, administración de fincas e instaladores—, tanto que tenemos producto propio. Aun así, la automatización y la IA sirven a cualquier pyme.",
       "items": [
         {
-          "title": "Inmobiliario y construcción",
-          "desc": "Captación, gestión de comunidades, documentación y obra: automatizamos los procesos que más tiempo consumen en el sector.",
-          "href": "/sectores/inmobiliario-construccion",
+          "title": "El mundo del inmueble",
+          "desc": "Inmobiliaria, administración de fincas e instaladores: el sector que mejor conocemos, con producto propio y automatizaciones para lo que más tiempo consume.",
+          "href": "/inmueble",
           "linkLabel": "Ver sector"
         },
         {
-          "title": "Legal",
-          "desc": "Auditoría contable, documentación y plazos del despacho, con la confidencialidad como base de todo.",
-          "href": "/sectores/legal",
-          "linkLabel": "Ver sector"
+          "title": "Cualquier pyme",
+          "desc": "Automatización, IA y presencia online para cualquier negocio local: clínicas, estética, hostelería, comercio, servicios… Si hay tareas repetitivas, hay margen.",
+          "href": "/servicios",
+          "linkLabel": "Ver servicios"
         }
       ]
     },
@@ -1029,8 +1029,8 @@
       "title": "Preguntas frecuentes",
       "items": [
         {
-          "q": "¿Trabajáis solo con inmobiliario, construcción y legal?",
-          "a": "Con nuestro software propio vamos a fondo en inmobiliario, construcción y legal. Pero la automatización, la IA y la mejora de presencia online (web, SEO y visibilidad en IA) sirven a cualquier pyme o negocio local —clínicas, estética, electricistas, instaladores, hostelería, comercio…—. Si tienes tareas repetitivas o quieres que te encuentren mejor online, hablemos."
+          "q": "¿Trabajáis solo con el sector del inmueble?",
+          "a": "Con nuestro software propio vamos a fondo en el mundo del inmueble (inmobiliaria, administración de fincas e instaladores). Pero la automatización, la IA y la mejora de presencia online (web, SEO y visibilidad en IA) sirven a cualquier pyme o negocio local —clínicas, estética, hostelería, comercio…—. Si tienes tareas repetitivas o quieres que te encuentren mejor online, hablemos."
         },
         {
           "q": "¿Hace falta saber de tecnología para trabajar con vosotros?",
@@ -1073,10 +1073,17 @@
   "blogPage": {
     "eyebrow": "Blog",
     "title": "Automatización e IA, explicadas para tu negocio",
-    "subtitle": "Ideas prácticas para producir más sin crecer en costes. Sin tecnicismos y sin humo.",
-    "readMore": "Leer artículo",
+    "subtitle": "Guías prácticas para producir más sin crecer en costes. Sin tecnicismos y sin humo.",
+    "all": "Todos",
+    "guide": "Guía",
+    "readMore": "Leer",
     "backToBlog": "Volver al blog",
-    "empty": "Aún no hay artículos publicados.",
+    "toc": "En esta página",
+    "faqTitle": "Preguntas frecuentes",
+    "relatedTitle": "Sigue leyendo",
+    "home": "Inicio",
+    "updated": "Actualizado",
+    "empty": "Aún no hay artículos en esta categoría.",
     "ctaTitle": "¿Lo aplicamos en tu negocio?",
     "ctaSubtitle": "Cuéntanos cómo trabajáis hoy y te decimos por dónde empezar.",
     "ctaCta": "Solicitar consultoría"
@@ -1165,20 +1172,26 @@
       }
     },
     "form": {
-      "name": "Nombre",
+      "name": "Nombre y apellidos",
       "email": "Email",
+      "phone": "Teléfono (opcional)",
       "company": "Empresa (opcional)",
-      "subject": "¿En qué podemos ayudarte?",
+      "companyUrl": "Web actual (opcional)",
+      "sector": "Sector (opcional)",
+      "teamSize": "Tamaño del equipo (opcional)",
+      "select": "Selecciona…",
+      "subject": "¿Qué te interesa?",
       "subjects": {
         "presencia": "Mejora de presencia online",
         "consultoria": "Consultoría de IA",
         "automatizacion": "Automatización de procesos",
-        "software": "Software por sector",
-        "inmobiliario": "Inmobiliario y construcción",
+        "software": "Software a medida",
+        "inmobiliario": "El mundo del inmueble",
         "legal": "Sector legal",
         "otro": "Otra cosa"
       },
-      "message": "¿Qué quieres mejorar?",
+      "message": "Cuéntanos tu caso",
+      "messagePlaceholder": "¿En qué se te va el tiempo? ¿Qué te gustaría resolver o mejorar?",
       "submit": "Enviar mensaje",
       "sending": "Enviando…",
       "success": "¡Gracias! Te respondemos en breve.",
@@ -1196,7 +1209,7 @@
     "lastUpdated": "Última actualización: junio de 2026",
     "company": {
       "label": "Titular y responsable",
-      "brandNote": "Agenflow es la marca comercial bajo la que opera Francisco Javier Arias Carrillo (autónomo).",
+      "brandNote": "Agenflow es la marca comercial bajo la que opera Francisco Javier Arias Carrillo.",
       "name": "Francisco Javier Arias Carrillo",
       "taxIdLabel": "NIF",
       "taxId": "45886331C",

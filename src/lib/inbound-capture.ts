@@ -26,7 +26,11 @@ export const SUBJECT_TO_INTERES: Record<ContactSubject, string> = {
 export interface InboundCaptureInput {
   name: string;
   email: string;
+  phone?: string;
   company?: string;
+  companyUrl?: string;
+  sector?: string;
+  teamSize?: string;
   subject: ContactSubject;
   message: string;
   website?: string; // honeypot: vacío en humanos; la función descarta si viene relleno
@@ -44,7 +48,11 @@ export function postInboundCapture(v: InboundCaptureInput): void {
     body: JSON.stringify({
       nombre: v.name,
       email: v.email,
+      telefono: v.phone ?? "",
       empresa: v.company ?? "",
+      web: v.companyUrl ?? "",
+      sector: v.sector ?? "",
+      tamano_equipo: v.teamSize ?? "",
       interes: SUBJECT_TO_INTERES[v.subject],
       mensaje: v.message,
       website: v.website ?? "",
