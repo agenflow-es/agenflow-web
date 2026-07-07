@@ -9,6 +9,18 @@ const nextConfig: NextConfig = {
   // desarrollo-software se renombró a software-medida. Locale-prefixed (es|en).
   async redirects() {
     return [
+      // Español solo por ahora: /en/* → /es/* (TEMPORAL, para reactivar inglés
+      // más adelante sin que Google haya cacheado un 301).
+      {
+        source: "/en/:path*",
+        destination: "/es/:path*",
+        permanent: false,
+      },
+      {
+        source: "/en",
+        destination: "/es",
+        permanent: false,
+      },
       {
         source: "/:locale(es|en)/precios",
         destination: "/:locale/consultoria",

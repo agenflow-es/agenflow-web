@@ -20,6 +20,14 @@ export type AiCheckResult = {
 // "claude-haiku-4-5" as preferred — it's the only line to change.
 const MODEL = "claude-sonnet-4-6";
 
+// Fixed message returned whenever the model can't find the business, so the
+// "you're invisible to AI" outcome is always the same, on-message copy (the
+// hook for the presencia-online service) instead of a varying model reply.
+const NOT_FOUND_MESSAGE: Record<"es" | "en", string> = {
+  es: "No hemos podido encontrar tu negocio. Hoy no es rastreable por los motores de IA como ChatGPT: cuando alguien pregunta por lo que ofreces, tu negocio no aparece.",
+  en: "We couldn't find your business. Right now it isn't traceable by AI engines like ChatGPT: when someone asks about what you offer, your business doesn't show up.",
+};
+
 // Basic in-memory rate limit. NOTE: per server instance only — on serverless
 // (Vercel) instances don't share memory, so for production this should move to
 // a durable store (Vercel KV / Upstash Redis). Good enough as a first guard.
@@ -76,8 +84,8 @@ export async function checkAiVisibility(input: unknown): Promise<AiCheckResult> 
 
   const system =
     locale === "en"
-      ? "You check whether a business shows up online and to AI assistants. The user gives the business name and, usually, the city. Use web search and answer in 2–3 very short sentences (about 50 words max), in plain running text: no headings, no lists, no bullets, no emojis, no bold and no markdown of any kind. Get to the point: say whether the business appears and what is known about it; if there's barely any information, say so honestly —that to AI it's nearly invisible— and mention in a few words what shows up in its place (competitors or directories). Don't add a preamble or comment on the query, and don't end with questions or offers. Never invent data or cite URLs. Answer in English."
-      : "Compruebas si un negocio aparece en internet y ante los asistentes de IA. El usuario te da el nombre del negocio y, normalmente, la ciudad. Usa la búsqueda web y responde en 2 o 3 frases muy breves (máximo unas 50 palabras), en texto plano y corrido: sin títulos, sin listas, sin viñetas, sin emojis, sin negritas y sin ningún formato markdown. Ve al grano: di si el negocio aparece y qué se sabe de él; si apenas hay información, dilo con honestidad —que para la IA es casi invisible— y menciona en pocas palabras qué aparece en su lugar (competencia o directorios). No añadas introducción ni comentes la consulta, y no termines con preguntas ni ofrecimientos. Nunca inventes datos ni cites URLs. Responde en español.";
+      ? "You check whether a business shows up online and to AI assistants. The user gives the business name and, usually, the city. Use web search. ALWAYS START your reply with a tag: write exactly [NO_ENCONTRADO] if you can't find the business, if there's virtually no reliable information about it, or if you can't confirm it exists; or [ENCONTRADO] if the business clearly shows up and there is reliable information about it. If the tag is [NO_ENCONTRADO], add nothing after it. If the tag is [ENCONTRADO], after it write 2–3 very short sentences (about 50 words max) in plain running text —no headings, no lists, no bullets, no emojis, no bold, no markdown— saying what is known about the business. No preamble, don't comment on the query, don't end with questions or offers, and never invent data or cite URLs. Answer in English."
+      : "Compruebas si un negocio aparece en internet y ante los asistentes de IA. El usuario te da el nombre del negocio y, normalmente, la ciudad. Usa la búsqueda web. EMPIEZA SIEMPRE tu respuesta con una etiqueta: escribe exactamente [NO_ENCONTRADO] si no localizas el negocio, si apenas hay información fiable sobre él o si no puedes confirmar que exista; o [ENCONTRADO] si el negocio aparece con claridad y hay información fiable sobre él. Si la etiqueta es [NO_ENCONTRADO], no añadas nada después. Si la etiqueta es [ENCONTRADO], tras ella escribe 2 o 3 frases muy breves (máximo unas 50 palabras) en texto plano y corrido —sin títulos, sin listas, sin viñetas, sin emojis, sin negritas y sin ningún markdown— diciendo qué se sabe del negocio. No añadas introducción ni comentes la consulta, no termines con preguntas ni ofrecimientos, y nunca inventes datos ni cites URLs. Responde en español.";
 
   try {
     const client = new Anthropic({ apiKey });
@@ -93,9 +101,19 @@ export async function checkAiVisibility(input: unknown): Promise<AiCheckResult> 
       .filter((b): b is Anthropic.TextBlock => b.type === "text")
       .map((b) => b.text)
       .join("\n");
-    const answer = toPlainText(raw);
+    const trimmed = raw.trimStart();
 
-    if (!answer) return { ok: false, error: "failed" };
+    // Not found → always the same fixed message (the "invisible to AI" hook),
+    // never a varying model reply.
+    if (/^\[?\s*NO_ENCONTRADO/i.test(trimmed)) {
+      return { ok: true, answer: NOT_FOUND_MESSAGE[locale] };
+    }
+
+    // Found → strip the [ENCONTRADO] tag and return the short description.
+    const answer = toPlainText(trimmed.replace(/^\[?\s*ENCONTRADO\s*\]?/i, ""));
+
+    // Empty/unexpected → fall back to the fixed not-found message (graceful).
+    if (!answer) return { ok: true, answer: NOT_FOUND_MESSAGE[locale] };
     return { ok: true, answer };
   } catch (err) {
     if (err instanceof Anthropic.AuthenticationError) {

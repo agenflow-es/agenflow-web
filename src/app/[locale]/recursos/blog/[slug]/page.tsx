@@ -39,7 +39,7 @@ export async function generateMetadata({
     description: post.description,
     alternates: {
       canonical: `/${locale}${path}`,
-      languages: { es: `/es${path}`, en: `/en${path}` },
+      languages: { es: `/es${path}` },
     },
     openGraph: {
       type: "article",
