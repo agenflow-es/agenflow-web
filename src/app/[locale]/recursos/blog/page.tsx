@@ -2,11 +2,10 @@ import type { Metadata } from "next";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
 import { Container } from "@/components/ui/primitives";
-import { Reveal } from "@/components/motion/Reveal";
-import { PageHero } from "@/components/layout/PageHero";
-import { CtaSection } from "@/components/layout/CtaSection";
+import { HeroLineaB } from "@/components/sections/HeroLineaB";
+import { BlogList, type PostCard } from "@/components/blog/BlogList";
 import { buildMetadata } from "@/lib/metadata";
-import { getPosts } from "@/content/blog/posts";
+import { getPosts, getCategory, CATEGORIES } from "@/content/blog/posts";
 
 export async function generateMetadata({
   params,
@@ -33,67 +32,60 @@ export default async function BlogIndexPage({
     timeZone: "UTC",
   });
 
+  const cards: PostCard[] = posts.map((p) => ({
+    slug: p.slug,
+    title: p.title,
+    description: p.description,
+    dateIso: p.date,
+    dateLabel: df.format(new Date(p.date)),
+    category: p.category,
+    categoryLabel: getCategory(p.category)?.label ?? p.category,
+    type: p.type,
+    readingTime: p.readingTime,
+  }));
+
+  const categories = CATEGORIES.map((c) => ({ slug: c.slug, label: c.label }));
+
   return (
     <>
-      <PageHero
+      <HeroLineaB
         eyebrow={t("eyebrow")}
         title={t("title")}
         subtitle={t("subtitle")}
       />
 
-      <section className="border-b border-border">
-        <Container className="py-[clamp(72px,10vw,140px)]">
-          {posts.length === 0 ? (
-            <p className="text-center text-[17px] text-fg-muted">{t("empty")}</p>
-          ) : (
-            <div className="mx-auto grid max-w-[920px] gap-6 sm:grid-cols-2">
-              {posts.map((p) => (
-                <Reveal key={p.slug}>
-                  <Link
-                    href={`/recursos/blog/${p.slug}`}
-                    className="group flex h-full flex-col rounded-[var(--radius-lg)] border border-border bg-surface p-7 shadow-[var(--shadow)] transition duration-200 hover:-translate-y-1 hover:border-accent"
-                  >
-                    <div className="flex items-center gap-3 font-label text-[12.5px] text-fg-faint">
-                      <span className="font-medium uppercase tracking-[0.1em] text-accent">
-                        {p.tag}
-                      </span>
-                      <span aria-hidden>·</span>
-                      <span>{p.readingTime}</span>
-                    </div>
-                    <h2 className="mt-4 font-display text-[21px] font-semibold leading-[1.25] tracking-[-0.01em]">
-                      {p.title}
-                    </h2>
-                    <p className="mt-3 flex-1 text-[15px] leading-[1.6] text-fg-muted">
-                      {p.description}
-                    </p>
-                    <div className="mt-5 flex items-center justify-between">
-                      <time className="text-[13px] text-fg-faint" dateTime={p.date}>
-                        {df.format(new Date(p.date))}
-                      </time>
-                      <span className="inline-flex items-center gap-1.5 text-[14px] font-medium text-accent">
-                        {t("readMore")}{" "}
-                        <span
-                          aria-hidden
-                          className="transition group-hover:translate-x-0.5"
-                        >
-                          →
-                        </span>
-                      </span>
-                    </div>
-                  </Link>
-                </Reveal>
-              ))}
-            </div>
-          )}
+      <section className="border-b border-border bg-bg py-[clamp(56px,9vw,110px)]">
+        <Container>
+          <BlogList
+            posts={cards}
+            categories={categories}
+            allLabel={t("all")}
+            readMore={t("readMore")}
+            guideLabel={t("guide")}
+            emptyLabel={t("empty")}
+          />
         </Container>
       </section>
 
-      <CtaSection
-        title={t("ctaTitle")}
-        subtitle={t("ctaSubtitle")}
-        cta={t("ctaCta")}
-        href="/contacto?reason=consultoria&subject=consultoria"
-      />
+      {/* Cierre */}
+      <section className="border-t border-border bg-surface py-[clamp(72px,12vw,150px)]">
+        <Container className="text-center">
+          <p className="mx-auto max-w-[24ch] font-display text-[clamp(26px,4.4vw,44px)] font-semibold leading-[1.1] tracking-[-0.02em] text-fg">
+            {t("ctaTitle")}
+          </p>
+          <p className="mx-auto mt-5 max-w-[52ch] text-[16px] leading-relaxed text-fg-muted">
+            {t("ctaSubtitle")}
+          </p>
+          <div className="mt-9">
+            <Link
+              href="/contacto?reason=consultoria&subject=consultoria"
+              className="inline-flex items-center gap-2 rounded-[var(--radius)] bg-accent px-7 py-4 text-[15px] font-semibold text-accent-fg transition-transform hover:-translate-y-0.5"
+            >
+              {t("ctaCta")} <span aria-hidden>→</span>
+            </Link>
+          </div>
+        </Container>
+      </section>
     </>
   );
 }

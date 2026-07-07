@@ -21,7 +21,7 @@ export function HeroLineaB({
   eyebrow?: string;
   title: ReactNode;
   subtitle: ReactNode;
-  primary: Cta;
+  primary?: Cta;
   secondary?: Cta;
   proof?: string;
 }) {
@@ -36,22 +36,26 @@ export function HeroLineaB({
           <p className="mx-auto mt-6 max-w-[56ch] text-[clamp(16px,1.6vw,19px)] leading-relaxed text-fg-muted">
             {subtitle}
           </p>
-          <div className="mt-9 flex flex-wrap items-center justify-center gap-3">
-            <a
-              href={primary.href}
-              className="inline-flex items-center gap-2 rounded-[var(--radius)] bg-accent px-6 py-3.5 text-[15px] font-medium text-accent-fg transition-transform hover:-translate-y-0.5"
-            >
-              {primary.label} <span aria-hidden>→</span>
-            </a>
-            {secondary && (
-              <a
-                href={secondary.href}
-                className="inline-flex items-center rounded-[var(--radius)] border border-border-strong px-6 py-3.5 text-[15px] font-medium text-fg transition-colors hover:bg-surface"
-              >
-                {secondary.label}
-              </a>
-            )}
-          </div>
+          {(primary || secondary) && (
+            <div className="mt-9 flex flex-wrap items-center justify-center gap-3">
+              {primary && (
+                <a
+                  href={primary.href}
+                  className="inline-flex items-center gap-2 rounded-[var(--radius)] bg-accent px-6 py-3.5 text-[15px] font-medium text-accent-fg transition-transform hover:-translate-y-0.5"
+                >
+                  {primary.label} <span aria-hidden>→</span>
+                </a>
+              )}
+              {secondary && (
+                <a
+                  href={secondary.href}
+                  className="inline-flex items-center rounded-[var(--radius)] border border-border-strong px-6 py-3.5 text-[15px] font-medium text-fg transition-colors hover:bg-surface"
+                >
+                  {secondary.label}
+                </a>
+              )}
+            </div>
+          )}
           {proof && (
             <div className="mt-10 font-label text-[11.5px] uppercase tracking-[0.14em] text-label-adaptive">
               {proof}
