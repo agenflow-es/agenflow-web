@@ -79,12 +79,12 @@ export function TextReveal({
   // Finish revealing well before the end of the scroll (COMPLETE), so from there
   // to the end the whole sentence stays fully visible (held) while still pinned —
   // instead of the last word landing just as the section scrolls away.
-  const COMPLETE = 0.6;
+  const COMPLETE = 0.55;
   let idx = 0;
 
   return (
-    <div ref={ref} className={cn("relative h-[130vh]", containerClassName)}>
-      <div className="sticky top-0 flex h-screen items-center justify-center">
+    <div ref={ref} className={cn("relative h-[110vh]", containerClassName)}>
+      <div className="sticky top-0 flex h-[85vh] items-center justify-center">
         <p className={className}>
           {lines.map((line, li) => (
             <span key={li}>

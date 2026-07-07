@@ -254,7 +254,7 @@ export default async function DevInmueblePage({
         <Container>
           <TextReveal
             text={
-              "No es solo ahorrar horas: es crecer sin sumar gente.\nTu mismo equipo saca adelante mucho más trabajo, y tu negocio se vuelve mucho más rentable."
+              "No es solo ahorrar horas.\nEs darle a tu equipo capacidad para hacer mucho más,\ny a tu negocio, margen para crecer."
             }
             className="mx-auto max-w-[30ch] text-center font-display text-[clamp(24px,4vw,42px)] font-semibold leading-[1.2] tracking-[-0.02em] text-fg"
           />
