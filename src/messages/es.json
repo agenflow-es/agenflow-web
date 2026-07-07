@@ -467,6 +467,7 @@
       "items": [
         {
           "name": "FincAI",
+          "status": "Operativo",
           "sector": "Administración de fincas",
           "desc": "Software con IA para que los administradores gestionen sus comunidades mucho mejor.",
           "href": "https://fincai.es",
@@ -475,9 +476,12 @@
         },
         {
           "name": "Replo",
+          "status": "Operativo",
           "sector": "Inmobiliarias",
           "desc": "Gestión de leads de punta a punta: bandeja omnicanal, agente de WhatsApp, voz y gestión de visitas.",
-          "status": "Web en construcción"
+          "href": "https://replo.es",
+          "external": true,
+          "cta": "Ver producto"
         },
         {
           "name": "Sector legal",
@@ -865,6 +869,7 @@
       "items": [
         {
           "name": "FincAI",
+          "status": "Operativo",
           "for": "Administración de fincas",
           "desc": "Software con IA para que los administradores gestionen sus comunidades mucho mejor: un agente que orquesta documentación, incidencias y comunicación.",
           "cta": "Ver producto",
@@ -873,9 +878,12 @@
         },
         {
           "name": "Replo",
+          "status": "Operativo",
           "for": "Inmobiliarias",
           "desc": "Gestión de leads de punta a punta: bandeja omnicanal, agente de WhatsApp, voz y gestión de visitas. Para responder el primero y vender más.",
-          "status": "Web en construcción"
+          "href": "https://replo.es",
+          "external": true,
+          "cta": "Ver producto"
         }
       ]
     },
@@ -963,20 +971,18 @@
       "eyebrow": "El origen",
       "title": "De la construcción de hospitales a Agenflow",
       "paragraphs": [
-        "Agenflow lo funda un ingeniero industrial con más de 6 años de experiencia en construcción y proyectos internacionales de hospitales: obras enormes, con cientos de personas y miles de detalles que tienen que encajar. Ahí se aprende rápido que un proyecto sale adelante —y es rentable— cuando por dentro hay sistemas bien definidos y orquestados.",
-        "También se vive el otro lado. Como todos sus compañeros, sufría el mismo problema: jornadas larguísimas, sin tiempo para nada y procesos con un margen de mejora enorme. Mucho esfuerzo invertido en tareas que un buen sistema podía resolver.",
-        "La idea de montar algo propio siempre estuvo ahí. Cuando vio lo que la automatización y la inteligencia artificial podían hacer con esos procesos, no se lo pensó: dedicó más de un año a formarse y a aplicarlo en real, hasta fundar Agenflow."
+        "Soy Francisco Javier Arias, ingeniero industrial. Pasé más de 5 años en construcción y proyectos internacionales de hospitales: obras enormes, con cientos de personas y miles de detalles que tienen que encajar. Ahí aprendes rápido que un proyecto sale adelante —y es rentable— cuando por dentro hay sistemas bien definidos y orquestados.",
+        "También viví el otro lado. Como todos mis compañeros, sufría el mismo problema: jornadas larguísimas, sin tiempo para nada y procesos con un margen de mejora enorme. Mucho esfuerzo invertido en tareas que un buen sistema podía resolver.",
+        "La idea de montar algo propio siempre estuvo ahí. Cuando vi lo que la automatización y la inteligencia artificial podían hacer con esos procesos, no me lo pensé: dediqué más de un año a formarme y a aplicarlo en real, hasta fundar Agenflow."
       ],
-      "milestones": [
-        { "title": "Construcción de hospitales", "sub": "Ingeniería en proyectos nacionales e internacionales" },
-        { "title": "El salto a la IA", "sub": "Más de un año formándose y aplicándolo en real" },
-        { "title": "Nace Agenflow", "sub": "Sistemas e IA para pymes" }
-      ]
+      "name": "Francisco J. Arias",
+      "role": "Fundador · Ingeniero industrial",
+      "photoAlt": "Francisco J. Arias, fundador de Agenflow"
     },
     "mission": {
       "eyebrow": "Misión",
-      "title": "Ayudar a las pymes españolas a ser más rentables y más robustas",
-      "body": "Integramos sistemas automatizados e inteligencia artificial en la operación del día a día para que produzcas más sin crecer en costes, con procesos que aguantan cuando el negocio crece."
+      "quote": "Mi objetivo con Agenflow es que las pymes españolas sean más rentables y más robustas. Integramos inteligencia artificial y automatización en tu operación del día a día para que produzcas más sin crecer en costes, con procesos que aguantan cuando el negocio crece.",
+      "author": "Francisco J. Arias, Fundador"
     },
     "focus": {
       "eyebrow": "Sectores",

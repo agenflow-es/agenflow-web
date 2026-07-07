@@ -467,6 +467,7 @@
       "items": [
         {
           "name": "FincAI",
+          "status": "Live",
           "sector": "Property management",
           "desc": "AI software so property managers can run their communities far better.",
           "href": "https://fincai.es",
@@ -475,9 +476,12 @@
         },
         {
           "name": "Replo",
+          "status": "Live",
           "sector": "Real estate agencies",
           "desc": "End-to-end lead management: omnichannel inbox, WhatsApp agent, voice and visit scheduling.",
-          "status": "Site under construction"
+          "href": "https://replo.es",
+          "external": true,
+          "cta": "View product"
         },
         {
           "name": "Legal sector",
@@ -865,6 +869,7 @@
       "items": [
         {
           "name": "FincAI",
+          "status": "Live",
           "for": "Property management",
           "desc": "AI software so property managers can run their communities far better: an agent that orchestrates documents, incidents and communication.",
           "cta": "View product",
@@ -873,9 +878,12 @@
         },
         {
           "name": "Replo",
+          "status": "Live",
           "for": "Real estate agencies",
           "desc": "End-to-end lead management: omnichannel inbox, WhatsApp agent, voice and visit scheduling. So you reply first and sell more.",
-          "status": "Site under construction"
+          "href": "https://replo.es",
+          "external": true,
+          "cta": "View product"
         }
       ]
     },
@@ -963,20 +971,18 @@
       "eyebrow": "Origin",
       "title": "From building hospitals to Agenflow",
       "paragraphs": [
-        "Agenflow was founded by an industrial engineer with over 6 years in construction and international hospital projects: huge builds, with hundreds of people and thousands of details that all have to fit together. There you learn fast that a project succeeds —and turns a profit— when the systems inside are well defined and orchestrated.",
-        "You also live the other side. Like all of his colleagues, he suffered the same problem: endless hours, no time for anything, and processes with enormous room for improvement. A lot of effort spent on tasks a good system could handle.",
-        "The idea of building something of his own was always there. When he saw what automation and artificial intelligence could do with those processes, he didn't think twice: he spent more than a year learning and applying it for real, until he founded Agenflow."
+        "I'm Francisco Javier Arias, an industrial engineer. I spent over 5 years in construction and international hospital projects: huge builds, with hundreds of people and thousands of details that all have to fit together. There you learn fast that a project succeeds —and turns a profit— when the systems inside are well defined and orchestrated.",
+        "I also lived the other side. Like all of my colleagues, I suffered the same problem: endless hours, no time for anything, and processes with enormous room for improvement. A lot of effort spent on tasks a good system could handle.",
+        "The idea of building something of my own was always there. When I saw what automation and artificial intelligence could do with those processes, I didn't think twice: I spent more than a year learning and applying it for real, until I founded Agenflow."
       ],
-      "milestones": [
-        { "title": "Building hospitals", "sub": "Engineering on national and international projects" },
-        { "title": "The jump to AI", "sub": "Over a year learning and applying it for real" },
-        { "title": "Agenflow is born", "sub": "Systems and AI for SMBs" }
-      ]
+      "name": "Francisco J. Arias",
+      "role": "Founder · Industrial engineer",
+      "photoAlt": "Francisco J. Arias, founder of Agenflow"
     },
     "mission": {
       "eyebrow": "Mission",
-      "title": "Help Spanish SMBs become more profitable and more resilient",
-      "body": "We integrate automated systems and artificial intelligence into day-to-day operations so you produce more without growing costs, with processes that hold up as the business grows."
+      "quote": "My goal with Agenflow is for Spanish SMBs to become more profitable and more resilient. We bring artificial intelligence and automation into your day-to-day operation so you produce more without growing your costs, with processes that hold up as the business scales.",
+      "author": "Francisco J. Arias, Founder"
     },
     "focus": {
       "eyebrow": "Sectors",
