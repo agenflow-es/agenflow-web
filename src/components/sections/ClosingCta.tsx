@@ -32,7 +32,7 @@ export function ClosingCta() {
           </div>
 
           <div className="mt-6 font-label text-[11.5px] uppercase tracking-[0.14em] text-label-adaptive">
-            Gratis · Sin compromiso · Te respondemos en menos de 24 h
+            Sin compromiso · Te respondemos en menos de 24 h
           </div>
         </Reveal>
       </Container>

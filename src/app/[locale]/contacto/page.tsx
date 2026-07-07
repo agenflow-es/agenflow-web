@@ -102,7 +102,7 @@ export default async function ContactPage({
                 icon={<BadgeCheck className="h-4 w-4" strokeWidth={1.7} />}
                 label="Sin compromiso"
               >
-                Gratis. Cuéntanos tu caso y te decimos por dónde empezar
+                Cuéntanos tu caso y te decimos por dónde empezar
               </InfoRow>
             </div>
           </div>
