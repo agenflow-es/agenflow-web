@@ -117,7 +117,7 @@ export function MobileMenu({
             >
               <Group title={labels.servicios} items={servicios} onNavigate={close} />
 
-              <div className="mb-2">
+              <div className="border-t border-border pt-2">
                 {topLinks.map((it) => (
                   <Link
                     key={it.href}
