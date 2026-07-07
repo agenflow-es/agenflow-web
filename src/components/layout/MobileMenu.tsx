@@ -45,15 +45,18 @@ function Group({
 // sized against the 68px header (collapsing to ~0 height); the portal restores
 // viewport-relative positioning so the panel fills the screen.
 export function MobileMenu({
+  servicios,
   topLinks,
   recursos,
   nosotros,
   labels,
 }: {
+  servicios: NavItem[];
   topLinks: NavItem[];
   recursos: NavItem[];
   nosotros: NavItem;
   labels: {
+    servicios: string;
     recursos: string;
     cta: string;
     open: string;
@@ -112,6 +115,8 @@ export function MobileMenu({
               onClick={(e) => e.stopPropagation()}
               className="absolute inset-x-0 top-0 max-h-full overflow-y-auto border-b border-border bg-surface p-5 shadow-[var(--shadow)]"
             >
+              <Group title={labels.servicios} items={servicios} onNavigate={close} />
+
               <div className="mb-2">
                 {topLinks.map((it) => (
                   <Link
