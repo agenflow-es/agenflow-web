@@ -73,19 +73,7 @@ function ReploCard() {
         style={{ background: REPLO.terra, opacity: 0.2 }}
       />
       <div className="relative flex h-full flex-col">
-        <div className="flex flex-wrap items-center justify-between gap-3">
-          <ReploWordmark />
-          <span
-            className="inline-flex items-center gap-2 rounded-full border px-3 py-1 text-[11px] font-medium uppercase tracking-[0.1em]"
-            style={{ borderColor: "rgba(244,236,223,0.25)", color: REPLO.sand }}
-          >
-            <span
-              className="h-1.5 w-1.5 rounded-full"
-              style={{ background: REPLO.terra }}
-            />
-            Operativo
-          </span>
-        </div>
+        <ReploWordmark />
 
         <p
           className="mt-10 max-w-[16ch] text-[clamp(24px,3vw,34px)] font-semibold leading-[1.12]"
@@ -134,19 +122,7 @@ function FincaiCard() {
         style={{ background: FINCAI.blue, opacity: 0.1 }}
       />
       <div className="relative flex h-full flex-col">
-        <div className="flex flex-wrap items-center justify-between gap-3">
-          <FincaiWordmark />
-          <span
-            className="inline-flex items-center gap-2 rounded-full border px-3 py-1 text-[11px] font-medium uppercase tracking-[0.1em]"
-            style={{ borderColor: "rgba(14,20,24,0.18)", color: FINCAI.ink }}
-          >
-            <span
-              className="h-1.5 w-1.5 rounded-full"
-              style={{ background: FINCAI.blue }}
-            />
-            Próximamente
-          </span>
-        </div>
+        <FincaiWordmark />
 
         <p
           className="mt-10 max-w-[16ch] text-[clamp(24px,3vw,34px)] leading-[1.14]"
