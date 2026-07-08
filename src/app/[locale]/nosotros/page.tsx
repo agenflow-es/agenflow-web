@@ -6,7 +6,6 @@ import { Container, Eyebrow } from "@/components/ui/primitives";
 import { Reveal } from "@/components/motion/Reveal";
 import { Link } from "@/i18n/navigation";
 import { HeroLineaB } from "@/components/sections/HeroLineaB";
-import { StepTimeline } from "@/components/visuals/StepTimeline";
 import { FeatureCard } from "@/components/ui/FeatureCard";
 
 export const metadata: Metadata = {
@@ -22,18 +21,6 @@ const PARAGRAPHS = [
   "Agenflow lo funda un ingeniero industrial con más de 6 años de experiencia en construcción y proyectos internacionales de hospitales: obras enormes, con cientos de personas y miles de detalles que tienen que encajar. Ahí se aprende rápido que un proyecto sale adelante —y es rentable— cuando por dentro hay sistemas bien definidos y orquestados.",
   "También se vive el otro lado. Como todos sus compañeros, sufría el mismo problema: jornadas larguísimas, sin tiempo para nada y procesos con un margen de mejora enorme. Mucho esfuerzo invertido en tareas que un buen sistema podía resolver.",
   "La idea de montar algo propio siempre estuvo ahí. Cuando vio lo que la automatización y la inteligencia artificial podían hacer con esos procesos, no se lo pensó: dedicó más de un año a formarse y a aplicarlo en real, hasta fundar Agenflow.",
-];
-
-const MILESTONES = [
-  {
-    title: "Construcción de hospitales",
-    sub: "Ingeniería en proyectos nacionales e internacionales",
-  },
-  {
-    title: "El salto a la IA",
-    sub: "Más de un año formándose y aplicándolo en real",
-  },
-  { title: "Nace Agenflow", sub: "Sistemas e IA para pymes" },
 ];
 
 const PRINCIPIOS = [
@@ -75,7 +62,7 @@ export default async function NosotrosPage({
       {/* El origen — foto + historia + hitos */}
       <section className="border-b border-border bg-bg py-[clamp(64px,10vw,120px)]">
         <Container>
-          <div className="grid gap-x-14 gap-y-10 md:grid-cols-[minmax(0,300px)_1fr] md:items-start md:gap-16">
+          <div className="grid gap-x-14 gap-y-10 md:grid-cols-[minmax(0,300px)_1fr] md:items-center md:gap-16">
             <Reveal>
               <figure className="m-0">
                 <div className="relative aspect-[4/5] w-full max-w-[300px] overflow-hidden rounded-[var(--radius-lg)] border border-border">
@@ -87,7 +74,7 @@ export default async function NosotrosPage({
                     sizes="(max-width: 768px) 80vw, 300px"
                   />
                 </div>
-                <figcaption className="mt-3 font-label text-[11px] uppercase tracking-[0.14em] text-fg-faint">
+                <figcaption className="mt-3 font-label text-[11px] uppercase tracking-[0.14em] text-accent">
                   Francisco J. Arias · Fundador
                 </figcaption>
               </figure>
@@ -105,10 +92,6 @@ export default async function NosotrosPage({
               </div>
             </Reveal>
           </div>
-
-          <Reveal className="mt-16">
-            <StepTimeline items={MILESTONES} highlightLast />
-          </Reveal>
         </Container>
       </section>
 
