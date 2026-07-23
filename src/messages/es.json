@@ -1216,7 +1216,9 @@
       "addressLabel": "Domicilio",
       "address": "c/ Huelva, 38 — 14400 Pozoblanco (Córdoba)",
       "emailLabel": "Email",
-      "email": "info@agenflow.es"
+      "email": "info@agenflow.es",
+      "phoneLabel": "Teléfono",
+      "phone": "611 499 875"
     },
     "privacy": {
       "title": "Política de privacidad",
@@ -1226,7 +1228,7 @@
           "heading": "Responsable del tratamiento",
           "body": [
             "El responsable del tratamiento de tus datos es Francisco Javier Arias Carrillo (NIF 45886331C), con domicilio en c/ Huelva, 38, 14400 Pozoblanco (Córdoba), que opera bajo la marca Agenflow.",
-            "Puedes contactar con nosotros en cualquier momento en info@agenflow.es."
+            "Puedes contactar con nosotros en cualquier momento en info@agenflow.es o en el teléfono 611 499 875."
           ]
         },
         {
@@ -1288,7 +1290,7 @@
         {
           "heading": "Titular del sitio",
           "body": [
-            "En cumplimiento del deber de información del artículo 10 de la LSSI-CE, se hacen constar los siguientes datos: el titular de este sitio web es Francisco Javier Arias Carrillo (NIF 45886331C), con domicilio en c/ Huelva, 38, 14400 Pozoblanco (Córdoba). «Agenflow» es la marca comercial bajo la que opera. Email de contacto: info@agenflow.es."
+            "En cumplimiento del deber de información del artículo 10 de la LSSI-CE, se hacen constar los siguientes datos: el titular de este sitio web es Francisco Javier Arias Carrillo (NIF 45886331C), con domicilio en c/ Huelva, 38, 14400 Pozoblanco (Córdoba). «Agenflow» es la marca comercial bajo la que opera. Email de contacto: info@agenflow.es. Teléfono de contacto: 611 499 875."
           ]
         },
         {

@@ -43,6 +43,15 @@ export function LegalDoc({ namespace }: { namespace: LegalNamespace }) {
               {t("company.email")}
             </a>
           </li>
+          <li>
+            {t("company.phoneLabel")}:{" "}
+            <a
+              href={`tel:${t("company.phone").replace(/[^+\d]/g, "")}`}
+              className="text-accent transition hover:underline"
+            >
+              {t("company.phone")}
+            </a>
+          </li>
         </ul>
       </div>
 
