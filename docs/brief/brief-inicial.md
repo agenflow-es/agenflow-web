@@ -140,7 +140,7 @@ Directo, técnico-pero-claro, orientado a resultados de negocio. Sin humo de "tr
 ## 13. Necesito de ti
 
 - **Email de contacto** definitivo (placeholder actual: `hola@agenflow.es`).
-- Datos legales (autónomo ahora; SL en trámite) para privacidad/aviso legal.
+- Datos legales (persona física con NIF ahora; S.L. en trámite) para privacidad/aviso legal.
 - 1–2 **cifras reales** del proyecto legal (anonimizadas).
 - **Anclajes de precio** si en algún momento quieres pasar de "presupuesto" a "desde €".
 - Bio para **Nosotros** (ángulo "habla con un experto").
