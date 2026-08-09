@@ -43,16 +43,27 @@ const nextConfig: NextConfig = {
       },
     ];
   },
-  // Páginas-para-leads (propuestas) las sirve un servidor externo aislado.
-  // agenflow.es solo hace de proxy fino. Gated: sin la var, no hay rewrite.
+  // Páginas-para-leads (propuestas, maquetas) las sirve un servidor externo
+  // aislado. agenflow.es solo hace de proxy fino: ni credenciales ni datos de
+  // cliente. Gated: sin la var, no hay rewrite.
+  //
+  // AÑADIR UN TIPO NUEVO = AÑADIR UNA PALABRA a esta lista Y OTRA al `matcher`
+  // de src/proxy.ts. El segmento viaja como parámetro, así que el destino no hay
+  // que tocarlo nunca, pero el matcher del proxy SÍ: el proxy corre antes que
+  // estos rewrites y, si no está excluido, next-intl redirige a /es/... y esto
+  // ya no casa. La lista viva es `REGISTRY` en agenflow-lead-pages/lib/registry.ts;
+  // esta la repite porque next.config no puede importar de otro proyecto.
   async rewrites() {
     const origin = process.env.LEAD_PAGES_ORIGIN;
     if (!origin) return [];
+
+    const TIPOS_LEAD_PAGES = ["propuesta-web", "muestra-web"];
+
     return {
       beforeFiles: [
         {
-          source: "/propuesta-web/:slug",
-          destination: `${origin}/propuesta-web/:slug`,
+          source: `/:tipo(${TIPOS_LEAD_PAGES.join("|")})/:slug`,
+          destination: `${origin}/:tipo/:slug`,
         },
       ],
     };
