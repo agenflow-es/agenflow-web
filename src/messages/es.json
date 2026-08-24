@@ -1206,7 +1206,7 @@
     }
   },
   "legal": {
-    "lastUpdated": "Última actualización: junio de 2026",
+    "lastUpdated": "Última actualización: agosto de 2026",
     "company": {
       "label": "Titular y responsable",
       "brandNote": "Agenflow es la denominación comercial de esta actividad, titularidad de Francisco Javier Arias Carrillo.",
@@ -1222,7 +1222,7 @@
     },
     "privacy": {
       "title": "Política de privacidad",
-      "intro": "Cómo tratamos tus datos personales cuando contactas con Agenflow o navegas por este sitio, conforme al Reglamento (UE) 2016/679 (RGPD) y a la Ley Orgánica 3/2018 (LOPDGDD).",
+      "intro": "Cómo tratamos tus datos personales cuando contactas con Agenflow o navegas por este sitio, y cómo tratamos la información pública de los sitios web que analizamos, conforme al Reglamento (UE) 2016/679 (RGPD) y a la Ley Orgánica 3/2018 (LOPDGDD).",
       "sections": [
         {
           "heading": "Responsable del tratamiento",
@@ -1236,8 +1236,8 @@
           "body": [
             "Tratamos los datos que nos facilitas al rellenar el formulario de contacto: tu nombre, tu email y, de forma opcional, el nombre de tu empresa y el contenido de tu mensaje.",
             "Si te suscribes a nuestra newsletter, tratamos tu dirección de email y el registro de tu consentimiento para enviártela.",
-            "Si utilizas la comprobación de visibilidad en IA, tratamos el nombre del negocio (y, si la incluyes, la ciudad) que escribes para realizar la consulta.",
-            "No recogemos categorías especiales de datos, no elaboramos perfiles y no tomamos decisiones automatizadas sobre ti."
+            "Si utilizas la comprobación de visibilidad en IA, tratamos el texto que escribes para realizar la consulta, que puede incluir el nombre del negocio y su localidad. Ese texto se envía a nuestro proveedor de modelo, que realiza además las búsquedas web necesarias para responderla.",
+            "Sobre los datos que nos facilitas al contactar o suscribirte: no recogemos categorías especiales, no elaboramos perfiles tuyos y no tomamos decisiones automatizadas sobre ti. El tratamiento de investigación de mercado que describimos más abajo es distinto y no se cruza con estos datos."
           ]
         },
         {
@@ -1262,11 +1262,34 @@
           ]
         },
         {
+          "heading": "Investigación sobre la preparación de sitios web para agentes de IA",
+          "body": [
+            "Analizamos de forma automatizada el contenido que los sitios web sirven públicamente, para estudiar cómo de preparados están para los agentes de inteligencia artificial. Ese análisis alimenta informes agregados sobre el estado del mercado y el servicio que prestamos a nuestros clientes.",
+            "Qué analizamos. Únicamente lo que un sitio entrega a cualquier visitante sin identificarse: su robots.txt, su página de inicio y su sitemap. No accedemos a zonas protegidas, no rellenamos formularios y no iniciamos sesión.",
+            "Qué puede contener. Datos de contacto profesional que el propio sitio publica —denominación, teléfono, correo, domicilio, o un NIF en el aviso legal—. Cuando el titular es un empresario individual, esos datos son datos personales.",
+            "Con qué base legal. Interés legítimo (artículo 6.1.f del RGPD): estudiar el estado público del mercado y ofrecer un servicio de diagnóstico. Hemos valorado que se trata de información que el titular publica deliberadamente para ser encontrada, que el análisis es sobre la web y no sobre la persona, y que no se cruza con ninguna otra fuente. No usamos estos datos para enviar comunicaciones comerciales no solicitadas.",
+            "Cuánto tiempo. Conservamos el contenido descargado 90 días. Pasado ese plazo eliminamos de forma automática los datos de contacto e identificadores fiscales que pudiera contener, y mantenemos únicamente el resultado del análisis —tipo de negocio, sector, tamaño estimado y estado técnico—, que no identifica a ninguna persona.",
+            "Cómo nos identificamos y cómo pedirnos que paremos. Nuestro rastreador se identifica en todas sus peticiones con el nombre AIVisibilityBot y respeta robots.txt. En agenflow.es/bot explicamos qué hace y cómo excluirse, por robots.txt o escribiendo a info@agenflow.es. Atendemos la exclusión sin preguntas.",
+            "Tus derechos sobre este tratamiento. Puedes ejercer los derechos de acceso, rectificación, supresión, oposición y limitación en info@agenflow.es, y reclamar ante la Agencia Española de Protección de Datos."
+          ]
+        },
+        {
           "heading": "Destinatarios y encargados",
           "body": [
-            "No cedemos tus datos a terceros, salvo obligación legal. Para el funcionamiento del sitio y algunas de sus funciones nos apoyamos en proveedores que actúan como encargados del tratamiento: Vercel (alojamiento del sitio), Resend (envío del email de contacto y gestión de la lista de suscriptores de la newsletter) y Anthropic (que procesa el nombre del negocio que introduces en la comprobación de visibilidad en IA), con los que mantenemos los acuerdos exigidos por el RGPD.",
-            "Si alguno de estos proveedores trata datos fuera del Espacio Económico Europeo, lo hace con las garantías adecuadas previstas en el RGPD."
-          ]
+            "No cedemos tus datos a terceros, salvo obligación legal. Para el funcionamiento del sitio y algunas de sus funciones nos apoyamos en los proveedores que se relacionan a continuación, que actúan como encargados del tratamiento por nuestra cuenta y siguiendo nuestras instrucciones, y con los que hemos suscrito el acuerdo de encargo exigido por el artículo 28 del RGPD.",
+            "Vercel Inc. y Plus Five Five, Inc. están establecidas en Estados Unidos, y Supabase Pte. Ltd. en Singapur; Anthropic Ireland, Limited está establecida en Irlanda. La base de datos en la que quedan registrados los envíos del formulario de contacto está alojada en la región europea de Fráncfort (Alemania).",
+            "Cuando el tratamiento implica una transferencia internacional de datos fuera del Espacio Económico Europeo, se ampara en las cláusulas contractuales tipo aprobadas por la Comisión Europea, incorporadas al acuerdo de encargo que cada proveedor suscribe con nosotros.",
+            "Mantenemos esta lista actualizada. Si quieres conocer el detalle de un proveedor concreto, escríbenos a info@agenflow.es."
+          ],
+          "table": {
+            "headers": ["Proveedor", "Entidad legal", "Para qué", "Qué datos trata"],
+            "rows": [
+              ["Vercel", "Vercel Inc. (Estados Unidos)", "Alojamiento y despliegue de agenflow.es.", "Registros de servidor y las peticiones que envías desde la web."],
+              ["Supabase", "Supabase Pte. Ltd. (Singapur)", "Base de datos en la que queda registrado cada envío del formulario de contacto.", "Los datos que escribes en el formulario de contacto."],
+              ["Resend", "Plus Five Five, Inc. (Estados Unidos)", "Envío del email del formulario de contacto y gestión de la lista de suscriptores de la newsletter.", "Los datos del formulario de contacto y tu email de suscripción."],
+              ["Anthropic", "Anthropic Ireland, Limited (Irlanda)", "Comprobación de visibilidad en IA: procesa tu consulta y realiza las búsquedas web necesarias para responderla.", "El texto que escribes en la comprobación."]
+            ]
+          }
         },
         {
           "heading": "Tus derechos",

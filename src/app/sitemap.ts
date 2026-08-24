@@ -29,9 +29,20 @@ const paths = [
 export default function sitemap(): MetadataRoute.Sitemap {
   const { defaultLocale } = routing;
 
-  return paths.map((path) => ({
-    url: `${siteConfig.url}/${defaultLocale}${path}`,
-    changeFrequency: "monthly",
-    priority: path === "" ? 1 : 0.7,
-  }));
+  return [
+    ...paths.map((path) => ({
+      url: `${siteConfig.url}/${defaultLocale}${path}`,
+      changeFrequency: "monthly" as const,
+      priority: path === "" ? 1 : 0.7,
+    })),
+    // `/bot` va SIN prefijo de idioma y por eso no puede salir de `paths`, que
+    // los prefija todos. No es una excepción cosmética: esa URL viaja en el
+    // User-Agent del rastreador, es bilingüe en una sola página y no se puede
+    // mover nunca. Ver src/app/bot/layout.tsx y el matcher de src/proxy.ts.
+    {
+      url: `${siteConfig.url}/bot`,
+      changeFrequency: "monthly" as const,
+      priority: 0.5,
+    },
+  ];
 }

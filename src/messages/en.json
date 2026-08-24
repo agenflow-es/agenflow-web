@@ -1206,7 +1206,7 @@
     }
   },
   "legal": {
-    "lastUpdated": "Last updated: June 2026",
+    "lastUpdated": "Last updated: August 2026",
     "company": {
       "label": "Owner and controller",
       "brandNote": "Agenflow is the trading name for this activity, owned by Francisco Javier Arias Carrillo.",
@@ -1222,7 +1222,7 @@
     },
     "privacy": {
       "title": "Privacy policy",
-      "intro": "How we handle your personal data when you contact Agenflow or browse this site, under Regulation (EU) 2016/679 (GDPR) and Spanish Organic Law 3/2018 (LOPDGDD).",
+      "intro": "How we handle your personal data when you contact Agenflow or browse this site, and how we handle the public information of the websites we analyse, under Regulation (EU) 2016/679 (GDPR) and Spanish Organic Law 3/2018 (LOPDGDD).",
       "sections": [
         {
           "heading": "Data controller",
@@ -1236,8 +1236,8 @@
           "body": [
             "We process the data you provide when you fill in the contact form: your name, your email and, optionally, your company name and the content of your message.",
             "If you subscribe to our newsletter, we process your email address and the record of your consent to send it to you.",
-            "If you use the AI visibility check, we process the business name (and the city, if you include it) you type to run the query.",
-            "We do not collect special categories of data, we do not build profiles and we do not make automated decisions about you."
+            "If you use the AI visibility check, we process the text you type to run the query, which may include the business name and its town or city. That text is sent to our model provider, which also runs the web searches needed to answer it.",
+            "Regarding the data you give us when you contact us or subscribe: we do not collect special categories, we do not build profiles of you and we do not make automated decisions about you. The market research processing described below is a separate activity and is never combined with this data."
           ]
         },
         {
@@ -1262,11 +1262,34 @@
           ]
         },
         {
+          "heading": "Research into how ready websites are for AI agents",
+          "body": [
+            "We carry out automated analysis of the content that websites serve publicly, in order to study how ready they are for AI agents. That analysis feeds aggregate reports on the state of the market and the service we provide to our clients.",
+            "What we analyse. Only what a site serves to any visitor without identifying themselves: its robots.txt, its home page and its sitemap. We do not access protected areas, we do not submit forms and we do not log in.",
+            "What it may contain. Professional contact details that the site itself publishes — business name, phone number, email, address, or a tax ID in the legal notice. Where the owner is a sole trader, those details are personal data.",
+            "Legal basis. Legitimate interest (Article 6(1)(f) GDPR): studying the public state of the market and offering a diagnostic service. We have assessed that this is information the owner deliberately publishes in order to be found, that the analysis is about the website rather than the person, and that it is not combined with any other source. We do not use this data to send unsolicited marketing.",
+            "How long. We keep the downloaded content for 90 days. After that period we automatically delete any contact details and tax identifiers it may contain, and keep only the result of the analysis — business type, sector, estimated size and technical state — which does not identify any person.",
+            "How we identify ourselves and how to ask us to stop. Our crawler identifies itself in every request as AIVisibilityBot and honours robots.txt. At agenflow.es/bot we explain what it does and how to opt out, via robots.txt or by writing to info@agenflow.es. We action opt-outs with no questions asked.",
+            "Your rights over this processing. You can exercise your rights of access, rectification, erasure, objection and restriction at info@agenflow.es, and lodge a complaint with the Spanish Data Protection Agency."
+          ]
+        },
+        {
           "heading": "Recipients and processors",
           "body": [
-            "We do not share your data with third parties except where legally required. To run the site and some of its features we rely on providers acting as data processors: Vercel (site hosting), Resend (delivery of the contact email and management of the newsletter subscriber list) and Anthropic (which processes the business name you enter in the AI visibility check), with whom we maintain the agreements required by the GDPR.",
-            "Where any of these providers processes data outside the European Economic Area, it does so under the appropriate safeguards set out in the GDPR."
-          ]
+            "We do not share your data with third parties except where legally required. To run the site and some of its features we rely on the providers listed below, which act as data processors on our behalf and on our instructions, and with which we have entered into the processing agreement required by Article 28 GDPR.",
+            "Vercel Inc. and Plus Five Five, Inc. are established in the United States, and Supabase Pte. Ltd. in Singapore; Anthropic Ireland, Limited is established in Ireland. The database in which contact form submissions are recorded is hosted in the European region of Frankfurt (Germany).",
+            "Where processing involves an international transfer of data outside the European Economic Area, it relies on the standard contractual clauses approved by the European Commission, incorporated into the processing agreement each provider enters into with us.",
+            "We keep this list up to date. If you would like details of a specific provider, write to us at info@agenflow.es."
+          ],
+          "table": {
+            "headers": ["Provider", "Legal entity", "What for", "What data it processes"],
+            "rows": [
+              ["Vercel", "Vercel Inc. (United States)", "Hosting and deployment of agenflow.es.", "Server logs and the requests you send from the site."],
+              ["Supabase", "Supabase Pte. Ltd. (Singapore)", "Database where every contact form submission is recorded.", "The data you type into the contact form."],
+              ["Resend", "Plus Five Five, Inc. (United States)", "Delivery of the contact form email and management of the newsletter subscriber list.", "The contact form data and your subscription email."],
+              ["Anthropic", "Anthropic Ireland, Limited (Ireland)", "AI visibility check: processes your query and runs the web searches needed to answer it.", "The text you type into the check."]
+            ]
+          }
         },
         {
           "heading": "Your rights",

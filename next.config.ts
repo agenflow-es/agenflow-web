@@ -9,6 +9,17 @@ const nextConfig: NextConfig = {
   // desarrollo-software se renombró a software-medida. Locale-prefixed (es|en).
   async redirects() {
     return [
+      // /es/bot y /en/bot → /bot. La URL canónica del rastreador NO lleva prefijo
+      // de idioma (va escrita en el User-Agent de cada petición y no se puede
+      // mover nunca; ver src/app/bot/layout.tsx y el matcher de src/proxy.ts).
+      // Sin esta regla, quien teclee /es/bot —o quien la enlace por costumbre—
+      // se come un 404. VA LA PRIMERA A PROPÓSITO: si fuera después de la regla
+      // /en/:path* → /es/:path*, un /en/bot daría dos saltos en vez de uno.
+      {
+        source: "/:locale(es|en)/bot",
+        destination: "/bot",
+        permanent: true,
+      },
       // Español solo por ahora: /en/* → /es/* (TEMPORAL, para reactivar inglés
       // más adelante sin que Google haya cacheado un 301).
       {
