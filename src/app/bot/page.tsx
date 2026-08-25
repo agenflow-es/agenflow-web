@@ -34,6 +34,18 @@ function Pre({ children }: { children: string }) {
   );
 }
 
+// El enlace a la política lo usan la versión española y la inglesa. Va con <a>
+// pelado a propósito, y la razón está en la nota larga de layout.tsx: /bot tiene
+// su propio root layout y no debe acoplarse al enrutado por idioma.
+function PrivacyLink({ children }: { children: React.ReactNode }) {
+  return (
+    // eslint-disable-next-line @next/next/no-html-link-for-pages
+    <a href="/es/privacidad" className="text-accent transition hover:underline">
+      {children}
+    </a>
+  );
+}
+
 function Mail() {
   return (
     <a
@@ -206,16 +218,7 @@ export default function BotPage() {
         el{" "}
         <strong className="font-semibold text-fg">interés legítimo</strong> de
         investigación de mercado, y está detallado en nuestra{" "}
-        {/* eslint-disable-next-line @next/next/no-html-link-for-pages --
-            <a> pelado a propósito: /bot tiene su propio root layout y no debe
-            acoplarse al enrutado por idioma. Ver la nota larga en layout.tsx. */}
-        <a
-          href="/es/privacidad"
-          className="text-accent transition hover:underline"
-        >
-          política de privacidad
-        </a>
-        .
+        <PrivacyLink>política de privacidad</PrivacyLink>.
       </P>
       <P>
         Puedes pedirnos acceso, rectificación, supresión u oposición en <Mail />,
@@ -270,8 +273,26 @@ export default function BotPage() {
         <P>
           <strong className="font-semibold text-fg">We never</strong> log in,
           submit forms, buy, book, collect your users&rsquo; personal data,
-          record your software versions, or impersonate a browser to get around
-          a block.
+          record your software versions, follow links to crawl through your
+          site, or impersonate a browser to get around a block.
+        </P>
+        <P>
+          <strong className="font-semibold text-fg">How we behave</strong> — A
+          few requests per domain and sweep, and they are the ones listed above.
+          We honour <code className="font-label text-fg">robots.txt</code>,
+          including <code className="font-label text-fg">crawl-delay</code>. We
+          identify ourselves in every request. If you block us, we record that
+          and do not try again.
+        </P>
+        <P>
+          <strong className="font-semibold text-fg">Your data</strong> — We
+          process the content your site serves publicly, which may include
+          professional contact details you publish yourself. Our legal basis is{" "}
+          <strong className="font-semibold text-fg">legitimate interest</strong>{" "}
+          in market research, set out in our{" "}
+          <PrivacyLink>privacy policy</PrivacyLink>. You can request access,
+          rectification, erasure or object at <Mail />, and lodge a complaint
+          with the Spanish Data Protection Agency.
         </P>
       </section>
 
