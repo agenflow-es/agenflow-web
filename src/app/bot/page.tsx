@@ -74,7 +74,7 @@ const NO_HACEMOS: [string, string][] = [
 ];
 
 const COMPORTAMIENTO = [
-  "Una petición por dominio y barrido. No navegamos por tu sitio.",
+  "Unas pocas peticiones por dominio y barrido, y son las que ves arriba. No navegamos por tu sitio: no seguimos enlaces ni recorremos tu catálogo.",
   "Respetamos robots.txt, incluido crawl-delay.",
   "Nos identificamos siempre, en todas las peticiones.",
   "Si nos devuelves un bloqueo, lo anotamos y no insistimos.",
