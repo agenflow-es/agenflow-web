@@ -31,7 +31,7 @@ npm run dev                  # http://localhost:3000  → redirige a /es
 | `CONTACT_FROM` | Remitente verificado en Resend (p. ej. `web@notifications.agenflow.es`) | — |
 | `CONTACT_EMAIL` | Buzón que recibe los mensajes de contacto | — |
 | `RESEND_AUDIENCE_ID` | Audiencia de Resend donde se guardan las altas de newsletter | sin ella, la suscripción devuelve error |
-| `ANTHROPIC_API_KEY` | Comprobación «¿qué dice la IA de tu negocio?» (Claude + búsqueda web) | sin ella, el widget muestra estado "muy pronto" |
+| `AGENFLOW_VISION_API_URL` | Backend de Agenflow Vision (diagnóstico gratuito en `/servicios/presencia-online`) | sin ella, el widget muestra estado "muy pronto" |
 
 Todas las funciones están *gated*: si falta su clave, degradan con elegancia en vez de romper.
 

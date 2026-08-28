@@ -15,7 +15,7 @@ import { Container, Eyebrow } from "@/components/ui/primitives";
 import { Reveal } from "@/components/motion/Reveal";
 import { Link } from "@/i18n/navigation";
 import { HeroLineaB } from "@/components/sections/HeroLineaB";
-import { AiVisibilityCheck } from "@/components/ai/AiVisibilityCheck";
+import { FreeDiagnostic } from "@/components/diagnostic/FreeDiagnostic";
 import { FeatureCard } from "@/components/ui/FeatureCard";
 import { SystemFlow, type FlowStage } from "@/components/visuals/SystemFlow";
 import { FaqList } from "@/components/layout/FaqList";
@@ -133,7 +133,7 @@ export default async function DevPresenciaOnlinePage({
             </Reveal>
 
             <Reveal>
-              <AiVisibilityCheck />
+              <FreeDiagnostic />
             </Reveal>
           </div>
         </Container>
