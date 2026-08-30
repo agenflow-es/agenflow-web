@@ -569,7 +569,7 @@
       "urlPlaceholder": "yoursite.com",
       "submit": "Check it",
       "checking": "Checking…",
-      "loadingNotice": "We don't hit your site with hundreds of requests at once. One moment…",
+      "loadingNotice": "We don't hit your site with hundreds of requests at once, so this can take up to a minute. One moment…",
       "states": {
         "pocoPreparado": "Not ready",
         "enProgreso": "In progress",
@@ -592,12 +592,30 @@
           "otro": "Other"
         },
         "sending": "Sending…",
-        "success": "We'll email it to you shortly.",
-        "privacy": "By continuing, you accept our <privacy>privacy policy</privacy>.",
+        "success": "We've sent it. If you don't see it in a few minutes, check your spam folder too.",
+        "consentLabel": "I have read and accept the <privacy>privacy policy</privacy>.",
         "errors": {
           "email": "Enter a valid email.",
           "businessType": "Choose an option.",
-          "failed": "We couldn't send the report. Please try again."
+          "consent": "You need to accept the privacy policy.",
+          "failed": "We couldn't send the report. Please try again.",
+          "retryable": "The email didn't go out, but we haven't used up your free diagnostic. You can try again."
+        },
+        "conflict": {
+          "conexion": {
+            "fallback": "We've already run a free diagnostic from this connection. It's one per business — let's talk and measure yours.",
+            "cta": "Talk to us"
+          },
+          "correo": {
+            "fallback": "That email already has its free diagnostic. Look for it in your inbox and in spam.",
+            "cta": "Resend it to me",
+            "email": "info@agenflow.es",
+            "subject": "Resend my free diagnostic"
+          },
+          "medicion": {
+            "fallback": "That measurement was already delivered or expired. You can start again.",
+            "cta": "Start again"
+          }
         }
       },
       "errors": {
@@ -1262,7 +1280,7 @@
           "body": [
             "We process the data you provide when you fill in the contact form: your name, your email and, optionally, your company name and the content of your message.",
             "If you subscribe to our newsletter, we process your email address and the record of your consent to send it to you.",
-            "If you use the AI visibility check, we process the text you type to run the query, which may include the business name and its town or city. That text is sent to our model provider, which also runs the web searches needed to answer it.",
+            "If you use the free AI visibility diagnostic, we process your email, the IP address you connect from, and the domain you ask us to measure. Further below, in \"Free AI visibility diagnostic\", we detail what each of these is used for and how long we keep it.",
             "Regarding the data you give us when you contact us or subscribe: we do not collect special categories, we do not build profiles of you and we do not make automated decisions about you. The market research processing described below is a separate activity and is never combined with this data."
           ]
         },
@@ -1288,6 +1306,15 @@
           ]
         },
         {
+          "heading": "Site access logs",
+          "body": [
+            "Our hosting provider automatically records every request agenflow.es receives. For each one we keep the date and time, the IP address it comes from, the page requested, the result we returned, the size of the response, and what the browser or program itself sends when identifying: its user agent and, where present, the referring page.",
+            "What for. Keeping the site running, spotting faults and abuse, and knowing which automated programs visit it. Ours among them: we consult these logs to check that our crawler behaves the way we say it does at agenflow.es/bot.",
+            "Legal basis. Legitimate interest (Article 6.1.f GDPR) in the security and correct operation of the service. We do not use these logs to build profiles, we do not combine them with the data you give us when you contact us, and we do not use them for audience measurement.",
+            "How long. We keep the complete log for 90 days. After that we automatically delete the IP address and keep the rest, which no longer identifies anyone."
+          ]
+        },
+        {
           "heading": "Research into how ready websites are for AI agents",
           "body": [
             "We carry out automated analysis of the content that websites serve publicly, in order to study how ready they are for AI agents. That analysis feeds aggregate reports on the state of the market and the service we provide to our clients.",
@@ -1303,7 +1330,7 @@
           "heading": "Recipients and processors",
           "body": [
             "We do not share your data with third parties except where legally required. To run the site and some of its features we rely on the providers listed below, which act as data processors on our behalf and on our instructions, and with which we have entered into the processing agreement required by Article 28 GDPR.",
-            "Vercel Inc. and Plus Five Five, Inc. are established in the United States, and Supabase Pte. Ltd. in Singapore; Anthropic Ireland, Limited is established in Ireland. The database in which contact form submissions are recorded is hosted in the European region of Frankfurt (Germany).",
+            "Vercel Inc. and Plus Five Five, Inc. are established in the United States, and Supabase Pte. Ltd. in Singapore; Anthropic Ireland, Limited and OpenAI Ireland Limited are established in Ireland. The database in which contact form submissions and site access logs are recorded is hosted in the European region of Frankfurt (Germany).",
             "Where processing involves an international transfer of data outside the European Economic Area, it relies on the standard contractual clauses approved by the European Commission, incorporated into the processing agreement each provider enters into with us.",
             "We keep this list up to date. If you would like details of a specific provider, write to us at info@agenflow.es."
           ],
@@ -1311,9 +1338,27 @@
             "headers": ["Provider", "Legal entity", "What for", "What data it processes"],
             "rows": [
               ["Vercel", "Vercel Inc. (United States)", "Hosting and deployment of agenflow.es.", "Server logs and the requests you send from the site."],
-              ["Supabase", "Supabase Pte. Ltd. (Singapore)", "Database where every contact form submission is recorded.", "The data you type into the contact form."],
+              ["Supabase", "Supabase Pte. Ltd. (Singapore)", "Database where contact form submissions and site access logs are recorded.", "The data you type into the contact form and the technical data of each request to the site, including the IP address."],
               ["Resend", "Plus Five Five, Inc. (United States)", "Delivery of the contact form email and management of the newsletter subscriber list.", "The contact form data and your subscription email."],
-              ["Anthropic", "Anthropic Ireland, Limited (Ireland)", "AI visibility check: processes your query and runs the web searches needed to answer it.", "The text you type into the check."]
+              ["Anthropic", "Anthropic Ireland, Limited (Ireland)", "Classifying the content analysed by our AIVisibilityBot crawler, as part of the research described above.", "The public content our crawler downloads from the sites it analyses."],
+              ["OpenAI", "OpenAI Ireland Limited (Ireland)", "Web search to answer on the domain you ask us to analyse, as part of the free AI visibility diagnostic described below.", "The public homepage text of the site being analysed and its domain. Never your email."]
+            ]
+          }
+        },
+        {
+          "heading": "Free AI visibility diagnostic",
+          "body": [
+            "If you use the free diagnostic form at /servicios/presencia-online, we use AI to measure how ready a domain is for AI agents and, if you ask for it, we email you the result as a PDF.",
+            "What OpenAI receives. The public homepage text of the site you ask us to analyse and its domain, so it can search the web and answer. It never receives your email: that never leaves our server.",
+            "Legal basis. Your consent (Article 6.1.a GDPR), given when you tick the checkbox on the form.",
+            "A limit: one free diagnostic per connection and per email address, forever. We don't store your email address or your IP address: we store an irreversible calculation (technically, a hash) from which the original cannot be recovered. It lets us check whether an address has already received its diagnosis; it does not let us rebuild a list of addresses. This is pseudonymised data, not anonymous."
+          ],
+          "table": {
+            "headers": ["Data", "What for", "How long we keep it"],
+            "rows": [
+              ["Email address", "Sending you the report and following up commercially.", "12 months"],
+              ["IP address", "Only to limit the number of requests.", "48 hours"],
+              ["Irreversible hash of the email and the IP", "Making sure each business gets a single free diagnostic.", "Indefinite"]
             ]
           }
         },

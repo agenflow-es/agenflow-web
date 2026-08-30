@@ -15,6 +15,7 @@ import {
   DIAGNOSTICO_ESTADOS,
   TIPOS_NEGOCIO,
   type DiagnosticoEstado,
+  type Motivo409,
 } from "@/lib/free-diagnostic-shared";
 
 type CheckState =
@@ -62,19 +63,29 @@ function StateBar({
   );
 }
 
+type ReportStatus =
+  | { status: "idle" }
+  | { status: "sent" }
+  | { status: "error"; message?: string }
+  | { status: "retryable"; message?: string }
+  | { status: "conflict"; motivo: Motivo409; message?: string };
+
 function ReportForm({
   id,
   locale,
+  onReset,
 }: {
   id: string;
   locale: "es" | "en";
+  onReset: () => void;
 }) {
   const t = useTranslations("presenciaPage.freeDiagnostic.report");
-  const [status, setStatus] = useState<"idle" | "sent" | "error">("idle");
+  const [status, setStatus] = useState<ReportStatus>({ status: "idle" });
 
   const schema = z.object({
     email: z.string().trim().email(t("errors.email")),
     tipoNegocio: z.enum(TIPOS_NEGOCIO),
+    consent: z.boolean().refine((v) => v, { message: t("errors.consent") }),
     website: z.string().optional(),
   });
   type Values = z.infer<typeof schema>;
@@ -86,8 +97,22 @@ function ReportForm({
   } = useForm<Values>({ resolver: zodResolver(schema) });
 
   async function onSubmit(values: Values) {
-    const res = await submitFreeDiagnosticReport({ id, locale, ...values });
-    setStatus(res.ok ? "sent" : "error");
+    const res = await submitFreeDiagnosticReport({
+      id,
+      locale,
+      email: values.email,
+      tipoNegocio: values.tipoNegocio,
+      website: values.website,
+    });
+    if (res.ok) {
+      setStatus({ status: "sent" });
+    } else if (res.error === "conflict") {
+      setStatus({ status: "conflict", motivo: res.motivo, message: res.message });
+    } else if (res.error === "retryable") {
+      setStatus({ status: "retryable", message: res.message });
+    } else {
+      setStatus({ status: "error", message: res.message });
+    }
   }
 
   const labelClass = "text-[13px] font-medium text-fg";
@@ -96,11 +121,48 @@ function ReportForm({
   const selectClass =
     "mt-1.5 w-full appearance-none rounded-[var(--radius)] border border-border bg-bg px-3.5 py-2.5 pr-9 text-sm text-fg outline-none transition focus:border-accent";
 
-  if (status === "sent") {
+  if (status.status === "sent") {
     return (
       <p role="status" className="mt-5 text-[14.5px] font-medium leading-[1.5] text-fg">
         {t("success")}
       </p>
+    );
+  }
+
+  // El 409 no es un error: es una conversación que empieza. Cada motivo lleva
+  // a una acción distinta, nunca a "prueba con otro correo".
+  if (status.status === "conflict") {
+    return (
+      <div role="status" className="mt-5 border-t border-border pt-5">
+        <p className="text-[14.5px] leading-[1.55] text-fg-muted">
+          {status.message ?? t(`conflict.${status.motivo}.fallback`)}
+        </p>
+        {status.motivo === "conexion" && (
+          <Link
+            href="/contacto"
+            className="mt-3 inline-flex w-full justify-center rounded-[var(--radius)] bg-accent px-5 py-2.5 text-[13.5px] font-semibold text-accent-fg transition hover:-translate-y-0.5 sm:w-auto"
+          >
+            {t("conflict.conexion.cta")}
+          </Link>
+        )}
+        {status.motivo === "correo" && (
+          <a
+            href={`mailto:${t("conflict.correo.email")}?subject=${encodeURIComponent(t("conflict.correo.subject"))}`}
+            className="mt-3 inline-flex font-medium text-accent underline decoration-accent/40 underline-offset-2 transition hover:decoration-accent"
+          >
+            {t("conflict.correo.cta")}
+          </a>
+        )}
+        {status.motivo === "medicion" && (
+          <button
+            type="button"
+            onClick={onReset}
+            className="mt-3 inline-flex w-full justify-center rounded-[var(--radius)] bg-accent px-5 py-2.5 text-[13.5px] font-semibold text-accent-fg transition hover:-translate-y-0.5 sm:w-auto"
+          >
+            {t("conflict.medicion.cta")}
+          </button>
+        )}
+      </div>
     );
   }
 
@@ -169,6 +231,34 @@ function ReportForm({
         <input id="fd-website" type="text" tabIndex={-1} autoComplete="off" {...register("website")} />
       </div>
 
+      <label className="mt-3.5 flex items-start gap-2 text-xs leading-[1.5] text-fg-faint">
+        <input
+          id="fd-consent"
+          type="checkbox"
+          aria-invalid={!!errors.consent}
+          aria-describedby={errors.consent ? "fd-consent-error" : undefined}
+          className="mt-0.5 h-4 w-4 shrink-0 accent-[var(--accent)]"
+          {...register("consent")}
+        />
+        <span>
+          {t.rich("consentLabel", {
+            privacy: (chunks) => (
+              <Link
+                href="/privacidad"
+                className="font-medium text-accent underline decoration-accent/40 underline-offset-2 transition hover:decoration-accent"
+              >
+                {chunks}
+              </Link>
+            ),
+          })}
+        </span>
+      </label>
+      {errors.consent && (
+        <p id="fd-consent-error" role="alert" className="mt-1.5 text-xs text-red-500">
+          {errors.consent.message}
+        </p>
+      )}
+
       <button
         type="submit"
         disabled={isSubmitting}
@@ -177,22 +267,15 @@ function ReportForm({
         {isSubmitting ? t("sending") : t("cta")}
       </button>
 
-      <p className="mt-2.5 text-xs leading-[1.5] text-fg-faint">
-        {t.rich("privacy", {
-          privacy: (chunks) => (
-            <Link
-              href="/privacidad"
-              className="font-medium text-accent underline decoration-accent/40 underline-offset-2 transition hover:decoration-accent"
-            >
-              {chunks}
-            </Link>
-          ),
-        })}
-      </p>
-
-      {status === "error" && (
+      {status.status === "error" && (
         <p role="alert" className="mt-2.5 text-[13px] text-red-500">
-          {t("errors.failed")}
+          {status.message ?? t("errors.failed")}
+        </p>
+      )}
+
+      {status.status === "retryable" && (
+        <p role="status" className="mt-2.5 text-[13px] text-amber-600">
+          {status.message ?? t("errors.retryable")}
         </p>
       )}
     </form>
@@ -217,6 +300,11 @@ export function FreeDiagnostic() {
     }
   }
 
+  function resetToIdle() {
+    setUrl("");
+    setState({ step: "idle" });
+  }
+
   const stateLabels: Record<DiagnosticoEstado, string> = {
     poco_preparado: t("states.pocoPreparado"),
     en_progreso: t("states.enProgreso"),
@@ -226,19 +314,28 @@ export function FreeDiagnostic() {
   return (
     <div className="rounded-[var(--radius-lg)] border border-border bg-surface p-5 shadow-[var(--shadow)] sm:p-6">
       <form onSubmit={onSubmit} className="flex flex-col gap-3 sm:flex-row">
-        <input
-          type="text"
-          inputMode="url"
-          value={url}
-          onChange={(e) => setUrl(e.target.value)}
-          placeholder={t("urlPlaceholder")}
-          disabled={state.step === "loading"}
-          className="w-full flex-1 rounded-[var(--radius)] border border-border bg-transparent px-4 py-3 text-sm text-fg outline-none transition placeholder:text-fg-faint focus:border-accent disabled:opacity-60"
-        />
+        <div className="w-full flex-1">
+          <input
+            type="text"
+            inputMode="url"
+            value={url}
+            onChange={(e) => setUrl(e.target.value)}
+            placeholder={t("urlPlaceholder")}
+            disabled={state.step === "loading"}
+            aria-invalid={state.step === "error" && state.kind === "invalid" ? true : undefined}
+            aria-describedby={state.step === "error" && state.kind === "invalid" ? "fd-url-error" : undefined}
+            className="w-full rounded-[var(--radius)] border border-border bg-transparent px-4 py-3 text-sm text-fg outline-none transition placeholder:text-fg-faint focus:border-accent disabled:opacity-60"
+          />
+          {state.step === "error" && state.kind === "invalid" && (
+            <p id="fd-url-error" role="alert" className="mt-1.5 text-xs text-red-500">
+              {state.message ?? t("errors.invalid")}
+            </p>
+          )}
+        </div>
         <button
           type="submit"
           disabled={state.step === "loading" || !url.trim()}
-          className="shrink-0 rounded-[var(--radius)] bg-accent px-6 py-3 text-sm font-semibold text-accent-fg transition hover:-translate-y-0.5 disabled:opacity-60"
+          className="h-fit shrink-0 rounded-[var(--radius)] bg-accent px-6 py-3 text-sm font-semibold text-accent-fg transition hover:-translate-y-0.5 disabled:opacity-60"
         >
           {state.step === "loading" ? t("checking") : t("submit")}
         </button>
@@ -251,13 +348,9 @@ export function FreeDiagnostic() {
         </div>
       )}
 
-      {state.step === "error" && (
+      {state.step === "error" && (state.kind === "not_configured" || state.kind === "failed") && (
         <p role="alert" className="mt-4 text-[14px] text-fg-faint">
-          {state.kind === "not_configured"
-            ? t("errors.notConfigured")
-            : state.kind === "invalid"
-              ? t("errors.invalid")
-              : (state.message ?? t("errors.failed"))}
+          {state.kind === "not_configured" ? t("errors.notConfigured") : (state.message ?? t("errors.failed"))}
         </p>
       )}
 
@@ -265,7 +358,7 @@ export function FreeDiagnostic() {
         <div className="mt-5">
           <StateBar estado={state.estado} labels={stateLabels} />
           <p className="mt-4 text-[14.5px] leading-[1.55] text-fg-muted">{state.mensaje}</p>
-          <ReportForm id={state.id} locale={locale} />
+          <ReportForm id={state.id} locale={locale} onReset={resetToIdle} />
         </div>
       )}
     </div>

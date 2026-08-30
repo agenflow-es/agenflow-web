@@ -569,7 +569,7 @@
       "urlPlaceholder": "tuweb.es",
       "submit": "Comprobar",
       "checking": "Comprobando…",
-      "loadingNotice": "No atacamos tu web con cientos de peticiones a la vez. Un momento…",
+      "loadingNotice": "No atacamos tu web con cientos de peticiones a la vez, así que puede tardar hasta un minuto. Un momento…",
       "states": {
         "pocoPreparado": "Poco preparado",
         "enProgreso": "En progreso",
@@ -592,12 +592,30 @@
           "otro": "Otro"
         },
         "sending": "Enviando…",
-        "success": "Te lo enviamos a tu correo en breve.",
-        "privacy": "Al continuar, aceptas nuestra <privacy>política de privacidad</privacy>.",
+        "success": "Te lo hemos enviado. Si no lo ves en unos minutos, revisa también la carpeta de spam.",
+        "consentLabel": "He leído y acepto la <privacy>política de privacidad</privacy>.",
         "errors": {
           "email": "Escribe un correo válido.",
           "businessType": "Elige una opción.",
-          "failed": "No hemos podido enviar el informe. Inténtalo de nuevo."
+          "consent": "Tienes que aceptar la política de privacidad.",
+          "failed": "No hemos podido enviar el informe. Inténtalo de nuevo.",
+          "retryable": "El correo no ha salido, pero no hemos gastado tu diagnóstico gratuito. Puedes reintentar."
+        },
+        "conflict": {
+          "conexion": {
+            "fallback": "Ya hemos hecho un diagnóstico gratuito desde esta conexión. Es uno por negocio — hablemos y medimos el tuyo.",
+            "cta": "Hablar con nosotros"
+          },
+          "correo": {
+            "fallback": "Ese correo ya tiene su diagnóstico gratuito. Búscalo en tu bandeja de entrada y en spam.",
+            "cta": "Reenviármelo",
+            "email": "info@agenflow.es",
+            "subject": "Reenvío de mi diagnóstico gratuito"
+          },
+          "medicion": {
+            "fallback": "Esa medición ya se entregó o caducó. Puedes volver a empezar.",
+            "cta": "Empezar de nuevo"
+          }
         }
       },
       "errors": {
@@ -1262,7 +1280,7 @@
           "body": [
             "Tratamos los datos que nos facilitas al rellenar el formulario de contacto: tu nombre, tu email y, de forma opcional, el nombre de tu empresa y el contenido de tu mensaje.",
             "Si te suscribes a nuestra newsletter, tratamos tu dirección de email y el registro de tu consentimiento para enviártela.",
-            "Si utilizas la comprobación de visibilidad en IA, tratamos el texto que escribes para realizar la consulta, que puede incluir el nombre del negocio y su localidad. Ese texto se envía a nuestro proveedor de modelo, que realiza además las búsquedas web necesarias para responderla.",
+            "Si utilizas el diagnóstico gratuito de visibilidad en IA, tratamos tu email, la dirección IP desde la que te conectas y el dominio que nos pides medir. Más abajo, en «Diagnóstico gratuito de visibilidad en IA», detallamos qué datos son, para qué se usa cada uno y cuánto tiempo se conservan.",
             "Sobre los datos que nos facilitas al contactar o suscribirte: no recogemos categorías especiales, no elaboramos perfiles tuyos y no tomamos decisiones automatizadas sobre ti. El tratamiento de investigación de mercado que describimos más abajo es distinto y no se cruza con estos datos."
           ]
         },
@@ -1288,6 +1306,15 @@
           ]
         },
         {
+          "heading": "Registros de acceso al sitio",
+          "body": [
+            "Nuestro proveedor de alojamiento registra automáticamente cada petición que recibe agenflow.es. De cada una guardamos la fecha y la hora, la dirección IP desde la que se conecta, la página solicitada, el resultado que devolvimos, el tamaño de la respuesta y lo que el propio navegador o programa envía al identificarse: su agente de usuario y, si la hay, la página de procedencia.",
+            "Para qué. Mantener el sitio en funcionamiento, detectar fallos y abusos, y saber qué programas automáticos lo visitan. Entre ellos, el nuestro: consultamos estos registros para comprobar que nuestro rastreador se comporta como decimos en agenflow.es/bot.",
+            "Con qué base legal. Interés legítimo (artículo 6.1.f del RGPD) en la seguridad y el correcto funcionamiento del servicio. No usamos estos registros para elaborar perfiles, no los cruzamos con los datos que nos facilitas al contactar y no hacemos con ellos medición de audiencia.",
+            "Cuánto tiempo. Conservamos el registro completo 90 días. Pasado ese plazo eliminamos automáticamente la dirección IP y mantenemos el resto, que ya no permite identificar a nadie."
+          ]
+        },
+        {
           "heading": "Investigación sobre la preparación de sitios web para agentes de IA",
           "body": [
             "Analizamos de forma automatizada el contenido que los sitios web sirven públicamente, para estudiar cómo de preparados están para los agentes de inteligencia artificial. Ese análisis alimenta informes agregados sobre el estado del mercado y el servicio que prestamos a nuestros clientes.",
@@ -1303,7 +1330,7 @@
           "heading": "Destinatarios y encargados",
           "body": [
             "No cedemos tus datos a terceros, salvo obligación legal. Para el funcionamiento del sitio y algunas de sus funciones nos apoyamos en los proveedores que se relacionan a continuación, que actúan como encargados del tratamiento por nuestra cuenta y siguiendo nuestras instrucciones, y con los que hemos suscrito el acuerdo de encargo exigido por el artículo 28 del RGPD.",
-            "Vercel Inc. y Plus Five Five, Inc. están establecidas en Estados Unidos, y Supabase Pte. Ltd. en Singapur; Anthropic Ireland, Limited está establecida en Irlanda. La base de datos en la que quedan registrados los envíos del formulario de contacto está alojada en la región europea de Fráncfort (Alemania).",
+            "Vercel Inc. y Plus Five Five, Inc. están establecidas en Estados Unidos, y Supabase Pte. Ltd. en Singapur; Anthropic Ireland, Limited y OpenAI Ireland Limited están establecidas en Irlanda. La base de datos en la que quedan registrados los envíos del formulario de contacto y los registros de acceso al sitio está alojada en la región europea de Fráncfort (Alemania).",
             "Cuando el tratamiento implica una transferencia internacional de datos fuera del Espacio Económico Europeo, se ampara en las cláusulas contractuales tipo aprobadas por la Comisión Europea, incorporadas al acuerdo de encargo que cada proveedor suscribe con nosotros.",
             "Mantenemos esta lista actualizada. Si quieres conocer el detalle de un proveedor concreto, escríbenos a info@agenflow.es."
           ],
@@ -1311,9 +1338,27 @@
             "headers": ["Proveedor", "Entidad legal", "Para qué", "Qué datos trata"],
             "rows": [
               ["Vercel", "Vercel Inc. (Estados Unidos)", "Alojamiento y despliegue de agenflow.es.", "Registros de servidor y las peticiones que envías desde la web."],
-              ["Supabase", "Supabase Pte. Ltd. (Singapur)", "Base de datos en la que queda registrado cada envío del formulario de contacto.", "Los datos que escribes en el formulario de contacto."],
+              ["Supabase", "Supabase Pte. Ltd. (Singapur)", "Base de datos en la que quedan registrados los envíos del formulario de contacto y los registros de acceso al sitio.", "Los datos que escribes en el formulario de contacto y los datos técnicos de cada petición al sitio, incluida la dirección IP."],
               ["Resend", "Plus Five Five, Inc. (Estados Unidos)", "Envío del email del formulario de contacto y gestión de la lista de suscriptores de la newsletter.", "Los datos del formulario de contacto y tu email de suscripción."],
-              ["Anthropic", "Anthropic Ireland, Limited (Irlanda)", "Comprobación de visibilidad en IA: procesa tu consulta y realiza las búsquedas web necesarias para responderla.", "El texto que escribes en la comprobación."]
+              ["Anthropic", "Anthropic Ireland, Limited (Irlanda)", "Clasificación del contenido que analiza nuestro rastreador AIVisibilityBot, dentro de la investigación descrita más arriba.", "El contenido público que el rastreador descarga de los sitios que analiza."],
+              ["OpenAI", "OpenAI Ireland Limited (Irlanda)", "Búsqueda en la web para responder sobre el dominio que nos pides analizar, dentro del diagnóstico gratuito de visibilidad en IA descrito más abajo.", "El texto público de la portada del sitio analizado y su dominio. Nunca tu email."]
+            ]
+          }
+        },
+        {
+          "heading": "Diagnóstico gratuito de visibilidad en IA",
+          "body": [
+            "Si usas el formulario de diagnóstico gratuito en /servicios/presencia-online, medimos con IA cómo de preparado está un dominio para los agentes de inteligencia artificial y, si lo pides, te enviamos el resultado en PDF por email.",
+            "Qué recibe OpenAI. El texto público de la portada del sitio que nos pides analizar y su dominio, para poder buscar en la web y responder. Nunca recibe tu email: no sale de nuestro servidor.",
+            "Con qué base legal. Tu consentimiento (artículo 6.1.a del RGPD), que prestas al marcar la casilla del formulario.",
+            "Un límite: un diagnóstico gratuito por conexión y por dirección de email, para siempre. No guardamos tu correo electrónico ni tu dirección IP: guardamos un cálculo irreversible (técnicamente, un hash) del que no se puede recuperar el original. Sirve para comprobar si una dirección ya ha recibido su diagnóstico, no para reconstruir una lista de direcciones. Es un dato seudonimizado, no anónimo."
+          ],
+          "table": {
+            "headers": ["Dato", "Para qué", "Cuánto se conserva"],
+            "rows": [
+              ["Correo electrónico", "Enviarte el informe y hacer seguimiento comercial.", "12 meses"],
+              ["Dirección IP", "Solo limitar el número de peticiones.", "48 horas"],
+              ["Huella irreversible del correo y de la IP", "Que cada negocio reciba un único diagnóstico gratuito.", "Indefinido"]
             ]
           }
         },
