@@ -198,6 +198,19 @@ body {
   display: inline;
 }
 
+/* Badge "Meta Tech Provider": la variante invertida (texto en blanco) es la de
+   tema oscuro — y también el estado por defecto, porque sin `data-theme` los
+   tokens de :root son los oscuros. El isotipo azul es idéntico en ambas. */
+.meta-badge-light {
+  display: none;
+}
+[data-theme="light"] .meta-badge-light {
+  display: block;
+}
+[data-theme="light"] .meta-badge-reverse {
+  display: none;
+}
+
 /* ---- Animations (ported from the design) ---- */
 @keyframes af-drift {
   0% { transform: translate(0, 0); }

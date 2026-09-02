@@ -1,5 +1,6 @@
 import { setRequestLocale } from "next-intl/server";
 import { HeroLineaB } from "@/components/sections/HeroLineaB";
+import { MetaTechProvider } from "@/components/sections/MetaTechProvider";
 import { PainBlock } from "@/components/sections/PainBlock";
 import { ProcessSteps } from "@/components/sections/ProcessSteps";
 import { SystemsInAction } from "@/components/sections/SystemsInAction";
@@ -30,6 +31,7 @@ export default async function HomePage({
         proof="Consultoría · Automatización · Software a medida"
       />
 
+      <MetaTechProvider />
       <PainBlock />
       <ProcessSteps />
       <SystemsInAction />
